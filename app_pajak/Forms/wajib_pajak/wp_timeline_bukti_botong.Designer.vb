@@ -22,8 +22,8 @@ Partial Class wp_timeline_bukti_botong
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges49 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges50 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -32,17 +32,17 @@ Partial Class wp_timeline_bukti_botong
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -58,10 +58,20 @@ Partial Class wp_timeline_bukti_botong
         Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Wp_navbar1 = New wp_navbar()
         PanelMain = New Guna.UI2.WinForms.Guna2Panel()
         PanelDetail = New Guna.UI2.WinForms.Guna2Panel()
@@ -151,23 +161,24 @@ Partial Class wp_timeline_bukti_botong
         Wp_navbar1.Dock = DockStyle.Left
         Wp_navbar1.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
         Wp_navbar1.Location = New Point(0, 0)
+        Wp_navbar1.Margin = New Padding(3, 4, 3, 4)
         Wp_navbar1.Name = "Wp_navbar1"
         Wp_navbar1.Size = New Size(190, 720)
         Wp_navbar1.TabIndex = 0
         ' 
         ' PanelMain
         ' 
+        PanelMain.AutoScroll = True
         PanelMain.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
         PanelMain.Controls.Add(PanelDetail)
         PanelMain.Controls.Add(PanelTimeline)
         PanelMain.Controls.Add(PanelHeader)
-        PanelMain.CustomizableEdges = CustomizableEdges39
+        PanelMain.CustomizableEdges = CustomizableEdges49
         PanelMain.Dock = DockStyle.Fill
         PanelMain.Location = New Point(190, 0)
         PanelMain.Name = "PanelMain"
         PanelMain.Padding = New Padding(24)
-        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges40
-        PanelMain.AutoScroll = True
+        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges50
         PanelMain.Size = New Size(1110, 720)
         PanelMain.TabIndex = 1
         ' 
@@ -251,7 +262,7 @@ Partial Class wp_timeline_bukti_botong
         LblTanggalInputValue.ForeColor = Color.Black
         LblTanggalInputValue.Location = New Point(138, 84)
         LblTanggalInputValue.Name = "LblTanggalInputValue"
-        LblTanggalInputValue.Size = New Size(113, 22)
+        LblTanggalInputValue.Size = New Size(88, 17)
         LblTanggalInputValue.TabIndex = 5
         LblTanggalInputValue.Text = "15 Februari 2024"
         ' 
@@ -262,7 +273,7 @@ Partial Class wp_timeline_bukti_botong
         LblTanggalInput.ForeColor = Color.FromArgb(CByte(102), CByte(112), CByte(133))
         LblTanggalInput.Location = New Point(24, 84)
         LblTanggalInput.Name = "LblTanggalInput"
-        LblTanggalInput.Size = New Size(98, 22)
+        LblTanggalInput.Size = New Size(79, 17)
         LblTanggalInput.TabIndex = 4
         LblTanggalInput.Text = "Tanggal Input:"
         ' 
@@ -273,7 +284,7 @@ Partial Class wp_timeline_bukti_botong
         LblSelectedMonth.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         LblSelectedMonth.Location = New Point(24, 54)
         LblSelectedMonth.Name = "LblSelectedMonth"
-        LblSelectedMonth.Size = New Size(148, 33)
+        LblSelectedMonth.Size = New Size(123, 27)
         LblSelectedMonth.TabIndex = 1
         LblSelectedMonth.Text = "Februari 2024"
         ' 
@@ -284,7 +295,7 @@ Partial Class wp_timeline_bukti_botong
         LblDetailTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblDetailTitle.Location = New Point(24, 20)
         LblDetailTitle.Name = "LblDetailTitle"
-        LblDetailTitle.Size = New Size(104, 27)
+        LblDetailTitle.Size = New Size(86, 22)
         LblDetailTitle.TabIndex = 0
         LblDetailTitle.Text = "Detail Bulan"
         ' 
@@ -296,13 +307,13 @@ Partial Class wp_timeline_bukti_botong
         PanelTimeline.BorderThickness = 1
         PanelTimeline.Controls.Add(FlowTimeline)
         PanelTimeline.Controls.Add(LblTimelineTitle)
-        PanelTimeline.CustomizableEdges = CustomizableEdges35
+        PanelTimeline.CustomizableEdges = CustomizableEdges45
         PanelTimeline.FillColor = Color.White
         PanelTimeline.Location = New Point(24, 130)
         PanelTimeline.Name = "PanelTimeline"
         PanelTimeline.Padding = New Padding(24)
         PanelTimeline.ShadowDecoration.Color = Color.FromArgb(CByte(209), CByte(216), CByte(230))
-        PanelTimeline.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        PanelTimeline.ShadowDecoration.CustomizableEdges = CustomizableEdges46
         PanelTimeline.ShadowDecoration.Depth = 8
         PanelTimeline.ShadowDecoration.Enabled = True
         PanelTimeline.Size = New Size(1062, 200)
@@ -334,7 +345,7 @@ Partial Class wp_timeline_bukti_botong
         ' MonthCardJan
         ' 
         MonthCardJan.BackColor = Color.Transparent
-        MonthCardJan.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardJan.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardJan.BorderRadius = 12
         MonthCardJan.BorderThickness = 1
         MonthCardJan.Controls.Add(IndicatorJan)
@@ -368,14 +379,14 @@ Partial Class wp_timeline_bukti_botong
         LblMonthJan.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthJan.Location = New Point(21, 12)
         LblMonthJan.Name = "LblMonthJan"
-        LblMonthJan.Size = New Size(26, 22)
+        LblMonthJan.Size = New Size(21, 17)
         LblMonthJan.TabIndex = 0
         LblMonthJan.Text = "Jan"
         ' 
         ' MonthCardFeb
         ' 
         MonthCardFeb.BackColor = Color.Transparent
-        MonthCardFeb.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardFeb.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardFeb.BorderRadius = 12
         MonthCardFeb.BorderThickness = 1
         MonthCardFeb.Controls.Add(IndicatorFeb)
@@ -409,24 +420,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthFeb.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthFeb.Location = New Point(21, 12)
         LblMonthFeb.Name = "LblMonthFeb"
-        LblMonthFeb.Size = New Size(28, 22)
+        LblMonthFeb.Size = New Size(22, 17)
         LblMonthFeb.TabIndex = 0
         LblMonthFeb.Text = "Feb"
         ' 
         ' MonthCardMar
         ' 
         MonthCardMar.BackColor = Color.Transparent
-        MonthCardMar.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardMar.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardMar.BorderRadius = 12
         MonthCardMar.BorderThickness = 1
         MonthCardMar.Controls.Add(IndicatorMar)
         MonthCardMar.Controls.Add(LblMonthMar)
-        MonthCardMar.CustomizableEdges = CustomizableEdges7
+        MonthCardMar.CustomizableEdges = CustomizableEdges16
         MonthCardMar.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardMar.Location = New Point(156, 8)
         MonthCardMar.Margin = New Padding(4, 0, 4, 0)
         MonthCardMar.Name = "MonthCardMar"
-        MonthCardMar.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        MonthCardMar.ShadowDecoration.CustomizableEdges = CustomizableEdges17
         MonthCardMar.Size = New Size(68, 100)
         MonthCardMar.TabIndex = 2
         ' 
@@ -450,24 +461,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthMar.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthMar.Location = New Point(21, 12)
         LblMonthMar.Name = "LblMonthMar"
-        LblMonthMar.Size = New Size(31, 22)
+        LblMonthMar.Size = New Size(24, 17)
         LblMonthMar.TabIndex = 0
         LblMonthMar.Text = "Mar"
         ' 
         ' MonthCardApr
         ' 
         MonthCardApr.BackColor = Color.Transparent
-        MonthCardApr.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardApr.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardApr.BorderRadius = 12
         MonthCardApr.BorderThickness = 1
         MonthCardApr.Controls.Add(IndicatorApr)
         MonthCardApr.Controls.Add(LblMonthApr)
-        MonthCardApr.CustomizableEdges = CustomizableEdges5
+        MonthCardApr.CustomizableEdges = CustomizableEdges19
         MonthCardApr.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardApr.Location = New Point(232, 8)
         MonthCardApr.Margin = New Padding(4, 0, 4, 0)
         MonthCardApr.Name = "MonthCardApr"
-        MonthCardApr.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        MonthCardApr.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         MonthCardApr.Size = New Size(68, 100)
         MonthCardApr.TabIndex = 3
         ' 
@@ -478,7 +489,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorApr.ImageRotate = 0F
         IndicatorApr.Location = New Point(20, 48)
         IndicatorApr.Name = "IndicatorApr"
-        IndicatorApr.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        IndicatorApr.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         IndicatorApr.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorApr.Size = New Size(28, 28)
         IndicatorApr.TabIndex = 1
@@ -491,24 +502,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthApr.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthApr.Location = New Point(21, 12)
         LblMonthApr.Name = "LblMonthApr"
-        LblMonthApr.Size = New Size(28, 22)
+        LblMonthApr.Size = New Size(22, 17)
         LblMonthApr.TabIndex = 0
         LblMonthApr.Text = "Apr"
         ' 
         ' MonthCardMay
         ' 
         MonthCardMay.BackColor = Color.Transparent
-        MonthCardMay.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardMay.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardMay.BorderRadius = 12
         MonthCardMay.BorderThickness = 1
         MonthCardMay.Controls.Add(IndicatorMay)
         MonthCardMay.Controls.Add(LblMonthMay)
-        MonthCardMay.CustomizableEdges = CustomizableEdges3
+        MonthCardMay.CustomizableEdges = CustomizableEdges22
         MonthCardMay.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardMay.Location = New Point(308, 8)
         MonthCardMay.Margin = New Padding(4, 0, 4, 0)
         MonthCardMay.Name = "MonthCardMay"
-        MonthCardMay.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        MonthCardMay.ShadowDecoration.CustomizableEdges = CustomizableEdges23
         MonthCardMay.Size = New Size(68, 100)
         MonthCardMay.TabIndex = 4
         ' 
@@ -519,7 +530,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorMay.ImageRotate = 0F
         IndicatorMay.Location = New Point(20, 48)
         IndicatorMay.Name = "IndicatorMay"
-        IndicatorMay.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        IndicatorMay.ShadowDecoration.CustomizableEdges = CustomizableEdges21
         IndicatorMay.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorMay.Size = New Size(28, 28)
         IndicatorMay.TabIndex = 1
@@ -532,24 +543,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthMay.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthMay.Location = New Point(21, 12)
         LblMonthMay.Name = "LblMonthMay"
-        LblMonthMay.Size = New Size(29, 22)
+        LblMonthMay.Size = New Size(23, 17)
         LblMonthMay.TabIndex = 0
         LblMonthMay.Text = "Mei"
         ' 
         ' MonthCardJun
         ' 
         MonthCardJun.BackColor = Color.Transparent
-        MonthCardJun.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardJun.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardJun.BorderRadius = 12
         MonthCardJun.BorderThickness = 1
         MonthCardJun.Controls.Add(IndicatorJun)
         MonthCardJun.Controls.Add(LblMonthJun)
-        MonthCardJun.CustomizableEdges = CustomizableEdges19
+        MonthCardJun.CustomizableEdges = CustomizableEdges25
         MonthCardJun.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardJun.Location = New Point(384, 8)
         MonthCardJun.Margin = New Padding(4, 0, 4, 0)
         MonthCardJun.Name = "MonthCardJun"
-        MonthCardJun.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        MonthCardJun.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         MonthCardJun.Size = New Size(68, 100)
         MonthCardJun.TabIndex = 5
         ' 
@@ -560,7 +571,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorJun.ImageRotate = 0F
         IndicatorJun.Location = New Point(20, 48)
         IndicatorJun.Name = "IndicatorJun"
-        IndicatorJun.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        IndicatorJun.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         IndicatorJun.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorJun.Size = New Size(28, 28)
         IndicatorJun.TabIndex = 1
@@ -573,24 +584,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthJun.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthJun.Location = New Point(21, 12)
         LblMonthJun.Name = "LblMonthJun"
-        LblMonthJun.Size = New Size(27, 22)
+        LblMonthJun.Size = New Size(22, 17)
         LblMonthJun.TabIndex = 0
         LblMonthJun.Text = "Jun"
         ' 
         ' MonthCardJul
         ' 
         MonthCardJul.BackColor = Color.Transparent
-        MonthCardJul.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardJul.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardJul.BorderRadius = 12
         MonthCardJul.BorderThickness = 1
         MonthCardJul.Controls.Add(IndicatorJul)
         MonthCardJul.Controls.Add(LblMonthJul)
-        MonthCardJul.CustomizableEdges = CustomizableEdges22
+        MonthCardJul.CustomizableEdges = CustomizableEdges28
         MonthCardJul.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardJul.Location = New Point(460, 8)
         MonthCardJul.Margin = New Padding(4, 0, 4, 0)
         MonthCardJul.Name = "MonthCardJul"
-        MonthCardJul.ShadowDecoration.CustomizableEdges = CustomizableEdges23
+        MonthCardJul.ShadowDecoration.CustomizableEdges = CustomizableEdges29
         MonthCardJul.Size = New Size(68, 100)
         MonthCardJul.TabIndex = 6
         ' 
@@ -601,7 +612,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorJul.ImageRotate = 0F
         IndicatorJul.Location = New Point(20, 48)
         IndicatorJul.Name = "IndicatorJul"
-        IndicatorJul.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        IndicatorJul.ShadowDecoration.CustomizableEdges = CustomizableEdges27
         IndicatorJul.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorJul.Size = New Size(28, 28)
         IndicatorJul.TabIndex = 1
@@ -614,24 +625,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthJul.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthJul.Location = New Point(21, 12)
         LblMonthJul.Name = "LblMonthJul"
-        LblMonthJul.Size = New Size(22, 22)
+        LblMonthJul.Size = New Size(18, 17)
         LblMonthJul.TabIndex = 0
         LblMonthJul.Text = "Jul"
         ' 
         ' MonthCardAug
         ' 
         MonthCardAug.BackColor = Color.Transparent
-        MonthCardAug.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardAug.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardAug.BorderRadius = 12
         MonthCardAug.BorderThickness = 1
         MonthCardAug.Controls.Add(IndicatorAug)
         MonthCardAug.Controls.Add(LblMonthAug)
-        MonthCardAug.CustomizableEdges = CustomizableEdges25
+        MonthCardAug.CustomizableEdges = CustomizableEdges31
         MonthCardAug.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardAug.Location = New Point(536, 8)
         MonthCardAug.Margin = New Padding(4, 0, 4, 0)
         MonthCardAug.Name = "MonthCardAug"
-        MonthCardAug.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        MonthCardAug.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         MonthCardAug.Size = New Size(68, 100)
         MonthCardAug.TabIndex = 7
         ' 
@@ -642,7 +653,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorAug.ImageRotate = 0F
         IndicatorAug.Location = New Point(20, 48)
         IndicatorAug.Name = "IndicatorAug"
-        IndicatorAug.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        IndicatorAug.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         IndicatorAug.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorAug.Size = New Size(28, 28)
         IndicatorAug.TabIndex = 1
@@ -655,24 +666,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthAug.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthAug.Location = New Point(21, 12)
         LblMonthAug.Name = "LblMonthAug"
-        LblMonthAug.Size = New Size(31, 22)
+        LblMonthAug.Size = New Size(25, 17)
         LblMonthAug.TabIndex = 0
         LblMonthAug.Text = "Agu"
         ' 
         ' MonthCardSep
         ' 
         MonthCardSep.BackColor = Color.Transparent
-        MonthCardSep.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardSep.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardSep.BorderRadius = 12
         MonthCardSep.BorderThickness = 1
         MonthCardSep.Controls.Add(IndicatorSep)
         MonthCardSep.Controls.Add(LblMonthSep)
-        MonthCardSep.CustomizableEdges = CustomizableEdges28
+        MonthCardSep.CustomizableEdges = CustomizableEdges34
         MonthCardSep.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardSep.Location = New Point(612, 8)
         MonthCardSep.Margin = New Padding(4, 0, 4, 0)
         MonthCardSep.Name = "MonthCardSep"
-        MonthCardSep.ShadowDecoration.CustomizableEdges = CustomizableEdges29
+        MonthCardSep.ShadowDecoration.CustomizableEdges = CustomizableEdges35
         MonthCardSep.Size = New Size(68, 100)
         MonthCardSep.TabIndex = 8
         ' 
@@ -683,7 +694,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorSep.ImageRotate = 0F
         IndicatorSep.Location = New Point(20, 48)
         IndicatorSep.Name = "IndicatorSep"
-        IndicatorSep.ShadowDecoration.CustomizableEdges = CustomizableEdges27
+        IndicatorSep.ShadowDecoration.CustomizableEdges = CustomizableEdges33
         IndicatorSep.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorSep.Size = New Size(28, 28)
         IndicatorSep.TabIndex = 1
@@ -696,24 +707,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthSep.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthSep.Location = New Point(21, 12)
         LblMonthSep.Name = "LblMonthSep"
-        LblMonthSep.Size = New Size(28, 22)
+        LblMonthSep.Size = New Size(23, 17)
         LblMonthSep.TabIndex = 0
         LblMonthSep.Text = "Sep"
         ' 
         ' MonthCardOct
         ' 
         MonthCardOct.BackColor = Color.Transparent
-        MonthCardOct.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardOct.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardOct.BorderRadius = 12
         MonthCardOct.BorderThickness = 1
         MonthCardOct.Controls.Add(IndicatorOct)
         MonthCardOct.Controls.Add(LblMonthOct)
-        MonthCardOct.CustomizableEdges = CustomizableEdges31
+        MonthCardOct.CustomizableEdges = CustomizableEdges37
         MonthCardOct.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardOct.Location = New Point(688, 8)
         MonthCardOct.Margin = New Padding(4, 0, 4, 0)
         MonthCardOct.Name = "MonthCardOct"
-        MonthCardOct.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        MonthCardOct.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         MonthCardOct.Size = New Size(68, 100)
         MonthCardOct.TabIndex = 9
         ' 
@@ -724,7 +735,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorOct.ImageRotate = 0F
         IndicatorOct.Location = New Point(20, 48)
         IndicatorOct.Name = "IndicatorOct"
-        IndicatorOct.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        IndicatorOct.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         IndicatorOct.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorOct.Size = New Size(28, 28)
         IndicatorOct.TabIndex = 1
@@ -737,24 +748,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthOct.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthOct.Location = New Point(21, 12)
         LblMonthOct.Name = "LblMonthOct"
-        LblMonthOct.Size = New Size(27, 22)
+        LblMonthOct.Size = New Size(22, 17)
         LblMonthOct.TabIndex = 0
         LblMonthOct.Text = "Okt"
         ' 
         ' MonthCardNov
         ' 
         MonthCardNov.BackColor = Color.Transparent
-        MonthCardNov.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardNov.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardNov.BorderRadius = 12
         MonthCardNov.BorderThickness = 1
         MonthCardNov.Controls.Add(IndicatorNov)
         MonthCardNov.Controls.Add(LblMonthNov)
-        MonthCardNov.CustomizableEdges = CustomizableEdges10
+        MonthCardNov.CustomizableEdges = CustomizableEdges40
         MonthCardNov.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardNov.Location = New Point(764, 8)
         MonthCardNov.Margin = New Padding(4, 0, 4, 0)
         MonthCardNov.Name = "MonthCardNov"
-        MonthCardNov.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        MonthCardNov.ShadowDecoration.CustomizableEdges = CustomizableEdges41
         MonthCardNov.Size = New Size(68, 100)
         MonthCardNov.TabIndex = 10
         ' 
@@ -765,7 +776,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorNov.ImageRotate = 0F
         IndicatorNov.Location = New Point(20, 48)
         IndicatorNov.Name = "IndicatorNov"
-        IndicatorNov.ShadowDecoration.CustomizableEdges = CustomizableEdges33
+        IndicatorNov.ShadowDecoration.CustomizableEdges = CustomizableEdges39
         IndicatorNov.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorNov.Size = New Size(28, 28)
         IndicatorNov.TabIndex = 1
@@ -778,24 +789,24 @@ Partial Class wp_timeline_bukti_botong
         LblMonthNov.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthNov.Location = New Point(21, 12)
         LblMonthNov.Name = "LblMonthNov"
-        LblMonthNov.Size = New Size(32, 22)
+        LblMonthNov.Size = New Size(25, 17)
         LblMonthNov.TabIndex = 0
         LblMonthNov.Text = "Nov"
         ' 
         ' MonthCardDec
         ' 
         MonthCardDec.BackColor = Color.Transparent
-        MonthCardDec.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        MonthCardDec.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         MonthCardDec.BorderRadius = 12
         MonthCardDec.BorderThickness = 1
         MonthCardDec.Controls.Add(IndicatorDec)
         MonthCardDec.Controls.Add(LblMonthDec)
-        MonthCardDec.CustomizableEdges = CustomizableEdges13
+        MonthCardDec.CustomizableEdges = CustomizableEdges43
         MonthCardDec.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardDec.Location = New Point(840, 8)
         MonthCardDec.Margin = New Padding(4, 0, 4, 0)
         MonthCardDec.Name = "MonthCardDec"
-        MonthCardDec.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        MonthCardDec.ShadowDecoration.CustomizableEdges = CustomizableEdges44
         MonthCardDec.Size = New Size(68, 100)
         MonthCardDec.TabIndex = 11
         ' 
@@ -806,7 +817,7 @@ Partial Class wp_timeline_bukti_botong
         IndicatorDec.ImageRotate = 0F
         IndicatorDec.Location = New Point(20, 48)
         IndicatorDec.Name = "IndicatorDec"
-        IndicatorDec.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        IndicatorDec.ShadowDecoration.CustomizableEdges = CustomizableEdges42
         IndicatorDec.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorDec.Size = New Size(28, 28)
         IndicatorDec.TabIndex = 1
@@ -819,7 +830,7 @@ Partial Class wp_timeline_bukti_botong
         LblMonthDec.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthDec.Location = New Point(21, 12)
         LblMonthDec.Name = "LblMonthDec"
-        LblMonthDec.Size = New Size(28, 22)
+        LblMonthDec.Size = New Size(23, 17)
         LblMonthDec.TabIndex = 0
         LblMonthDec.Text = "Des"
         ' 
@@ -830,7 +841,7 @@ Partial Class wp_timeline_bukti_botong
         LblTimelineTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblTimelineTitle.Location = New Point(24, 20)
         LblTimelineTitle.Name = "LblTimelineTitle"
-        LblTimelineTitle.Size = New Size(236, 27)
+        LblTimelineTitle.Size = New Size(195, 22)
         LblTimelineTitle.TabIndex = 0
         LblTimelineTitle.Text = "Timeline Pelaporan Bulanan"
         ' 
@@ -842,13 +853,13 @@ Partial Class wp_timeline_bukti_botong
         PanelHeader.BorderThickness = 1
         PanelHeader.Controls.Add(LblSubtitle)
         PanelHeader.Controls.Add(LblTitle)
-        PanelHeader.CustomizableEdges = CustomizableEdges37
+        PanelHeader.CustomizableEdges = CustomizableEdges47
         PanelHeader.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         PanelHeader.Location = New Point(24, 24)
         PanelHeader.Name = "PanelHeader"
         PanelHeader.Padding = New Padding(24)
         PanelHeader.ShadowDecoration.Color = Color.FromArgb(CByte(209), CByte(216), CByte(230))
-        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges48
         PanelHeader.ShadowDecoration.Depth = 10
         PanelHeader.ShadowDecoration.Enabled = True
         PanelHeader.Size = New Size(1062, 91)
@@ -861,7 +872,7 @@ Partial Class wp_timeline_bukti_botong
         LblSubtitle.ForeColor = Color.FromArgb(CByte(233), CByte(221), CByte(255))
         LblSubtitle.Location = New Point(24, 48)
         LblSubtitle.Name = "LblSubtitle"
-        LblSubtitle.Size = New Size(433, 22)
+        LblSubtitle.Size = New Size(346, 17)
         LblSubtitle.TabIndex = 1
         LblSubtitle.Text = "Pantau progress pelaporan pajak bulanan Anda sepanjang tahun."
         ' 
@@ -872,13 +883,12 @@ Partial Class wp_timeline_bukti_botong
         LblTitle.ForeColor = Color.White
         LblTitle.Location = New Point(24, 14)
         LblTitle.Name = "LblTitle"
-        LblTitle.Size = New Size(232, 33)
+        LblTitle.Size = New Size(192, 27)
         LblTitle.TabIndex = 0
         LblTitle.Text = "Timeline Bukti Potong"
         ' 
         ' wp_timeline_bukti_botong
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(250), CByte(251), CByte(253))
         ClientSize = New Size(1300, 720)

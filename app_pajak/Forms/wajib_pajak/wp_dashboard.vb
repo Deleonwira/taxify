@@ -2,9 +2,10 @@
 
     Private Sub FrmDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AddHandler Wp_navbar1.DashboardClicked, AddressOf OnDashboardClicked
-        AddHandler Wp_navbar1.LaporClicked, AddressOf OnLaporClicked
-        AddHandler Wp_navbar1.BuktiPotongClicked, AddressOf OnBuktiPotongClicked
-        AddHandler Wp_navbar1.RiwayatClicked, AddressOf OnRiwayatClicked
+        AddHandler Wp_navbar1.LaporPajakClicked, AddressOf OnLaporPajakClicked
+        AddHandler Wp_navbar1.RiwayatLaporClicked, AddressOf OnRiwayatLaporClicked
+        AddHandler Wp_navbar1.TimelineBuktiPotongClicked, AddressOf OnTimelineBuktiPotongClicked
+        AddHandler Wp_navbar1.RiwayatBuktiPotongClicked, AddressOf OnRiwayatBuktiPotongClicked
         AddHandler Wp_navbar1.DataDiriClicked, AddressOf OnDataDiriClicked
         AddHandler Wp_navbar1.LogoutClicked, AddressOf OnLogoutClicked
 
@@ -16,20 +17,26 @@
         ' Sudah di dashboard
     End Sub
 
-    Private Sub OnLaporClicked(sender As Object, e As EventArgs)
+    Private Sub OnLaporPajakClicked(sender As Object, e As EventArgs)
         Dim f As New wp_lapor_pajak()
         f.Show()
         Me.Hide()
     End Sub
 
-    Private Sub OnBuktiPotongClicked(sender As Object, e As EventArgs)
-        Dim f As New wp_riwayat_bukti_potong()
+    Private Sub OnRiwayatLaporClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_riwayat_lapor_pajak()
         f.Show()
         Me.Hide()
     End Sub
 
-    Private Sub OnRiwayatClicked(sender As Object, e As EventArgs)
-        Dim f As New wp_riwayat_lapor_pajak()
+    Private Sub OnTimelineBuktiPotongClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_timeline_bukti_botong()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnRiwayatBuktiPotongClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_riwayat_bukti_potong()
         f.Show()
         Me.Hide()
     End Sub

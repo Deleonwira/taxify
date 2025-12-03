@@ -51,12 +51,12 @@ Partial Class wp_riwayat_bukti_potong
         LblTableTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         GridBukti = New Guna.UI2.WinForms.Guna2DataGridView()
         colPeriode = New DataGridViewTextBoxColumn()
-        colPerusahaan = New DataGridViewTextBoxColumn()
+        colBuktiPotong = New DataGridViewTextBoxColumn()
         colPenghasilan = New DataGridViewTextBoxColumn()
         colPPh = New DataGridViewTextBoxColumn()
         colJenisPekerjaan = New DataGridViewTextBoxColumn()
         colStatus = New DataGridViewTextBoxColumn()
-        colDownload = New DataGridViewButtonColumn()
+        colDetail = New DataGridViewButtonColumn()
         PanelFilters = New Guna.UI2.WinForms.Guna2Panel()
         TxtSearch = New Guna.UI2.WinForms.Guna2TextBox()
         CmbBulan = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -123,6 +123,7 @@ Partial Class wp_riwayat_bukti_potong
         ' 
         ' PanelTable
         ' 
+        PanelTable.AutoScroll = True
         PanelTable.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
         PanelTable.BorderRadius = 12
         PanelTable.BorderThickness = 1
@@ -207,7 +208,7 @@ Partial Class wp_riwayat_bukti_potong
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         GridBukti.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         GridBukti.ColumnHeadersHeight = 36
-        GridBukti.Columns.AddRange(New DataGridViewColumn() {colPeriode, colPerusahaan, colPenghasilan, colPPh, colJenisPekerjaan, colStatus, colDownload})
+        GridBukti.Columns.AddRange(New DataGridViewColumn() {colPeriode, colBuktiPotong, colPenghasilan, colPPh, colJenisPekerjaan, colStatus, colDetail})
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.White
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.0F)
@@ -255,53 +256,53 @@ Partial Class wp_riwayat_bukti_potong
         colPeriode.Name = "colPeriode"
         colPeriode.ReadOnly = True
         ' 
-        ' colPerusahaan
+        ' colBuktiPotong
         ' 
-        colPerusahaan.HeaderText = "Perusahaan"
-        colPerusahaan.MinimumWidth = 120
-        colPerusahaan.Name = "colPerusahaan"
-        colPerusahaan.ReadOnly = True
+        colBuktiPotong.HeaderText = "No. Bukti Potong"
+        colBuktiPotong.MinimumWidth = 120
+        colBuktiPotong.Name = "colBuktiPotong"
+        colBuktiPotong.ReadOnly = True
         ' 
         ' colPenghasilan
         ' 
-        colPenghasilan.HeaderText = "Penghasilan (Rp)"
+        colPenghasilan.HeaderText = "Perusahaan"
         colPenghasilan.MinimumWidth = 90
         colPenghasilan.Name = "colPenghasilan"
         colPenghasilan.ReadOnly = True
         ' 
         ' colPPh
         ' 
-        colPPh.HeaderText = "PPh21 (Rp)"
+        colPPh.HeaderText = "Bruto"
         colPPh.MinimumWidth = 80
         colPPh.Name = "colPPh"
         colPPh.ReadOnly = True
         ' 
         ' colJenisPekerjaan
         ' 
-        colJenisPekerjaan.HeaderText = "Jenis"
+        colJenisPekerjaan.HeaderText = "Neto"
         colJenisPekerjaan.MinimumWidth = 80
         colJenisPekerjaan.Name = "colJenisPekerjaan"
         colJenisPekerjaan.ReadOnly = True
         ' 
         ' colStatus
         ' 
-        colStatus.HeaderText = "Status"
+        colStatus.HeaderText = "PPh"
         colStatus.MinimumWidth = 70
         colStatus.Name = "colStatus"
         colStatus.ReadOnly = True
         ' 
-        ' colDownload
+        ' colDetail
         ' 
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
         DataGridViewCellStyle3.ForeColor = Color.White
-        colDownload.DefaultCellStyle = DataGridViewCellStyle3
-        colDownload.HeaderText = ""
-        colDownload.MinimumWidth = 70
-        colDownload.Name = "colDownload"
-        colDownload.ReadOnly = True
-        colDownload.Text = "Download"
-        colDownload.UseColumnTextForButtonValue = True
+        colDetail.DefaultCellStyle = DataGridViewCellStyle3
+        colDetail.HeaderText = ""
+        colDetail.MinimumWidth = 70
+        colDetail.Name = "colDetail"
+        colDetail.ReadOnly = True
+        colDetail.Text = "Detail"
+        colDetail.UseColumnTextForButtonValue = True
         ' 
         ' PanelFilters
         ' 
@@ -665,16 +666,16 @@ Partial Class wp_riwayat_bukti_potong
     Friend WithEvents BtnFilter As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PanelTable As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents GridBukti As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents colPeriode As DataGridViewTextBoxColumn
-    Friend WithEvents colPerusahaan As DataGridViewTextBoxColumn
-    Friend WithEvents colPenghasilan As DataGridViewTextBoxColumn
-    Friend WithEvents colPPh As DataGridViewTextBoxColumn
-    Friend WithEvents colJenisPekerjaan As DataGridViewTextBoxColumn
-    Friend WithEvents colStatus As DataGridViewTextBoxColumn
-    Friend WithEvents colDownload As DataGridViewButtonColumn
     Friend WithEvents LblTableTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblTableDesc As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnDownloadAll As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnSortAmount As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LblSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents colPeriode As DataGridViewTextBoxColumn
+    Friend WithEvents colBuktiPotong As DataGridViewTextBoxColumn
+    Friend WithEvents colPenghasilan As DataGridViewTextBoxColumn
+    Friend WithEvents colPPh As DataGridViewTextBoxColumn
+    Friend WithEvents colJenisPekerjaan As DataGridViewTextBoxColumn
+    Friend WithEvents colStatus As DataGridViewTextBoxColumn
+    Friend WithEvents colDetail As DataGridViewButtonColumn
 End Class
