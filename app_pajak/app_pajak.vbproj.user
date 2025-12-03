@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\admin\admin_dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\admin\FrmManagementPerusahaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\admin\FrmUserManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\pemberi_kerja\pk_daftar_pegawai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\pemberi_kerja\pk_dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\pemberi_kerja\pk_form_bukti_potong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\pemberi_kerja\pk_riwayat_bukti_potong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\pemberi_kerja\pk_timeline_bukti_botong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\FrmDiagnosa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_detail_bukti_potong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_diagnosa_pajak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_lapor_pajak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_riwayat_lapor_pajak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_tambah_bukti_potong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_data_diri.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_riwayat_bukti_potong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="user_controls\pemberi_kerja\pk_navbar1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="user_controls\wajib_pajak\wp_navbar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

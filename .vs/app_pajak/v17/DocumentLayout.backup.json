@@ -1,0 +1,1252 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_daftar_pegawai.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_daftar_pegawai.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\app_pajak.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\app_pajak.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_data_diri.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_data_diri.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_data_diri.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_data_diri.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\frmdiagnosa.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\frmdiagnosa.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_form_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_form_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_daftar_pegawai.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_daftar_pegawai.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_dashboard.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_dashboard.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\frmdiagnosa.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\frmdiagnosa.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\user_controls\\wajib_pajak\\wp_navbar.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_form_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_form_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_data_diri.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_data_diri.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_daftar_pegawai.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_daftar_pegawai.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\admin\\admin_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\admin\\admin_dashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_detail_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_detail_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_diagnosa_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_diagnosa_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\admin\\frmusermanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\admin\\frmusermanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\admin\\frmmanagementperusahaan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\admin\\frmmanagementperusahaan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_diagnosa_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_diagnosa_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\resources\\history.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\resources\\history.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\pajakdiagnosisengine.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\pajakdiagnosisengine.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\app_pajak.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\app_pajak.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\frmdiagnosa.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\frmdiagnosa.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_diagnosa_pajak.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_diagnosa_pajak.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\module\\modulkoneksi.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\module\\modulkoneksi.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_dashboard.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_dashboard.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_data_diri.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_data_diri.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_lapor_pajak.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_dashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_dashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_detail_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_detail_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_detail_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_detail_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_riwayat_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_riwayat_bukti_potong.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\frmregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\frmregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\frmregister.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\frmregister.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\wajib_pajak\\wp_riwayat_lapor_pajak.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_riwayat_lapor_pajak.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\resources\\taxify_logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\resources\\taxify_logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\frmregister.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\frmregister.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\admin\\frmusermanagement.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\admin\\frmusermanagement.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\admin\\frmmanagementperusahaan.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\admin\\frmmanagementperusahaan.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\admin\\frmusermanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\admin\\frmusermanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\app_pajak\\app_pajak\\forms\\pemberi_kerja\\pk_form_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_form_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pk_daftar_pegawai.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:26:55.692Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pk_dashboard.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T05:09:46.594Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "wp_data_diri.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-13T22:55:47.319Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmDiagnosa.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T19:27:09.225Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "wp_dashboard.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:18:07.422Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "wp_data_diri.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowM4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-19T16:56:34.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "app_pajak",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+              "RelativeDocumentMoniker": "app_pajak\\app_pajak.vbproj",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+              "RelativeToolTip": "app_pajak\\app_pajak.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-12-02T13:54:29.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmLogin.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.vb",
+              "RelativeDocumentMoniker": "app_pajak\\FrmLogin.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.vb [Design]",
+              "RelativeToolTip": "app_pajak\\FrmLogin.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-31T01:34:44.572Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmLogin.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.vb",
+              "RelativeDocumentMoniker": "app_pajak\\FrmLogin.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.vb",
+              "RelativeToolTip": "app_pajak\\FrmLogin.vb",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-31T01:44:21.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "pk_form_bukti_potong.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T07:15:38.701Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "pk_navbar1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
+              "RelativeDocumentMoniker": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb [Design]",
+              "RelativeToolTip": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:23:26.656Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "pk_navbar1.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.Designer.vb",
+              "RelativeToolTip": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.Designer.vb",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:23:21.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "pk_timeline_bukti_botong.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T02:34:33.351Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "pk_riwayat_bukti_potong.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T10:51:44.825Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "pk_daftar_pegawai.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:25:49.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "pk_navbar1.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
+              "RelativeDocumentMoniker": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
+              "RelativeToolTip": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:23:19.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "wp_dashboard.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.Designer.vb",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAlwFEAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T03:44:19.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FrmDiagnosa.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T19:30:59.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "wp_navbar.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.Designer.vb",
+              "RelativeToolTip": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.Designer.vb",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAmwA8BAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:02:27.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "wp_navbar.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
+              "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb [Design]",
+              "RelativeToolTip": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:02:32.352Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "wp_riwayat_bukti_potong.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-13T23:06:57.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "wp_dashboard.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-26T15:05:55.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "wp_navbar.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
+              "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
+              "RelativeToolTip": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:02:12.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "wp_tambah_bukti_potong.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T05:21:00.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "wp_tambah_bukti_potong.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T03:45:12.787Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "wp_lapor_pajak.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-03T05:04:34.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "pk_form_bukti_potong.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.Designer.vb",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAEwHIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T07:14:45.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "wp_data_diri.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.Designer.vb",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwC0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-31T02:56:32.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "wp_lapor_pajak.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.Designer.vb",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowHQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T19:49:24.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "pk_daftar_pegawai.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-12-03T04:55:57.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "admin_dashboard.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\admin_dashboard.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_dashboard.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\admin_dashboard.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\admin\\admin_dashboard.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:24:21.204Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "wp_detail_bukti_potong.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T03:45:34.186Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "wp_lapor_pajak.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T19:36:10.775Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "wp_riwayat_bukti_potong.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T18:53:40.956Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "wp_riwayat_lapor_pajak.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-26T13:45:56.749Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "wp_timeline_bukti_botong.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T02:35:20.048Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "wp_diagnosa_pajak.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T18:19:21.701Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "FrmUserManagement.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmUserManagement.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\FrmUserManagement.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmUserManagement.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\admin\\FrmUserManagement.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:26:43.023Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "FrmManagementPerusahaan.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmManagementPerusahaan.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\FrmManagementPerusahaan.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmManagementPerusahaan.vb [Design]",
+              "RelativeToolTip": "app_pajak\\Forms\\admin\\FrmManagementPerusahaan.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:50:36.512Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "wp_diagnosa_pajak.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T18:51:10.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Application.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\My Project\\Application.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\My Project\\Application.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\My Project\\Application.Designer.vb",
+              "RelativeToolTip": "app_pajak\\My Project\\Application.Designer.vb",
+              "ViewState": "AgIAAB4AAAAAAAAAAAASwCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-31T01:40:03.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "history.png -  [English (United States)] - PNG [24x24, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Resources\\history.png",
+              "RelativeDocumentMoniker": "app_pajak\\Resources\\history.png",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Resources\\history.png -  [English (United States)] - PNG [24x24, 32 bit, PNG]",
+              "RelativeToolTip": "app_pajak\\Resources\\history.png -  [English (United States)] - PNG [24x24, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-12-02T10:05:29.658Z",
+              "EditorCaption": " -  [English (United States)] - PNG [24x24, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAGgNAAAAAAAAAAAEwH4NAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-12-02T10:12:50.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "PajakDiagnosisEngine.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\PajakDiagnosisEngine.vb",
+              "RelativeDocumentMoniker": "app_pajak\\PajakDiagnosisEngine.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\PajakDiagnosisEngine.vb",
+              "RelativeToolTip": "app_pajak\\PajakDiagnosisEngine.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T18:53:26.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "app_pajak.vbproj",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+              "RelativeDocumentMoniker": "app_pajak\\app_pajak.vbproj",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+              "RelativeToolTip": "app_pajak\\app_pajak.vbproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-11-20T17:18:17.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "FrmDiagnosa.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T18:52:24.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "wp_diagnosa_pajak.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T18:00:21.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "pk_dashboard.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T05:10:16.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "FrmLogin.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.resx",
+              "RelativeDocumentMoniker": "app_pajak\\FrmLogin.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.resx",
+              "RelativeToolTip": "app_pajak\\FrmLogin.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-21T02:02:10.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "FrmLogin.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\FrmLogin.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmLogin.Designer.vb",
+              "RelativeToolTip": "app_pajak\\FrmLogin.Designer.vb",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAuwOAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-31T01:39:27.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "modulkoneksi.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\module\\modulkoneksi.vb",
+              "RelativeDocumentMoniker": "app_pajak\\module\\modulkoneksi.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\module\\modulkoneksi.vb",
+              "RelativeToolTip": "app_pajak\\module\\modulkoneksi.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T09:17:32.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "pk_timeline_bukti_botong.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-26T11:10:02.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "wp_timeline_bukti_botong.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T02:29:30.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "pk_timeline_bukti_botong.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T06:15:12.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "wp_tambah_bukti_potong.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.Designer.vb",
+              "ViewState": "AgIAAEUDAAAAAAAAAAAgwGwDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T03:44:19.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "wp_data_diri.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-12T12:31:18.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "wp_detail_bukti_potong.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-27T03:44:11.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "wp_detail_bukti_potong.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T03:44:13.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "wp_tambah_bukti_potong.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-27T03:44:19.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "wp_lapor_pajak.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-27T03:44:19.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "wp_riwayat_bukti_potong.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-27T03:44:19.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "wp_timeline_bukti_botong.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-27T03:44:11.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "wp_timeline_bukti_botong.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-27T02:36:11.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "pk_riwayat_bukti_potong.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.Designer.vb",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T12:37:14.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "FrmRegister.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmRegister.vb",
+              "RelativeDocumentMoniker": "app_pajak\\FrmRegister.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmRegister.vb [Design]",
+              "RelativeToolTip": "app_pajak\\FrmRegister.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T02:49:57.531Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "FrmRegister.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmRegister.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\FrmRegister.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmRegister.Designer.vb",
+              "RelativeToolTip": "app_pajak\\FrmRegister.Designer.vb",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAuwBYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T05:52:42.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "wp_riwayat_bukti_potong.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcCAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-13T23:03:11.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "wp_riwayat_lapor_pajak.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-26T14:19:27.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "wp_dashboard.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-12T15:16:55.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "taxify_logo.png -  [English (United States)] - PNG [500x500, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Resources\\taxify_logo.png",
+              "RelativeDocumentMoniker": "app_pajak\\Resources\\taxify_logo.png",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Resources\\taxify_logo.png -  [English (United States)] - PNG [500x500, 32 bit, PNG]",
+              "RelativeToolTip": "app_pajak\\Resources\\taxify_logo.png -  [English (United States)] - PNG [500x500, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-11-25T06:58:50.054Z",
+              "EditorCaption": " -  [English (United States)] - PNG [500x500, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "FrmRegister.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmRegister.resx",
+              "RelativeDocumentMoniker": "app_pajak\\FrmRegister.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\FrmRegister.resx",
+              "RelativeToolTip": "app_pajak\\FrmRegister.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-13T22:50:05.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "FrmUserManagement.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmUserManagement.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\FrmUserManagement.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmUserManagement.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\admin\\FrmUserManagement.Designer.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwH4CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:52:04.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "FrmManagementPerusahaan.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmManagementPerusahaan.Designer.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\FrmManagementPerusahaan.Designer.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmManagementPerusahaan.Designer.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\admin\\FrmManagementPerusahaan.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T02:23:03.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "FrmUserManagement.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmUserManagement.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\FrmUserManagement.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\admin\\FrmUserManagement.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\admin\\FrmUserManagement.vb",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:59:53.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "pk_riwayat_bukti_potong.resx",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-20T12:37:12.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "pk_form_bukti_potong.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-20T07:14:42.793Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
