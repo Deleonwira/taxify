@@ -2,7 +2,9 @@
 
 Public Class pk_riwayat_bukti_potong
 
+    ' Form load - set active menu and load data
     Private Sub pk_riwayat_bukti_potong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Pk_navbar11.SetActiveMenu(pk_navbar1.MenuType.Riwayat)
         LoadBuktiPotongHistory()
     End Sub
 
@@ -77,6 +79,42 @@ Public Class pk_riwayat_bukti_potong
         Finally
             modulkoneksi.TutupKoneksi()
         End Try
+    End Sub
+
+    ' ====== NAVBAR EVENT HANDLERS ======
+    Private Sub Pk_navbar11_DashboardClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.DashboardClicked
+        Dim formDashboard As New pk_dashboard()
+        formDashboard.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Pk_navbar11_DaftarPegawaiClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.DaftarPegawaiClicked
+        Dim formDaftarPegawai As New pk_daftar_pegawai()
+        formDaftarPegawai.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Pk_navbar11_BuktiPotongClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.BuktiPotongClicked
+        Dim formTimeline As New pk_timeline_bukti_botong()
+        formTimeline.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Pk_navbar11_RiwayatClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.RiwayatClicked
+        ' Already on riwayat, no action needed
+    End Sub
+
+    Private Sub Pk_navbar11_LogoutClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.LogoutClicked
+        Dim result As DialogResult = MessageBox.Show(
+            "Apakah Anda yakin ingin keluar?",
+            "Konfirmasi Logout",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question)
+        
+        If result = DialogResult.Yes Then
+            ' TODO: Implement logout logic (return to login form)
+            Application.Exit()
+        End If
     End Sub
 
 End Class

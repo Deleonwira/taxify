@@ -16,6 +16,9 @@
     <Compile Update="Forms\pemberi_kerja\pk_dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\pemberi_kerja\pk_form_bukti_potong.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\pemberi_kerja\pk_riwayat_bukti_potong.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -46,13 +49,13 @@
     <Compile Update="Forms\wajib_pajak\wp_tambah_bukti_potong.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmRegister.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\wajib_pajak\wp_data_diri.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmRegister.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\pemberi_kerja\pk_navbar1.vb">

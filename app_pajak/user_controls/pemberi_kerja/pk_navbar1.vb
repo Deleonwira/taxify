@@ -25,7 +25,7 @@ Public Class pk_navbar1
         RaiseEvent DaftarPegawaiClicked(Me, e)
     End Sub
 
-    Private Sub btnBuktiPotong_Click(sender As Object, e As EventArgs) Handles btnBuktiPotong.Click
+    Private Sub btnBuktiPotong_Click(sender As Object, e As EventArgs)
         RaiseEvent BuktiPotongClicked(Me, e)
     End Sub
 
@@ -53,8 +53,8 @@ Public Class pk_navbar1
                 btnDashboard.Checked = True
             Case MenuType.DaftarPegawai
                 btnDaftarPegawai.Checked = True
-            Case MenuType.BuktiPotong
-                btnBuktiPotong.Checked = True
+            'Case MenuType.BuktiPotong
+            '    btnBuktiPotong.Checked = True
             Case MenuType.Riwayat
                 btnRiwayat.Checked = True
         End Select

@@ -17,44 +17,44 @@ Partial Class pk_daftar_pegawai
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges55 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges49 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges50 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges61 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges62 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges56 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges57 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges58 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges59 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges60 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges68 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges69 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges63 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges64 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges65 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges66 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges67 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges75 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges76 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges70 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges71 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges72 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges73 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges74 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         PanelHeader = New Guna.UI2.WinForms.Guna2Panel()
         BtnAddEmployee = New Guna.UI2.WinForms.Guna2Button()
         LblHeaderSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -115,12 +115,12 @@ Partial Class pk_daftar_pegawai
         PanelHeader.Controls.Add(BtnAddEmployee)
         PanelHeader.Controls.Add(LblHeaderSubtitle)
         PanelHeader.Controls.Add(LblHeaderTitle)
-        PanelHeader.CustomizableEdges = CustomizableEdges41
+        PanelHeader.CustomizableEdges = CustomizableEdges3
         PanelHeader.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         PanelHeader.Location = New Point(210, 20)
         PanelHeader.Name = "PanelHeader"
         PanelHeader.Padding = New Padding(18)
-        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         PanelHeader.Size = New Size(1060, 120)
         PanelHeader.TabIndex = 1
         ' 
@@ -129,13 +129,13 @@ Partial Class pk_daftar_pegawai
         BtnAddEmployee.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         BtnAddEmployee.BackColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         BtnAddEmployee.BorderRadius = 8
-        BtnAddEmployee.CustomizableEdges = CustomizableEdges39
+        BtnAddEmployee.CustomizableEdges = CustomizableEdges1
         BtnAddEmployee.FillColor = Color.White
-        BtnAddEmployee.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        BtnAddEmployee.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         BtnAddEmployee.ForeColor = Color.White
         BtnAddEmployee.Location = New Point(860, 70)
         BtnAddEmployee.Name = "BtnAddEmployee"
-        BtnAddEmployee.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        BtnAddEmployee.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         BtnAddEmployee.Size = New Size(180, 32)
         BtnAddEmployee.TabIndex = 2
         BtnAddEmployee.Text = "Tambah Pegawai"
@@ -143,7 +143,7 @@ Partial Class pk_daftar_pegawai
         ' LblHeaderSubtitle
         ' 
         LblHeaderSubtitle.BackColor = Color.Transparent
-        LblHeaderSubtitle.Font = New Font("Segoe UI", 9.0F)
+        LblHeaderSubtitle.Font = New Font("Segoe UI", 9F)
         LblHeaderSubtitle.ForeColor = Color.FromArgb(CByte(219), CByte(234), CByte(254))
         LblHeaderSubtitle.Location = New Point(24, 64)
         LblHeaderSubtitle.Name = "LblHeaderSubtitle"
@@ -154,7 +154,7 @@ Partial Class pk_daftar_pegawai
         ' LblHeaderTitle
         ' 
         LblHeaderTitle.BackColor = Color.Transparent
-        LblHeaderTitle.Font = New Font("Segoe UI Semibold", 14.0F, FontStyle.Bold)
+        LblHeaderTitle.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold)
         LblHeaderTitle.ForeColor = Color.White
         LblHeaderTitle.Location = New Point(24, 24)
         LblHeaderTitle.Name = "LblHeaderTitle"
@@ -171,19 +171,19 @@ Partial Class pk_daftar_pegawai
         PanelFilters.Controls.Add(LblFilterTitle)
         PanelFilters.Controls.Add(CmbStatus)
         PanelFilters.Controls.Add(TxtSearch)
-        PanelFilters.CustomizableEdges = CustomizableEdges47
+        PanelFilters.CustomizableEdges = CustomizableEdges9
         PanelFilters.FillColor = Color.White
         PanelFilters.Location = New Point(210, 146)
         PanelFilters.Name = "PanelFilters"
         PanelFilters.Padding = New Padding(18)
-        PanelFilters.ShadowDecoration.CustomizableEdges = CustomizableEdges48
+        PanelFilters.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         PanelFilters.Size = New Size(1060, 108)
         PanelFilters.TabIndex = 2
         ' 
         ' LblFilterSubtitle
         ' 
         LblFilterSubtitle.BackColor = Color.Transparent
-        LblFilterSubtitle.Font = New Font("Segoe UI", 9.0F)
+        LblFilterSubtitle.Font = New Font("Segoe UI", 9F)
         LblFilterSubtitle.ForeColor = Color.Silver
         LblFilterSubtitle.Location = New Point(24, 56)
         LblFilterSubtitle.Name = "LblFilterSubtitle"
@@ -194,7 +194,7 @@ Partial Class pk_daftar_pegawai
         ' LblFilterTitle
         ' 
         LblFilterTitle.BackColor = Color.Transparent
-        LblFilterTitle.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        LblFilterTitle.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblFilterTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblFilterTitle.Location = New Point(24, 24)
         LblFilterTitle.Name = "LblFilterTitle"
@@ -207,18 +207,18 @@ Partial Class pk_daftar_pegawai
         CmbStatus.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         CmbStatus.BackColor = Color.Transparent
         CmbStatus.BorderRadius = 8
-        CmbStatus.CustomizableEdges = CustomizableEdges43
+        CmbStatus.CustomizableEdges = CustomizableEdges5
         CmbStatus.DrawMode = DrawMode.OwnerDrawFixed
         CmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         CmbStatus.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         CmbStatus.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        CmbStatus.Font = New Font("Segoe UI", 9.0F)
+        CmbStatus.Font = New Font("Segoe UI", 9F)
         CmbStatus.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         CmbStatus.ItemHeight = 30
         CmbStatus.Items.AddRange(New Object() {"Semua Status", "Sudah Lapor", "Belum Lapor"})
         CmbStatus.Location = New Point(863, 42)
         CmbStatus.Name = "CmbStatus"
-        CmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        CmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         CmbStatus.Size = New Size(177, 36)
         CmbStatus.StartIndex = 0
         CmbStatus.TabIndex = 1
@@ -226,21 +226,21 @@ Partial Class pk_daftar_pegawai
         ' TxtSearch
         ' 
         TxtSearch.BorderRadius = 8
-        TxtSearch.CustomizableEdges = CustomizableEdges45
+        TxtSearch.CustomizableEdges = CustomizableEdges7
         TxtSearch.DefaultText = ""
         TxtSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         TxtSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         TxtSearch.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         TxtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         TxtSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        TxtSearch.Font = New Font("Segoe UI", 9.0F)
+        TxtSearch.Font = New Font("Segoe UI", 9F)
         TxtSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         TxtSearch.Location = New Point(470, 42)
         TxtSearch.Margin = New Padding(3, 4, 3, 4)
         TxtSearch.Name = "TxtSearch"
         TxtSearch.PlaceholderText = "Cari nama atau NPWP..."
         TxtSearch.SelectedText = ""
-        TxtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges46
+        TxtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         TxtSearch.Size = New Size(290, 36)
         TxtSearch.TabIndex = 0
         ' 
@@ -269,30 +269,30 @@ Partial Class pk_daftar_pegawai
         CardEmployee1.Controls.Add(LblEmployee1Npwp)
         CardEmployee1.Controls.Add(LblEmployee1Name)
         CardEmployee1.Controls.Add(PicEmployee1)
-        CardEmployee1.CustomizableEdges = CustomizableEdges54
+        CardEmployee1.CustomizableEdges = CustomizableEdges16
         CardEmployee1.FillColor = Color.White
         CardEmployee1.Location = New Point(12, 12)
         CardEmployee1.Margin = New Padding(4)
         CardEmployee1.Name = "CardEmployee1"
         CardEmployee1.Padding = New Padding(16)
-        CardEmployee1.ShadowDecoration.CustomizableEdges = CustomizableEdges55
+        CardEmployee1.ShadowDecoration.CustomizableEdges = CustomizableEdges17
         CardEmployee1.Size = New Size(450, 140)
         CardEmployee1.TabIndex = 0
         ' 
         ' Guna2Button1
         ' 
         Guna2Button1.BorderRadius = 12
-        Guna2Button1.CustomizableEdges = CustomizableEdges49
+        Guna2Button1.CustomizableEdges = CustomizableEdges11
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button1.FillColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        Guna2Button1.Font = New Font("Segoe UI", 7.0F)
+        Guna2Button1.Font = New Font("Segoe UI", 7F)
         Guna2Button1.ForeColor = Color.FromArgb(CByte(16), CByte(185), CByte(129))
         Guna2Button1.Location = New Point(331, 18)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges50
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Button1.Size = New Size(101, 27)
         Guna2Button1.TabIndex = 9
         Guna2Button1.Text = "Sudah Lapor"
@@ -301,13 +301,13 @@ Partial Class pk_daftar_pegawai
         ' 
         BtnCardEmployee1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         BtnCardEmployee1.BorderRadius = 6
-        BtnCardEmployee1.CustomizableEdges = CustomizableEdges51
+        BtnCardEmployee1.CustomizableEdges = CustomizableEdges13
         BtnCardEmployee1.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         BtnCardEmployee1.Font = New Font("Segoe UI Semibold", 8.5F, FontStyle.Bold)
         BtnCardEmployee1.ForeColor = Color.White
         BtnCardEmployee1.Location = New Point(312, 90)
         BtnCardEmployee1.Name = "BtnCardEmployee1"
-        BtnCardEmployee1.ShadowDecoration.CustomizableEdges = CustomizableEdges52
+        BtnCardEmployee1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         BtnCardEmployee1.Size = New Size(120, 32)
         BtnCardEmployee1.TabIndex = 5
         BtnCardEmployee1.Text = "Lihat Profil"
@@ -315,7 +315,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee1Role
         ' 
         LblEmployee1Role.BackColor = Color.Transparent
-        LblEmployee1Role.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee1Role.Font = New Font("Segoe UI", 9F)
         LblEmployee1Role.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblEmployee1Role.Location = New Point(104, 96)
         LblEmployee1Role.Name = "LblEmployee1Role"
@@ -326,7 +326,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee1Npwp
         ' 
         LblEmployee1Npwp.BackColor = Color.Transparent
-        LblEmployee1Npwp.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee1Npwp.Font = New Font("Segoe UI", 9F)
         LblEmployee1Npwp.ForeColor = Color.FromArgb(CByte(71), CByte(79), CByte(99))
         LblEmployee1Npwp.Location = New Point(104, 64)
         LblEmployee1Npwp.Name = "LblEmployee1Npwp"
@@ -337,7 +337,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee1Name
         ' 
         LblEmployee1Name.BackColor = Color.Transparent
-        LblEmployee1Name.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        LblEmployee1Name.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblEmployee1Name.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblEmployee1Name.Location = New Point(104, 32)
         LblEmployee1Name.Name = "LblEmployee1Name"
@@ -351,7 +351,7 @@ Partial Class pk_daftar_pegawai
         PicEmployee1.ImageRotate = 0F
         PicEmployee1.Location = New Point(16, 32)
         PicEmployee1.Name = "PicEmployee1"
-        PicEmployee1.ShadowDecoration.CustomizableEdges = CustomizableEdges53
+        PicEmployee1.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         PicEmployee1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         PicEmployee1.Size = New Size(72, 72)
         PicEmployee1.TabIndex = 0
@@ -368,30 +368,30 @@ Partial Class pk_daftar_pegawai
         CardEmployee2.Controls.Add(LblEmployee2Npwp)
         CardEmployee2.Controls.Add(LblEmployee2Name)
         CardEmployee2.Controls.Add(PicEmployee2)
-        CardEmployee2.CustomizableEdges = CustomizableEdges61
+        CardEmployee2.CustomizableEdges = CustomizableEdges23
         CardEmployee2.FillColor = Color.White
         CardEmployee2.Location = New Point(470, 12)
         CardEmployee2.Margin = New Padding(4)
         CardEmployee2.Name = "CardEmployee2"
         CardEmployee2.Padding = New Padding(16)
-        CardEmployee2.ShadowDecoration.CustomizableEdges = CustomizableEdges62
+        CardEmployee2.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         CardEmployee2.Size = New Size(450, 140)
         CardEmployee2.TabIndex = 1
         ' 
         ' Guna2Button2
         ' 
         Guna2Button2.BorderRadius = 12
-        Guna2Button2.CustomizableEdges = CustomizableEdges56
+        Guna2Button2.CustomizableEdges = CustomizableEdges18
         Guna2Button2.DisabledState.BorderColor = Color.DarkGray
         Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button2.FillColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
-        Guna2Button2.Font = New Font("Segoe UI", 7.0F)
+        Guna2Button2.Font = New Font("Segoe UI", 7F)
         Guna2Button2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Guna2Button2.Location = New Point(331, 19)
         Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges57
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges19
         Guna2Button2.Size = New Size(101, 27)
         Guna2Button2.TabIndex = 10
         Guna2Button2.Text = "Belum Lapor"
@@ -400,13 +400,13 @@ Partial Class pk_daftar_pegawai
         ' 
         BtnCardEmployee2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         BtnCardEmployee2.BorderRadius = 6
-        BtnCardEmployee2.CustomizableEdges = CustomizableEdges58
+        BtnCardEmployee2.CustomizableEdges = CustomizableEdges20
         BtnCardEmployee2.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         BtnCardEmployee2.Font = New Font("Segoe UI Semibold", 8.5F, FontStyle.Bold)
         BtnCardEmployee2.ForeColor = Color.White
         BtnCardEmployee2.Location = New Point(312, 90)
         BtnCardEmployee2.Name = "BtnCardEmployee2"
-        BtnCardEmployee2.ShadowDecoration.CustomizableEdges = CustomizableEdges59
+        BtnCardEmployee2.ShadowDecoration.CustomizableEdges = CustomizableEdges21
         BtnCardEmployee2.Size = New Size(120, 32)
         BtnCardEmployee2.TabIndex = 5
         BtnCardEmployee2.Text = "Lihat Profil"
@@ -414,7 +414,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee2Role
         ' 
         LblEmployee2Role.BackColor = Color.Transparent
-        LblEmployee2Role.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee2Role.Font = New Font("Segoe UI", 9F)
         LblEmployee2Role.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblEmployee2Role.Location = New Point(104, 96)
         LblEmployee2Role.Name = "LblEmployee2Role"
@@ -425,7 +425,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee2Npwp
         ' 
         LblEmployee2Npwp.BackColor = Color.Transparent
-        LblEmployee2Npwp.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee2Npwp.Font = New Font("Segoe UI", 9F)
         LblEmployee2Npwp.ForeColor = Color.FromArgb(CByte(71), CByte(79), CByte(99))
         LblEmployee2Npwp.Location = New Point(104, 64)
         LblEmployee2Npwp.Name = "LblEmployee2Npwp"
@@ -436,7 +436,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee2Name
         ' 
         LblEmployee2Name.BackColor = Color.Transparent
-        LblEmployee2Name.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        LblEmployee2Name.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblEmployee2Name.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblEmployee2Name.Location = New Point(104, 32)
         LblEmployee2Name.Name = "LblEmployee2Name"
@@ -450,7 +450,7 @@ Partial Class pk_daftar_pegawai
         PicEmployee2.ImageRotate = 0F
         PicEmployee2.Location = New Point(16, 32)
         PicEmployee2.Name = "PicEmployee2"
-        PicEmployee2.ShadowDecoration.CustomizableEdges = CustomizableEdges60
+        PicEmployee2.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         PicEmployee2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         PicEmployee2.Size = New Size(72, 72)
         PicEmployee2.TabIndex = 0
@@ -467,30 +467,30 @@ Partial Class pk_daftar_pegawai
         CardEmployee3.Controls.Add(LblEmployee3Npwp)
         CardEmployee3.Controls.Add(LblEmployee3Name)
         CardEmployee3.Controls.Add(PicEmployee3)
-        CardEmployee3.CustomizableEdges = CustomizableEdges68
+        CardEmployee3.CustomizableEdges = CustomizableEdges30
         CardEmployee3.FillColor = Color.White
         CardEmployee3.Location = New Point(12, 160)
         CardEmployee3.Margin = New Padding(4)
         CardEmployee3.Name = "CardEmployee3"
         CardEmployee3.Padding = New Padding(16)
-        CardEmployee3.ShadowDecoration.CustomizableEdges = CustomizableEdges69
+        CardEmployee3.ShadowDecoration.CustomizableEdges = CustomizableEdges31
         CardEmployee3.Size = New Size(450, 140)
         CardEmployee3.TabIndex = 2
         ' 
         ' Guna2Button3
         ' 
         Guna2Button3.BorderRadius = 12
-        Guna2Button3.CustomizableEdges = CustomizableEdges63
+        Guna2Button3.CustomizableEdges = CustomizableEdges25
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button3.FillColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        Guna2Button3.Font = New Font("Segoe UI", 7.0F)
+        Guna2Button3.Font = New Font("Segoe UI", 7F)
         Guna2Button3.ForeColor = Color.FromArgb(CByte(16), CByte(185), CByte(129))
         Guna2Button3.Location = New Point(330, 24)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges64
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2Button3.Size = New Size(101, 27)
         Guna2Button3.TabIndex = 10
         Guna2Button3.Text = "Sudah Lapor"
@@ -499,13 +499,13 @@ Partial Class pk_daftar_pegawai
         ' 
         BtnCardEmployee3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         BtnCardEmployee3.BorderRadius = 6
-        BtnCardEmployee3.CustomizableEdges = CustomizableEdges65
+        BtnCardEmployee3.CustomizableEdges = CustomizableEdges27
         BtnCardEmployee3.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         BtnCardEmployee3.Font = New Font("Segoe UI Semibold", 8.5F, FontStyle.Bold)
         BtnCardEmployee3.ForeColor = Color.White
         BtnCardEmployee3.Location = New Point(312, 90)
         BtnCardEmployee3.Name = "BtnCardEmployee3"
-        BtnCardEmployee3.ShadowDecoration.CustomizableEdges = CustomizableEdges66
+        BtnCardEmployee3.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         BtnCardEmployee3.Size = New Size(120, 32)
         BtnCardEmployee3.TabIndex = 5
         BtnCardEmployee3.Text = "Lihat Profil"
@@ -513,7 +513,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee3Role
         ' 
         LblEmployee3Role.BackColor = Color.Transparent
-        LblEmployee3Role.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee3Role.Font = New Font("Segoe UI", 9F)
         LblEmployee3Role.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblEmployee3Role.Location = New Point(104, 96)
         LblEmployee3Role.Name = "LblEmployee3Role"
@@ -524,7 +524,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee3Npwp
         ' 
         LblEmployee3Npwp.BackColor = Color.Transparent
-        LblEmployee3Npwp.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee3Npwp.Font = New Font("Segoe UI", 9F)
         LblEmployee3Npwp.ForeColor = Color.FromArgb(CByte(71), CByte(79), CByte(99))
         LblEmployee3Npwp.Location = New Point(104, 64)
         LblEmployee3Npwp.Name = "LblEmployee3Npwp"
@@ -535,7 +535,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee3Name
         ' 
         LblEmployee3Name.BackColor = Color.Transparent
-        LblEmployee3Name.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        LblEmployee3Name.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblEmployee3Name.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblEmployee3Name.Location = New Point(104, 32)
         LblEmployee3Name.Name = "LblEmployee3Name"
@@ -549,7 +549,7 @@ Partial Class pk_daftar_pegawai
         PicEmployee3.ImageRotate = 0F
         PicEmployee3.Location = New Point(16, 32)
         PicEmployee3.Name = "PicEmployee3"
-        PicEmployee3.ShadowDecoration.CustomizableEdges = CustomizableEdges67
+        PicEmployee3.ShadowDecoration.CustomizableEdges = CustomizableEdges29
         PicEmployee3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         PicEmployee3.Size = New Size(72, 72)
         PicEmployee3.TabIndex = 0
@@ -566,30 +566,30 @@ Partial Class pk_daftar_pegawai
         CardEmployee4.Controls.Add(LblEmployee4Npwp)
         CardEmployee4.Controls.Add(LblEmployee4Name)
         CardEmployee4.Controls.Add(PicEmployee4)
-        CardEmployee4.CustomizableEdges = CustomizableEdges75
+        CardEmployee4.CustomizableEdges = CustomizableEdges37
         CardEmployee4.FillColor = Color.White
         CardEmployee4.Location = New Point(470, 160)
         CardEmployee4.Margin = New Padding(4)
         CardEmployee4.Name = "CardEmployee4"
         CardEmployee4.Padding = New Padding(16)
-        CardEmployee4.ShadowDecoration.CustomizableEdges = CustomizableEdges76
+        CardEmployee4.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         CardEmployee4.Size = New Size(450, 140)
         CardEmployee4.TabIndex = 3
         ' 
         ' Guna2Button4
         ' 
         Guna2Button4.BorderRadius = 12
-        Guna2Button4.CustomizableEdges = CustomizableEdges70
+        Guna2Button4.CustomizableEdges = CustomizableEdges32
         Guna2Button4.DisabledState.BorderColor = Color.DarkGray
         Guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button4.FillColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        Guna2Button4.Font = New Font("Segoe UI", 7.0F)
+        Guna2Button4.Font = New Font("Segoe UI", 7F)
         Guna2Button4.ForeColor = Color.FromArgb(CByte(16), CByte(185), CByte(129))
         Guna2Button4.Location = New Point(331, 24)
         Guna2Button4.Name = "Guna2Button4"
-        Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges71
+        Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges33
         Guna2Button4.Size = New Size(101, 27)
         Guna2Button4.TabIndex = 11
         Guna2Button4.Text = "Sudah Lapor"
@@ -598,13 +598,13 @@ Partial Class pk_daftar_pegawai
         ' 
         BtnCardEmployee4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         BtnCardEmployee4.BorderRadius = 6
-        BtnCardEmployee4.CustomizableEdges = CustomizableEdges72
+        BtnCardEmployee4.CustomizableEdges = CustomizableEdges34
         BtnCardEmployee4.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         BtnCardEmployee4.Font = New Font("Segoe UI Semibold", 8.5F, FontStyle.Bold)
         BtnCardEmployee4.ForeColor = Color.White
         BtnCardEmployee4.Location = New Point(312, 90)
         BtnCardEmployee4.Name = "BtnCardEmployee4"
-        BtnCardEmployee4.ShadowDecoration.CustomizableEdges = CustomizableEdges73
+        BtnCardEmployee4.ShadowDecoration.CustomizableEdges = CustomizableEdges35
         BtnCardEmployee4.Size = New Size(120, 32)
         BtnCardEmployee4.TabIndex = 5
         BtnCardEmployee4.Text = "Lihat Profil"
@@ -612,7 +612,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee4Role
         ' 
         LblEmployee4Role.BackColor = Color.Transparent
-        LblEmployee4Role.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee4Role.Font = New Font("Segoe UI", 9F)
         LblEmployee4Role.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblEmployee4Role.Location = New Point(104, 96)
         LblEmployee4Role.Name = "LblEmployee4Role"
@@ -623,7 +623,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee4Npwp
         ' 
         LblEmployee4Npwp.BackColor = Color.Transparent
-        LblEmployee4Npwp.Font = New Font("Segoe UI", 9.0F)
+        LblEmployee4Npwp.Font = New Font("Segoe UI", 9F)
         LblEmployee4Npwp.ForeColor = Color.FromArgb(CByte(71), CByte(79), CByte(99))
         LblEmployee4Npwp.Location = New Point(104, 64)
         LblEmployee4Npwp.Name = "LblEmployee4Npwp"
@@ -634,7 +634,7 @@ Partial Class pk_daftar_pegawai
         ' LblEmployee4Name
         ' 
         LblEmployee4Name.BackColor = Color.Transparent
-        LblEmployee4Name.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        LblEmployee4Name.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblEmployee4Name.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblEmployee4Name.Location = New Point(104, 32)
         LblEmployee4Name.Name = "LblEmployee4Name"
@@ -648,7 +648,7 @@ Partial Class pk_daftar_pegawai
         PicEmployee4.ImageRotate = 0F
         PicEmployee4.Location = New Point(16, 32)
         PicEmployee4.Name = "PicEmployee4"
-        PicEmployee4.ShadowDecoration.CustomizableEdges = CustomizableEdges74
+        PicEmployee4.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         PicEmployee4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         PicEmployee4.Size = New Size(72, 72)
         PicEmployee4.TabIndex = 0

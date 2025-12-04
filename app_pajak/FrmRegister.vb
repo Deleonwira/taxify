@@ -4,17 +4,28 @@ Public Class FrmRegister
 
     Private Sub FrmRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Clear all fields on load
-        txtNama.Clear()
+        txtNPWP.Clear()
+        txtNamaLengkap.Clear()
         txtEmail.Clear()
+        txtNIK.Clear()
+        txtNoTelepon.Clear()
+        txtAlamat.Clear()
         txtPassword.Clear()
         txtConfirmPassword.Clear()
+        cmbTipeUser.SelectedIndex = 0 ' Default to Wajib Pajak
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         ' 1. Validasi Input
-        If String.IsNullOrWhiteSpace(txtNama.Text) Then
+        If String.IsNullOrWhiteSpace(txtNPWP.Text) Then
             MsgBox("NPWP harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
-            txtNama.Focus()
+            txtNPWP.Focus()
+            Return
+        End If
+
+        If String.IsNullOrWhiteSpace(txtNamaLengkap.Text) Then
+            MsgBox("Nama Lengkap harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
+            txtNamaLengkap.Focus()
             Return
         End If
 
@@ -37,19 +48,40 @@ Public Class FrmRegister
         End If
 
         ' 2. Clean NPWP
-        Dim npwpClean As String = ModuleSecurity.CleanNPWP(txtNama.Text)
+        Dim npwpClean As String = ModuleSecurity.CleanNPWP(txtNPWP.Text)
         
         ' Validasi format NPWP (15 digit)
         If npwpClean.Length <> 15 Then
             MsgBox("NPWP harus 15 digit!", MsgBoxStyle.Exclamation, "Validasi")
-            txtNama.Focus()
+            txtNPWP.Focus()
             Return
+        End If
+
+        ' Validasi NIK (optional, tapi jika diisi harus 16 digit)
+        If Not String.IsNullOrWhiteSpace(txtNIK.Text) Then
+            Dim nikClean As String = txtNIK.Text.Trim().Replace("-", "").Replace(".", "").Replace(" ", "")
+            If nikClean.Length <> 16 OrElse Not IsNumeric(nikClean) Then
+                MsgBox("NIK harus 16 digit angka!", MsgBoxStyle.Exclamation, "Validasi")
+                txtNIK.Focus()
+                Return
+            End If
         End If
 
         ' 3. Hash Password
         Dim passwordHash As String = ModuleSecurity.HashPassword(txtPassword.Text)
 
-        ' 4. Insert ke Database
+        ' 4. Map tipe user from ComboBox
+        Dim tipeUser As String = "wajib_pajak" ' default
+        Select Case cmbTipeUser.SelectedIndex
+            Case 0 ' Wajib Pajak
+                tipeUser = "wajib_pajak"
+            Case 1 ' Pemberi Kerja
+                tipeUser = "pemberi_kerja"
+            Case 2 ' Admin
+                tipeUser = "admin"
+        End Select
+
+        ' 5. Insert ke Database
         Try
             modulkoneksi.BukaKoneksi()
 
@@ -64,14 +96,35 @@ Public Class FrmRegister
                 Return
             End If
 
-            ' Insert new user (default as wajib_pajak, admin can change later)
-            Dim sql As String = "INSERT INTO users (npwp, password_hash, nama, email, tipe_user, status_aktif) 
-                                VALUES (@npwp, @pass, @nama, @email, 'wajib_pajak', 'active')"
+            ' Insert new user with all fields
+            Dim sql As String = "INSERT INTO users (npwp, password_hash, nama, email, tipe_user, no_telepon, alamat, nik) 
+                                VALUES (@npwp, @pass, @nama, @email, @tipe, @telepon, @alamat, @nik)"
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
             cmd.Parameters.AddWithValue("@npwp", npwpClean)
             cmd.Parameters.AddWithValue("@pass", passwordHash)
-            cmd.Parameters.AddWithValue("@nama", "User " & npwpClean) ' Temporary name, will update in profile
-            cmd.Parameters.AddWithValue("@email", txtEmail.Text)
+            cmd.Parameters.AddWithValue("@nama", txtNamaLengkap.Text.Trim())
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim())
+            cmd.Parameters.AddWithValue("@tipe", tipeUser)
+            
+            ' Handle optional fields
+            If String.IsNullOrWhiteSpace(txtNoTelepon.Text) Then
+                cmd.Parameters.AddWithValue("@telepon", DBNull.Value)
+            Else
+                cmd.Parameters.AddWithValue("@telepon", txtNoTelepon.Text.Trim())
+            End If
+
+            If String.IsNullOrWhiteSpace(txtAlamat.Text) Then
+                cmd.Parameters.AddWithValue("@alamat", DBNull.Value)
+            Else
+                cmd.Parameters.AddWithValue("@alamat", txtAlamat.Text.Trim())
+            End If
+
+            If String.IsNullOrWhiteSpace(txtNIK.Text) Then
+                cmd.Parameters.AddWithValue("@nik", DBNull.Value)
+            Else
+                Dim nikClean As String = txtNIK.Text.Trim().Replace("-", "").Replace(".", "").Replace(" ", "")
+                cmd.Parameters.AddWithValue("@nik", nikClean)
+            End If
 
             cmd.ExecuteNonQuery()
 

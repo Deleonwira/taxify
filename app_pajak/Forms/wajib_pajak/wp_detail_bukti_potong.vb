@@ -38,7 +38,7 @@ Public Class wp_detail_bukti_potong
                 ' ====== DATA PERUSAHAAN ======
                 ' Update Purple Header Panel with company name
                 Guna2HtmlLabel16.Text = rd("nama_perusahaan").ToString()
-                
+
                 LblNoBuktiValue.Text = rd("nomor_bukti").ToString()
                 LblTanggalBuktiValue.Text = Convert.ToDateTime(rd("created_at")).ToString("dd MMMM yyyy")
                 LblNamaPerusahaanValue.Text = rd("nama_perusahaan").ToString()
@@ -83,5 +83,7 @@ Public Class wp_detail_bukti_potong
 
     End Sub
 
+    Private Sub BunifuPanel1_Click(sender As Object, e As EventArgs) Handles BunifuPanel1.Click
 
+    End Sub
 End Class

@@ -2,7 +2,7 @@
 
 Public Class FrmLogin
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         ' 1. Validasi Input
         If String.IsNullOrWhiteSpace(Guna2TextBox1.Text) Or String.IsNullOrWhiteSpace(Guna2TextBox2.Text) Then
             MsgBox("NPWP dan Password harus diisi!", MsgBoxStyle.Exclamation, "Peringatan")
@@ -119,7 +119,7 @@ Public Class FrmLogin
 
 
     ' Tombol Register
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+    Private Sub btnGoRegister_Click(sender As Object, e As EventArgs) Handles btnGoRegister.Click
         Dim f As New FrmRegister()
         f.Show()
         Me.Hide()

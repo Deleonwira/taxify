@@ -46,12 +46,11 @@ Partial Class wp_riwayat_lapor_pajak
         PanelMain = New Guna.UI2.WinForms.Guna2Panel()
         PanelTable = New Guna.UI2.WinForms.Guna2Panel()
         GridRiwayat = New Guna.UI2.WinForms.Guna2DataGridView()
-        colPeriode = New DataGridViewTextBoxColumn()
-        colJenis = New DataGridViewTextBoxColumn()
-        colNomor = New DataGridViewTextBoxColumn()
-        colNilai = New DataGridViewTextBoxColumn()
+        colTahun = New DataGridViewTextBoxColumn()
+        colPenghasilanBruto = New DataGridViewTextBoxColumn()
+        colPenghasilanNeto = New DataGridViewTextBoxColumn()
+        colPph21 = New DataGridViewTextBoxColumn()
         colStatus = New DataGridViewTextBoxColumn()
-        colDownload = New DataGridViewButtonColumn()
         BtnDownloadSemua = New Guna.UI2.WinForms.Guna2Button()
         LblTableSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblTableTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -133,7 +132,7 @@ Partial Class wp_riwayat_lapor_pajak
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         GridRiwayat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         GridRiwayat.ColumnHeadersHeight = 36
-        GridRiwayat.Columns.AddRange(New DataGridViewColumn() {colPeriode, colJenis, colNomor, colNilai, colStatus, colDownload})
+        GridRiwayat.Columns.AddRange(New DataGridViewColumn() {colTahun, colPenghasilanBruto, colPenghasilanNeto, colPph21, colStatus})
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.White
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.0F)
@@ -174,33 +173,37 @@ Partial Class wp_riwayat_lapor_pajak
         GridRiwayat.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         GridRiwayat.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
-        ' colPeriode
+        ' colTahun
         ' 
-        colPeriode.HeaderText = "Periode"
-        colPeriode.MinimumWidth = 6
-        colPeriode.Name = "colPeriode"
-        colPeriode.ReadOnly = True
+        colTahun.HeaderText = "Tahun"
+        colTahun.MinimumWidth = 6
+        colTahun.Name = "colTahun"
+        colTahun.ReadOnly = True
+        colTahun.Width = 120
         ' 
-        ' colJenis
+        ' colPenghasilanBruto
         ' 
-        colJenis.HeaderText = "Jenis Laporan"
-        colJenis.MinimumWidth = 6
-        colJenis.Name = "colJenis"
-        colJenis.ReadOnly = True
+        colPenghasilanBruto.HeaderText = "Penghasilan Bruto"
+        colPenghasilanBruto.MinimumWidth = 6
+        colPenghasilanBruto.Name = "colPenghasilanBruto"
+        colPenghasilanBruto.ReadOnly = True
+        colPenghasilanBruto.Width = 200
         ' 
-        ' colNomor
+        ' colPenghasilanNeto
         ' 
-        colNomor.HeaderText = "Nomor Bukti"
-        colNomor.MinimumWidth = 6
-        colNomor.Name = "colNomor"
-        colNomor.ReadOnly = True
+        colPenghasilanNeto.HeaderText = "Penghasilan Neto"
+        colPenghasilanNeto.MinimumWidth = 6
+        colPenghasilanNeto.Name = "colPenghasilanNeto"
+        colPenghasilanNeto.ReadOnly = True
+        colPenghasilanNeto.Width = 200
         ' 
-        ' colNilai
+        ' colPph21
         ' 
-        colNilai.HeaderText = "Nilai Setor"
-        colNilai.MinimumWidth = 6
-        colNilai.Name = "colNilai"
-        colNilai.ReadOnly = True
+        colPph21.HeaderText = "Pph21"
+        colPph21.MinimumWidth = 6
+        colPph21.Name = "colPph21"
+        colPph21.ReadOnly = True
+        colPph21.Width = 150
         ' 
         ' colStatus
         ' 
@@ -210,16 +213,7 @@ Partial Class wp_riwayat_lapor_pajak
         colStatus.MinimumWidth = 6
         colStatus.Name = "colStatus"
         colStatus.ReadOnly = True
-        ' 
-        ' colDownload
-        ' 
-        colDownload.FillWeight = 60.0F
-        colDownload.HeaderText = ""
-        colDownload.MinimumWidth = 6
-        colDownload.Name = "colDownload"
-        colDownload.ReadOnly = True
-        colDownload.Text = "Download"
-        colDownload.UseColumnTextForButtonValue = True
+        colStatus.Width = 150
         ' 
         ' BtnDownloadSemua
         ' 
@@ -472,10 +466,9 @@ Partial Class wp_riwayat_lapor_pajak
     Friend WithEvents BtnDownloadSemua As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LblTableSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblTableTitle As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents colPeriode As DataGridViewTextBoxColumn
-    Friend WithEvents colJenis As DataGridViewTextBoxColumn
-    Friend WithEvents colNomor As DataGridViewTextBoxColumn
-    Friend WithEvents colNilai As DataGridViewTextBoxColumn
+    Friend WithEvents colTahun As DataGridViewTextBoxColumn
+    Friend WithEvents colPenghasilanBruto As DataGridViewTextBoxColumn
+    Friend WithEvents colPenghasilanNeto As DataGridViewTextBoxColumn
+    Friend WithEvents colPph21 As DataGridViewTextBoxColumn
     Friend WithEvents colStatus As DataGridViewTextBoxColumn
-    Friend WithEvents colDownload As DataGridViewButtonColumn
 End Class

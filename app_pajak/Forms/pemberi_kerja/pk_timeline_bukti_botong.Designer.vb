@@ -24,25 +24,25 @@ Partial Class pk_timeline_bukti_botong
     Private Sub InitializeComponent()
         Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -65,7 +65,6 @@ Partial Class pk_timeline_bukti_botong
         PanelMain = New Guna.UI2.WinForms.Guna2Panel()
         PanelDetail = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        BtnEditLapor = New Guna.UI2.WinForms.Guna2Button()
         BtnInputLapor = New Guna.UI2.WinForms.Guna2Button()
         LblTanggalInputValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblTanggalInput = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -166,22 +165,21 @@ Partial Class pk_timeline_bukti_botong
         PanelDetail.BorderRadius = 12
         PanelDetail.BorderThickness = 1
         PanelDetail.Controls.Add(Guna2Button1)
-        PanelDetail.Controls.Add(BtnEditLapor)
         PanelDetail.Controls.Add(BtnInputLapor)
         PanelDetail.Controls.Add(LblTanggalInputValue)
         PanelDetail.Controls.Add(LblTanggalInput)
         PanelDetail.Controls.Add(LblSelectedMonth)
         PanelDetail.Controls.Add(LblDetailTitle)
-        PanelDetail.CustomizableEdges = CustomizableEdges7
+        PanelDetail.CustomizableEdges = CustomizableEdges5
         PanelDetail.FillColor = Color.White
         PanelDetail.Location = New Point(24, 350)
         PanelDetail.Name = "PanelDetail"
         PanelDetail.Padding = New Padding(24)
         PanelDetail.ShadowDecoration.Color = Color.FromArgb(CByte(209), CByte(216), CByte(230))
-        PanelDetail.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        PanelDetail.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         PanelDetail.ShadowDecoration.Depth = 8
         PanelDetail.ShadowDecoration.Enabled = True
-        PanelDetail.Size = New Size(343, 207)
+        PanelDetail.Size = New Size(343, 180)
         PanelDetail.TabIndex = 3
         ' 
         ' Guna2Button1
@@ -193,44 +191,28 @@ Partial Class pk_timeline_bukti_botong
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button1.FillColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        Guna2Button1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
+        Guna2Button1.Font = New Font("Segoe UI Semibold", 7F, FontStyle.Bold)
         Guna2Button1.ForeColor = Color.FromArgb(CByte(0), CByte(219), CByte(101))
         Guna2Button1.Location = New Point(223, 20)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button1.Size = New Size(101, 27)
+        Guna2Button1.Size = New Size(101, 22)
         Guna2Button1.TabIndex = 8
         Guna2Button1.Text = "Sudah Input"
-        ' 
-        ' BtnEditLapor
-        ' 
-        BtnEditLapor.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        BtnEditLapor.BorderRadius = 8
-        BtnEditLapor.BorderThickness = 1
-        BtnEditLapor.CustomizableEdges = CustomizableEdges3
-        BtnEditLapor.FillColor = Color.White
-        BtnEditLapor.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
-        BtnEditLapor.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
-        BtnEditLapor.Location = New Point(178, 141)
-        BtnEditLapor.Name = "BtnEditLapor"
-        BtnEditLapor.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        BtnEditLapor.Size = New Size(146, 40)
-        BtnEditLapor.TabIndex = 7
-        BtnEditLapor.Text = "Edit"
         ' 
         ' BtnInputLapor
         ' 
         BtnInputLapor.BorderRadius = 8
-        BtnInputLapor.CustomizableEdges = CustomizableEdges5
+        BtnInputLapor.CustomizableEdges = CustomizableEdges3
         BtnInputLapor.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         BtnInputLapor.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         BtnInputLapor.ForeColor = Color.White
-        BtnInputLapor.Location = New Point(24, 141)
+        BtnInputLapor.Location = New Point(24, 125)
         BtnInputLapor.Name = "BtnInputLapor"
-        BtnInputLapor.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        BtnInputLapor.Size = New Size(148, 40)
+        BtnInputLapor.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        BtnInputLapor.Size = New Size(148, 28)
         BtnInputLapor.TabIndex = 6
-        BtnInputLapor.Text = "Detail"
+        BtnInputLapor.Text = "Tambah"
         ' 
         ' LblTanggalInputValue
         ' 
@@ -327,12 +309,12 @@ Partial Class pk_timeline_bukti_botong
         MonthCardJan.BorderThickness = 1
         MonthCardJan.Controls.Add(IndicatorJan)
         MonthCardJan.Controls.Add(LblMonthJan)
-        MonthCardJan.CustomizableEdges = CustomizableEdges10
+        MonthCardJan.CustomizableEdges = CustomizableEdges8
         MonthCardJan.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardJan.Location = New Point(4, 8)
         MonthCardJan.Margin = New Padding(4, 0, 4, 0)
         MonthCardJan.Name = "MonthCardJan"
-        MonthCardJan.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        MonthCardJan.ShadowDecoration.CustomizableEdges = CustomizableEdges9
         MonthCardJan.Size = New Size(68, 100)
         MonthCardJan.TabIndex = 0
         ' 
@@ -343,7 +325,7 @@ Partial Class pk_timeline_bukti_botong
         IndicatorJan.ImageRotate = 0F
         IndicatorJan.Location = New Point(20, 48)
         IndicatorJan.Name = "IndicatorJan"
-        IndicatorJan.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        IndicatorJan.ShadowDecoration.CustomizableEdges = CustomizableEdges7
         IndicatorJan.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorJan.Size = New Size(28, 28)
         IndicatorJan.TabIndex = 1
@@ -368,12 +350,12 @@ Partial Class pk_timeline_bukti_botong
         MonthCardFeb.BorderThickness = 1
         MonthCardFeb.Controls.Add(IndicatorFeb)
         MonthCardFeb.Controls.Add(LblMonthFeb)
-        MonthCardFeb.CustomizableEdges = CustomizableEdges13
+        MonthCardFeb.CustomizableEdges = CustomizableEdges11
         MonthCardFeb.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardFeb.Location = New Point(80, 8)
         MonthCardFeb.Margin = New Padding(4, 0, 4, 0)
         MonthCardFeb.Name = "MonthCardFeb"
-        MonthCardFeb.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        MonthCardFeb.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         MonthCardFeb.Size = New Size(68, 100)
         MonthCardFeb.TabIndex = 1
         ' 
@@ -384,7 +366,7 @@ Partial Class pk_timeline_bukti_botong
         IndicatorFeb.ImageRotate = 0F
         IndicatorFeb.Location = New Point(20, 48)
         IndicatorFeb.Name = "IndicatorFeb"
-        IndicatorFeb.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        IndicatorFeb.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         IndicatorFeb.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorFeb.Size = New Size(28, 28)
         IndicatorFeb.TabIndex = 1
@@ -409,12 +391,12 @@ Partial Class pk_timeline_bukti_botong
         MonthCardMar.BorderThickness = 1
         MonthCardMar.Controls.Add(IndicatorMar)
         MonthCardMar.Controls.Add(LblMonthMar)
-        MonthCardMar.CustomizableEdges = CustomizableEdges7
+        MonthCardMar.CustomizableEdges = CustomizableEdges5
         MonthCardMar.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardMar.Location = New Point(156, 8)
         MonthCardMar.Margin = New Padding(4, 0, 4, 0)
         MonthCardMar.Name = "MonthCardMar"
-        MonthCardMar.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        MonthCardMar.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         MonthCardMar.Size = New Size(68, 100)
         MonthCardMar.TabIndex = 2
         ' 
@@ -425,7 +407,7 @@ Partial Class pk_timeline_bukti_botong
         IndicatorMar.ImageRotate = 0F
         IndicatorMar.Location = New Point(20, 48)
         IndicatorMar.Name = "IndicatorMar"
-        IndicatorMar.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        IndicatorMar.ShadowDecoration.CustomizableEdges = CustomizableEdges13
         IndicatorMar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorMar.Size = New Size(28, 28)
         IndicatorMar.TabIndex = 1
@@ -450,12 +432,12 @@ Partial Class pk_timeline_bukti_botong
         MonthCardApr.BorderThickness = 1
         MonthCardApr.Controls.Add(IndicatorApr)
         MonthCardApr.Controls.Add(LblMonthApr)
-        MonthCardApr.CustomizableEdges = CustomizableEdges5
+        MonthCardApr.CustomizableEdges = CustomizableEdges3
         MonthCardApr.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardApr.Location = New Point(232, 8)
         MonthCardApr.Margin = New Padding(4, 0, 4, 0)
         MonthCardApr.Name = "MonthCardApr"
-        MonthCardApr.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        MonthCardApr.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         MonthCardApr.Size = New Size(68, 100)
         MonthCardApr.TabIndex = 3
         ' 
@@ -466,7 +448,7 @@ Partial Class pk_timeline_bukti_botong
         IndicatorApr.ImageRotate = 0F
         IndicatorApr.Location = New Point(20, 48)
         IndicatorApr.Name = "IndicatorApr"
-        IndicatorApr.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        IndicatorApr.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         IndicatorApr.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorApr.Size = New Size(28, 28)
         IndicatorApr.TabIndex = 1
@@ -491,12 +473,12 @@ Partial Class pk_timeline_bukti_botong
         MonthCardMay.BorderThickness = 1
         MonthCardMay.Controls.Add(IndicatorMay)
         MonthCardMay.Controls.Add(LblMonthMay)
-        MonthCardMay.CustomizableEdges = CustomizableEdges3
+        MonthCardMay.CustomizableEdges = CustomizableEdges16
         MonthCardMay.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardMay.Location = New Point(308, 8)
         MonthCardMay.Margin = New Padding(4, 0, 4, 0)
         MonthCardMay.Name = "MonthCardMay"
-        MonthCardMay.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        MonthCardMay.ShadowDecoration.CustomizableEdges = CustomizableEdges17
         MonthCardMay.Size = New Size(68, 100)
         MonthCardMay.TabIndex = 4
         ' 
@@ -507,7 +489,7 @@ Partial Class pk_timeline_bukti_botong
         IndicatorMay.ImageRotate = 0F
         IndicatorMay.Location = New Point(20, 48)
         IndicatorMay.Name = "IndicatorMay"
-        IndicatorMay.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        IndicatorMay.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         IndicatorMay.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         IndicatorMay.Size = New Size(28, 28)
         IndicatorMay.TabIndex = 1
@@ -737,12 +719,12 @@ Partial Class pk_timeline_bukti_botong
         MonthCardNov.BorderThickness = 1
         MonthCardNov.Controls.Add(IndicatorNov)
         MonthCardNov.Controls.Add(LblMonthNov)
-        MonthCardNov.CustomizableEdges = CustomizableEdges10
+        MonthCardNov.CustomizableEdges = CustomizableEdges8
         MonthCardNov.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardNov.Location = New Point(764, 8)
         MonthCardNov.Margin = New Padding(4, 0, 4, 0)
         MonthCardNov.Name = "MonthCardNov"
-        MonthCardNov.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        MonthCardNov.ShadowDecoration.CustomizableEdges = CustomizableEdges9
         MonthCardNov.Size = New Size(68, 100)
         MonthCardNov.TabIndex = 10
         ' 
@@ -778,12 +760,12 @@ Partial Class pk_timeline_bukti_botong
         MonthCardDec.BorderThickness = 1
         MonthCardDec.Controls.Add(IndicatorDec)
         MonthCardDec.Controls.Add(LblMonthDec)
-        MonthCardDec.CustomizableEdges = CustomizableEdges13
+        MonthCardDec.CustomizableEdges = CustomizableEdges11
         MonthCardDec.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
         MonthCardDec.Location = New Point(840, 8)
         MonthCardDec.Margin = New Padding(4, 0, 4, 0)
         MonthCardDec.Name = "MonthCardDec"
-        MonthCardDec.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        MonthCardDec.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         MonthCardDec.Size = New Size(68, 100)
         MonthCardDec.TabIndex = 11
         ' 
@@ -981,7 +963,6 @@ Partial Class pk_timeline_bukti_botong
     Friend WithEvents LblTanggalInput As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblTanggalInputValue As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnInputLapor As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnEditLapor As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Pk_navbar11 As pk_navbar1
 End Class
