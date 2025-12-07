@@ -4,6 +4,9 @@
     <Compile Update="Forms\admin\admin_dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\admin\admin_validasi_registrasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\admin\FrmManagementPerusahaan.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +62,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="user_controls\pemberi_kerja\pk_navbar1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="user_controls\wajib_pajak\chatbot_control.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="user_controls\wajib_pajak\wp_navbar.vb">

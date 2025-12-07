@@ -7,8 +7,8 @@ Partial Class wp_riwayat_bukti_potong
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -18,36 +18,28 @@ Partial Class wp_riwayat_bukti_potong
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Wp_navbar1 = New wp_navbar()
         PanelMain = New Guna.UI2.WinForms.Guna2Panel()
         PanelTable = New Guna.UI2.WinForms.Guna2Panel()
-        BtnSortAmount = New Guna.UI2.WinForms.Guna2Button()
-        BtnDownloadAll = New Guna.UI2.WinForms.Guna2Button()
+        TxtSearch = New Guna.UI2.WinForms.Guna2TextBox()
         LblTableDesc = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        BtnFilter = New Guna.UI2.WinForms.Guna2Button()
         LblTableTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         GridBukti = New Guna.UI2.WinForms.Guna2DataGridView()
         colPeriode = New DataGridViewTextBoxColumn()
@@ -57,12 +49,6 @@ Partial Class wp_riwayat_bukti_potong
         colJenisPekerjaan = New DataGridViewTextBoxColumn()
         colStatus = New DataGridViewTextBoxColumn()
         colDetail = New DataGridViewButtonColumn()
-        PanelFilters = New Guna.UI2.WinForms.Guna2Panel()
-        TxtSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        CmbBulan = New Guna.UI2.WinForms.Guna2ComboBox()
-        CmbJenis = New Guna.UI2.WinForms.Guna2ComboBox()
-        CmbSort = New Guna.UI2.WinForms.Guna2ComboBox()
-        BtnFilter = New Guna.UI2.WinForms.Guna2Button()
         FlowCompanies = New FlowLayoutPanel()
         CardCompany1 = New Guna.UI2.WinForms.Guna2Panel()
         PicCompany1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
@@ -76,13 +62,16 @@ Partial Class wp_riwayat_bukti_potong
         PicCompany3 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Company3Name = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Company3Stat = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         PanelHeader = New Guna.UI2.WinForms.Guna2Panel()
         LblSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         PanelMain.SuspendLayout()
         PanelTable.SuspendLayout()
         CType(GridBukti, ComponentModel.ISupportInitialize).BeginInit()
-        PanelFilters.SuspendLayout()
         FlowCompanies.SuspendLayout()
         CardCompany1.SuspendLayout()
         CType(PicCompany1, ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +79,8 @@ Partial Class wp_riwayat_bukti_potong
         CType(PicCompany2, ComponentModel.ISupportInitialize).BeginInit()
         CardCompany3.SuspendLayout()
         CType(PicCompany3, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel1.SuspendLayout()
+        CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         PanelHeader.SuspendLayout()
         SuspendLayout()
         ' 
@@ -109,15 +100,14 @@ Partial Class wp_riwayat_bukti_potong
         PanelMain.AutoScroll = True
         PanelMain.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
         PanelMain.Controls.Add(PanelTable)
-        PanelMain.Controls.Add(PanelFilters)
         PanelMain.Controls.Add(FlowCompanies)
         PanelMain.Controls.Add(PanelHeader)
-        PanelMain.CustomizableEdges = CustomizableEdges30
+        PanelMain.CustomizableEdges = CustomizableEdges21
         PanelMain.Dock = DockStyle.Fill
         PanelMain.Location = New Point(190, 0)
         PanelMain.Name = "PanelMain"
         PanelMain.Padding = New Padding(24)
-        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges31
+        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         PanelMain.Size = New Size(1110, 720)
         PanelMain.TabIndex = 1
         ' 
@@ -127,48 +117,35 @@ Partial Class wp_riwayat_bukti_potong
         PanelTable.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
         PanelTable.BorderRadius = 12
         PanelTable.BorderThickness = 1
-        PanelTable.Controls.Add(BtnSortAmount)
-        PanelTable.Controls.Add(BtnDownloadAll)
+        PanelTable.Controls.Add(TxtSearch)
         PanelTable.Controls.Add(LblTableDesc)
+        PanelTable.Controls.Add(BtnFilter)
         PanelTable.Controls.Add(LblTableTitle)
         PanelTable.Controls.Add(GridBukti)
         PanelTable.CustomizableEdges = CustomizableEdges5
         PanelTable.FillColor = Color.White
-        PanelTable.Location = New Point(24, 340)
+        PanelTable.Location = New Point(24, 261)
         PanelTable.Name = "PanelTable"
         PanelTable.Padding = New Padding(24)
         PanelTable.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         PanelTable.Size = New Size(1062, 356)
         PanelTable.TabIndex = 4
         ' 
-        ' BtnSortAmount
+        ' TxtSearch
         ' 
-        BtnSortAmount.BorderRadius = 12
-        BtnSortAmount.CustomizableEdges = CustomizableEdges1
-        BtnSortAmount.FillColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
-        BtnSortAmount.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
-        BtnSortAmount.ForeColor = Color.FromArgb(CByte(60), CByte(76), CByte(97))
-        BtnSortAmount.Location = New Point(808, 32)
-        BtnSortAmount.Name = "BtnSortAmount"
-        BtnSortAmount.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        BtnSortAmount.Size = New Size(120, 30)
-        BtnSortAmount.TabIndex = 4
-        BtnSortAmount.Text = "Sortir Nominal"
-        ' 
-        ' BtnDownloadAll
-        ' 
-        BtnDownloadAll.BorderRadius = 6
-        BtnDownloadAll.CustomizableEdges = CustomizableEdges3
-        BtnDownloadAll.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        BtnDownloadAll.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
-        BtnDownloadAll.ForeColor = Color.White
-        BtnDownloadAll.ImeMode = ImeMode.NoControl
-        BtnDownloadAll.Location = New Point(935, 32)
-        BtnDownloadAll.Name = "BtnDownloadAll"
-        BtnDownloadAll.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        BtnDownloadAll.Size = New Size(107, 30)
-        BtnDownloadAll.TabIndex = 3
-        BtnDownloadAll.Text = "Unduh Semua"
+        TxtSearch.BorderRadius = 8
+        TxtSearch.CustomizableEdges = CustomizableEdges1
+        TxtSearch.DefaultText = ""
+        TxtSearch.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        TxtSearch.Font = New Font("Segoe UI", 9.0F)
+        TxtSearch.Location = New Point(660, 28)
+        TxtSearch.Margin = New Padding(3, 4, 3, 4)
+        TxtSearch.Name = "TxtSearch"
+        TxtSearch.PlaceholderText = "Cari perusahaan / periode"
+        TxtSearch.SelectedText = ""
+        TxtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        TxtSearch.Size = New Size(314, 36)
+        TxtSearch.TabIndex = 0
         ' 
         ' LblTableDesc
         ' 
@@ -180,6 +157,20 @@ Partial Class wp_riwayat_bukti_potong
         LblTableDesc.Size = New Size(302, 17)
         LblTableDesc.TabIndex = 2
         LblTableDesc.Text = "Data dummy untuk membantu pengecekan status bukti."
+        ' 
+        ' BtnFilter
+        ' 
+        BtnFilter.BorderRadius = 8
+        BtnFilter.CustomizableEdges = CustomizableEdges3
+        BtnFilter.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        BtnFilter.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        BtnFilter.ForeColor = Color.White
+        BtnFilter.Location = New Point(980, 27)
+        BtnFilter.Name = "BtnFilter"
+        BtnFilter.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        BtnFilter.Size = New Size(62, 36)
+        BtnFilter.TabIndex = 4
+        BtnFilter.Text = "Cari"
         ' 
         ' LblTableTitle
         ' 
@@ -197,13 +188,13 @@ Partial Class wp_riwayat_bukti_potong
         GridBukti.AllowUserToAddRows = False
         GridBukti.AllowUserToDeleteRows = False
         GridBukti.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(252))
+        DataGridViewCellStyle1.BackColor = Color.White
         GridBukti.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.White
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         DataGridViewCellStyle2.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(234), CByte(244), CByte(255))
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         DataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         GridBukti.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
@@ -212,20 +203,22 @@ Partial Class wp_riwayat_bukti_potong
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.White
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.0F)
-        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
-        DataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(CByte(240), CByte(244), CByte(252))
-        DataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
         GridBukti.DefaultCellStyle = DataGridViewCellStyle4
-        GridBukti.GridColor = Color.FromArgb(CByte(235), CByte(240), CByte(247))
-        GridBukti.Location = New Point(86, 113)
+        GridBukti.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        GridBukti.Location = New Point(24, 113)
         GridBukti.MultiSelect = False
         GridBukti.Name = "GridBukti"
         GridBukti.ReadOnly = True
         GridBukti.RowHeadersVisible = False
         GridBukti.RowHeadersWidth = 51
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter
+        GridBukti.RowsDefaultCellStyle = DataGridViewCellStyle5
         GridBukti.RowTemplate.Height = 36
-        GridBukti.Size = New Size(912, 240)
+        GridBukti.Size = New Size(1018, 240)
         GridBukti.TabIndex = 0
         GridBukti.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         GridBukti.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -233,10 +226,10 @@ Partial Class wp_riwayat_bukti_potong
         GridBukti.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
         GridBukti.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
         GridBukti.ThemeStyle.BackColor = Color.White
-        GridBukti.ThemeStyle.GridColor = Color.FromArgb(CByte(235), CByte(240), CByte(247))
+        GridBukti.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         GridBukti.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         GridBukti.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        GridBukti.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9.0F)
+        GridBukti.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
         GridBukti.ThemeStyle.HeaderStyle.ForeColor = Color.White
         GridBukti.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         GridBukti.ThemeStyle.HeaderStyle.Height = 36
@@ -304,118 +297,17 @@ Partial Class wp_riwayat_bukti_potong
         colDetail.Text = "Detail"
         colDetail.UseColumnTextForButtonValue = True
         ' 
-        ' PanelFilters
-        ' 
-        PanelFilters.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
-        PanelFilters.BorderRadius = 12
-        PanelFilters.BorderThickness = 1
-        PanelFilters.Controls.Add(TxtSearch)
-        PanelFilters.Controls.Add(CmbBulan)
-        PanelFilters.Controls.Add(CmbJenis)
-        PanelFilters.Controls.Add(CmbSort)
-        PanelFilters.Controls.Add(BtnFilter)
-        PanelFilters.CustomizableEdges = CustomizableEdges17
-        PanelFilters.FillColor = Color.White
-        PanelFilters.Location = New Point(24, 250)
-        PanelFilters.Name = "PanelFilters"
-        PanelFilters.Padding = New Padding(24)
-        PanelFilters.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        PanelFilters.Size = New Size(1062, 78)
-        PanelFilters.TabIndex = 3
-        ' 
-        ' TxtSearch
-        ' 
-        TxtSearch.BorderRadius = 8
-        TxtSearch.CustomizableEdges = CustomizableEdges7
-        TxtSearch.DefaultText = ""
-        TxtSearch.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        TxtSearch.Font = New Font("Segoe UI", 9.0F)
-        TxtSearch.Location = New Point(18, 20)
-        TxtSearch.Margin = New Padding(3, 4, 3, 4)
-        TxtSearch.Name = "TxtSearch"
-        TxtSearch.PlaceholderText = "Cari perusahaan / periode"
-        TxtSearch.SelectedText = ""
-        TxtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        TxtSearch.Size = New Size(314, 36)
-        TxtSearch.TabIndex = 0
-        ' 
-        ' CmbBulan
-        ' 
-        CmbBulan.BackColor = Color.Transparent
-        CmbBulan.BorderRadius = 8
-        CmbBulan.CustomizableEdges = CustomizableEdges9
-        CmbBulan.DrawMode = DrawMode.OwnerDrawFixed
-        CmbBulan.DropDownStyle = ComboBoxStyle.DropDownList
-        CmbBulan.FocusedColor = Color.Empty
-        CmbBulan.Font = New Font("Segoe UI", 9.0F)
-        CmbBulan.ForeColor = Color.FromArgb(CByte(60), CByte(76), CByte(97))
-        CmbBulan.ItemHeight = 30
-        CmbBulan.Items.AddRange(New Object() {"Semua Bulan", "Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"})
-        CmbBulan.Location = New Point(352, 21)
-        CmbBulan.Name = "CmbBulan"
-        CmbBulan.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        CmbBulan.Size = New Size(140, 36)
-        CmbBulan.TabIndex = 1
-        ' 
-        ' CmbJenis
-        ' 
-        CmbJenis.BackColor = Color.Transparent
-        CmbJenis.BorderRadius = 8
-        CmbJenis.CustomizableEdges = CustomizableEdges11
-        CmbJenis.DrawMode = DrawMode.OwnerDrawFixed
-        CmbJenis.DropDownStyle = ComboBoxStyle.DropDownList
-        CmbJenis.FocusedColor = Color.Empty
-        CmbJenis.Font = New Font("Segoe UI", 9.0F)
-        CmbJenis.ForeColor = Color.FromArgb(CByte(60), CByte(76), CByte(97))
-        CmbJenis.ItemHeight = 30
-        CmbJenis.Items.AddRange(New Object() {"Semua Jenis", "Karyawan Tetap", "Freelance"})
-        CmbJenis.Location = New Point(502, 21)
-        CmbJenis.Name = "CmbJenis"
-        CmbJenis.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        CmbJenis.Size = New Size(150, 36)
-        CmbJenis.TabIndex = 2
-        ' 
-        ' CmbSort
-        ' 
-        CmbSort.BackColor = Color.Transparent
-        CmbSort.BorderRadius = 8
-        CmbSort.CustomizableEdges = CustomizableEdges13
-        CmbSort.DrawMode = DrawMode.OwnerDrawFixed
-        CmbSort.DropDownStyle = ComboBoxStyle.DropDownList
-        CmbSort.FocusedColor = Color.Empty
-        CmbSort.Font = New Font("Segoe UI", 9.0F)
-        CmbSort.ForeColor = Color.FromArgb(CByte(60), CByte(76), CByte(97))
-        CmbSort.ItemHeight = 30
-        CmbSort.Items.AddRange(New Object() {"Sortir: Terbaru", "Sortir: Terlama", "Nominal Tertinggi", "Nominal Terendah"})
-        CmbSort.Location = New Point(662, 21)
-        CmbSort.Name = "CmbSort"
-        CmbSort.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        CmbSort.Size = New Size(160, 36)
-        CmbSort.TabIndex = 3
-        ' 
-        ' BtnFilter
-        ' 
-        BtnFilter.BorderRadius = 8
-        BtnFilter.CustomizableEdges = CustomizableEdges15
-        BtnFilter.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        BtnFilter.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
-        BtnFilter.ForeColor = Color.White
-        BtnFilter.Location = New Point(842, 21)
-        BtnFilter.Name = "BtnFilter"
-        BtnFilter.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        BtnFilter.Size = New Size(200, 36)
-        BtnFilter.TabIndex = 4
-        BtnFilter.Text = "Terapkan Filter"
-        ' 
         ' FlowCompanies
         ' 
+        FlowCompanies.AutoScroll = True
         FlowCompanies.Controls.Add(CardCompany1)
         FlowCompanies.Controls.Add(CardCompany2)
         FlowCompanies.Controls.Add(CardCompany3)
+        FlowCompanies.Controls.Add(Guna2Panel1)
         FlowCompanies.Location = New Point(24, 130)
         FlowCompanies.Name = "FlowCompanies"
         FlowCompanies.Padding = New Padding(4)
-        FlowCompanies.Size = New Size(1062, 110)
+        FlowCompanies.Size = New Size(1062, 125)
         FlowCompanies.TabIndex = 2
         FlowCompanies.WrapContents = False
         ' 
@@ -427,12 +319,12 @@ Partial Class wp_riwayat_bukti_potong
         CardCompany1.Controls.Add(PicCompany1)
         CardCompany1.Controls.Add(Company1Name)
         CardCompany1.Controls.Add(Company1Stat)
-        CardCompany1.CustomizableEdges = CustomizableEdges20
+        CardCompany1.CustomizableEdges = CustomizableEdges8
         CardCompany1.FillColor = Color.White
         CardCompany1.Location = New Point(8, 8)
         CardCompany1.Margin = New Padding(4)
         CardCompany1.Name = "CardCompany1"
-        CardCompany1.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        CardCompany1.ShadowDecoration.CustomizableEdges = CustomizableEdges9
         CardCompany1.Size = New Size(300, 90)
         CardCompany1.TabIndex = 0
         ' 
@@ -442,7 +334,7 @@ Partial Class wp_riwayat_bukti_potong
         PicCompany1.ImageRotate = 0F
         PicCompany1.Location = New Point(18, 18)
         PicCompany1.Name = "PicCompany1"
-        PicCompany1.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        PicCompany1.ShadowDecoration.CustomizableEdges = CustomizableEdges7
         PicCompany1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         PicCompany1.Size = New Size(50, 50)
         PicCompany1.TabIndex = 0
@@ -478,12 +370,12 @@ Partial Class wp_riwayat_bukti_potong
         CardCompany2.Controls.Add(PicCompany2)
         CardCompany2.Controls.Add(Company2Name)
         CardCompany2.Controls.Add(Company2Stat)
-        CardCompany2.CustomizableEdges = CustomizableEdges23
+        CardCompany2.CustomizableEdges = CustomizableEdges11
         CardCompany2.FillColor = Color.White
         CardCompany2.Location = New Point(316, 8)
         CardCompany2.Margin = New Padding(4)
         CardCompany2.Name = "CardCompany2"
-        CardCompany2.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        CardCompany2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         CardCompany2.Size = New Size(300, 90)
         CardCompany2.TabIndex = 1
         ' 
@@ -493,7 +385,7 @@ Partial Class wp_riwayat_bukti_potong
         PicCompany2.ImageRotate = 0F
         PicCompany2.Location = New Point(18, 18)
         PicCompany2.Name = "PicCompany2"
-        PicCompany2.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        PicCompany2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         PicCompany2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         PicCompany2.Size = New Size(50, 50)
         PicCompany2.TabIndex = 0
@@ -529,12 +421,12 @@ Partial Class wp_riwayat_bukti_potong
         CardCompany3.Controls.Add(PicCompany3)
         CardCompany3.Controls.Add(Company3Name)
         CardCompany3.Controls.Add(Company3Stat)
-        CardCompany3.CustomizableEdges = CustomizableEdges26
+        CardCompany3.CustomizableEdges = CustomizableEdges14
         CardCompany3.FillColor = Color.White
         CardCompany3.Location = New Point(624, 8)
         CardCompany3.Margin = New Padding(4)
         CardCompany3.Name = "CardCompany3"
-        CardCompany3.ShadowDecoration.CustomizableEdges = CustomizableEdges27
+        CardCompany3.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         CardCompany3.Size = New Size(300, 90)
         CardCompany3.TabIndex = 2
         ' 
@@ -544,7 +436,7 @@ Partial Class wp_riwayat_bukti_potong
         PicCompany3.ImageRotate = 0F
         PicCompany3.Location = New Point(18, 18)
         PicCompany3.Name = "PicCompany3"
-        PicCompany3.ShadowDecoration.CustomizableEdges = CustomizableEdges25
+        PicCompany3.ShadowDecoration.CustomizableEdges = CustomizableEdges13
         PicCompany3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         PicCompany3.Size = New Size(50, 50)
         PicCompany3.TabIndex = 0
@@ -572,6 +464,57 @@ Partial Class wp_riwayat_bukti_potong
         Company3Stat.TabIndex = 2
         Company3Stat.Text = "2 bukti • Rp 36.000.000"
         ' 
+        ' Guna2Panel1
+        ' 
+        Guna2Panel1.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
+        Guna2Panel1.BorderRadius = 12
+        Guna2Panel1.BorderThickness = 1
+        Guna2Panel1.Controls.Add(Guna2CirclePictureBox1)
+        Guna2Panel1.Controls.Add(Guna2HtmlLabel1)
+        Guna2Panel1.Controls.Add(Guna2HtmlLabel2)
+        Guna2Panel1.CustomizableEdges = CustomizableEdges17
+        Guna2Panel1.FillColor = Color.White
+        Guna2Panel1.Location = New Point(932, 8)
+        Guna2Panel1.Margin = New Padding(4)
+        Guna2Panel1.Name = "Guna2Panel1"
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Panel1.Size = New Size(300, 90)
+        Guna2Panel1.TabIndex = 3
+        ' 
+        ' Guna2CirclePictureBox1
+        ' 
+        Guna2CirclePictureBox1.FillColor = Color.FromArgb(CByte(255), CByte(159), CByte(10))
+        Guna2CirclePictureBox1.ImageRotate = 0F
+        Guna2CirclePictureBox1.Location = New Point(18, 18)
+        Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Guna2CirclePictureBox1.Size = New Size(50, 50)
+        Guna2CirclePictureBox1.TabIndex = 0
+        Guna2CirclePictureBox1.TabStop = False
+        ' 
+        ' Guna2HtmlLabel1
+        ' 
+        Guna2HtmlLabel1.BackColor = Color.Transparent
+        Guna2HtmlLabel1.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Bold)
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        Guna2HtmlLabel1.Location = New Point(78, 18)
+        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Guna2HtmlLabel1.Size = New Size(132, 19)
+        Guna2HtmlLabel1.TabIndex = 1
+        Guna2HtmlLabel1.Text = "Studio Nebula Works"
+        ' 
+        ' Guna2HtmlLabel2
+        ' 
+        Guna2HtmlLabel2.BackColor = Color.Transparent
+        Guna2HtmlLabel2.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
+        Guna2HtmlLabel2.Location = New Point(78, 48)
+        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Guna2HtmlLabel2.Size = New Size(121, 17)
+        Guna2HtmlLabel2.TabIndex = 2
+        Guna2HtmlLabel2.Text = "2 bukti • Rp 36.000.000"
+        ' 
         ' PanelHeader
         ' 
         PanelHeader.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
@@ -579,12 +522,12 @@ Partial Class wp_riwayat_bukti_potong
         PanelHeader.BorderThickness = 1
         PanelHeader.Controls.Add(LblSubtitle)
         PanelHeader.Controls.Add(LblTitle)
-        PanelHeader.CustomizableEdges = CustomizableEdges28
+        PanelHeader.CustomizableEdges = CustomizableEdges19
         PanelHeader.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         PanelHeader.Location = New Point(24, 24)
         PanelHeader.Name = "PanelHeader"
         PanelHeader.Padding = New Padding(24)
-        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges29
+        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         PanelHeader.Size = New Size(1062, 91)
         PanelHeader.TabIndex = 1
         ' 
@@ -625,7 +568,6 @@ Partial Class wp_riwayat_bukti_potong
         PanelTable.ResumeLayout(False)
         PanelTable.PerformLayout()
         CType(GridBukti, ComponentModel.ISupportInitialize).EndInit()
-        PanelFilters.ResumeLayout(False)
         FlowCompanies.ResumeLayout(False)
         CardCompany1.ResumeLayout(False)
         CardCompany1.PerformLayout()
@@ -636,6 +578,9 @@ Partial Class wp_riwayat_bukti_potong
         CardCompany3.ResumeLayout(False)
         CardCompany3.PerformLayout()
         CType(PicCompany3, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel1.ResumeLayout(False)
+        Guna2Panel1.PerformLayout()
+        CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).EndInit()
         PanelHeader.ResumeLayout(False)
         PanelHeader.PerformLayout()
         ResumeLayout(False)
@@ -658,18 +603,10 @@ Partial Class wp_riwayat_bukti_potong
     Friend WithEvents PicCompany3 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Company3Name As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Company3Stat As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents PanelFilters As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents TxtSearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents CmbBulan As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents CmbJenis As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents CmbSort As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents BtnFilter As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PanelTable As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents GridBukti As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents LblTableTitle As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblTableDesc As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents BtnDownloadAll As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnSortAmount As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LblSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents colPeriode As DataGridViewTextBoxColumn
     Friend WithEvents colBuktiPotong As DataGridViewTextBoxColumn
@@ -678,4 +615,10 @@ Partial Class wp_riwayat_bukti_potong
     Friend WithEvents colJenisPekerjaan As DataGridViewTextBoxColumn
     Friend WithEvents colStatus As DataGridViewTextBoxColumn
     Friend WithEvents colDetail As DataGridViewButtonColumn
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblTableDesc As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents BtnFilter As Guna.UI2.WinForms.Guna2Button
 End Class

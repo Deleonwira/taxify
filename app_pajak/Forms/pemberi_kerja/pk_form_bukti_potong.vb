@@ -13,6 +13,7 @@ Public Class pk_form_bukti_potong
     ' Variable untuk menyimpan PKP Bulanan dan parent form reference
     Private pkp_bulanan As Decimal = 0
     Private parentForm As Form = Nothing
+    Private isCalculating As Boolean = False  ' Flag untuk mencegah loop kalkulasi
 
     ' Constructor untuk menerima parent form
     Public Sub New(Optional parent As Form = Nothing)
@@ -20,30 +21,7 @@ Public Class pk_form_bukti_potong
         parentForm = parent
     End Sub
 
-    ' Fungsi untuk mapping PTKP status ke nilai tahunan
-    Private Function GetPTKPTahunan(statusPTKP As String) As Decimal
-        ' PTKP values per year (2025) berdasarkan PMK No. 101/PMK.010/2016
-        Select Case statusPTKP.ToUpper().Trim()
-            Case "TK0"
-                Return 54000000D  ' Tidak Kawin, 0 tanggungan
-            Case "TK1"
-                Return 58500000D  ' Tidak Kawin, 1 tanggungan
-            Case "TK2"
-                Return 63000000D  ' Tidak Kawin, 2 tanggungan
-            Case "TK3"
-                Return 67500000D  ' Tidak Kawin, 3 tanggungan
-            Case "K0"
-                Return 58500000D  ' Kawin, 0 tanggungan
-            Case "K1"
-                Return 63000000D  ' Kawin, 1 tanggungan
-            Case "K2"
-                Return 67500000D  ' Kawin, 2 tanggungan
-            Case "K3"
-                Return 72000000D  ' Kawin, 3 tanggungan
-            Case Else
-                Return 54000000D  ' Default: TK0
-        End Select
-    End Function
+    ' NOTE: PTKP calculation functions moved to ModulePajak.vb for reusability
 
     ' Load Employee Name from Database
     Private Sub LoadEmployeeName()
@@ -67,20 +45,45 @@ Public Class pk_form_bukti_potong
         End Try
     End Sub
 
+    ' Load PTKP status from database (pekerjaan table) based on EmployeeNPWP
+    Private Sub LoadPTKPFromDatabase()
+        If String.IsNullOrEmpty(EmployeeNPWP) Then Return
+        If Not String.IsNullOrEmpty(PTKPStatusValue) Then Return ' Already has value from previous form
+
+        Try
+            modulkoneksi.BukaKoneksi()
+            Dim query As String = "SELECT status_ptkp FROM pekerjaan WHERE wp_npwp = @npwp LIMIT 1"
+            Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
+            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
+
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing AndAlso result IsNot DBNull.Value Then
+                PTKPStatusValue = result.ToString()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error loading PTKP from database: " & ex.Message)
+        Finally
+            modulkoneksi.TutupKoneksi()
+        End Try
+    End Sub
+
     ' Event form load - Set PTKP dan field properties
     Private Sub pk_form_bukti_potong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pk_navbar11.SetActiveMenu(pk_navbar1.MenuType.BuktiPotong)
-
-        ' DEBUG: Show received data
-        MessageBox.Show($"EmployeeNPWP: {EmployeeNPWP}" & vbCrLf &
-                       $"PTKPStatusValue: {PTKPStatusValue}" & vbCrLf &
-                       $"SelectedMonth: {SelectedMonth}",
-                       "Debug - Data Received")
 
         ' Load Employee Name
         LoadEmployeeName()
         Guna2TextBox11.ReadOnly = True
         Guna2TextBox11.FillColor = Color.FromArgb(226, 226, 226)
+
+        ' Load PTKP from database jika belum ada dari form sebelumnya
+        LoadPTKPFromDatabase()
+
+        ' DEBUG: Show received data (setelah load dari database)
+        MessageBox.Show($"EmployeeNPWP: {EmployeeNPWP}" & vbCrLf &
+                       $"PTKPStatusValue: {PTKPStatusValue}" & vbCrLf &
+                       $"SelectedMonth: {SelectedMonth}",
+                       "Debug - Data Received")
 
         ' Set Month in textbox if selected
         If SelectedMonth > 0 Then
@@ -98,18 +101,18 @@ Public Class pk_form_bukti_potong
             Guna2TextBox12.FillColor = Color.FromArgb(226, 226, 226)
         End If
 
-        ' Set PTKP field
+        ' Set PTKP field - sekarang PTKPStatusValue pasti sudah ada dari database
         If PTKPBulananValue > 0 Then
-            ' Jika sudah dikirim dari form sebelumnya
-            Guna2TextBox1.Text = PTKPBulananValue.ToString("N0")
+            ' Jika sudah dikirim dari form sebelumnya (pre-calculated)
+            Guna2TextBox1.Text = ModulePajak.FormatCurrency(PTKPBulananValue)
         ElseIf Not String.IsNullOrEmpty(PTKPStatusValue) Then
-            ' Jika hanya status yang dikirim, hitung bulanan
-            Dim ptkpTahunan As Decimal = GetPTKPTahunan(PTKPStatusValue)
-            PTKPBulananValue = ptkpTahunan / 12
-            Guna2TextBox1.Text = PTKPBulananValue.ToString("N0")
+            ' Hitung bulanan dari status menggunakan ModulePajak
+            PTKPBulananValue = ModulePajak.GetPTKPBulanan(PTKPStatusValue)
+            Guna2TextBox1.Text = ModulePajak.FormatCurrency(PTKPBulananValue)
         Else
-            ' Default jika tidak ada data
-            Guna2TextBox1.Text = "4,500,000"  ' TK0 bulanan
+            ' Fallback: Default TK0 jika benar-benar tidak ada data
+            PTKPBulananValue = ModulePajak.GetPTKPBulanan("TK0")
+            Guna2TextBox1.Text = ModulePajak.FormatCurrency(PTKPBulananValue)
         End If
 
         ' Set PTKP field menjadi read-only
@@ -123,133 +126,99 @@ Public Class pk_form_bukti_potong
 
     ' Event handler untuk perhitungan otomatis Total Penghasilan Bruto
     Private Sub CalculateTotalPenghasilanBruto()
+        ' Cegah recursive call saat sedang kalkulasi
+        If isCalculating Then Return
+
         Try
-            Dim gajiPokok As Decimal = If(String.IsNullOrWhiteSpace(txtPPhTerutang.Text), 0, Decimal.Parse(txtPPhTerutang.Text.Replace(".", "").Replace(",", ".")))
-            Dim tunjangan As Decimal = If(String.IsNullOrWhiteSpace(Guna2TextBox10.Text), 0, Decimal.Parse(Guna2TextBox10.Text.Replace(".", "").Replace(",", ".")))
-            Dim tantiem As Decimal = If(String.IsNullOrWhiteSpace(Guna2TextBox3.Text), 0, Decimal.Parse(Guna2TextBox3.Text.Replace(".", "").Replace(",", ".")))
+            ' Menggunakan ModulePajak.ParseCurrency untuk parsing
+            ' txtPPhTerutang = Gaji Pokok (nama control menyesatkan dari designer)
+            Dim gajiPokok As Decimal = ModulePajak.ParseCurrency(txtPPhTerutang.Text)
+            Dim tunjangan As Decimal = ModulePajak.ParseCurrency(Guna2TextBox10.Text)
+            Dim tantiem As Decimal = ModulePajak.ParseCurrency(Guna2TextBox3.Text)
 
             Dim total As Decimal = gajiPokok + tunjangan + tantiem
-            Guna2TextBox4.Text = total.ToString("N0")
+            Guna2TextBox4.Text = ModulePajak.FormatCurrency(total)
 
-            ' Auto-calculate Biaya Jabatan (5% of bruto, min 500k, max 6M)
-            Dim biayaJabatan As Decimal = total * 0.05D
-            If biayaJabatan < 500000D Then biayaJabatan = 500000D
-            If biayaJabatan > 6000000D Then biayaJabatan = 6000000D
-
-            Guna2TextBox8.Text = biayaJabatan.ToString("N0")
+            ' Menggunakan ModulePajak.CalculateBiayaJabatan
+            Dim biayaJabatan As Decimal = ModulePajak.CalculateBiayaJabatan(total)
+            Guna2TextBox8.Text = ModulePajak.FormatCurrency(biayaJabatan)
         Catch ex As Exception
             ' Jika ada error parsing, set total ke 0
             Guna2TextBox4.Text = "0"
-            Guna2TextBox8.Text = "500,000"  ' Minimum biaya jabatan
+            Guna2TextBox8.Text = "0"  ' Set ke 0 karena tidak ada bruto
         End Try
     End Sub
 
     ' Event handler untuk perhitungan otomatis Total Pengurangan
     Private Sub CalculateTotalPengurangan()
         Try
-            Dim biayaJabatan As Decimal = If(String.IsNullOrWhiteSpace(Guna2TextBox8.Text), 0, Decimal.Parse(Guna2TextBox8.Text.Replace(".", "").Replace(",", ".")))
-            Dim zakat As Decimal = If(String.IsNullOrWhiteSpace(Guna2TextBox7.Text), 0, Decimal.Parse(Guna2TextBox7.Text.Replace(".", "").Replace(",", ".")))
+            ' Menggunakan ModulePajak.ParseCurrency untuk parsing
+            Dim biayaJabatan As Decimal = ModulePajak.ParseCurrency(Guna2TextBox8.Text)
+            Dim zakat As Decimal = ModulePajak.ParseCurrency(Guna2TextBox7.Text)
 
             Dim total As Decimal = biayaJabatan + zakat
-            Guna2TextBox5.Text = total.ToString("N0")
+            Guna2TextBox5.Text = ModulePajak.FormatCurrency(total)
         Catch ex As Exception
             ' Jika ada error parsing, set total ke 0
             Guna2TextBox5.Text = "0"
         End Try
     End Sub
 
-    ' Fungsi untuk menghitung tarif progresif PPh21
-    Private Function CalculateProgressiveTax(pkpTahunan As Decimal) As Decimal
-        Dim tax As Decimal = 0
-
-        If pkpTahunan <= 0 Then
-            Return 0
-        End If
-
-        ' Lapisan 1: 0 - 60 juta (5%)
-        If pkpTahunan > 0 Then
-            Dim layer1 = Math.Min(pkpTahunan, 60000000D)
-            tax += layer1 * 0.05D
-        End If
-
-        ' Lapisan 2: 60 juta - 250 juta (15%)
-        If pkpTahunan > 60000000D Then
-            Dim layer2 = Math.Min(pkpTahunan - 60000000D, 190000000D)
-            tax += layer2 * 0.15D
-        End If
-
-        ' Lapisan 3: 250 juta - 500 juta (25%)
-        If pkpTahunan > 250000000D Then
-            Dim layer3 = Math.Min(pkpTahunan - 250000000D, 250000000D)
-            tax += layer3 * 0.25D
-        End If
-
-        ' Lapisan 4: 500 juta - 5 milyar (30%)
-        If pkpTahunan > 500000000D Then
-            Dim layer4 = Math.Min(pkpTahunan - 500000000D, 4500000000D)
-            tax += layer4 * 0.3D
-        End If
-
-        ' Lapisan 5: > 5 milyar (35%)
-        If pkpTahunan > 5000000000D Then
-            Dim layer5 = pkpTahunan - 5000000000D
-            tax += layer5 * 0.35D
-        End If
-
-        Return tax
-    End Function
+    ' NOTE: CalculateProgressiveTax moved to ModulePajak.vb for reusability
 
     ' Event handler untuk button Hitung - Menghitung PKP Bulanan dan PPh21
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         Try
-            ' Get values
-            Dim totalBruto As Decimal = If(String.IsNullOrWhiteSpace(Guna2TextBox4.Text), 0, Decimal.Parse(Guna2TextBox4.Text.Replace(".", "").Replace(",", ".")))
-            Dim totalPengurangan As Decimal = If(String.IsNullOrWhiteSpace(Guna2TextBox5.Text), 0, Decimal.Parse(Guna2TextBox5.Text.Replace(".", "").Replace(",", ".")))
-            Dim ptkpBulanan As Decimal = If(String.IsNullOrWhiteSpace(Guna2TextBox1.Text), 0, Decimal.Parse(Guna2TextBox1.Text.Replace(".", "").Replace(",", ".")))
+            ' Set flag untuk mencegah TextChanged events trigger ulang perhitungan
+            isCalculating = True
 
-            ' Calculate Penghasilan Neto = Total Bruto - Total Pengurangan
-            Dim penghasilanNeto As Decimal = totalBruto - totalPengurangan
+            ' Menggunakan ModulePajak.ParseCurrency untuk parsing
+            Dim totalBruto As Decimal = ModulePajak.ParseCurrency(Guna2TextBox4.Text)
+            Dim totalPengurangan As Decimal = ModulePajak.ParseCurrency(Guna2TextBox5.Text)
+            Dim ptkpBulanan As Decimal = ModulePajak.ParseCurrency(Guna2TextBox1.Text)
 
-            ' Calculate PKP Bulanan = Penghasilan Neto - PTKP Bulanan
-            pkp_bulanan = penghasilanNeto - ptkpBulanan
-
-            ' Ensure PKP is not negative
-            If pkp_bulanan < 0 Then pkp_bulanan = 0
-
-            ' Calculate PPh21 using progressive tax (annualized method)
+            ' Menggunakan ModulePajak untuk perhitungan
+            Dim penghasilanNeto As Decimal = ModulePajak.CalculatePenghasilanNeto(totalBruto, totalPengurangan)
+            pkp_bulanan = ModulePajak.CalculatePKPBulanan(totalBruto, totalPengurangan, ptkpBulanan)
+            Dim pph21Bulanan As Decimal = ModulePajak.CalculatePPh21Bulanan(pkp_bulanan)
             Dim pkpTahunan As Decimal = pkp_bulanan * 12
-            Dim pph21Tahunan As Decimal = CalculateProgressiveTax(pkpTahunan)
-            Dim pph21Bulanan As Decimal = pph21Tahunan / 12
+            Dim pph21Tahunan As Decimal = ModulePajak.CalculateProgressiveTax(pkpTahunan)
 
             ' Fill the result fields
-            Guna2TextBox6.Text = penghasilanNeto.ToString("N0")  ' Penghasilan Neto
-            Guna2TextBox6.ReadOnly = True
-            Guna2TextBox6.FillColor = Color.FromArgb(226, 226, 226)
-
-            Guna2TextBox9.Text = pph21Bulanan.ToString("N0")  ' PPh21 Dipotong
+            ' Guna2TextBox9 = Penghasilan Neto (sesuai label Guna2HtmlLabel21)
+            Guna2TextBox9.Text = ModulePajak.FormatCurrency(penghasilanNeto)
             Guna2TextBox9.ReadOnly = True
             Guna2TextBox9.FillColor = Color.FromArgb(226, 226, 226)
 
-            txtPPhTerutang.Text = pph21Bulanan.ToString("N0")  ' PPh21 Terutang
-            txtPPhTerutang.ReadOnly = True
-            txtPPhTerutang.FillColor = Color.FromArgb(226, 226, 226)
+            ' Guna2TextBox6 = PPh21 Dipotong (sesuai label Guna2HtmlLabel20)
+            Guna2TextBox6.Text = ModulePajak.FormatCurrency(pph21Bulanan)
+            Guna2TextBox6.ReadOnly = True
+            Guna2TextBox6.FillColor = Color.FromArgb(226, 226, 226)
+
+            ' Guna2TextBox2 = PPh21 Terutang (sesuai label Guna2HtmlLabel22)
+            Guna2TextBox2.Text = ModulePajak.FormatCurrency(pph21Bulanan)
+            Guna2TextBox2.ReadOnly = True
+            Guna2TextBox2.FillColor = Color.FromArgb(226, 226, 226)
 
             ' Tampilkan hasil perhitungan
             MessageBox.Show(
                 $"Perhitungan PPh21 Bulanan:" & vbCrLf & vbCrLf &
-                $"Total Penghasilan Bruto: Rp {totalBruto.ToString("N0")}" & vbCrLf &
-                $"Total Pengurangan: Rp {totalPengurangan.ToString("N0")}" & vbCrLf &
-                $"Penghasilan Neto: Rp {penghasilanNeto.ToString("N0")}" & vbCrLf &
-                $"PTKP Bulanan: Rp {ptkpBulanan.ToString("N0")}" & vbCrLf &
-                $"PKP Bulanan: Rp {pkp_bulanan.ToString("N0")}" & vbCrLf &
-                $"PKP Tahunan (x12): Rp {pkpTahunan.ToString("N0")}" & vbCrLf & vbCrLf &
-                $"PPh21 Terutang Tahunan: Rp {pph21Tahunan.ToString("N0")}" & vbCrLf &
-                $"PPh21 Terutang Bulanan: Rp {pph21Bulanan.ToString("N0")}",
+                $"Total Penghasilan Bruto: Rp {ModulePajak.FormatCurrency(totalBruto)}" & vbCrLf &
+                $"Total Pengurangan: Rp {ModulePajak.FormatCurrency(totalPengurangan)}" & vbCrLf &
+                $"Penghasilan Neto: Rp {ModulePajak.FormatCurrency(penghasilanNeto)}" & vbCrLf &
+                $"PTKP Bulanan: Rp {ModulePajak.FormatCurrency(ptkpBulanan)}" & vbCrLf &
+                $"PKP Bulanan: Rp {ModulePajak.FormatCurrency(pkp_bulanan)}" & vbCrLf &
+                $"PKP Tahunan (x12): Rp {ModulePajak.FormatCurrency(pkpTahunan)}" & vbCrLf & vbCrLf &
+                $"PPh21 Terutang Tahunan: Rp {ModulePajak.FormatCurrency(pph21Tahunan)}" & vbCrLf &
+                $"PPh21 Terutang Bulanan: Rp {ModulePajak.FormatCurrency(pph21Bulanan)}",
                 "Hasil Perhitungan",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBox.Show("Error menghitung PKP Bulanan: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            ' Reset flag
+            isCalculating = False
         End Try
     End Sub
 

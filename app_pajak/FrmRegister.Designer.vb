@@ -18,10 +18,12 @@ Partial Class FrmRegister
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -42,374 +44,547 @@ Partial Class FrmRegister
         Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         pnlMain = New Guna.UI2.WinForms.Guna2Panel()
-        btnGoLogin = New Guna.UI2.WinForms.Guna2Button()
-        lblLoginPrompt = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        btnRegister = New Guna.UI2.WinForms.Guna2Button()
-        cmbTipeUser = New Guna.UI2.WinForms.Guna2ComboBox()
-        txtAlamat = New Guna.UI2.WinForms.Guna2TextBox()
-        txtNoTelepon = New Guna.UI2.WinForms.Guna2TextBox()
-        txtNIK = New Guna.UI2.WinForms.Guna2TextBox()
-        txtConfirmPassword = New Guna.UI2.WinForms.Guna2TextBox()
-        txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
-        txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
-        txtNamaLengkap = New Guna.UI2.WinForms.Guna2TextBox()
-        txtNPWP = New Guna.UI2.WinForms.Guna2TextBox()
+        pnlHeader = New Guna.UI2.WinForms.Guna2Panel()
         lblSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        pnlForm = New Guna.UI2.WinForms.Guna2Panel()
+        lblNPWP = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtNPWP = New Guna.UI2.WinForms.Guna2TextBox()
+        lblNamaLengkap = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtNamaLengkap = New Guna.UI2.WinForms.Guna2TextBox()
+        lblEmail = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
+        lblPassword = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        lblConfirmPassword = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtConfirmPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        lblNIK = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtNIK = New Guna.UI2.WinForms.Guna2TextBox()
+        lblNoTelepon = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtNoTelepon = New Guna.UI2.WinForms.Guna2TextBox()
+        lblAlamat = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtAlamat = New Guna.UI2.WinForms.Guna2TextBox()
+        lblPekerjaan = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblPerusahaan = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        cmbPerusahaan = New Guna.UI2.WinForms.Guna2ComboBox()
+        lblJabatan = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtJabatan = New Guna.UI2.WinForms.Guna2TextBox()
+        lblStatusPTKP = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        cmbStatusPTKP = New Guna.UI2.WinForms.Guna2ComboBox()
+        btnRegister = New Guna.UI2.WinForms.Guna2Button()
+        lblLoginPrompt = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        btnGoLogin = New Guna.UI2.WinForms.Guna2Button()
         pnlMain.SuspendLayout()
+        pnlHeader.SuspendLayout()
+        pnlForm.SuspendLayout()
         SuspendLayout()
         ' 
         ' pnlMain
         ' 
-        pnlMain.BackColor = Color.Transparent
-        pnlMain.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        pnlMain.BorderRadius = 24
-        pnlMain.BorderThickness = 1
-        pnlMain.Controls.Add(btnGoLogin)
-        pnlMain.Controls.Add(lblLoginPrompt)
-        pnlMain.Controls.Add(btnRegister)
-        pnlMain.Controls.Add(cmbTipeUser)
-        pnlMain.Controls.Add(txtAlamat)
-        pnlMain.Controls.Add(txtNoTelepon)
-        pnlMain.Controls.Add(txtNIK)
-        pnlMain.Controls.Add(txtConfirmPassword)
-        pnlMain.Controls.Add(txtPassword)
-        pnlMain.Controls.Add(txtEmail)
-        pnlMain.Controls.Add(txtNamaLengkap)
-        pnlMain.Controls.Add(txtNPWP)
-        pnlMain.Controls.Add(lblSubtitle)
-        pnlMain.Controls.Add(lblTitle)
-        pnlMain.CustomizableEdges = CustomizableEdges23
-        pnlMain.FillColor = Color.White
-        pnlMain.Location = New Point(150, 30)
+        pnlMain.AutoScroll = True
+        pnlMain.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
+        pnlMain.Controls.Add(pnlHeader)
+        pnlMain.Controls.Add(pnlForm)
+        pnlMain.CustomizableEdges = CustomizableEdges31
+        pnlMain.Dock = DockStyle.Fill
+        pnlMain.Location = New Point(0, 0)
         pnlMain.Name = "pnlMain"
-        pnlMain.ShadowDecoration.Color = Color.FromArgb(CByte(0), CByte(0), CByte(0), CByte(20))
-        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        pnlMain.ShadowDecoration.Enabled = True
-        pnlMain.Size = New Size(500, 920)
+        pnlMain.Padding = New Padding(40)
+        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        pnlMain.Size = New Size(560, 950)
         pnlMain.TabIndex = 0
+        ' 
+        ' pnlHeader
+        ' 
+        pnlHeader.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
+        pnlHeader.BorderRadius = 12
+        pnlHeader.Controls.Add(lblSubtitle)
+        pnlHeader.Controls.Add(lblTitle)
+        pnlHeader.CustomizableEdges = CustomizableEdges1
+        pnlHeader.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        pnlHeader.Location = New Point(40, 40)
+        pnlHeader.Name = "pnlHeader"
+        pnlHeader.Padding = New Padding(24)
+        pnlHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        pnlHeader.Size = New Size(480, 90)
+        pnlHeader.TabIndex = 0
+        ' 
+        ' lblSubtitle
+        ' 
+        lblSubtitle.BackColor = Color.Transparent
+        lblSubtitle.Font = New Font("Segoe UI", 9.0F)
+        lblSubtitle.ForeColor = Color.FromArgb(CByte(233), CByte(221), CByte(255))
+        lblSubtitle.Location = New Point(24, 50)
+        lblSubtitle.Name = "lblSubtitle"
+        lblSubtitle.Size = New Size(274, 17)
+        lblSubtitle.TabIndex = 1
+        lblSubtitle.Text = "Daftar untuk mengelola pajak Anda dengan mudah"
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.BackColor = Color.Transparent
+        lblTitle.Font = New Font("Segoe UI Semibold", 14.0F, FontStyle.Bold)
+        lblTitle.ForeColor = Color.White
+        lblTitle.Location = New Point(24, 16)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(197, 27)
+        lblTitle.TabIndex = 0
+        lblTitle.Text = "Buat Akun Wajib Pajak"
+        ' 
+        ' pnlForm
+        ' 
+        pnlForm.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
+        pnlForm.BorderRadius = 12
+        pnlForm.BorderThickness = 1
+        pnlForm.Controls.Add(lblNPWP)
+        pnlForm.Controls.Add(txtNPWP)
+        pnlForm.Controls.Add(lblNamaLengkap)
+        pnlForm.Controls.Add(txtNamaLengkap)
+        pnlForm.Controls.Add(lblEmail)
+        pnlForm.Controls.Add(txtEmail)
+        pnlForm.Controls.Add(lblPassword)
+        pnlForm.Controls.Add(txtPassword)
+        pnlForm.Controls.Add(lblConfirmPassword)
+        pnlForm.Controls.Add(txtConfirmPassword)
+        pnlForm.Controls.Add(lblNIK)
+        pnlForm.Controls.Add(txtNIK)
+        pnlForm.Controls.Add(lblNoTelepon)
+        pnlForm.Controls.Add(txtNoTelepon)
+        pnlForm.Controls.Add(lblAlamat)
+        pnlForm.Controls.Add(txtAlamat)
+        pnlForm.Controls.Add(lblPekerjaan)
+        pnlForm.Controls.Add(lblPerusahaan)
+        pnlForm.Controls.Add(cmbPerusahaan)
+        pnlForm.Controls.Add(lblJabatan)
+        pnlForm.Controls.Add(txtJabatan)
+        pnlForm.Controls.Add(lblStatusPTKP)
+        pnlForm.Controls.Add(cmbStatusPTKP)
+        pnlForm.Controls.Add(btnRegister)
+        pnlForm.Controls.Add(lblLoginPrompt)
+        pnlForm.Controls.Add(btnGoLogin)
+        pnlForm.CustomizableEdges = CustomizableEdges29
+        pnlForm.FillColor = Color.White
+        pnlForm.Location = New Point(40, 145)
+        pnlForm.Name = "pnlForm"
+        pnlForm.Padding = New Padding(24)
+        pnlForm.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        pnlForm.Size = New Size(480, 760)
+        pnlForm.TabIndex = 1
+        ' 
+        ' lblNPWP
+        ' 
+        lblNPWP.BackColor = Color.Transparent
+        lblNPWP.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblNPWP.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblNPWP.Location = New Point(24, 20)
+        lblNPWP.Name = "lblNPWP"
+        lblNPWP.Size = New Size(46, 17)
+        lblNPWP.TabIndex = 0
+        lblNPWP.Text = "NPWP *"
+        ' 
+        ' txtNPWP
+        ' 
+        txtNPWP.BorderRadius = 8
+        txtNPWP.CustomizableEdges = CustomizableEdges3
+        txtNPWP.DefaultText = ""
+        txtNPWP.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtNPWP.Font = New Font("Segoe UI", 9.0F)
+        txtNPWP.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtNPWP.Location = New Point(24, 40)
+        txtNPWP.Name = "txtNPWP"
+        txtNPWP.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtNPWP.PlaceholderText = "Contoh: 12.345.678.9-123.000"
+        txtNPWP.SelectedText = ""
+        txtNPWP.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        txtNPWP.Size = New Size(432, 36)
+        txtNPWP.TabIndex = 1
+        ' 
+        ' lblNamaLengkap
+        ' 
+        lblNamaLengkap.BackColor = Color.Transparent
+        lblNamaLengkap.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblNamaLengkap.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblNamaLengkap.Location = New Point(24, 84)
+        lblNamaLengkap.Name = "lblNamaLengkap"
+        lblNamaLengkap.Size = New Size(91, 17)
+        lblNamaLengkap.TabIndex = 2
+        lblNamaLengkap.Text = "Nama Lengkap *"
+        ' 
+        ' txtNamaLengkap
+        ' 
+        txtNamaLengkap.BorderRadius = 8
+        txtNamaLengkap.CustomizableEdges = CustomizableEdges5
+        txtNamaLengkap.DefaultText = ""
+        txtNamaLengkap.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtNamaLengkap.Font = New Font("Segoe UI", 9.0F)
+        txtNamaLengkap.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtNamaLengkap.Location = New Point(24, 104)
+        txtNamaLengkap.Name = "txtNamaLengkap"
+        txtNamaLengkap.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtNamaLengkap.PlaceholderText = "Contoh: Ahmad Fauzi"
+        txtNamaLengkap.SelectedText = ""
+        txtNamaLengkap.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        txtNamaLengkap.Size = New Size(432, 36)
+        txtNamaLengkap.TabIndex = 3
+        ' 
+        ' lblEmail
+        ' 
+        lblEmail.BackColor = Color.Transparent
+        lblEmail.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblEmail.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblEmail.Location = New Point(24, 148)
+        lblEmail.Name = "lblEmail"
+        lblEmail.Size = New Size(40, 17)
+        lblEmail.TabIndex = 4
+        lblEmail.Text = "Email *"
+        ' 
+        ' txtEmail
+        ' 
+        txtEmail.BorderRadius = 8
+        txtEmail.CustomizableEdges = CustomizableEdges7
+        txtEmail.DefaultText = ""
+        txtEmail.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtEmail.Font = New Font("Segoe UI", 9.0F)
+        txtEmail.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtEmail.Location = New Point(24, 168)
+        txtEmail.Name = "txtEmail"
+        txtEmail.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtEmail.PlaceholderText = "Contoh: ahmad.fauzi@email.com"
+        txtEmail.SelectedText = ""
+        txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        txtEmail.Size = New Size(432, 36)
+        txtEmail.TabIndex = 5
+        ' 
+        ' lblPassword
+        ' 
+        lblPassword.BackColor = Color.Transparent
+        lblPassword.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblPassword.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblPassword.Location = New Point(24, 212)
+        lblPassword.Name = "lblPassword"
+        lblPassword.Size = New Size(61, 17)
+        lblPassword.TabIndex = 6
+        lblPassword.Text = "Password *"
+        ' 
+        ' txtPassword
+        ' 
+        txtPassword.BorderRadius = 8
+        txtPassword.CustomizableEdges = CustomizableEdges9
+        txtPassword.DefaultText = ""
+        txtPassword.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtPassword.Font = New Font("Segoe UI", 9.0F)
+        txtPassword.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtPassword.Location = New Point(24, 232)
+        txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "●"c
+        txtPassword.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtPassword.PlaceholderText = "Minimal 6 karakter"
+        txtPassword.SelectedText = ""
+        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        txtPassword.Size = New Size(210, 36)
+        txtPassword.TabIndex = 7
+        ' 
+        ' lblConfirmPassword
+        ' 
+        lblConfirmPassword.BackColor = Color.Transparent
+        lblConfirmPassword.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblConfirmPassword.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblConfirmPassword.Location = New Point(246, 212)
+        lblConfirmPassword.Name = "lblConfirmPassword"
+        lblConfirmPassword.Size = New Size(121, 17)
+        lblConfirmPassword.TabIndex = 8
+        lblConfirmPassword.Text = "Konfirmasi Password *"
+        ' 
+        ' txtConfirmPassword
+        ' 
+        txtConfirmPassword.BorderRadius = 8
+        txtConfirmPassword.CustomizableEdges = CustomizableEdges11
+        txtConfirmPassword.DefaultText = ""
+        txtConfirmPassword.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtConfirmPassword.Font = New Font("Segoe UI", 9.0F)
+        txtConfirmPassword.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtConfirmPassword.Location = New Point(246, 232)
+        txtConfirmPassword.Name = "txtConfirmPassword"
+        txtConfirmPassword.PasswordChar = "●"c
+        txtConfirmPassword.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtConfirmPassword.PlaceholderText = "Ulangi password"
+        txtConfirmPassword.SelectedText = ""
+        txtConfirmPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        txtConfirmPassword.Size = New Size(210, 36)
+        txtConfirmPassword.TabIndex = 9
+        ' 
+        ' lblNIK
+        ' 
+        lblNIK.BackColor = Color.Transparent
+        lblNIK.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblNIK.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblNIK.Location = New Point(24, 276)
+        lblNIK.Name = "lblNIK"
+        lblNIK.Size = New Size(23, 17)
+        lblNIK.TabIndex = 10
+        lblNIK.Text = "NIK"
+        ' 
+        ' txtNIK
+        ' 
+        txtNIK.BorderRadius = 8
+        txtNIK.CustomizableEdges = CustomizableEdges13
+        txtNIK.DefaultText = ""
+        txtNIK.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtNIK.Font = New Font("Segoe UI", 9.0F)
+        txtNIK.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtNIK.Location = New Point(24, 296)
+        txtNIK.Name = "txtNIK"
+        txtNIK.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtNIK.PlaceholderText = "Contoh: 3271234567890001"
+        txtNIK.SelectedText = ""
+        txtNIK.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        txtNIK.Size = New Size(210, 36)
+        txtNIK.TabIndex = 11
+        ' 
+        ' lblNoTelepon
+        ' 
+        lblNoTelepon.BackColor = Color.Transparent
+        lblNoTelepon.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblNoTelepon.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblNoTelepon.Location = New Point(246, 276)
+        lblNoTelepon.Name = "lblNoTelepon"
+        lblNoTelepon.Size = New Size(68, 17)
+        lblNoTelepon.TabIndex = 12
+        lblNoTelepon.Text = "No. Telepon"
+        ' 
+        ' txtNoTelepon
+        ' 
+        txtNoTelepon.BorderRadius = 8
+        txtNoTelepon.CustomizableEdges = CustomizableEdges15
+        txtNoTelepon.DefaultText = ""
+        txtNoTelepon.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtNoTelepon.Font = New Font("Segoe UI", 9.0F)
+        txtNoTelepon.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtNoTelepon.Location = New Point(246, 296)
+        txtNoTelepon.Name = "txtNoTelepon"
+        txtNoTelepon.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtNoTelepon.PlaceholderText = "Contoh: 081234567890"
+        txtNoTelepon.SelectedText = ""
+        txtNoTelepon.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        txtNoTelepon.Size = New Size(210, 36)
+        txtNoTelepon.TabIndex = 13
+        ' 
+        ' lblAlamat
+        ' 
+        lblAlamat.BackColor = Color.Transparent
+        lblAlamat.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblAlamat.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblAlamat.Location = New Point(24, 340)
+        lblAlamat.Name = "lblAlamat"
+        lblAlamat.Size = New Size(41, 17)
+        lblAlamat.TabIndex = 14
+        lblAlamat.Text = "Alamat"
+        ' 
+        ' txtAlamat
+        ' 
+        txtAlamat.BorderRadius = 8
+        txtAlamat.CustomizableEdges = CustomizableEdges17
+        txtAlamat.DefaultText = ""
+        txtAlamat.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtAlamat.Font = New Font("Segoe UI", 9.0F)
+        txtAlamat.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtAlamat.Location = New Point(24, 360)
+        txtAlamat.Multiline = True
+        txtAlamat.Name = "txtAlamat"
+        txtAlamat.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtAlamat.PlaceholderText = "Contoh: Jl. Merdeka No. 123, Jakarta Pusat"
+        txtAlamat.SelectedText = ""
+        txtAlamat.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        txtAlamat.Size = New Size(432, 50)
+        txtAlamat.TabIndex = 15
+        ' 
+        ' lblPekerjaan
+        ' 
+        lblPekerjaan.BackColor = Color.Transparent
+        lblPekerjaan.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        lblPekerjaan.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        lblPekerjaan.Location = New Point(24, 425)
+        lblPekerjaan.Name = "lblPekerjaan"
+        lblPekerjaan.Size = New Size(107, 22)
+        lblPekerjaan.TabIndex = 16
+        lblPekerjaan.Text = "Data Pekerjaan"
+        ' 
+        ' lblPerusahaan
+        ' 
+        lblPerusahaan.BackColor = Color.Transparent
+        lblPerusahaan.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblPerusahaan.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblPerusahaan.Location = New Point(24, 455)
+        lblPerusahaan.Name = "lblPerusahaan"
+        lblPerusahaan.Size = New Size(72, 17)
+        lblPerusahaan.TabIndex = 17
+        lblPerusahaan.Text = "Perusahaan *"
+        ' 
+        ' cmbPerusahaan
+        ' 
+        cmbPerusahaan.BackColor = Color.Transparent
+        cmbPerusahaan.BorderRadius = 8
+        cmbPerusahaan.CustomizableEdges = CustomizableEdges19
+        cmbPerusahaan.DrawMode = DrawMode.OwnerDrawFixed
+        cmbPerusahaan.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbPerusahaan.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        cmbPerusahaan.FocusedColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cmbPerusahaan.FocusedState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cmbPerusahaan.Font = New Font("Segoe UI", 9.0F)
+        cmbPerusahaan.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        cmbPerusahaan.ItemHeight = 30
+        cmbPerusahaan.Location = New Point(24, 475)
+        cmbPerusahaan.Name = "cmbPerusahaan"
+        cmbPerusahaan.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        cmbPerusahaan.Size = New Size(432, 36)
+        cmbPerusahaan.TabIndex = 18
+        ' 
+        ' lblJabatan
+        ' 
+        lblJabatan.BackColor = Color.Transparent
+        lblJabatan.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblJabatan.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblJabatan.Location = New Point(24, 519)
+        lblJabatan.Name = "lblJabatan"
+        lblJabatan.Size = New Size(44, 17)
+        lblJabatan.TabIndex = 19
+        lblJabatan.Text = "Jabatan"
+        ' 
+        ' txtJabatan
+        ' 
+        txtJabatan.BorderRadius = 8
+        txtJabatan.CustomizableEdges = CustomizableEdges21
+        txtJabatan.DefaultText = ""
+        txtJabatan.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtJabatan.Font = New Font("Segoe UI", 9.0F)
+        txtJabatan.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        txtJabatan.Location = New Point(24, 539)
+        txtJabatan.Name = "txtJabatan"
+        txtJabatan.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
+        txtJabatan.PlaceholderText = "Contoh: Software Engineer"
+        txtJabatan.SelectedText = ""
+        txtJabatan.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        txtJabatan.Size = New Size(432, 36)
+        txtJabatan.TabIndex = 20
+        ' 
+        ' lblStatusPTKP
+        ' 
+        lblStatusPTKP.BackColor = Color.Transparent
+        lblStatusPTKP.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        lblStatusPTKP.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        lblStatusPTKP.Location = New Point(24, 581)
+        lblStatusPTKP.Name = "lblStatusPTKP"
+        lblStatusPTKP.Size = New Size(67, 17)
+        lblStatusPTKP.TabIndex = 23
+        lblStatusPTKP.Text = "Status PTKP"
+        ' 
+        ' cmbStatusPTKP
+        ' 
+        cmbStatusPTKP.BackColor = Color.Transparent
+        cmbStatusPTKP.BorderRadius = 8
+        cmbStatusPTKP.CustomizableEdges = CustomizableEdges23
+        cmbStatusPTKP.DrawMode = DrawMode.OwnerDrawFixed
+        cmbStatusPTKP.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbStatusPTKP.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        cmbStatusPTKP.FocusedColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cmbStatusPTKP.FocusedState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cmbStatusPTKP.Font = New Font("Segoe UI", 9.0F)
+        cmbStatusPTKP.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        cmbStatusPTKP.ItemHeight = 30
+        cmbStatusPTKP.Items.AddRange(New Object() {"TK0", "TK1", "TK2", "TK3", "K0", "K1", "K2", "K3"})
+        cmbStatusPTKP.Location = New Point(24, 603)
+        cmbStatusPTKP.Name = "cmbStatusPTKP"
+        cmbStatusPTKP.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        cmbStatusPTKP.Size = New Size(432, 36)
+        cmbStatusPTKP.StartIndex = 0
+        cmbStatusPTKP.TabIndex = 24
+        ' 
+        ' btnRegister
+        ' 
+        btnRegister.BorderRadius = 8
+        btnRegister.CustomizableEdges = CustomizableEdges25
+        btnRegister.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        btnRegister.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Bold)
+        btnRegister.ForeColor = Color.White
+        btnRegister.Location = New Point(24, 660)
+        btnRegister.Name = "btnRegister"
+        btnRegister.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        btnRegister.Size = New Size(432, 44)
+        btnRegister.TabIndex = 25
+        btnRegister.Text = "Buat Akun"
+        ' 
+        ' lblLoginPrompt
+        ' 
+        lblLoginPrompt.BackColor = Color.Transparent
+        lblLoginPrompt.Font = New Font("Segoe UI", 9.0F)
+        lblLoginPrompt.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
+        lblLoginPrompt.Location = New Point(130, 718)
+        lblLoginPrompt.Name = "lblLoginPrompt"
+        lblLoginPrompt.Size = New Size(106, 17)
+        lblLoginPrompt.TabIndex = 26
+        lblLoginPrompt.Text = "Sudah punya akun?"
         ' 
         ' btnGoLogin
         ' 
         btnGoLogin.BackColor = Color.Transparent
         btnGoLogin.BorderRadius = 8
-        btnGoLogin.CustomizableEdges = CustomizableEdges1
-        btnGoLogin.DefaultAutoSize = True
-        btnGoLogin.DisabledState.BorderColor = Color.DarkGray
-        btnGoLogin.DisabledState.CustomBorderColor = Color.DarkGray
-        btnGoLogin.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnGoLogin.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnGoLogin.CustomizableEdges = CustomizableEdges27
         btnGoLogin.FillColor = Color.Empty
-        btnGoLogin.Font = New Font("Segoe UI", 9F)
-        btnGoLogin.ForeColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        btnGoLogin.HoverState.FillColor = Color.FromArgb(CByte(240), CByte(240), CByte(245))
-        btnGoLogin.Location = New Point(180, 824)
+        btnGoLogin.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        btnGoLogin.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        btnGoLogin.HoverState.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        btnGoLogin.Location = New Point(250, 712)
         btnGoLogin.Name = "btnGoLogin"
-        btnGoLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        btnGoLogin.Size = New Size(67, 27)
-        btnGoLogin.TabIndex = 13
-        btnGoLogin.Text = "Sign In"
+        btnGoLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        btnGoLogin.Size = New Size(80, 28)
+        btnGoLogin.TabIndex = 27
+        btnGoLogin.Text = "Masuk"
         btnGoLogin.UseTransparentBackground = True
-        ' 
-        ' lblLoginPrompt
-        ' 
-        lblLoginPrompt.BackColor = Color.Transparent
-        lblLoginPrompt.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblLoginPrompt.ForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        lblLoginPrompt.Location = New Point(50, 830)
-        lblLoginPrompt.Name = "lblLoginPrompt"
-        lblLoginPrompt.Size = New Size(138, 17)
-        lblLoginPrompt.TabIndex = 12
-        lblLoginPrompt.Text = "Already have an account?"
-        lblLoginPrompt.TextAlignment = ContentAlignment.MiddleCenter
-        ' 
-        ' btnRegister
-        ' 
-        btnRegister.BorderRadius = 12
-        btnRegister.CustomizableEdges = CustomizableEdges3
-        btnRegister.DisabledState.BorderColor = Color.DarkGray
-        btnRegister.DisabledState.CustomBorderColor = Color.DarkGray
-        btnRegister.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnRegister.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnRegister.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        btnRegister.Font = New Font("Segoe UI", 9F)
-        btnRegister.ForeColor = Color.White
-        btnRegister.HoverState.FillColor = Color.FromArgb(CByte(0), CByte(100), CByte(210))
-        btnRegister.Location = New Point(50, 760)
-        btnRegister.Name = "btnRegister"
-        btnRegister.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnRegister.Size = New Size(400, 50)
-        btnRegister.TabIndex = 11
-        btnRegister.Text = "Create Account"
-        ' 
-        ' cmbTipeUser
-        ' 
-        cmbTipeUser.BackColor = Color.Transparent
-        cmbTipeUser.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        cmbTipeUser.BorderRadius = 12
-        cmbTipeUser.CustomizableEdges = CustomizableEdges5
-        cmbTipeUser.DrawMode = DrawMode.OwnerDrawFixed
-        cmbTipeUser.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbTipeUser.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        cmbTipeUser.FocusedColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        cmbTipeUser.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        cmbTipeUser.Font = New Font("Segoe UI", 10F)
-        cmbTipeUser.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        cmbTipeUser.ItemHeight = 42
-        cmbTipeUser.Items.AddRange(New Object() {"Wajib Pajak", "Pemberi Kerja", "Admin"})
-        cmbTipeUser.Location = New Point(50, 685)
-        cmbTipeUser.Name = "cmbTipeUser"
-        cmbTipeUser.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        cmbTipeUser.Size = New Size(400, 48)
-        cmbTipeUser.StartIndex = 0
-        cmbTipeUser.TabIndex = 10
-        ' 
-        ' txtAlamat
-        ' 
-        txtAlamat.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtAlamat.BorderRadius = 12
-        txtAlamat.CustomizableEdges = CustomizableEdges7
-        txtAlamat.DefaultText = ""
-        txtAlamat.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtAlamat.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtAlamat.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtAlamat.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtAlamat.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtAlamat.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtAlamat.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtAlamat.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtAlamat.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtAlamat.Location = New Point(50, 610)
-        txtAlamat.Margin = New Padding(4, 5, 4, 5)
-        txtAlamat.Multiline = True
-        txtAlamat.Name = "txtAlamat"
-        txtAlamat.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtAlamat.PlaceholderText = "Alamat"
-        txtAlamat.SelectedText = ""
-        txtAlamat.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        txtAlamat.Size = New Size(400, 58)
-        txtAlamat.TabIndex = 9
-        ' 
-        ' txtNoTelepon
-        ' 
-        txtNoTelepon.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtNoTelepon.BorderRadius = 12
-        txtNoTelepon.CustomizableEdges = CustomizableEdges9
-        txtNoTelepon.DefaultText = ""
-        txtNoTelepon.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtNoTelepon.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtNoTelepon.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNoTelepon.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNoTelepon.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtNoTelepon.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNoTelepon.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtNoTelepon.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtNoTelepon.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNoTelepon.Location = New Point(50, 545)
-        txtNoTelepon.Margin = New Padding(4, 5, 4, 5)
-        txtNoTelepon.Name = "txtNoTelepon"
-        txtNoTelepon.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtNoTelepon.PlaceholderText = "No. Telepon"
-        txtNoTelepon.SelectedText = ""
-        txtNoTelepon.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        txtNoTelepon.Size = New Size(400, 48)
-        txtNoTelepon.TabIndex = 8
-        ' 
-        ' txtNIK
-        ' 
-        txtNIK.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtNIK.BorderRadius = 12
-        txtNIK.CustomizableEdges = CustomizableEdges11
-        txtNIK.DefaultText = ""
-        txtNIK.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtNIK.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtNIK.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNIK.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNIK.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtNIK.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNIK.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtNIK.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtNIK.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNIK.Location = New Point(50, 480)
-        txtNIK.Margin = New Padding(4, 5, 4, 5)
-        txtNIK.Name = "txtNIK"
-        txtNIK.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtNIK.PlaceholderText = "NIK (16 digits)"
-        txtNIK.SelectedText = ""
-        txtNIK.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        txtNIK.Size = New Size(400, 48)
-        txtNIK.TabIndex = 7
-        ' 
-        ' txtConfirmPassword
-        ' 
-        txtConfirmPassword.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtConfirmPassword.BorderRadius = 12
-        txtConfirmPassword.CustomizableEdges = CustomizableEdges13
-        txtConfirmPassword.DefaultText = ""
-        txtConfirmPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtConfirmPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtConfirmPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtConfirmPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtConfirmPassword.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtConfirmPassword.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtConfirmPassword.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtConfirmPassword.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtConfirmPassword.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtConfirmPassword.Location = New Point(50, 415)
-        txtConfirmPassword.Margin = New Padding(4, 5, 4, 5)
-        txtConfirmPassword.Name = "txtConfirmPassword"
-        txtConfirmPassword.PasswordChar = "●"c
-        txtConfirmPassword.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtConfirmPassword.PlaceholderText = "Confirm Password"
-        txtConfirmPassword.SelectedText = ""
-        txtConfirmPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        txtConfirmPassword.Size = New Size(400, 48)
-        txtConfirmPassword.TabIndex = 6
-        ' 
-        ' txtPassword
-        ' 
-        txtPassword.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtPassword.BorderRadius = 12
-        txtPassword.CustomizableEdges = CustomizableEdges15
-        txtPassword.DefaultText = ""
-        txtPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtPassword.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtPassword.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtPassword.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPassword.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtPassword.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtPassword.Location = New Point(50, 350)
-        txtPassword.Margin = New Padding(4, 5, 4, 5)
-        txtPassword.Name = "txtPassword"
-        txtPassword.PasswordChar = "●"c
-        txtPassword.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtPassword.PlaceholderText = "Password"
-        txtPassword.SelectedText = ""
-        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        txtPassword.Size = New Size(400, 48)
-        txtPassword.TabIndex = 5
-        ' 
-        ' txtEmail
-        ' 
-        txtEmail.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtEmail.BorderRadius = 12
-        txtEmail.CustomizableEdges = CustomizableEdges17
-        txtEmail.DefaultText = ""
-        txtEmail.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtEmail.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtEmail.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtEmail.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtEmail.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtEmail.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEmail.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtEmail.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtEmail.Location = New Point(50, 285)
-        txtEmail.Margin = New Padding(4, 5, 4, 5)
-        txtEmail.Name = "txtEmail"
-        txtEmail.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtEmail.PlaceholderText = "Email"
-        txtEmail.SelectedText = ""
-        txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        txtEmail.Size = New Size(400, 48)
-        txtEmail.TabIndex = 4
-        ' 
-        ' txtNamaLengkap
-        ' 
-        txtNamaLengkap.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtNamaLengkap.BorderRadius = 12
-        txtNamaLengkap.CustomizableEdges = CustomizableEdges19
-        txtNamaLengkap.DefaultText = ""
-        txtNamaLengkap.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtNamaLengkap.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtNamaLengkap.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNamaLengkap.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNamaLengkap.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtNamaLengkap.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNamaLengkap.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtNamaLengkap.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtNamaLengkap.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNamaLengkap.Location = New Point(50, 220)
-        txtNamaLengkap.Margin = New Padding(4, 5, 4, 5)
-        txtNamaLengkap.Name = "txtNamaLengkap"
-        txtNamaLengkap.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtNamaLengkap.PlaceholderText = "Nama Lengkap"
-        txtNamaLengkap.SelectedText = ""
-        txtNamaLengkap.ShadowDecoration.CustomizableEdges = CustomizableEdges20
-        txtNamaLengkap.Size = New Size(400, 48)
-        txtNamaLengkap.TabIndex = 3
-        ' 
-        ' txtNPWP
-        ' 
-        txtNPWP.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtNPWP.BorderRadius = 12
-        txtNPWP.CustomizableEdges = CustomizableEdges21
-        txtNPWP.DefaultText = ""
-        txtNPWP.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtNPWP.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtNPWP.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNPWP.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtNPWP.FillColor = Color.FromArgb(CByte(250), CByte(250), CByte(252))
-        txtNPWP.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNPWP.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtNPWP.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        txtNPWP.HoverState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtNPWP.Location = New Point(50, 155)
-        txtNPWP.Margin = New Padding(4, 5, 4, 5)
-        txtNPWP.Name = "txtNPWP"
-        txtNPWP.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtNPWP.PlaceholderText = "NPWP (15 digits)"
-        txtNPWP.SelectedText = ""
-        txtNPWP.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        txtNPWP.Size = New Size(400, 48)
-        txtNPWP.TabIndex = 2
-        ' 
-        ' lblSubtitle
-        ' 
-        lblSubtitle.BackColor = Color.Transparent
-        lblSubtitle.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblSubtitle.ForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        lblSubtitle.Location = New Point(50, 100)
-        lblSubtitle.Name = "lblSubtitle"
-        lblSubtitle.Size = New Size(254, 19)
-        lblSubtitle.TabIndex = 1
-        lblSubtitle.Text = "Register to manage your tax account easily"
-        lblSubtitle.TextAlignment = ContentAlignment.MiddleCenter
-        ' 
-        ' lblTitle
-        ' 
-        lblTitle.BackColor = Color.Transparent
-        lblTitle.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTitle.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        lblTitle.Location = New Point(50, 40)
-        lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(231, 47)
-        lblTitle.TabIndex = 0
-        lblTitle.Text = "Create Account"
-        lblTitle.TextAlignment = ContentAlignment.MiddleCenter
         ' 
         ' FrmRegister
         ' 
         AutoScaleMode = AutoScaleMode.None
-        BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(247))
-        ClientSize = New Size(800, 1000)
+        BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
+        ClientSize = New Size(560, 950)
         Controls.Add(pnlMain)
         FormBorderStyle = FormBorderStyle.None
         Name = "FrmRegister"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Register"
         pnlMain.ResumeLayout(False)
-        pnlMain.PerformLayout()
+        pnlHeader.ResumeLayout(False)
+        pnlHeader.PerformLayout()
+        pnlForm.ResumeLayout(False)
+        pnlForm.PerformLayout()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents pnlMain As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents pnlHeader As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents pnlForm As Guna.UI2.WinForms.Guna2Panel
+    ' Labels
+    Friend WithEvents lblNPWP As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblNamaLengkap As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblEmail As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPassword As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblConfirmPassword As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblNIK As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblNoTelepon As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblAlamat As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPekerjaan As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPerusahaan As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblJabatan As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblStatusPTKP As Guna.UI2.WinForms.Guna2HtmlLabel
+    ' Inputs
     Friend WithEvents txtNPWP As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtNamaLengkap As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtEmail As Guna.UI2.WinForms.Guna2TextBox
@@ -418,7 +593,10 @@ Partial Class FrmRegister
     Friend WithEvents txtNIK As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtNoTelepon As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtAlamat As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents cmbTipeUser As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cmbPerusahaan As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents txtJabatan As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents cmbStatusPTKP As Guna.UI2.WinForms.Guna2ComboBox
+    ' Buttons
     Friend WithEvents btnRegister As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblLoginPrompt As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnGoLogin As Guna.UI2.WinForms.Guna2Button

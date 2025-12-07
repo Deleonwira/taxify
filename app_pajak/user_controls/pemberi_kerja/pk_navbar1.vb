@@ -15,6 +15,14 @@ Public Class pk_navbar1
         Riwayat
     End Enum
 
+    Private Sub Dashboard_CheckedChanged(sender As Object, e As EventArgs)
+        If btnDashboard.Checked Then
+            btnDashboard.Image = My.Resources.Resources.dashboard_white
+        Else
+            btnDashboard.Image = My.Resources.Resources.dashboard
+        End If
+    End Sub
+
     ' ====== HANDLER NAVIGASI ======
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click

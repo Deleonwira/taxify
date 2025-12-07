@@ -149,6 +149,7 @@ Partial Class wp_detail_bukti_potong
         Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
         Guna2HtmlLabel16.Size = New Size(3, 2)
         Guna2HtmlLabel16.TabIndex = 5
+        Guna2HtmlLabel16.Text = Nothing
         ' 
         ' PanelEmployer
         ' 
@@ -197,6 +198,7 @@ Partial Class wp_detail_bukti_potong
         LblStatusKepegawaianValue.Name = "LblStatusKepegawaianValue"
         LblStatusKepegawaianValue.Size = New Size(3, 2)
         LblStatusKepegawaianValue.TabIndex = 25
+        LblStatusKepegawaianValue.Text = Nothing
         ' 
         ' LblStatusKepegawaian
         ' 
@@ -218,6 +220,7 @@ Partial Class wp_detail_bukti_potong
         LblNomorKaryawanValue.Name = "LblNomorKaryawanValue"
         LblNomorKaryawanValue.Size = New Size(3, 2)
         LblNomorKaryawanValue.TabIndex = 23
+        LblNomorKaryawanValue.Text = Nothing
         ' 
         ' LblNomorKaryawan
         ' 
@@ -239,6 +242,7 @@ Partial Class wp_detail_bukti_potong
         LblStatusPTKPValue.Name = "LblStatusPTKPValue"
         LblStatusPTKPValue.Size = New Size(3, 2)
         LblStatusPTKPValue.TabIndex = 21
+        LblStatusPTKPValue.Text = Nothing
         ' 
         ' LblStatusPTKP
         ' 
@@ -260,6 +264,7 @@ Partial Class wp_detail_bukti_potong
         LblAlamatKaryawanValue.Name = "LblAlamatKaryawanValue"
         LblAlamatKaryawanValue.Size = New Size(3, 2)
         LblAlamatKaryawanValue.TabIndex = 19
+        LblAlamatKaryawanValue.Text = Nothing
         ' 
         ' LblAlamatKaryawan
         ' 
@@ -281,6 +286,7 @@ Partial Class wp_detail_bukti_potong
         LblNPWPPegawaiValue.Name = "LblNPWPPegawaiValue"
         LblNPWPPegawaiValue.Size = New Size(3, 2)
         LblNPWPPegawaiValue.TabIndex = 17
+        LblNPWPPegawaiValue.Text = Nothing
         ' 
         ' LblNPWPPegawai
         ' 
@@ -302,6 +308,7 @@ Partial Class wp_detail_bukti_potong
         LblNamaPegawaiValue.Name = "LblNamaPegawaiValue"
         LblNamaPegawaiValue.Size = New Size(3, 2)
         LblNamaPegawaiValue.TabIndex = 15
+        LblNamaPegawaiValue.Text = Nothing
         ' 
         ' LblNamaPegawai
         ' 
@@ -334,6 +341,7 @@ Partial Class wp_detail_bukti_potong
         LblAlamatPerusahaanValue.Name = "LblAlamatPerusahaanValue"
         LblAlamatPerusahaanValue.Size = New Size(3, 2)
         LblAlamatPerusahaanValue.TabIndex = 10
+        LblAlamatPerusahaanValue.Text = Nothing
         ' 
         ' LblAlamatPerusahaan
         ' 
@@ -355,6 +363,7 @@ Partial Class wp_detail_bukti_potong
         LblNPWPPerusahaanValue.Name = "LblNPWPPerusahaanValue"
         LblNPWPPerusahaanValue.Size = New Size(3, 2)
         LblNPWPPerusahaanValue.TabIndex = 8
+        LblNPWPPerusahaanValue.Text = Nothing
         ' 
         ' LblNPWPPerusahaan
         ' 
@@ -376,6 +385,7 @@ Partial Class wp_detail_bukti_potong
         LblNamaPerusahaanValue.Name = "LblNamaPerusahaanValue"
         LblNamaPerusahaanValue.Size = New Size(3, 2)
         LblNamaPerusahaanValue.TabIndex = 6
+        LblNamaPerusahaanValue.Text = Nothing
         ' 
         ' LblNamaPerusahaan
         ' 
@@ -397,6 +407,7 @@ Partial Class wp_detail_bukti_potong
         LblTanggalBuktiValue.Name = "LblTanggalBuktiValue"
         LblTanggalBuktiValue.Size = New Size(3, 2)
         LblTanggalBuktiValue.TabIndex = 4
+        LblTanggalBuktiValue.Text = Nothing
         ' 
         ' LblTanggalBukti
         ' 
@@ -418,6 +429,7 @@ Partial Class wp_detail_bukti_potong
         LblNoBuktiValue.Name = "LblNoBuktiValue"
         LblNoBuktiValue.Size = New Size(3, 2)
         LblNoBuktiValue.TabIndex = 2
+        LblNoBuktiValue.Text = Nothing
         ' 
         ' LblNoBukti
         ' 
@@ -475,6 +487,7 @@ Partial Class wp_detail_bukti_potong
         LblPPh21DisetorValue.Name = "LblPPh21DisetorValue"
         LblPPh21DisetorValue.Size = New Size(3, 2)
         LblPPh21DisetorValue.TabIndex = 10
+        LblPPh21DisetorValue.Text = Nothing
         ' 
         ' LblPPh21Disetor
         ' 
@@ -496,6 +509,7 @@ Partial Class wp_detail_bukti_potong
         LblPPh21DipungutValue.Name = "LblPPh21DipungutValue"
         LblPPh21DipungutValue.Size = New Size(3, 2)
         LblPPh21DipungutValue.TabIndex = 8
+        LblPPh21DipungutValue.Text = Nothing
         ' 
         ' LblPPh21Dipungut
         ' 
@@ -517,6 +531,7 @@ Partial Class wp_detail_bukti_potong
         LblPotonganValue.Name = "LblPotonganValue"
         LblPotonganValue.Size = New Size(3, 2)
         LblPotonganValue.TabIndex = 6
+        LblPotonganValue.Text = Nothing
         ' 
         ' LblPotongan
         ' 
@@ -538,6 +553,7 @@ Partial Class wp_detail_bukti_potong
         LblTunjanganValue.Name = "LblTunjanganValue"
         LblTunjanganValue.Size = New Size(3, 2)
         LblTunjanganValue.TabIndex = 4
+        LblTunjanganValue.Text = Nothing
         ' 
         ' LblTunjangan
         ' 
@@ -559,6 +575,7 @@ Partial Class wp_detail_bukti_potong
         LblGajiBrutoValue.Name = "LblGajiBrutoValue"
         LblGajiBrutoValue.Size = New Size(3, 2)
         LblGajiBrutoValue.TabIndex = 2
+        LblGajiBrutoValue.Text = Nothing
         ' 
         ' LblGajiBruto
         ' 

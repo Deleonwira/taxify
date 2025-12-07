@@ -57,7 +57,7 @@ Partial Class pk_navbar1
         Guna2Panel1.Margin = New Padding(3, 4, 3, 4)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2Panel1.Size = New Size(190, 720)
+        Guna2Panel1.Size = New Size(200, 720)
         Guna2Panel1.TabIndex = 0
         ' 
         ' btnLogout
@@ -206,7 +206,7 @@ Partial Class pk_navbar1
         ForeColor = Color.White
         Margin = New Padding(3, 4, 3, 4)
         Name = "pk_navbar1"
-        Size = New Size(191, 720)
+        Size = New Size(200, 720)
         Guna2Panel1.ResumeLayout(False)
         Guna2Panel1.PerformLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()

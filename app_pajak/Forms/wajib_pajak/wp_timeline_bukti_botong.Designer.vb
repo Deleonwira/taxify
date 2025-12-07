@@ -216,7 +216,7 @@ Partial Class wp_timeline_bukti_botong
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button1.FillColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        Guna2Button1.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Guna2Button1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         Guna2Button1.ForeColor = Color.FromArgb(CByte(0), CByte(219), CByte(101))
         Guna2Button1.Location = New Point(223, 20)
         Guna2Button1.Name = "Guna2Button1"
@@ -232,7 +232,7 @@ Partial Class wp_timeline_bukti_botong
         BtnEditLapor.BorderThickness = 1
         BtnEditLapor.CustomizableEdges = CustomizableEdges3
         BtnEditLapor.FillColor = Color.White
-        BtnEditLapor.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        BtnEditLapor.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         BtnEditLapor.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         BtnEditLapor.Location = New Point(178, 141)
         BtnEditLapor.Name = "BtnEditLapor"
@@ -246,7 +246,7 @@ Partial Class wp_timeline_bukti_botong
         BtnInputLapor.BorderRadius = 8
         BtnInputLapor.CustomizableEdges = CustomizableEdges5
         BtnInputLapor.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        BtnInputLapor.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        BtnInputLapor.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         BtnInputLapor.ForeColor = Color.White
         BtnInputLapor.Location = New Point(24, 141)
         BtnInputLapor.Name = "BtnInputLapor"
@@ -258,7 +258,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblTanggalInputValue
         ' 
         LblTanggalInputValue.BackColor = Color.Transparent
-        LblTanggalInputValue.Font = New Font("Segoe UI", 9.0F)
+        LblTanggalInputValue.Font = New Font("Segoe UI", 9F)
         LblTanggalInputValue.ForeColor = Color.Black
         LblTanggalInputValue.Location = New Point(138, 84)
         LblTanggalInputValue.Name = "LblTanggalInputValue"
@@ -269,7 +269,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblTanggalInput
         ' 
         LblTanggalInput.BackColor = Color.Transparent
-        LblTanggalInput.Font = New Font("Segoe UI", 9.0F)
+        LblTanggalInput.Font = New Font("Segoe UI", 9F)
         LblTanggalInput.ForeColor = Color.FromArgb(CByte(102), CByte(112), CByte(133))
         LblTanggalInput.Location = New Point(24, 84)
         LblTanggalInput.Name = "LblTanggalInput"
@@ -280,7 +280,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblSelectedMonth
         ' 
         LblSelectedMonth.BackColor = Color.Transparent
-        LblSelectedMonth.Font = New Font("Segoe UI Semibold", 14.0F, FontStyle.Bold)
+        LblSelectedMonth.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold)
         LblSelectedMonth.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         LblSelectedMonth.Location = New Point(24, 54)
         LblSelectedMonth.Name = "LblSelectedMonth"
@@ -291,7 +291,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblDetailTitle
         ' 
         LblDetailTitle.BackColor = Color.Transparent
-        LblDetailTitle.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        LblDetailTitle.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblDetailTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblDetailTitle.Location = New Point(24, 20)
         LblDetailTitle.Name = "LblDetailTitle"
@@ -337,8 +337,8 @@ Partial Class wp_timeline_bukti_botong
         FlowTimeline.Location = New Point(24, 64)
         FlowTimeline.Margin = New Padding(0)
         FlowTimeline.Name = "FlowTimeline"
-        FlowTimeline.Padding = New Padding(0, 8, 0, 0)
-        FlowTimeline.Size = New Size(912, 116)
+        FlowTimeline.Padding = New Padding(20, 8, 0, 0)
+        FlowTimeline.Size = New Size(1014, 116)
         FlowTimeline.TabIndex = 1
         FlowTimeline.WrapContents = False
         ' 
@@ -352,8 +352,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardJan.Controls.Add(LblMonthJan)
         MonthCardJan.CustomizableEdges = CustomizableEdges10
         MonthCardJan.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardJan.Location = New Point(4, 8)
-        MonthCardJan.Margin = New Padding(4, 0, 4, 0)
+        MonthCardJan.Location = New Point(28, 8)
+        MonthCardJan.Margin = New Padding(8, 0, 4, 0)
         MonthCardJan.Name = "MonthCardJan"
         MonthCardJan.ShadowDecoration.CustomizableEdges = CustomizableEdges11
         MonthCardJan.Size = New Size(68, 100)
@@ -393,8 +393,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardFeb.Controls.Add(LblMonthFeb)
         MonthCardFeb.CustomizableEdges = CustomizableEdges13
         MonthCardFeb.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardFeb.Location = New Point(80, 8)
-        MonthCardFeb.Margin = New Padding(4, 0, 4, 0)
+        MonthCardFeb.Location = New Point(108, 8)
+        MonthCardFeb.Margin = New Padding(8, 0, 4, 0)
         MonthCardFeb.Name = "MonthCardFeb"
         MonthCardFeb.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         MonthCardFeb.Size = New Size(68, 100)
@@ -434,8 +434,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardMar.Controls.Add(LblMonthMar)
         MonthCardMar.CustomizableEdges = CustomizableEdges16
         MonthCardMar.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardMar.Location = New Point(156, 8)
-        MonthCardMar.Margin = New Padding(4, 0, 4, 0)
+        MonthCardMar.Location = New Point(188, 8)
+        MonthCardMar.Margin = New Padding(8, 0, 4, 0)
         MonthCardMar.Name = "MonthCardMar"
         MonthCardMar.ShadowDecoration.CustomizableEdges = CustomizableEdges17
         MonthCardMar.Size = New Size(68, 100)
@@ -475,8 +475,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardApr.Controls.Add(LblMonthApr)
         MonthCardApr.CustomizableEdges = CustomizableEdges19
         MonthCardApr.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardApr.Location = New Point(232, 8)
-        MonthCardApr.Margin = New Padding(4, 0, 4, 0)
+        MonthCardApr.Location = New Point(268, 8)
+        MonthCardApr.Margin = New Padding(8, 0, 4, 0)
         MonthCardApr.Name = "MonthCardApr"
         MonthCardApr.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         MonthCardApr.Size = New Size(68, 100)
@@ -516,8 +516,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardMay.Controls.Add(LblMonthMay)
         MonthCardMay.CustomizableEdges = CustomizableEdges22
         MonthCardMay.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardMay.Location = New Point(308, 8)
-        MonthCardMay.Margin = New Padding(4, 0, 4, 0)
+        MonthCardMay.Location = New Point(348, 8)
+        MonthCardMay.Margin = New Padding(8, 0, 4, 0)
         MonthCardMay.Name = "MonthCardMay"
         MonthCardMay.ShadowDecoration.CustomizableEdges = CustomizableEdges23
         MonthCardMay.Size = New Size(68, 100)
@@ -557,8 +557,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardJun.Controls.Add(LblMonthJun)
         MonthCardJun.CustomizableEdges = CustomizableEdges25
         MonthCardJun.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardJun.Location = New Point(384, 8)
-        MonthCardJun.Margin = New Padding(4, 0, 4, 0)
+        MonthCardJun.Location = New Point(428, 8)
+        MonthCardJun.Margin = New Padding(8, 0, 4, 0)
         MonthCardJun.Name = "MonthCardJun"
         MonthCardJun.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         MonthCardJun.Size = New Size(68, 100)
@@ -598,8 +598,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardJul.Controls.Add(LblMonthJul)
         MonthCardJul.CustomizableEdges = CustomizableEdges28
         MonthCardJul.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardJul.Location = New Point(460, 8)
-        MonthCardJul.Margin = New Padding(4, 0, 4, 0)
+        MonthCardJul.Location = New Point(508, 8)
+        MonthCardJul.Margin = New Padding(8, 0, 4, 0)
         MonthCardJul.Name = "MonthCardJul"
         MonthCardJul.ShadowDecoration.CustomizableEdges = CustomizableEdges29
         MonthCardJul.Size = New Size(68, 100)
@@ -639,8 +639,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardAug.Controls.Add(LblMonthAug)
         MonthCardAug.CustomizableEdges = CustomizableEdges31
         MonthCardAug.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardAug.Location = New Point(536, 8)
-        MonthCardAug.Margin = New Padding(4, 0, 4, 0)
+        MonthCardAug.Location = New Point(588, 8)
+        MonthCardAug.Margin = New Padding(8, 0, 4, 0)
         MonthCardAug.Name = "MonthCardAug"
         MonthCardAug.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         MonthCardAug.Size = New Size(68, 100)
@@ -680,8 +680,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardSep.Controls.Add(LblMonthSep)
         MonthCardSep.CustomizableEdges = CustomizableEdges34
         MonthCardSep.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardSep.Location = New Point(612, 8)
-        MonthCardSep.Margin = New Padding(4, 0, 4, 0)
+        MonthCardSep.Location = New Point(668, 8)
+        MonthCardSep.Margin = New Padding(8, 0, 4, 0)
         MonthCardSep.Name = "MonthCardSep"
         MonthCardSep.ShadowDecoration.CustomizableEdges = CustomizableEdges35
         MonthCardSep.Size = New Size(68, 100)
@@ -721,8 +721,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardOct.Controls.Add(LblMonthOct)
         MonthCardOct.CustomizableEdges = CustomizableEdges37
         MonthCardOct.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardOct.Location = New Point(688, 8)
-        MonthCardOct.Margin = New Padding(4, 0, 4, 0)
+        MonthCardOct.Location = New Point(748, 8)
+        MonthCardOct.Margin = New Padding(8, 0, 4, 0)
         MonthCardOct.Name = "MonthCardOct"
         MonthCardOct.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         MonthCardOct.Size = New Size(68, 100)
@@ -762,8 +762,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardNov.Controls.Add(LblMonthNov)
         MonthCardNov.CustomizableEdges = CustomizableEdges40
         MonthCardNov.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardNov.Location = New Point(764, 8)
-        MonthCardNov.Margin = New Padding(4, 0, 4, 0)
+        MonthCardNov.Location = New Point(828, 8)
+        MonthCardNov.Margin = New Padding(8, 0, 4, 0)
         MonthCardNov.Name = "MonthCardNov"
         MonthCardNov.ShadowDecoration.CustomizableEdges = CustomizableEdges41
         MonthCardNov.Size = New Size(68, 100)
@@ -803,8 +803,8 @@ Partial Class wp_timeline_bukti_botong
         MonthCardDec.Controls.Add(LblMonthDec)
         MonthCardDec.CustomizableEdges = CustomizableEdges43
         MonthCardDec.FillColor = Color.FromArgb(CByte(252), CByte(253), CByte(255))
-        MonthCardDec.Location = New Point(840, 8)
-        MonthCardDec.Margin = New Padding(4, 0, 4, 0)
+        MonthCardDec.Location = New Point(908, 8)
+        MonthCardDec.Margin = New Padding(8, 0, 4, 0)
         MonthCardDec.Name = "MonthCardDec"
         MonthCardDec.ShadowDecoration.CustomizableEdges = CustomizableEdges44
         MonthCardDec.Size = New Size(68, 100)
@@ -826,7 +826,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblMonthDec
         ' 
         LblMonthDec.BackColor = Color.Transparent
-        LblMonthDec.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        LblMonthDec.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         LblMonthDec.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
         LblMonthDec.Location = New Point(21, 12)
         LblMonthDec.Name = "LblMonthDec"
@@ -837,7 +837,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblTimelineTitle
         ' 
         LblTimelineTitle.BackColor = Color.Transparent
-        LblTimelineTitle.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        LblTimelineTitle.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblTimelineTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblTimelineTitle.Location = New Point(24, 20)
         LblTimelineTitle.Name = "LblTimelineTitle"
@@ -868,7 +868,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblSubtitle
         ' 
         LblSubtitle.BackColor = Color.Transparent
-        LblSubtitle.Font = New Font("Segoe UI", 9.0F)
+        LblSubtitle.Font = New Font("Segoe UI", 9F)
         LblSubtitle.ForeColor = Color.FromArgb(CByte(233), CByte(221), CByte(255))
         LblSubtitle.Location = New Point(24, 48)
         LblSubtitle.Name = "LblSubtitle"
@@ -879,7 +879,7 @@ Partial Class wp_timeline_bukti_botong
         ' LblTitle
         ' 
         LblTitle.BackColor = Color.Transparent
-        LblTitle.Font = New Font("Segoe UI Semibold", 14.0F, FontStyle.Bold)
+        LblTitle.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold)
         LblTitle.ForeColor = Color.White
         LblTitle.Location = New Point(24, 14)
         LblTitle.Name = "LblTitle"

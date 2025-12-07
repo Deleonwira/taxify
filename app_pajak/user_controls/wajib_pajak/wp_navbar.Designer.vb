@@ -35,9 +35,9 @@ Partial Class wp_navbar
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        btnRiwayat = New Guna.UI2.WinForms.Guna2Button()
         btnLogout = New Guna.UI2.WinForms.Guna2Button()
         btnDataDiri = New Guna.UI2.WinForms.Guna2Button()
-        btnRiwayat = New Guna.UI2.WinForms.Guna2Button()
         btnBuktiPotong = New Guna.UI2.WinForms.Guna2Button()
         btnLapor = New Guna.UI2.WinForms.Guna2Button()
         btnDashboard = New Guna.UI2.WinForms.Guna2Button()
@@ -50,9 +50,9 @@ Partial Class wp_navbar
         ' Guna2Panel1
         ' 
         Guna2Panel1.BackColor = Color.FromArgb(CByte(84), CByte(64), CByte(209))
+        Guna2Panel1.Controls.Add(btnRiwayat)
         Guna2Panel1.Controls.Add(btnLogout)
         Guna2Panel1.Controls.Add(btnDataDiri)
-        Guna2Panel1.Controls.Add(btnRiwayat)
         Guna2Panel1.Controls.Add(btnBuktiPotong)
         Guna2Panel1.Controls.Add(btnLapor)
         Guna2Panel1.Controls.Add(btnDashboard)
@@ -65,28 +65,56 @@ Partial Class wp_navbar
         Guna2Panel1.Margin = New Padding(3, 4, 3, 4)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        Guna2Panel1.Size = New Size(190, 720)
+        Guna2Panel1.Size = New Size(200, 720)
         Guna2Panel1.TabIndex = 0
+        ' 
+        ' btnRiwayat
+        ' 
+        btnRiwayat.BackColor = Color.Transparent
+        btnRiwayat.BorderRadius = 10
+        btnRiwayat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        btnRiwayat.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
+        btnRiwayat.CheckedState.ForeColor = Color.White
+        btnRiwayat.CustomizableEdges = CustomizableEdges1
+        btnRiwayat.DisabledState.BorderColor = Color.DarkGray
+        btnRiwayat.DisabledState.CustomBorderColor = Color.DarkGray
+        btnRiwayat.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnRiwayat.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnRiwayat.FillColor = Color.Transparent
+        btnRiwayat.Font = New Font("Segoe UI", 10.0F)
+        btnRiwayat.ForeColor = Color.Black
+        btnRiwayat.Image = My.Resources.Resources.user_robot
+        btnRiwayat.ImageAlign = HorizontalAlignment.Left
+        btnRiwayat.ImageOffset = New Point(10, 0)
+        btnRiwayat.Location = New Point(17, 280)
+        btnRiwayat.Margin = New Padding(3, 4, 3, 4)
+        btnRiwayat.Name = "btnRiwayat"
+        btnRiwayat.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnRiwayat.Size = New Size(167, 41)
+        btnRiwayat.TabIndex = 21
+        btnRiwayat.Text = "Diagnosa Pajak"
+        btnRiwayat.TextAlign = HorizontalAlignment.Left
+        btnRiwayat.TextOffset = New Point(20, 0)
         ' 
         ' btnLogout
         ' 
         btnLogout.BackColor = Color.Transparent
         btnLogout.BorderRadius = 10
-        btnLogout.CustomizableEdges = CustomizableEdges1
+        btnLogout.CustomizableEdges = CustomizableEdges3
         btnLogout.DisabledState.BorderColor = Color.DarkGray
         btnLogout.DisabledState.CustomBorderColor = Color.DarkGray
         btnLogout.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnLogout.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnLogout.FillColor = Color.Transparent
         btnLogout.Font = New Font("Segoe UI", 10.0F)
-        btnLogout.ForeColor = Color.Black
-        btnLogout.Image = My.Resources.Resources.contact_form
+        btnLogout.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        btnLogout.Image = My.Resources.Resources.exit__2_
         btnLogout.ImageAlign = HorizontalAlignment.Left
         btnLogout.ImageOffset = New Point(10, 0)
         btnLogout.Location = New Point(17, 622)
         btnLogout.Margin = New Padding(3, 4, 3, 4)
         btnLogout.Name = "btnLogout"
-        btnLogout.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnLogout.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnLogout.Size = New Size(160, 60)
         btnLogout.TabIndex = 20
         btnLogout.Text = "Keluar"
@@ -100,7 +128,7 @@ Partial Class wp_navbar
         btnDataDiri.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         btnDataDiri.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
         btnDataDiri.CheckedState.ForeColor = Color.White
-        btnDataDiri.CustomizableEdges = CustomizableEdges3
+        btnDataDiri.CustomizableEdges = CustomizableEdges5
         btnDataDiri.DisabledState.BorderColor = Color.DarkGray
         btnDataDiri.DisabledState.CustomBorderColor = Color.DarkGray
         btnDataDiri.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -114,40 +142,12 @@ Partial Class wp_navbar
         btnDataDiri.Location = New Point(17, 329)
         btnDataDiri.Margin = New Padding(3, 4, 3, 4)
         btnDataDiri.Name = "btnDataDiri"
-        btnDataDiri.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnDataDiri.Size = New Size(160, 41)
+        btnDataDiri.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnDataDiri.Size = New Size(167, 41)
         btnDataDiri.TabIndex = 18
         btnDataDiri.Text = "Data Diri"
         btnDataDiri.TextAlign = HorizontalAlignment.Left
         btnDataDiri.TextOffset = New Point(20, 0)
-        ' 
-        ' btnRiwayat
-        ' 
-        btnRiwayat.BackColor = Color.Transparent
-        btnRiwayat.BorderRadius = 10
-        btnRiwayat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        btnRiwayat.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
-        btnRiwayat.CheckedState.ForeColor = Color.White
-        btnRiwayat.CustomizableEdges = CustomizableEdges5
-        btnRiwayat.DisabledState.BorderColor = Color.DarkGray
-        btnRiwayat.DisabledState.CustomBorderColor = Color.DarkGray
-        btnRiwayat.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnRiwayat.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnRiwayat.FillColor = Color.Transparent
-        btnRiwayat.Font = New Font("Segoe UI", 10.0F)
-        btnRiwayat.ForeColor = Color.Black
-        btnRiwayat.Image = My.Resources.Resources.history
-        btnRiwayat.ImageAlign = HorizontalAlignment.Left
-        btnRiwayat.ImageOffset = New Point(10, 0)
-        btnRiwayat.Location = New Point(17, 280)
-        btnRiwayat.Margin = New Padding(3, 4, 3, 4)
-        btnRiwayat.Name = "btnRiwayat"
-        btnRiwayat.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnRiwayat.Size = New Size(160, 41)
-        btnRiwayat.TabIndex = 17
-        btnRiwayat.Text = "Riwayat"
-        btnRiwayat.TextAlign = HorizontalAlignment.Left
-        btnRiwayat.TextOffset = New Point(20, 0)
         ' 
         ' btnBuktiPotong
         ' 
@@ -164,14 +164,14 @@ Partial Class wp_navbar
         btnBuktiPotong.FillColor = Color.Transparent
         btnBuktiPotong.Font = New Font("Segoe UI", 10.0F)
         btnBuktiPotong.ForeColor = Color.Black
-        btnBuktiPotong.Image = My.Resources.Resources.report_card
+        btnBuktiPotong.Image = My.Resources.Resources.diploma
         btnBuktiPotong.ImageAlign = HorizontalAlignment.Left
         btnBuktiPotong.ImageOffset = New Point(10, 0)
         btnBuktiPotong.Location = New Point(17, 231)
         btnBuktiPotong.Margin = New Padding(3, 4, 3, 4)
         btnBuktiPotong.Name = "btnBuktiPotong"
         btnBuktiPotong.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        btnBuktiPotong.Size = New Size(160, 41)
+        btnBuktiPotong.Size = New Size(167, 41)
         btnBuktiPotong.TabIndex = 16
         btnBuktiPotong.Text = "Bukti Potong"
         btnBuktiPotong.TextAlign = HorizontalAlignment.Left
@@ -192,16 +192,16 @@ Partial Class wp_navbar
         btnLapor.FillColor = Color.Transparent
         btnLapor.Font = New Font("Segoe UI", 10.0F)
         btnLapor.ForeColor = Color.Black
-        btnLapor.Image = My.Resources.Resources.contact_form
+        btnLapor.Image = My.Resources.Resources.newspaper
         btnLapor.ImageAlign = HorizontalAlignment.Left
         btnLapor.ImageOffset = New Point(10, 0)
         btnLapor.Location = New Point(17, 182)
         btnLapor.Margin = New Padding(3, 4, 3, 4)
         btnLapor.Name = "btnLapor"
         btnLapor.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        btnLapor.Size = New Size(160, 41)
+        btnLapor.Size = New Size(167, 41)
         btnLapor.TabIndex = 15
-        btnLapor.Text = "Lapor SPT"
+        btnLapor.Text = "SPT"
         btnLapor.TextAlign = HorizontalAlignment.Left
         btnLapor.TextOffset = New Point(20, 0)
         ' 
@@ -227,7 +227,7 @@ Partial Class wp_navbar
         btnDashboard.Margin = New Padding(3, 4, 3, 4)
         btnDashboard.Name = "btnDashboard"
         btnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        btnDashboard.Size = New Size(160, 41)
+        btnDashboard.Size = New Size(167, 41)
         btnDashboard.TabIndex = 14
         btnDashboard.Text = "Dashboard"
         btnDashboard.TextAlign = HorizontalAlignment.Left
@@ -270,7 +270,7 @@ Partial Class wp_navbar
         ForeColor = Color.White
         Margin = New Padding(3, 4, 3, 4)
         Name = "wp_navbar"
-        Size = New Size(191, 720)
+        Size = New Size(200, 720)
         Guna2Panel1.ResumeLayout(False)
         Guna2Panel1.PerformLayout()
         CType(Guna2PictureBox6, ComponentModel.ISupportInitialize).EndInit()
@@ -284,8 +284,8 @@ Partial Class wp_navbar
     Friend WithEvents btnDashboard As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnLapor As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnBuktiPotong As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnRiwayat As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnDataDiri As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnRiwayat As Guna.UI2.WinForms.Guna2Button
 
 End Class

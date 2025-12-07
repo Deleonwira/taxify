@@ -9,6 +9,18 @@ Public Class wp_detail_bukti_potong
     End Sub
 
     Private Sub wp_detail_bukti_potong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Navigation event handlers
+        AddHandler Wp_navbar1.DashboardClicked, AddressOf OnDashboardClicked
+        AddHandler Wp_navbar1.LaporPajakClicked, AddressOf OnLaporPajakClicked
+        AddHandler Wp_navbar1.RiwayatLaporClicked, AddressOf OnRiwayatLaporClicked
+        AddHandler Wp_navbar1.TimelineBuktiPotongClicked, AddressOf OnTimelineBuktiPotongClicked
+        AddHandler Wp_navbar1.RiwayatBuktiPotongClicked, AddressOf OnRiwayatBuktiPotongClicked
+        AddHandler Wp_navbar1.DataDiriClicked, AddressOf OnDataDiriClicked
+        AddHandler Wp_navbar1.LogoutClicked, AddressOf OnLogoutClicked
+
+        ' Set active menu (this is a detail form from RiwayatBuktiPotong)
+        Wp_navbar1.SetActiveMenu(wp_navbar.MenuType.RiwayatBuktiPotong)
+
         LoadDetail()
     End Sub
 
@@ -83,7 +95,49 @@ Public Class wp_detail_bukti_potong
 
     End Sub
 
-    Private Sub BunifuPanel1_Click(sender As Object, e As EventArgs) Handles BunifuPanel1.Click
+    ' =============================
+    '   NAVIGATION HANDLERS
+    ' =============================
+    Private Sub OnDashboardClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_dashboard()
+        f.Show()
+        Me.Close()
+    End Sub
 
+    Private Sub OnLaporPajakClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_lapor_pajak()
+        f.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub OnRiwayatLaporClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_riwayat_lapor_pajak()
+        f.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub OnTimelineBuktiPotongClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_timeline_bukti_botong()
+        f.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub OnRiwayatBuktiPotongClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_riwayat_bukti_potong()
+        f.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub OnDataDiriClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_data_diri()
+        f.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub OnLogoutClicked(sender As Object, e As EventArgs)
+        ModuleSession.ClearSession()
+        Dim f As New FrmLogin()
+        f.Show()
+        Me.Close()
     End Sub
 End Class

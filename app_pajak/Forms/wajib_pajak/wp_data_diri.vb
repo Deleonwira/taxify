@@ -214,4 +214,7 @@ Public Class wp_data_diri
         Me.Close()
     End Sub
 
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+
+    End Sub
 End Class

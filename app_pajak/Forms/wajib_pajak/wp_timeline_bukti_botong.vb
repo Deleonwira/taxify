@@ -19,7 +19,7 @@ Public Class wp_timeline_bukti_botong
         For i As Integer = 0 To monthCards.Count - 1
             Dim monthIndex As Integer = i + 1 ' Store month number (1-12)
             AddHandler monthCards(i).Click, Sub(s, ev) SelectMonth(monthIndex)
-            
+
             ' Make cursor hand pointer for better UX
             monthCards(i).Cursor = Cursors.Hand
         Next
@@ -306,5 +306,9 @@ Public Class wp_timeline_bukti_botong
         Dim f As New FrmLogin()
         f.Show()
         Me.Close()
+    End Sub
+
+    Private Sub PanelMain_Paint(sender As Object, e As PaintEventArgs) Handles PanelMain.Paint
+
     End Sub
 End Class

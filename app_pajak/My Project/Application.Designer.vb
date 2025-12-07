@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.app_pajak.FrmRegister
+            Me.MainForm = Global.app_pajak.FrmLogin
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

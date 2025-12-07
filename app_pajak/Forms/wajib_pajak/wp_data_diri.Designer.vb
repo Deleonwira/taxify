@@ -84,7 +84,7 @@ Partial Class wp_data_diri
         txtNama.BorderRadius = 12
         txtNama.CustomizableEdges = CustomizableEdges2
         txtNama.DefaultText = ""
-        txtNama.Font = New Font("Segoe UI", 9.0F)
+        txtNama.Font = New Font("Segoe UI", 9F)
         txtNama.Location = New Point(434, 177)
         txtNama.Margin = New Padding(3, 4, 3, 4)
         txtNama.Name = "txtNama"
@@ -99,7 +99,7 @@ Partial Class wp_data_diri
         txtNIK.BorderRadius = 12
         txtNIK.CustomizableEdges = CustomizableEdges4
         txtNIK.DefaultText = ""
-        txtNIK.Font = New Font("Segoe UI", 9.0F)
+        txtNIK.Font = New Font("Segoe UI", 9F)
         txtNIK.Location = New Point(434, 258)
         txtNIK.Margin = New Padding(3, 4, 3, 4)
         txtNIK.Name = "txtNIK"
@@ -114,7 +114,7 @@ Partial Class wp_data_diri
         txtEmail.BorderRadius = 12
         txtEmail.CustomizableEdges = CustomizableEdges6
         txtEmail.DefaultText = ""
-        txtEmail.Font = New Font("Segoe UI", 9.0F)
+        txtEmail.Font = New Font("Segoe UI", 9F)
         txtEmail.Location = New Point(434, 345)
         txtEmail.Margin = New Padding(3, 4, 3, 4)
         txtEmail.Name = "txtEmail"
@@ -129,7 +129,7 @@ Partial Class wp_data_diri
         txtAlamat.BorderRadius = 12
         txtAlamat.CustomizableEdges = CustomizableEdges8
         txtAlamat.DefaultText = ""
-        txtAlamat.Font = New Font("Segoe UI", 9.0F)
+        txtAlamat.Font = New Font("Segoe UI", 9F)
         txtAlamat.Location = New Point(433, 429)
         txtAlamat.Margin = New Padding(3, 4, 3, 4)
         txtAlamat.Multiline = True
@@ -146,7 +146,7 @@ Partial Class wp_data_diri
         btnSimpan.BorderRadius = 16
         btnSimpan.CustomizableEdges = CustomizableEdges10
         btnSimpan.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        btnSimpan.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
+        btnSimpan.Font = New Font("Poppins SemiBold", 8F, FontStyle.Bold)
         btnSimpan.ForeColor = Color.BlanchedAlmond
         btnSimpan.Location = New Point(878, 638)
         btnSimpan.Name = "btnSimpan"
@@ -160,7 +160,7 @@ Partial Class wp_data_diri
         btnUbahFoto.BorderRadius = 10
         btnUbahFoto.CustomizableEdges = CustomizableEdges12
         btnUbahFoto.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        btnUbahFoto.Font = New Font("Poppins", 6.0F)
+        btnUbahFoto.Font = New Font("Poppins", 6F)
         btnUbahFoto.ForeColor = Color.White
         btnUbahFoto.Location = New Point(291, 196)
         btnUbahFoto.Name = "btnUbahFoto"
@@ -218,7 +218,7 @@ Partial Class wp_data_diri
         Guna2TextBox2.BorderRadius = 12
         Guna2TextBox2.CustomizableEdges = CustomizableEdges14
         Guna2TextBox2.DefaultText = ""
-        Guna2TextBox2.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox2.Font = New Font("Segoe UI", 9F)
         Guna2TextBox2.Location = New Point(729, 548)
         Guna2TextBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox2.Name = "Guna2TextBox2"
@@ -244,7 +244,7 @@ Partial Class wp_data_diri
         Guna2TextBox3.BorderRadius = 12
         Guna2TextBox3.CustomizableEdges = CustomizableEdges16
         Guna2TextBox3.DefaultText = ""
-        Guna2TextBox3.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox3.Font = New Font("Segoe UI", 9F)
         Guna2TextBox3.Location = New Point(433, 548)
         Guna2TextBox3.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox3.Name = "Guna2TextBox3"
@@ -281,7 +281,7 @@ Partial Class wp_data_diri
         Guna2TextBox1.BorderRadius = 12
         Guna2TextBox1.CustomizableEdges = CustomizableEdges18
         Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox1.Font = New Font("Segoe UI", 9F)
         Guna2TextBox1.Location = New Point(730, 345)
         Guna2TextBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox1.Name = "Guna2TextBox1"
@@ -331,7 +331,7 @@ Partial Class wp_data_diri
         Guna2Button1.BorderThickness = 1
         Guna2Button1.CustomizableEdges = CustomizableEdges20
         Guna2Button1.FillColor = Color.Transparent
-        Guna2Button1.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
+        Guna2Button1.Font = New Font("Poppins SemiBold", 8F, FontStyle.Bold)
         Guna2Button1.ForeColor = Color.Black
         Guna2Button1.Location = New Point(729, 638)
         Guna2Button1.Name = "Guna2Button1"
@@ -354,7 +354,7 @@ Partial Class wp_data_diri
         ' lblSubtitle
         ' 
         lblSubtitle.BackColor = Color.Transparent
-        lblSubtitle.Font = New Font("Poppins", 6.0F)
+        lblSubtitle.Font = New Font("Poppins", 6F)
         lblSubtitle.ForeColor = Color.DimGray
         lblSubtitle.Location = New Point(434, 116)
         lblSubtitle.Name = "lblSubtitle"
@@ -365,7 +365,7 @@ Partial Class wp_data_diri
         ' lblTitle
         ' 
         lblTitle.BackColor = Color.Transparent
-        lblTitle.Font = New Font("Poppins SemiBold", 14.0F, FontStyle.Bold)
+        lblTitle.Font = New Font("Poppins SemiBold", 14F, FontStyle.Bold)
         lblTitle.ForeColor = Color.Black
         lblTitle.Location = New Point(433, 78)
         lblTitle.Name = "lblTitle"
