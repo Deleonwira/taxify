@@ -146,7 +146,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Bold)
+        Guna2HtmlLabel2.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         Guna2HtmlLabel2.ForeColor = Color.Gainsboro
         Guna2HtmlLabel2.Location = New Point(943, 48)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
@@ -157,7 +157,7 @@ Partial Class pk_form_bukti_potong
         ' lblTitle
         ' 
         lblTitle.BackColor = Color.Transparent
-        lblTitle.Font = New Font("Segoe UI Semibold", 14.0F, FontStyle.Bold)
+        lblTitle.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold)
         lblTitle.ForeColor = Color.White
         lblTitle.Location = New Point(24, 14)
         lblTitle.Name = "lblTitle"
@@ -168,7 +168,7 @@ Partial Class pk_form_bukti_potong
         ' lblSubtitle
         ' 
         lblSubtitle.BackColor = Color.Transparent
-        lblSubtitle.Font = New Font("Segoe UI", 9.0F)
+        lblSubtitle.Font = New Font("Segoe UI", 9F)
         lblSubtitle.ForeColor = Color.FromArgb(CByte(233), CByte(221), CByte(255))
         lblSubtitle.Location = New Point(24, 48)
         lblSubtitle.Name = "lblSubtitle"
@@ -245,7 +245,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel33
         ' 
         Guna2HtmlLabel33.BackColor = Color.Transparent
-        Guna2HtmlLabel33.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel33.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel33.ForeColor = Color.Black
         Guna2HtmlLabel33.Location = New Point(284, 153)
         Guna2HtmlLabel33.Name = "Guna2HtmlLabel33"
@@ -265,7 +265,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox12.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox12.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox12.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox12.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox12.Font = New Font("Segoe UI", 9F)
         Guna2TextBox12.Location = New Point(284, 176)
         Guna2TextBox12.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox12.Name = "Guna2TextBox12"
@@ -279,7 +279,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel32
         ' 
         Guna2HtmlLabel32.BackColor = Color.Transparent
-        Guna2HtmlLabel32.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel32.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel32.ForeColor = Color.Black
         Guna2HtmlLabel32.Location = New Point(40, 77)
         Guna2HtmlLabel32.Name = "Guna2HtmlLabel32"
@@ -299,7 +299,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox11.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox11.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox11.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox11.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox11.Font = New Font("Segoe UI", 9F)
         Guna2TextBox11.Location = New Point(40, 100)
         Guna2TextBox11.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox11.Name = "Guna2TextBox11"
@@ -328,7 +328,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel23
         ' 
         Guna2HtmlLabel23.BackColor = Color.Transparent
-        Guna2HtmlLabel23.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        Guna2HtmlLabel23.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         Guna2HtmlLabel23.ForeColor = Color.White
         Guna2HtmlLabel23.Location = New Point(17, 12)
         Guna2HtmlLabel23.Name = "Guna2HtmlLabel23"
@@ -348,7 +348,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox2.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox2.Font = New Font("Segoe UI", 9F)
         Guna2TextBox2.Location = New Point(38, 780)
         Guna2TextBox2.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox2.Name = "Guna2TextBox2"
@@ -362,7 +362,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel22
         ' 
         Guna2HtmlLabel22.BackColor = Color.Transparent
-        Guna2HtmlLabel22.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel22.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel22.ForeColor = Color.Black
         Guna2HtmlLabel22.Location = New Point(38, 757)
         Guna2HtmlLabel22.Name = "Guna2HtmlLabel22"
@@ -377,14 +377,14 @@ Partial Class pk_form_bukti_potong
         Guna2Button1.BorderThickness = 1
         Guna2Button1.CustomizableEdges = CustomizableEdges9
         Guna2Button1.FillColor = Color.Transparent
-        Guna2Button1.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
+        Guna2Button1.Font = New Font("Poppins SemiBold", 8F, FontStyle.Bold)
         Guna2Button1.ForeColor = Color.Black
         Guna2Button1.Location = New Point(742, 854)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2Button1.Size = New Size(141, 35)
         Guna2Button1.TabIndex = 59
-        Guna2Button1.Text = "Discard Changes"
+        Guna2Button1.Text = "Reset"
         ' 
         ' btnSimpan
         ' 
@@ -392,19 +392,19 @@ Partial Class pk_form_bukti_potong
         btnSimpan.BorderRadius = 16
         btnSimpan.CustomizableEdges = CustomizableEdges11
         btnSimpan.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        btnSimpan.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
+        btnSimpan.Font = New Font("Poppins SemiBold", 8F, FontStyle.Bold)
         btnSimpan.ForeColor = Color.BlanchedAlmond
         btnSimpan.Location = New Point(886, 854)
         btnSimpan.Name = "btnSimpan"
         btnSimpan.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnSimpan.Size = New Size(141, 35)
         btnSimpan.TabIndex = 58
-        btnSimpan.Text = "Simpan Perubahan"
+        btnSimpan.Text = "Lapor"
         ' 
         ' Guna2HtmlLabel19
         ' 
         Guna2HtmlLabel19.BackColor = Color.Transparent
-        Guna2HtmlLabel19.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel19.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel19.ForeColor = Color.Black
         Guna2HtmlLabel19.Location = New Point(38, 153)
         Guna2HtmlLabel19.Name = "Guna2HtmlLabel19"
@@ -424,7 +424,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox1.Font = New Font("Segoe UI", 9F)
         Guna2TextBox1.Location = New Point(38, 176)
         Guna2TextBox1.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox1.Name = "Guna2TextBox1"
@@ -441,7 +441,7 @@ Partial Class pk_form_bukti_potong
         Guna2Button2.BorderRadius = 16
         Guna2Button2.CustomizableEdges = CustomizableEdges15
         Guna2Button2.FillColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2Button2.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
+        Guna2Button2.Font = New Font("Poppins SemiBold", 8F, FontStyle.Bold)
         Guna2Button2.ForeColor = Color.BlanchedAlmond
         Guna2Button2.Location = New Point(904, 558)
         Guna2Button2.Name = "Guna2Button2"
@@ -468,7 +468,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        Guna2HtmlLabel1.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         Guna2HtmlLabel1.ForeColor = Color.White
         Guna2HtmlLabel1.Location = New Point(17, 12)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
@@ -494,7 +494,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel18
         ' 
         Guna2HtmlLabel18.BackColor = Color.Transparent
-        Guna2HtmlLabel18.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        Guna2HtmlLabel18.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         Guna2HtmlLabel18.ForeColor = Color.White
         Guna2HtmlLabel18.Location = New Point(17, 12)
         Guna2HtmlLabel18.Name = "Guna2HtmlLabel18"
@@ -514,7 +514,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox6.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox6.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox6.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox6.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox6.Font = New Font("Segoe UI", 9F)
         Guna2TextBox6.Location = New Point(556, 696)
         Guna2TextBox6.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox6.Name = "Guna2TextBox6"
@@ -528,7 +528,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel20
         ' 
         Guna2HtmlLabel20.BackColor = Color.Transparent
-        Guna2HtmlLabel20.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel20.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel20.ForeColor = Color.Black
         Guna2HtmlLabel20.Location = New Point(556, 673)
         Guna2HtmlLabel20.Name = "Guna2HtmlLabel20"
@@ -539,7 +539,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel21
         ' 
         Guna2HtmlLabel21.BackColor = Color.Transparent
-        Guna2HtmlLabel21.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel21.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel21.ForeColor = Color.Black
         Guna2HtmlLabel21.Location = New Point(40, 673)
         Guna2HtmlLabel21.Name = "Guna2HtmlLabel21"
@@ -559,7 +559,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox9.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox9.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox9.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox9.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox9.Font = New Font("Segoe UI", 9F)
         Guna2TextBox9.Location = New Point(38, 696)
         Guna2TextBox9.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox9.Name = "Guna2TextBox9"
@@ -588,7 +588,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel24
         ' 
         Guna2HtmlLabel24.BackColor = Color.Transparent
-        Guna2HtmlLabel24.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        Guna2HtmlLabel24.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         Guna2HtmlLabel24.ForeColor = Color.White
         Guna2HtmlLabel24.Location = New Point(17, 12)
         Guna2HtmlLabel24.Name = "Guna2HtmlLabel24"
@@ -608,7 +608,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox5.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox5.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox5.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox5.Font = New Font("Segoe UI", 9F)
         Guna2TextBox5.Location = New Point(558, 253)
         Guna2TextBox5.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox5.Name = "Guna2TextBox5"
@@ -622,7 +622,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel25
         ' 
         Guna2HtmlLabel25.BackColor = Color.Transparent
-        Guna2HtmlLabel25.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel25.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel25.ForeColor = Color.Black
         Guna2HtmlLabel25.Location = New Point(558, 230)
         Guna2HtmlLabel25.Name = "Guna2HtmlLabel25"
@@ -642,7 +642,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox7.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox7.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox7.Font = New Font("Segoe UI", 9F)
         Guna2TextBox7.Location = New Point(558, 176)
         Guna2TextBox7.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox7.Name = "Guna2TextBox7"
@@ -656,7 +656,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel26
         ' 
         Guna2HtmlLabel26.BackColor = Color.Transparent
-        Guna2HtmlLabel26.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel26.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel26.ForeColor = Color.Black
         Guna2HtmlLabel26.Location = New Point(558, 153)
         Guna2HtmlLabel26.Name = "Guna2HtmlLabel26"
@@ -667,7 +667,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel27
         ' 
         Guna2HtmlLabel27.BackColor = Color.Transparent
-        Guna2HtmlLabel27.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel27.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel27.ForeColor = Color.Black
         Guna2HtmlLabel27.Location = New Point(558, 77)
         Guna2HtmlLabel27.Name = "Guna2HtmlLabel27"
@@ -687,7 +687,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox8.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox8.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox8.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox8.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox8.Font = New Font("Segoe UI", 9F)
         Guna2TextBox8.Location = New Point(556, 100)
         Guna2TextBox8.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox8.Name = "Guna2TextBox8"
@@ -701,7 +701,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel28
         ' 
         Guna2HtmlLabel28.BackColor = Color.Transparent
-        Guna2HtmlLabel28.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel28.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel28.ForeColor = Color.Black
         Guna2HtmlLabel28.Location = New Point(38, 519)
         Guna2HtmlLabel28.Name = "Guna2HtmlLabel28"
@@ -721,12 +721,12 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox4.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox4.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox4.Font = New Font("Segoe UI", 9F)
         Guna2TextBox4.Location = New Point(38, 542)
         Guna2TextBox4.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox4.Name = "Guna2TextBox4"
         Guna2TextBox4.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox4.PlaceholderText = "900.000.000"
+        Guna2TextBox4.PlaceholderText = "0"
         Guna2TextBox4.SelectedText = ""
         Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2TextBox4.Size = New Size(470, 36)
@@ -744,7 +744,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox3.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox3.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox3.Font = New Font("Segoe UI", 9F)
         Guna2TextBox3.Location = New Point(38, 462)
         Guna2TextBox3.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox3.Name = "Guna2TextBox3"
@@ -758,7 +758,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel29
         ' 
         Guna2HtmlLabel29.BackColor = Color.Transparent
-        Guna2HtmlLabel29.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel29.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel29.ForeColor = Color.Black
         Guna2HtmlLabel29.Location = New Point(38, 439)
         Guna2HtmlLabel29.Name = "Guna2HtmlLabel29"
@@ -778,7 +778,7 @@ Partial Class pk_form_bukti_potong
         Guna2TextBox10.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox10.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         Guna2TextBox10.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox10.Font = New Font("Segoe UI", 9.0F)
+        Guna2TextBox10.Font = New Font("Segoe UI", 9F)
         Guna2TextBox10.Location = New Point(38, 385)
         Guna2TextBox10.Margin = New Padding(2, 3, 2, 3)
         Guna2TextBox10.Name = "Guna2TextBox10"
@@ -792,7 +792,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel30
         ' 
         Guna2HtmlLabel30.BackColor = Color.Transparent
-        Guna2HtmlLabel30.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel30.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel30.ForeColor = Color.Black
         Guna2HtmlLabel30.Location = New Point(38, 362)
         Guna2HtmlLabel30.Name = "Guna2HtmlLabel30"
@@ -803,7 +803,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel31
         ' 
         Guna2HtmlLabel31.BackColor = Color.Transparent
-        Guna2HtmlLabel31.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel31.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel31.ForeColor = Color.Black
         Guna2HtmlLabel31.Location = New Point(38, 286)
         Guna2HtmlLabel31.Name = "Guna2HtmlLabel31"
@@ -823,12 +823,12 @@ Partial Class pk_form_bukti_potong
         txtPPhTerutang.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtPPhTerutang.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         txtPPhTerutang.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtPPhTerutang.Font = New Font("Segoe UI", 9.0F)
+        txtPPhTerutang.Font = New Font("Segoe UI", 9F)
         txtPPhTerutang.Location = New Point(38, 309)
         txtPPhTerutang.Margin = New Padding(2, 3, 2, 3)
         txtPPhTerutang.Name = "txtPPhTerutang"
         txtPPhTerutang.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtPPhTerutang.PlaceholderText = "900.000.000"
+        txtPPhTerutang.PlaceholderText = "0"
         txtPPhTerutang.SelectedText = ""
         txtPPhTerutang.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         txtPPhTerutang.Size = New Size(467, 36)
@@ -837,7 +837,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel17
         ' 
         Guna2HtmlLabel17.BackColor = Color.Transparent
-        Guna2HtmlLabel17.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel17.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel17.ForeColor = Color.Black
         Guna2HtmlLabel17.Location = New Point(44, 87)
         Guna2HtmlLabel17.Name = "Guna2HtmlLabel17"
@@ -848,7 +848,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel15
         ' 
         Guna2HtmlLabel15.BackColor = Color.Transparent
-        Guna2HtmlLabel15.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel15.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel15.ForeColor = Color.Black
         Guna2HtmlLabel15.Location = New Point(318, 87)
         Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
@@ -859,7 +859,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel3.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel3.ForeColor = Color.Black
         Guna2HtmlLabel3.Location = New Point(40, 225)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
@@ -870,7 +870,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel4.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel4.ForeColor = Color.Black
         Guna2HtmlLabel4.Location = New Point(269, 225)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
@@ -881,7 +881,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel6
         ' 
         Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel6.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel6.ForeColor = Color.Black
         Guna2HtmlLabel6.Location = New Point(500, 225)
         Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
@@ -892,7 +892,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel7
         ' 
         Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel7.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel7.ForeColor = Color.Black
         Guna2HtmlLabel7.Location = New Point(731, 225)
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
@@ -903,7 +903,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel11
         ' 
         Guna2HtmlLabel11.BackColor = Color.Transparent
-        Guna2HtmlLabel11.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel11.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel11.ForeColor = Color.Black
         Guna2HtmlLabel11.Location = New Point(40, 399)
         Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
@@ -914,7 +914,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel10
         ' 
         Guna2HtmlLabel10.BackColor = Color.Transparent
-        Guna2HtmlLabel10.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel10.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel10.ForeColor = Color.Black
         Guna2HtmlLabel10.Location = New Point(269, 399)
         Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
@@ -925,7 +925,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel8
         ' 
         Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel8.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel8.ForeColor = Color.Black
         Guna2HtmlLabel8.Location = New Point(500, 399)
         Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
@@ -936,7 +936,7 @@ Partial Class pk_form_bukti_potong
         ' lblDetailPajak
         ' 
         lblDetailPajak.BackColor = Color.Transparent
-        lblDetailPajak.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        lblDetailPajak.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         lblDetailPajak.ForeColor = Color.White
         lblDetailPajak.Location = New Point(17, 12)
         lblDetailPajak.Name = "lblDetailPajak"
@@ -947,7 +947,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel12
         ' 
         Guna2HtmlLabel12.BackColor = Color.Transparent
-        Guna2HtmlLabel12.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        Guna2HtmlLabel12.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         Guna2HtmlLabel12.ForeColor = Color.White
         Guna2HtmlLabel12.Location = New Point(17, 12)
         Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
@@ -958,7 +958,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel16
         ' 
         Guna2HtmlLabel16.BackColor = Color.Transparent
-        Guna2HtmlLabel16.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        Guna2HtmlLabel16.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         Guna2HtmlLabel16.ForeColor = Color.White
         Guna2HtmlLabel16.Location = New Point(17, 12)
         Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
@@ -969,7 +969,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel14
         ' 
         Guna2HtmlLabel14.BackColor = Color.Transparent
-        Guna2HtmlLabel14.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel14.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel14.ForeColor = Color.Black
         Guna2HtmlLabel14.Location = New Point(38, 551)
         Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
@@ -980,7 +980,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel13
         ' 
         Guna2HtmlLabel13.BackColor = Color.Transparent
-        Guna2HtmlLabel13.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel13.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel13.ForeColor = Color.Black
         Guna2HtmlLabel13.Location = New Point(269, 551)
         Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
@@ -991,7 +991,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel9
         ' 
         Guna2HtmlLabel9.BackColor = Color.Transparent
-        Guna2HtmlLabel9.Font = New Font("Segoe UI", 9.0F)
+        Guna2HtmlLabel9.Font = New Font("Segoe UI", 9F)
         Guna2HtmlLabel9.ForeColor = Color.Black
         Guna2HtmlLabel9.Location = New Point(500, 551)
         Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
@@ -1002,7 +1002,7 @@ Partial Class pk_form_bukti_potong
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.Transparent
-        Guna2HtmlLabel5.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
+        Guna2HtmlLabel5.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         Guna2HtmlLabel5.ForeColor = Color.White
         Guna2HtmlLabel5.Location = New Point(17, 12)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"

@@ -187,3 +187,4 @@ C:\Users\hamza\Downloads\app_pajak\app_pajak\bin\Debug\net8.0-windows\runtimes\w
 C:\Users\hamza\Downloads\app_pajak\app_pajak\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.chatbot_control.resources
 C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.admin_validasi_registrasi.resources
+C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.pk_detail_riwayat_bukti_potong.resources

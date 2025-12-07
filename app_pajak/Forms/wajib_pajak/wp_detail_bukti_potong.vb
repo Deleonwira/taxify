@@ -33,7 +33,7 @@ Public Class wp_detail_bukti_potong
         "SELECT bp.*, 
                 p.nama_perusahaan, p.npwp_perusahaan, p.alamat AS alamat_perusahaan,
                 u.nama AS nama_wp, u.alamat AS alamat_wp, u.nik AS nik_wp,
-                pk.status_kepegawaian, pk.status_ptkp
+                pk.status_ptkp
                 FROM bukti_potong bp
                 JOIN perusahaan p ON p.id = bp.perusahaan_id
                 JOIN users u ON u.npwp = bp.wp_npwp
@@ -64,7 +64,6 @@ Public Class wp_detail_bukti_potong
 
                 ' Status & NIK
                 LblStatusPTKPValue.Text = If(IsDBNull(rd("status_ptkp")), "-", rd("status_ptkp").ToString())
-                LblStatusKepegawaianValue.Text = If(IsDBNull(rd("status_kepegawaian")), "-", rd("status_kepegawaian").ToString())
                 LblNomorKaryawanValue.Text = If(IsDBNull(rd("nik_wp")), "-", rd("nik_wp").ToString())
 
                 ' ====== KOMONEN PENGHASILAN ======

@@ -9,6 +9,10 @@ Public Class pk_form_bukti_potong
     Public Property EmployeeNPWP As String = ""
     Public Property EmployeeName As String = ""
     Public Property SelectedMonth As Integer = 0
+    
+    ' Properties untuk Edit Mode
+    Public Property EditMode As Boolean = False
+    Public Property BuktiPotongId As Integer = 0
 
     ' Variable untuk menyimpan PKP Bulanan dan parent form reference
     Private pkp_bulanan As Decimal = 0
@@ -79,12 +83,6 @@ Public Class pk_form_bukti_potong
         ' Load PTKP from database jika belum ada dari form sebelumnya
         LoadPTKPFromDatabase()
 
-        ' DEBUG: Show received data (setelah load dari database)
-        MessageBox.Show($"EmployeeNPWP: {EmployeeNPWP}" & vbCrLf &
-                       $"PTKPStatusValue: {PTKPStatusValue}" & vbCrLf &
-                       $"SelectedMonth: {SelectedMonth}",
-                       "Debug - Data Received")
-
         ' Set Month in textbox if selected
         If SelectedMonth > 0 Then
             Dim monthName As String = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(SelectedMonth)
@@ -93,7 +91,11 @@ Public Class pk_form_bukti_potong
             Guna2TextBox12.ReadOnly = True
             Guna2TextBox12.FillColor = Color.FromArgb(226, 226, 226)
             ' Also set in header
-            Guna2HtmlLabel2.Text = "Bulan " & monthName
+            If EditMode Then
+                Guna2HtmlLabel2.Text = "Edit Bukti Potong - " & monthName
+            Else
+                Guna2HtmlLabel2.Text = "Bulan " & monthName
+            End If
         Else
             ' Default if no month selected
             Guna2TextBox12.Text = "Januari"
@@ -122,6 +124,64 @@ Public Class pk_form_bukti_potong
         ' Set Biaya Jabatan field menjadi read-only
         Guna2TextBox8.ReadOnly = True
         Guna2TextBox8.FillColor = Color.FromArgb(226, 226, 226)  ' Abu-abu untuk menandakan read-only
+        
+        ' Load existing data if in Edit Mode
+        If EditMode AndAlso BuktiPotongId > 0 Then
+            LoadExistingBuktiPotong()
+        End If
+    End Sub
+    
+    ' Load existing bukti potong data for editing
+    Private Sub LoadExistingBuktiPotong()
+        Try
+            modulkoneksi.BukaKoneksi()
+            Dim query As String = "SELECT gaji_pokok, tunjangan, bonus_thr, bruto_total, biaya_jabatan, iuran_pensiun, " &
+                                 "netto_total, ptkp, pkp, pph21_terutang FROM bukti_potong WHERE id = @id"
+            Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
+            cmd.Parameters.AddWithValue("@id", BuktiPotongId)
+            
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            If reader.Read() Then
+                ' Set flag untuk mencegah kalkulasi otomatis
+                isCalculating = True
+                
+                ' Load data ke field-field
+                txtPPhTerutang.Text = ModulePajak.FormatCurrency(reader.GetDecimal("gaji_pokok"))  ' Gaji Pokok
+                Guna2TextBox10.Text = ModulePajak.FormatCurrency(reader.GetDecimal("tunjangan"))   ' Tunjangan
+                Guna2TextBox3.Text = ModulePajak.FormatCurrency(reader.GetDecimal("bonus_thr"))    ' Tantiem/THR
+                Guna2TextBox4.Text = ModulePajak.FormatCurrency(reader.GetDecimal("bruto_total"))  ' Total Bruto
+                Guna2TextBox8.Text = ModulePajak.FormatCurrency(reader.GetDecimal("biaya_jabatan")) ' Biaya Jabatan
+                Guna2TextBox7.Text = ModulePajak.FormatCurrency(reader.GetDecimal("iuran_pensiun")) ' Iuran/Zakat
+                Guna2TextBox9.Text = ModulePajak.FormatCurrency(reader.GetDecimal("netto_total"))  ' Penghasilan Neto
+                Guna2TextBox1.Text = ModulePajak.FormatCurrency(reader.GetDecimal("ptkp"))         ' PTKP
+                
+                Dim pkpValue As Decimal = reader.GetDecimal("pkp")
+                Dim pph21Value As Decimal = reader.GetDecimal("pph21_terutang")
+                
+                ' Set result fields
+                Guna2TextBox6.Text = ModulePajak.FormatCurrency(pph21Value)  ' PPh21 Dipotong
+                Guna2TextBox6.ReadOnly = True
+                Guna2TextBox6.FillColor = Color.FromArgb(226, 226, 226)
+                
+                Guna2TextBox2.Text = ModulePajak.FormatCurrency(pph21Value)  ' PPh21 Terutang
+                Guna2TextBox2.ReadOnly = True
+                Guna2TextBox2.FillColor = Color.FromArgb(226, 226, 226)
+                
+                Guna2TextBox9.ReadOnly = True
+                Guna2TextBox9.FillColor = Color.FromArgb(226, 226, 226)
+                
+                ' Reset flag
+                isCalculating = False
+                
+                ' Hitung Total Pengurangan
+                CalculateTotalPengurangan()
+            End If
+            reader.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error loading bukti potong data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            modulkoneksi.TutupKoneksi()
+        End Try
     End Sub
 
     ' Event handler untuk perhitungan otomatis Total Penghasilan Bruto
@@ -315,4 +375,125 @@ Public Class pk_form_bukti_potong
     Private Sub Guna2TextBox11_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox11.TextChanged
 
     End Sub
+
+    ' Event handler untuk button Simpan/Lapor - Insert atau Update bukti potong
+    Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
+        Try
+            ' Validasi data
+            If String.IsNullOrEmpty(EmployeeNPWP) Then
+                MessageBox.Show("Data pegawai tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+            
+            ' Parse semua nilai dari field
+            Dim gajiPokok As Decimal = ModulePajak.ParseCurrency(txtPPhTerutang.Text)
+            Dim tunjangan As Decimal = ModulePajak.ParseCurrency(Guna2TextBox10.Text)
+            Dim bonusThr As Decimal = ModulePajak.ParseCurrency(Guna2TextBox3.Text)
+            Dim brutoTotal As Decimal = ModulePajak.ParseCurrency(Guna2TextBox4.Text)
+            Dim biayaJabatan As Decimal = ModulePajak.ParseCurrency(Guna2TextBox8.Text)
+            Dim iuranPensiun As Decimal = ModulePajak.ParseCurrency(Guna2TextBox7.Text)
+            Dim nettoTotal As Decimal = ModulePajak.ParseCurrency(Guna2TextBox9.Text)
+            Dim ptkp As Decimal = ModulePajak.ParseCurrency(Guna2TextBox1.Text)
+            Dim pph21Terutang As Decimal = ModulePajak.ParseCurrency(Guna2TextBox2.Text)
+            
+            ' Hitung PKP jika belum dihitung
+            If pkp_bulanan = 0 Then
+                pkp_bulanan = ModulePajak.CalculatePKPBulanan(brutoTotal, biayaJabatan + iuranPensiun, ptkp)
+            End If
+            
+            modulkoneksi.BukaKoneksi()
+            
+            Dim query As String
+            Dim cmd As New MySqlCommand()
+            cmd.Connection = modulkoneksi.koneksi
+            
+            If EditMode AndAlso BuktiPotongId > 0 Then
+                ' UPDATE existing bukti potong
+                query = "UPDATE bukti_potong SET " &
+                       "gaji_pokok = @gaji_pokok, tunjangan = @tunjangan, bonus_thr = @bonus_thr, " &
+                       "bruto_total = @bruto_total, biaya_jabatan = @biaya_jabatan, iuran_pensiun = @iuran_pensiun, " &
+                       "netto_total = @netto_total, ptkp = @ptkp, pkp = @pkp, pph21_terutang = @pph21_terutang " &
+                       "WHERE id = @id"
+                cmd.Parameters.AddWithValue("@id", BuktiPotongId)
+            Else
+                ' INSERT new bukti potong
+                ' Get perusahaan_id from pekerjaan table
+                Dim perusahaanId As Integer = GetPerusahaanId()
+                If perusahaanId = 0 Then
+                    MessageBox.Show("Tidak dapat menemukan data perusahaan untuk pegawai ini.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return
+                End If
+                
+                ' Generate nomor bukti
+                Dim nomorBukti As String = GenerateNomorBukti()
+                
+                query = "INSERT INTO bukti_potong (nomor_bukti, perusahaan_id, wp_npwp, masa_bulan, masa_tahun, " &
+                       "gaji_pokok, tunjangan, bonus_thr, bruto_total, biaya_jabatan, iuran_pensiun, " &
+                       "netto_total, ptkp, pkp, pph21_terutang) VALUES " &
+                       "(@nomor_bukti, @perusahaan_id, @wp_npwp, @masa_bulan, @masa_tahun, " &
+                       "@gaji_pokok, @tunjangan, @bonus_thr, @bruto_total, @biaya_jabatan, @iuran_pensiun, " &
+                       "@netto_total, @ptkp, @pkp, @pph21_terutang)"
+                cmd.Parameters.AddWithValue("@nomor_bukti", nomorBukti)
+                cmd.Parameters.AddWithValue("@perusahaan_id", perusahaanId)
+                cmd.Parameters.AddWithValue("@wp_npwp", EmployeeNPWP)
+                cmd.Parameters.AddWithValue("@masa_bulan", SelectedMonth)
+                cmd.Parameters.AddWithValue("@masa_tahun", DateTime.Now.Year)
+            End If
+            
+            cmd.CommandText = query
+            cmd.Parameters.AddWithValue("@gaji_pokok", gajiPokok)
+            cmd.Parameters.AddWithValue("@tunjangan", tunjangan)
+            cmd.Parameters.AddWithValue("@bonus_thr", bonusThr)
+            cmd.Parameters.AddWithValue("@bruto_total", brutoTotal)
+            cmd.Parameters.AddWithValue("@biaya_jabatan", biayaJabatan)
+            cmd.Parameters.AddWithValue("@iuran_pensiun", iuranPensiun)
+            cmd.Parameters.AddWithValue("@netto_total", nettoTotal)
+            cmd.Parameters.AddWithValue("@ptkp", ptkp)
+            cmd.Parameters.AddWithValue("@pkp", pkp_bulanan)
+            cmd.Parameters.AddWithValue("@pph21_terutang", pph21Terutang)
+            
+            Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+            
+            If rowsAffected > 0 Then
+                Dim successMessage As String = If(EditMode, "Bukti potong berhasil diperbarui.", "Bukti potong berhasil disimpan.")
+                MessageBox.Show(successMessage, "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                
+                ' Navigate back to timeline
+                NavigateBack()
+            Else
+                MessageBox.Show("Gagal menyimpan bukti potong.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+            
+        Catch ex As Exception
+            MessageBox.Show("Error menyimpan bukti potong: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            modulkoneksi.TutupKoneksi()
+        End Try
+    End Sub
+    
+    ' Get perusahaan_id from pekerjaan table based on EmployeeNPWP
+    Private Function GetPerusahaanId() As Integer
+        Try
+            Dim query As String = "SELECT perusahaan_id FROM pekerjaan WHERE wp_npwp = @npwp LIMIT 1"
+            Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
+            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
+            
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing AndAlso result IsNot DBNull.Value Then
+                Return Convert.ToInt32(result)
+            End If
+            Return 0
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
+    
+    ' Generate unique nomor bukti
+    Private Function GenerateNomorBukti() As String
+        Dim tahun As String = DateTime.Now.Year.ToString()
+        Dim bulan As String = SelectedMonth.ToString("D2")
+        Dim random As New Random()
+        Dim randomNum As String = random.Next(1000, 9999).ToString()
+        Return $"BP-{tahun}-{bulan}-{randomNum}"
+    End Function
 End Class

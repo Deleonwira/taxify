@@ -19,6 +19,9 @@
     <Compile Update="Forms\pemberi_kerja\pk_dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\pemberi_kerja\pk_detail_riwayat_bukti_potong.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\pemberi_kerja\pk_form_bukti_potong.vb">
       <SubType>Form</SubType>
     </Compile>

@@ -34,7 +34,7 @@ Public Class pk_daftar_pegawai
             End If
 
             ' Query untuk get employees based on perusahaan_id
-            Dim query As String = "SELECT p.wp_npwp, u.nama, p.jabatan, p.status_kepegawaian, p.status_ptkp " &
+            Dim query As String = "SELECT p.wp_npwp, u.nama, p.jabatan, p.status_ptkp " &
                                   "FROM pekerjaan p " &
                                   "INNER JOIN users u ON p.wp_npwp = u.npwp " &
                                   "WHERE p.perusahaan_id = @perusahaan_id"
@@ -230,4 +230,7 @@ Public Class pk_daftar_pegawai
         End If
     End Sub
 
+    Private Sub FlowEmployees_Paint(sender As Object, e As PaintEventArgs) Handles FlowEmployees.Paint
+
+    End Sub
 End Class

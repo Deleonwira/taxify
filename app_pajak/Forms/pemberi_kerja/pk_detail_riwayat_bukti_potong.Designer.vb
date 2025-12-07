@@ -1,5 +1,5 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class wp_detail_bukti_potong
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class pk_detail_riwayat_bukti_potong
     Inherits System.Windows.Forms.Form
 
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -17,24 +17,23 @@ Partial Class wp_detail_bukti_potong
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(wp_detail_bukti_potong))
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Wp_navbar1 = New wp_navbar()
+        Pk_navbar11 = New pk_navbar1()
         PanelMain = New Guna.UI2.WinForms.Guna2Panel()
-        BunifuPanel1 = New Bunifu.UI.WinForms.BunifuPanel()
-        BunifuPanel4 = New Bunifu.UI.WinForms.BunifuPanel()
-        Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        PanelContent = New Guna.UI2.WinForms.Guna2Panel()
+        LblCompanyName = New Guna.UI2.WinForms.Guna2HtmlLabel()
         PanelEmployer = New Guna.UI2.WinForms.Guna2Panel()
-
         LblNomorKaryawanValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblNomorKaryawan = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblStatusPTKPValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -74,81 +73,61 @@ Partial Class wp_detail_bukti_potong
         LblHeaderSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblHeaderTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         PanelMain.SuspendLayout()
-        BunifuPanel1.SuspendLayout()
-        BunifuPanel4.SuspendLayout()
+        PanelContent.SuspendLayout()
         PanelEmployer.SuspendLayout()
         PanelIncome.SuspendLayout()
         PanelHeader.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Wp_navbar1
+        ' Pk_navbar11
         ' 
-        Wp_navbar1.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(247))
-        Wp_navbar1.Dock = DockStyle.Left
-        Wp_navbar1.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
-        Wp_navbar1.Location = New Point(0, 0)
-        Wp_navbar1.Margin = New Padding(3, 4, 3, 4)
-        Wp_navbar1.Name = "Wp_navbar1"
-        Wp_navbar1.Size = New Size(190, 720)
-        Wp_navbar1.TabIndex = 0
+        Pk_navbar11.BackColor = Color.FromArgb(CByte(84), CByte(64), CByte(209))
+        Pk_navbar11.Dock = DockStyle.Left
+        Pk_navbar11.ForeColor = Color.White
+        Pk_navbar11.Location = New Point(0, 0)
+        Pk_navbar11.Margin = New Padding(3, 4, 3, 4)
+        Pk_navbar11.Name = "Pk_navbar11"
+        Pk_navbar11.Size = New Size(191, 720)
+        Pk_navbar11.TabIndex = 0
         ' 
         ' PanelMain
         ' 
         PanelMain.AutoScroll = True
         PanelMain.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
-        PanelMain.Controls.Add(BunifuPanel1)
+        PanelMain.Controls.Add(PanelContent)
         PanelMain.Controls.Add(PanelHeader)
-        PanelMain.CustomizableEdges = CustomizableEdges9
+        PanelMain.CustomizableEdges = CustomizableEdges11
         PanelMain.Dock = DockStyle.Fill
-        PanelMain.Location = New Point(190, 0)
+        PanelMain.Location = New Point(191, 0)
         PanelMain.Name = "PanelMain"
         PanelMain.Padding = New Padding(24)
-        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        PanelMain.Size = New Size(1110, 720)
+        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        PanelMain.Size = New Size(1109, 720)
         PanelMain.TabIndex = 1
         ' 
-        ' BunifuPanel1
+        ' PanelContent
         ' 
-        BunifuPanel1.BackgroundColor = Color.Transparent
-        BunifuPanel1.BackgroundImage = CType(resources.GetObject("BunifuPanel1.BackgroundImage"), Image)
-        BunifuPanel1.BackgroundImageLayout = ImageLayout.Stretch
-        BunifuPanel1.BorderColor = Color.Transparent
-        BunifuPanel1.BorderRadius = 3
-        BunifuPanel1.BorderThickness = 1
-        BunifuPanel1.Controls.Add(BunifuPanel4)
-        BunifuPanel1.Controls.Add(PanelEmployer)
-        BunifuPanel1.Controls.Add(PanelIncome)
-        BunifuPanel1.Location = New Point(23, 118)
-        BunifuPanel1.Name = "BunifuPanel1"
-        BunifuPanel1.ShowBorders = True
-        BunifuPanel1.Size = New Size(1060, 627)
-        BunifuPanel1.TabIndex = 47
+        PanelContent.BackColor = Color.Transparent
+        PanelContent.Controls.Add(LblCompanyName)
+        PanelContent.Controls.Add(PanelEmployer)
+        PanelContent.Controls.Add(PanelIncome)
+        PanelContent.CustomizableEdges = CustomizableEdges5
+        PanelContent.Location = New Point(24, 118)
+        PanelContent.Name = "PanelContent"
+        PanelContent.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        PanelContent.Size = New Size(1061, 580)
+        PanelContent.TabIndex = 1
         ' 
-        ' BunifuPanel4
+        ' LblCompanyName
         ' 
-        BunifuPanel4.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
-        BunifuPanel4.BackgroundImage = CType(resources.GetObject("BunifuPanel4.BackgroundImage"), Image)
-        BunifuPanel4.BackgroundImageLayout = ImageLayout.Stretch
-        BunifuPanel4.BorderColor = Color.Transparent
-        BunifuPanel4.BorderRadius = 10
-        BunifuPanel4.BorderThickness = 1
-        BunifuPanel4.Controls.Add(Guna2HtmlLabel16)
-        BunifuPanel4.Location = New Point(21, 25)
-        BunifuPanel4.Name = "BunifuPanel4"
-        BunifuPanel4.ShowBorders = True
-        BunifuPanel4.Size = New Size(1018, 50)
-        BunifuPanel4.TabIndex = 46
-        ' 
-        ' Guna2HtmlLabel16
-        ' 
-        Guna2HtmlLabel16.BackColor = Color.Transparent
-        Guna2HtmlLabel16.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
-        Guna2HtmlLabel16.ForeColor = Color.White
-        Guna2HtmlLabel16.Location = New Point(17, 12)
-        Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
-        Guna2HtmlLabel16.Size = New Size(3, 2)
-        Guna2HtmlLabel16.TabIndex = 5
-        Guna2HtmlLabel16.Text = Nothing
+        LblCompanyName.BackColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
+        LblCompanyName.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
+        LblCompanyName.ForeColor = Color.White
+        LblCompanyName.Location = New Point(0, 0)
+        LblCompanyName.Name = "LblCompanyName"
+        LblCompanyName.Size = New Size(3, 2)
+        LblCompanyName.TabIndex = 0
+        LblCompanyName.TextAlignment = ContentAlignment.MiddleLeft
         ' 
         ' PanelEmployer
         ' 
@@ -179,35 +158,33 @@ Partial Class wp_detail_bukti_potong
         PanelEmployer.Controls.Add(LblEmployerTitle)
         PanelEmployer.CustomizableEdges = CustomizableEdges1
         PanelEmployer.FillColor = Color.White
-        PanelEmployer.Location = New Point(21, 74)
+        PanelEmployer.Location = New Point(0, 56)
         PanelEmployer.Name = "PanelEmployer"
         PanelEmployer.Padding = New Padding(24)
         PanelEmployer.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        PanelEmployer.Size = New Size(1018, 397)
+        PanelEmployer.Size = New Size(1061, 244)
         PanelEmployer.TabIndex = 1
-        ' 
-        '
         ' 
         ' LblNomorKaryawanValue
         ' 
         LblNomorKaryawanValue.BackColor = Color.Transparent
         LblNomorKaryawanValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblNomorKaryawanValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblNomorKaryawanValue.Location = New Point(829, 154)
+        LblNomorKaryawanValue.Location = New Point(792, 140)
         LblNomorKaryawanValue.Name = "LblNomorKaryawanValue"
-        LblNomorKaryawanValue.Size = New Size(3, 2)
-        LblNomorKaryawanValue.TabIndex = 23
-        LblNomorKaryawanValue.Text = Nothing
+        LblNomorKaryawanValue.Size = New Size(8, 19)
+        LblNomorKaryawanValue.TabIndex = 21
+        LblNomorKaryawanValue.Text = "-"
         ' 
         ' LblNomorKaryawan
         ' 
         LblNomorKaryawan.BackColor = Color.Transparent
         LblNomorKaryawan.Font = New Font("Segoe UI", 9F)
         LblNomorKaryawan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNomorKaryawan.Location = New Point(829, 132)
+        LblNomorKaryawan.Location = New Point(792, 118)
         LblNomorKaryawan.Name = "LblNomorKaryawan"
         LblNomorKaryawan.Size = New Size(125, 17)
-        LblNomorKaryawan.TabIndex = 22
+        LblNomorKaryawan.TabIndex = 20
         LblNomorKaryawan.Text = "Nomor Karyawan / NIP"
         ' 
         ' LblStatusPTKPValue
@@ -215,21 +192,21 @@ Partial Class wp_detail_bukti_potong
         LblStatusPTKPValue.BackColor = Color.Transparent
         LblStatusPTKPValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblStatusPTKPValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblStatusPTKPValue.Location = New Point(829, 90)
+        LblStatusPTKPValue.Location = New Point(792, 85)
         LblStatusPTKPValue.Name = "LblStatusPTKPValue"
-        LblStatusPTKPValue.Size = New Size(3, 2)
-        LblStatusPTKPValue.TabIndex = 21
-        LblStatusPTKPValue.Text = Nothing
+        LblStatusPTKPValue.Size = New Size(8, 19)
+        LblStatusPTKPValue.TabIndex = 19
+        LblStatusPTKPValue.Text = "-"
         ' 
         ' LblStatusPTKP
         ' 
         LblStatusPTKP.BackColor = Color.Transparent
         LblStatusPTKP.Font = New Font("Segoe UI", 9F)
         LblStatusPTKP.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblStatusPTKP.Location = New Point(829, 68)
+        LblStatusPTKP.Location = New Point(792, 63)
         LblStatusPTKP.Name = "LblStatusPTKP"
         LblStatusPTKP.Size = New Size(65, 17)
-        LblStatusPTKP.TabIndex = 20
+        LblStatusPTKP.TabIndex = 18
         LblStatusPTKP.Text = "Status PTKP"
         ' 
         ' LblAlamatKaryawanValue
@@ -237,21 +214,21 @@ Partial Class wp_detail_bukti_potong
         LblAlamatKaryawanValue.BackColor = Color.Transparent
         LblAlamatKaryawanValue.Font = New Font("Segoe UI", 9F)
         LblAlamatKaryawanValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblAlamatKaryawanValue.Location = New Point(522, 218)
+        LblAlamatKaryawanValue.Location = New Point(536, 195)
         LblAlamatKaryawanValue.Name = "LblAlamatKaryawanValue"
-        LblAlamatKaryawanValue.Size = New Size(3, 2)
-        LblAlamatKaryawanValue.TabIndex = 19
-        LblAlamatKaryawanValue.Text = Nothing
+        LblAlamatKaryawanValue.Size = New Size(8, 17)
+        LblAlamatKaryawanValue.TabIndex = 17
+        LblAlamatKaryawanValue.Text = "-"
         ' 
         ' LblAlamatKaryawan
         ' 
         LblAlamatKaryawan.BackColor = Color.Transparent
         LblAlamatKaryawan.Font = New Font("Segoe UI", 9F)
         LblAlamatKaryawan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblAlamatKaryawan.Location = New Point(522, 196)
+        LblAlamatKaryawan.Location = New Point(536, 173)
         LblAlamatKaryawan.Name = "LblAlamatKaryawan"
         LblAlamatKaryawan.Size = New Size(95, 17)
-        LblAlamatKaryawan.TabIndex = 18
+        LblAlamatKaryawan.TabIndex = 16
         LblAlamatKaryawan.Text = "Alamat Karyawan"
         ' 
         ' LblNPWPPegawaiValue
@@ -259,21 +236,21 @@ Partial Class wp_detail_bukti_potong
         LblNPWPPegawaiValue.BackColor = Color.Transparent
         LblNPWPPegawaiValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblNPWPPegawaiValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblNPWPPegawaiValue.Location = New Point(522, 154)
+        LblNPWPPegawaiValue.Location = New Point(536, 140)
         LblNPWPPegawaiValue.Name = "LblNPWPPegawaiValue"
-        LblNPWPPegawaiValue.Size = New Size(3, 2)
-        LblNPWPPegawaiValue.TabIndex = 17
-        LblNPWPPegawaiValue.Text = Nothing
+        LblNPWPPegawaiValue.Size = New Size(8, 19)
+        LblNPWPPegawaiValue.TabIndex = 15
+        LblNPWPPegawaiValue.Text = "-"
         ' 
         ' LblNPWPPegawai
         ' 
         LblNPWPPegawai.BackColor = Color.Transparent
         LblNPWPPegawai.Font = New Font("Segoe UI", 9F)
         LblNPWPPegawai.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNPWPPegawai.Location = New Point(522, 132)
+        LblNPWPPegawai.Location = New Point(536, 118)
         LblNPWPPegawai.Name = "LblNPWPPegawai"
         LblNPWPPegawai.Size = New Size(37, 17)
-        LblNPWPPegawai.TabIndex = 16
+        LblNPWPPegawai.TabIndex = 14
         LblNPWPPegawai.Text = "NPWP"
         ' 
         ' LblNamaPegawaiValue
@@ -281,21 +258,21 @@ Partial Class wp_detail_bukti_potong
         LblNamaPegawaiValue.BackColor = Color.Transparent
         LblNamaPegawaiValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblNamaPegawaiValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblNamaPegawaiValue.Location = New Point(522, 90)
+        LblNamaPegawaiValue.Location = New Point(536, 85)
         LblNamaPegawaiValue.Name = "LblNamaPegawaiValue"
-        LblNamaPegawaiValue.Size = New Size(3, 2)
-        LblNamaPegawaiValue.TabIndex = 15
-        LblNamaPegawaiValue.Text = Nothing
+        LblNamaPegawaiValue.Size = New Size(8, 19)
+        LblNamaPegawaiValue.TabIndex = 13
+        LblNamaPegawaiValue.Text = "-"
         ' 
         ' LblNamaPegawai
         ' 
         LblNamaPegawai.BackColor = Color.Transparent
         LblNamaPegawai.Font = New Font("Segoe UI", 9F)
         LblNamaPegawai.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNamaPegawai.Location = New Point(522, 68)
+        LblNamaPegawai.Location = New Point(536, 63)
         LblNamaPegawai.Name = "LblNamaPegawai"
         LblNamaPegawai.Size = New Size(83, 17)
-        LblNamaPegawai.TabIndex = 14
+        LblNamaPegawai.TabIndex = 12
         LblNamaPegawai.Text = "Nama Lengkap"
         ' 
         ' LblEmployeeTitle
@@ -303,10 +280,10 @@ Partial Class wp_detail_bukti_potong
         LblEmployeeTitle.BackColor = Color.Transparent
         LblEmployeeTitle.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblEmployeeTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblEmployeeTitle.Location = New Point(522, 24)
+        LblEmployeeTitle.Location = New Point(536, 27)
         LblEmployeeTitle.Name = "LblEmployeeTitle"
         LblEmployeeTitle.Size = New Size(168, 22)
-        LblEmployeeTitle.TabIndex = 13
+        LblEmployeeTitle.TabIndex = 11
         LblEmployeeTitle.Text = "Data Identitas Karyawan"
         ' 
         ' LblAlamatPerusahaanValue
@@ -314,21 +291,21 @@ Partial Class wp_detail_bukti_potong
         LblAlamatPerusahaanValue.BackColor = Color.Transparent
         LblAlamatPerusahaanValue.Font = New Font("Segoe UI", 9F)
         LblAlamatPerusahaanValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblAlamatPerusahaanValue.Location = New Point(24, 282)
+        LblAlamatPerusahaanValue.Location = New Point(280, 85)
         LblAlamatPerusahaanValue.Name = "LblAlamatPerusahaanValue"
-        LblAlamatPerusahaanValue.Size = New Size(3, 2)
-        LblAlamatPerusahaanValue.TabIndex = 10
-        LblAlamatPerusahaanValue.Text = Nothing
+        LblAlamatPerusahaanValue.Size = New Size(8, 17)
+        LblAlamatPerusahaanValue.TabIndex = 8
+        LblAlamatPerusahaanValue.Text = "-"
         ' 
         ' LblAlamatPerusahaan
         ' 
         LblAlamatPerusahaan.BackColor = Color.Transparent
         LblAlamatPerusahaan.Font = New Font("Segoe UI", 9F)
         LblAlamatPerusahaan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblAlamatPerusahaan.Location = New Point(24, 260)
+        LblAlamatPerusahaan.Location = New Point(280, 63)
         LblAlamatPerusahaan.Name = "LblAlamatPerusahaan"
         LblAlamatPerusahaan.Size = New Size(105, 17)
-        LblAlamatPerusahaan.TabIndex = 9
+        LblAlamatPerusahaan.TabIndex = 7
         LblAlamatPerusahaan.Text = "Alamat Perusahaan"
         ' 
         ' LblNPWPPerusahaanValue
@@ -336,21 +313,21 @@ Partial Class wp_detail_bukti_potong
         LblNPWPPerusahaanValue.BackColor = Color.Transparent
         LblNPWPPerusahaanValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblNPWPPerusahaanValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblNPWPPerusahaanValue.Location = New Point(24, 218)
+        LblNPWPPerusahaanValue.Location = New Point(24, 192)
         LblNPWPPerusahaanValue.Name = "LblNPWPPerusahaanValue"
-        LblNPWPPerusahaanValue.Size = New Size(3, 2)
-        LblNPWPPerusahaanValue.TabIndex = 8
-        LblNPWPPerusahaanValue.Text = Nothing
+        LblNPWPPerusahaanValue.Size = New Size(8, 19)
+        LblNPWPPerusahaanValue.TabIndex = 6
+        LblNPWPPerusahaanValue.Text = "-"
         ' 
         ' LblNPWPPerusahaan
         ' 
         LblNPWPPerusahaan.BackColor = Color.Transparent
         LblNPWPPerusahaan.Font = New Font("Segoe UI", 9F)
         LblNPWPPerusahaan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNPWPPerusahaan.Location = New Point(24, 196)
+        LblNPWPPerusahaan.Location = New Point(24, 170)
         LblNPWPPerusahaan.Name = "LblNPWPPerusahaan"
         LblNPWPPerusahaan.Size = New Size(101, 17)
-        LblNPWPPerusahaan.TabIndex = 7
+        LblNPWPPerusahaan.TabIndex = 5
         LblNPWPPerusahaan.Text = "NPWP Perusahaan"
         ' 
         ' LblNamaPerusahaanValue
@@ -358,21 +335,21 @@ Partial Class wp_detail_bukti_potong
         LblNamaPerusahaanValue.BackColor = Color.Transparent
         LblNamaPerusahaanValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblNamaPerusahaanValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblNamaPerusahaanValue.Location = New Point(24, 154)
+        LblNamaPerusahaanValue.Location = New Point(24, 137)
         LblNamaPerusahaanValue.Name = "LblNamaPerusahaanValue"
-        LblNamaPerusahaanValue.Size = New Size(3, 2)
-        LblNamaPerusahaanValue.TabIndex = 6
-        LblNamaPerusahaanValue.Text = Nothing
+        LblNamaPerusahaanValue.Size = New Size(8, 19)
+        LblNamaPerusahaanValue.TabIndex = 4
+        LblNamaPerusahaanValue.Text = "-"
         ' 
         ' LblNamaPerusahaan
         ' 
         LblNamaPerusahaan.BackColor = Color.Transparent
         LblNamaPerusahaan.Font = New Font("Segoe UI", 9F)
         LblNamaPerusahaan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNamaPerusahaan.Location = New Point(24, 132)
+        LblNamaPerusahaan.Location = New Point(24, 115)
         LblNamaPerusahaan.Name = "LblNamaPerusahaan"
         LblNamaPerusahaan.Size = New Size(99, 17)
-        LblNamaPerusahaan.TabIndex = 5
+        LblNamaPerusahaan.TabIndex = 3
         LblNamaPerusahaan.Text = "Nama Perusahaan"
         ' 
         ' LblTanggalBuktiValue
@@ -380,21 +357,21 @@ Partial Class wp_detail_bukti_potong
         LblTanggalBuktiValue.BackColor = Color.Transparent
         LblTanggalBuktiValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblTanggalBuktiValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblTanggalBuktiValue.Location = New Point(24, 342)
+        LblTanggalBuktiValue.Location = New Point(280, 140)
         LblTanggalBuktiValue.Name = "LblTanggalBuktiValue"
-        LblTanggalBuktiValue.Size = New Size(3, 2)
-        LblTanggalBuktiValue.TabIndex = 4
-        LblTanggalBuktiValue.Text = Nothing
+        LblTanggalBuktiValue.Size = New Size(8, 19)
+        LblTanggalBuktiValue.TabIndex = 10
+        LblTanggalBuktiValue.Text = "-"
         ' 
         ' LblTanggalBukti
         ' 
         LblTanggalBukti.BackColor = Color.Transparent
         LblTanggalBukti.Font = New Font("Segoe UI", 9F)
         LblTanggalBukti.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblTanggalBukti.Location = New Point(24, 320)
+        LblTanggalBukti.Location = New Point(280, 118)
         LblTanggalBukti.Name = "LblTanggalBukti"
         LblTanggalBukti.Size = New Size(75, 17)
-        LblTanggalBukti.TabIndex = 3
+        LblTanggalBukti.TabIndex = 9
         LblTanggalBukti.Text = "Tanggal Bukti"
         ' 
         ' LblNoBuktiValue
@@ -402,18 +379,18 @@ Partial Class wp_detail_bukti_potong
         LblNoBuktiValue.BackColor = Color.Transparent
         LblNoBuktiValue.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         LblNoBuktiValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblNoBuktiValue.Location = New Point(24, 90)
+        LblNoBuktiValue.Location = New Point(24, 82)
         LblNoBuktiValue.Name = "LblNoBuktiValue"
-        LblNoBuktiValue.Size = New Size(3, 2)
+        LblNoBuktiValue.Size = New Size(8, 19)
         LblNoBuktiValue.TabIndex = 2
-        LblNoBuktiValue.Text = Nothing
+        LblNoBuktiValue.Text = "-"
         ' 
         ' LblNoBukti
         ' 
         LblNoBukti.BackColor = Color.Transparent
         LblNoBukti.Font = New Font("Segoe UI", 9F)
         LblNoBukti.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNoBukti.Location = New Point(24, 68)
+        LblNoBukti.Location = New Point(24, 60)
         LblNoBukti.Name = "LblNoBukti"
         LblNoBukti.Size = New Size(113, 17)
         LblNoBukti.TabIndex = 1
@@ -424,7 +401,7 @@ Partial Class wp_detail_bukti_potong
         LblEmployerTitle.BackColor = Color.Transparent
         LblEmployerTitle.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
         LblEmployerTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblEmployerTitle.Location = New Point(24, 24)
+        LblEmployerTitle.Location = New Point(24, 27)
         LblEmployerTitle.Name = "LblEmployerTitle"
         LblEmployerTitle.Size = New Size(135, 22)
         LblEmployerTitle.TabIndex = 0
@@ -448,30 +425,30 @@ Partial Class wp_detail_bukti_potong
         PanelIncome.Controls.Add(LblIncomeTitle)
         PanelIncome.CustomizableEdges = CustomizableEdges3
         PanelIncome.FillColor = Color.White
-        PanelIncome.Location = New Point(21, 477)
+        PanelIncome.Location = New Point(0, 315)
         PanelIncome.Name = "PanelIncome"
         PanelIncome.Padding = New Padding(24)
         PanelIncome.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        PanelIncome.Size = New Size(1018, 194)
-        PanelIncome.TabIndex = 3
+        PanelIncome.Size = New Size(1061, 180)
+        PanelIncome.TabIndex = 2
         ' 
         ' LblPPh21DisetorValue
         ' 
         LblPPh21DisetorValue.BackColor = Color.Transparent
         LblPPh21DisetorValue.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         LblPPh21DisetorValue.ForeColor = Color.FromArgb(CByte(34), CByte(197), CByte(94))
-        LblPPh21DisetorValue.Location = New Point(24, 154)
+        LblPPh21DisetorValue.Location = New Point(24, 142)
         LblPPh21DisetorValue.Name = "LblPPh21DisetorValue"
-        LblPPh21DisetorValue.Size = New Size(3, 2)
+        LblPPh21DisetorValue.Size = New Size(9, 23)
         LblPPh21DisetorValue.TabIndex = 10
-        LblPPh21DisetorValue.Text = Nothing
+        LblPPh21DisetorValue.Text = "-"
         ' 
         ' LblPPh21Disetor
         ' 
         LblPPh21Disetor.BackColor = Color.Transparent
         LblPPh21Disetor.Font = New Font("Segoe UI", 9F)
         LblPPh21Disetor.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblPPh21Disetor.Location = New Point(24, 132)
+        LblPPh21Disetor.Location = New Point(24, 120)
         LblPPh21Disetor.Name = "LblPPh21Disetor"
         LblPPh21Disetor.Size = New Size(143, 17)
         LblPPh21Disetor.TabIndex = 9
@@ -482,18 +459,18 @@ Partial Class wp_detail_bukti_potong
         LblPPh21DipungutValue.BackColor = Color.Transparent
         LblPPh21DipungutValue.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         LblPPh21DipungutValue.ForeColor = Color.FromArgb(CByte(34), CByte(197), CByte(94))
-        LblPPh21DipungutValue.Location = New Point(792, 90)
+        LblPPh21DipungutValue.Location = New Point(792, 82)
         LblPPh21DipungutValue.Name = "LblPPh21DipungutValue"
-        LblPPh21DipungutValue.Size = New Size(3, 2)
+        LblPPh21DipungutValue.Size = New Size(9, 23)
         LblPPh21DipungutValue.TabIndex = 8
-        LblPPh21DipungutValue.Text = Nothing
+        LblPPh21DipungutValue.Text = "-"
         ' 
         ' LblPPh21Dipungut
         ' 
         LblPPh21Dipungut.BackColor = Color.Transparent
         LblPPh21Dipungut.Font = New Font("Segoe UI", 9F)
         LblPPh21Dipungut.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblPPh21Dipungut.Location = New Point(792, 68)
+        LblPPh21Dipungut.Location = New Point(792, 60)
         LblPPh21Dipungut.Name = "LblPPh21Dipungut"
         LblPPh21Dipungut.Size = New Size(147, 17)
         LblPPh21Dipungut.TabIndex = 7
@@ -504,18 +481,18 @@ Partial Class wp_detail_bukti_potong
         LblPotonganValue.BackColor = Color.Transparent
         LblPotonganValue.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         LblPotonganValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblPotonganValue.Location = New Point(536, 90)
+        LblPotonganValue.Location = New Point(536, 82)
         LblPotonganValue.Name = "LblPotonganValue"
-        LblPotonganValue.Size = New Size(3, 2)
+        LblPotonganValue.Size = New Size(9, 23)
         LblPotonganValue.TabIndex = 6
-        LblPotonganValue.Text = Nothing
+        LblPotonganValue.Text = "-"
         ' 
         ' LblPotongan
         ' 
         LblPotongan.BackColor = Color.Transparent
         LblPotongan.Font = New Font("Segoe UI", 9F)
         LblPotongan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblPotongan.Location = New Point(536, 68)
+        LblPotongan.Location = New Point(536, 60)
         LblPotongan.Name = "LblPotongan"
         LblPotongan.Size = New Size(187, 17)
         LblPotongan.TabIndex = 5
@@ -526,18 +503,18 @@ Partial Class wp_detail_bukti_potong
         LblTunjanganValue.BackColor = Color.Transparent
         LblTunjanganValue.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         LblTunjanganValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblTunjanganValue.Location = New Point(280, 90)
+        LblTunjanganValue.Location = New Point(280, 82)
         LblTunjanganValue.Name = "LblTunjanganValue"
-        LblTunjanganValue.Size = New Size(3, 2)
+        LblTunjanganValue.Size = New Size(9, 23)
         LblTunjanganValue.TabIndex = 4
-        LblTunjanganValue.Text = Nothing
+        LblTunjanganValue.Text = "-"
         ' 
         ' LblTunjangan
         ' 
         LblTunjangan.BackColor = Color.Transparent
         LblTunjangan.Font = New Font("Segoe UI", 9F)
         LblTunjangan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblTunjangan.Location = New Point(280, 68)
+        LblTunjangan.Location = New Point(280, 60)
         LblTunjangan.Name = "LblTunjangan"
         LblTunjangan.Size = New Size(167, 17)
         LblTunjangan.TabIndex = 3
@@ -548,18 +525,18 @@ Partial Class wp_detail_bukti_potong
         LblGajiBrutoValue.BackColor = Color.Transparent
         LblGajiBrutoValue.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         LblGajiBrutoValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        LblGajiBrutoValue.Location = New Point(24, 90)
+        LblGajiBrutoValue.Location = New Point(24, 82)
         LblGajiBrutoValue.Name = "LblGajiBrutoValue"
-        LblGajiBrutoValue.Size = New Size(3, 2)
+        LblGajiBrutoValue.Size = New Size(9, 23)
         LblGajiBrutoValue.TabIndex = 2
-        LblGajiBrutoValue.Text = Nothing
+        LblGajiBrutoValue.Text = "-"
         ' 
         ' LblGajiBruto
         ' 
         LblGajiBruto.BackColor = Color.Transparent
         LblGajiBruto.Font = New Font("Segoe UI", 9F)
         LblGajiBruto.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblGajiBruto.Location = New Point(24, 68)
+        LblGajiBruto.Location = New Point(24, 60)
         LblGajiBruto.Name = "LblGajiBruto"
         LblGajiBruto.Size = New Size(124, 17)
         LblGajiBruto.TabIndex = 1
@@ -584,26 +561,26 @@ Partial Class wp_detail_bukti_potong
         PanelHeader.Controls.Add(BtnDownload)
         PanelHeader.Controls.Add(LblHeaderSubtitle)
         PanelHeader.Controls.Add(LblHeaderTitle)
-        PanelHeader.CustomizableEdges = CustomizableEdges7
+        PanelHeader.CustomizableEdges = CustomizableEdges9
         PanelHeader.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         PanelHeader.Location = New Point(24, 24)
         PanelHeader.Name = "PanelHeader"
         PanelHeader.Padding = New Padding(24)
-        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        PanelHeader.Size = New Size(1062, 90)
+        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        PanelHeader.Size = New Size(1061, 90)
         PanelHeader.TabIndex = 0
         ' 
         ' BtnDownload
         ' 
         BtnDownload.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         BtnDownload.BorderRadius = 20
-        BtnDownload.CustomizableEdges = CustomizableEdges5
+        BtnDownload.CustomizableEdges = CustomizableEdges7
         BtnDownload.FillColor = Color.White
         BtnDownload.Font = New Font("Segoe UI Semibold", 7F, FontStyle.Bold)
         BtnDownload.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         BtnDownload.Location = New Point(946, 27)
         BtnDownload.Name = "BtnDownload"
-        BtnDownload.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        BtnDownload.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         BtnDownload.Size = New Size(89, 41)
         BtnDownload.TabIndex = 2
         BtnDownload.Text = "Download PDF"
@@ -630,21 +607,20 @@ Partial Class wp_detail_bukti_potong
         LblHeaderTitle.TabIndex = 0
         LblHeaderTitle.Text = "Detail Bukti Potong"
         ' 
-        ' wp_detail_bukti_potong
+        ' pk_detail_riwayat_bukti_potong
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
         ClientSize = New Size(1300, 720)
         Controls.Add(PanelMain)
-        Controls.Add(Wp_navbar1)
+        Controls.Add(Pk_navbar11)
         FormBorderStyle = FormBorderStyle.None
-        Name = "wp_detail_bukti_potong"
+        Name = "pk_detail_riwayat_bukti_potong"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Detail Bukti Potong"
         PanelMain.ResumeLayout(False)
-        BunifuPanel1.ResumeLayout(False)
-        BunifuPanel4.ResumeLayout(False)
-        BunifuPanel4.PerformLayout()
+        PanelContent.ResumeLayout(False)
+        PanelContent.PerformLayout()
         PanelEmployer.ResumeLayout(False)
         PanelEmployer.PerformLayout()
         PanelIncome.ResumeLayout(False)
@@ -654,24 +630,38 @@ Partial Class wp_detail_bukti_potong
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents Wp_navbar1 As wp_navbar
+    Friend WithEvents Pk_navbar11 As pk_navbar1
     Friend WithEvents PanelMain As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents PanelHeader As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblHeaderTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblHeaderSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnDownload As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents PanelContent As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents LblCompanyName As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PanelEmployer As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblEmployerTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNoBukti As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNoBuktiValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblTanggalBukti As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblTanggalBuktiValue As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNamaPerusahaan As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNamaPerusahaanValue As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNPWPPerusahaan As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNPWPPerusahaanValue As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblAlamatPerusahaan As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblAlamatPerusahaanValue As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblTanggalBukti As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblTanggalBuktiValue As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblEmployeeTitle As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblNamaPegawai As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblNamaPegawaiValue As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblNPWPPegawai As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblNPWPPegawaiValue As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblAlamatKaryawan As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblAlamatKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblStatusPTKP As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblStatusPTKPValue As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblNomorKaryawan As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblNomorKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel
+
     Friend WithEvents PanelIncome As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblIncomeTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblGajiBruto As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -684,18 +674,4 @@ Partial Class wp_detail_bukti_potong
     Friend WithEvents LblPPh21DipungutValue As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblPPh21Disetor As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblPPh21DisetorValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents BunifuPanel1 As Bunifu.UI.WinForms.BunifuPanel
-    Friend WithEvents BunifuPanel4 As Bunifu.UI.WinForms.BunifuPanel
-    Friend WithEvents Guna2HtmlLabel16 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNomorKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNomorKaryawan As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblStatusPTKPValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblStatusPTKP As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblAlamatKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblAlamatKaryawan As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNPWPPegawaiValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNPWPPegawai As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNamaPegawaiValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNamaPegawai As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblEmployeeTitle As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
