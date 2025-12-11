@@ -23,9 +23,9 @@ Public Class wp_lapor_pajak
         ' Load user basic info
         Try
             modulkoneksi.BukaKoneksi()
-            Dim sql As String = "SELECT npwp, nama, alamat FROM users WHERE npwp = @npwp"
+            Dim sql As String = "SELECT npwp, nama, alamat FROM wajib_pajak WHERE id = @wp_id"
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
 
             If rd.Read() Then
@@ -55,9 +55,9 @@ Public Class wp_lapor_pajak
     Private Sub LoadPTKP()
         Try
             modulkoneksi.BukaKoneksi()
-            Dim sql As String = "SELECT status_ptkp FROM pekerjaan WHERE wp_npwp = @npwp LIMIT 1"
+            Dim sql As String = "SELECT status_ptkp FROM wajib_pajak WHERE id = @wp_id"
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
 
             If rd.Read() Then
@@ -84,11 +84,11 @@ Public Class wp_lapor_pajak
             modulkoneksi.BukaKoneksi()
 
             Dim sql As String = "SELECT * FROM spt_tahunan 
-                                WHERE wp_npwp = @npwp AND tahun_pajak = @tahun 
+                                WHERE wajib_pajak_id = @wp_id AND tahun_pajak = @tahun 
                                 LIMIT 1"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmd.Parameters.AddWithValue("@tahun", tahunPajak)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
@@ -195,9 +195,9 @@ Public Class wp_lapor_pajak
             ' Get PTKP from pekerjaan table (REQUIRED)
             Dim statusPTKP As String = ""
             Try
-                Dim sqlPTKP As String = "SELECT status_ptkp FROM pekerjaan WHERE wp_npwp = @npwp LIMIT 1"
+                Dim sqlPTKP As String = "SELECT status_ptkp FROM wajib_pajak WHERE id = @wp_id"
                 Dim cmdPTKP As New MySqlCommand(sqlPTKP, modulkoneksi.koneksi)
-                cmdPTKP.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+                cmdPTKP.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
                 Dim rdPTKP As MySqlDataReader = cmdPTKP.ExecuteReader()
                 If rdPTKP.Read() Then
                     statusPTKP = If(IsDBNull(rdPTKP("status_ptkp")), "", rdPTKP("status_ptkp").ToString())
@@ -214,9 +214,9 @@ Public Class wp_lapor_pajak
             End Try
 
             ' Check if record exists
-            Dim sqlCheck As String = "SELECT id FROM spt_tahunan WHERE wp_npwp = @npwp AND tahun_pajak = @tahun"
+            Dim sqlCheck As String = "SELECT id FROM spt_tahunan WHERE wajib_pajak_id = @wp_id AND tahun_pajak = @tahun"
             Dim cmdCheck As New MySqlCommand(sqlCheck, modulkoneksi.koneksi)
-            cmdCheck.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmdCheck.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmdCheck.Parameters.AddWithValue("@tahun", tahunPajak)
             Dim exists As Boolean = cmdCheck.ExecuteScalar() IsNot Nothing
 
@@ -238,11 +238,11 @@ Public Class wp_lapor_pajak
                     sql &= ", tanggal_lapor = @tanggal"
                 End If
 
-                sql &= " WHERE wp_npwp = @npwp AND tahun_pajak = @tahun"
+                sql &= " WHERE wajib_pajak_id = @wp_id AND tahun_pajak = @tahun"
             Else
                 ' INSERT new record
                 sql = "INSERT INTO spt_tahunan (
-                    wp_npwp, tahun_pajak, status_ptkp,
+                    wajib_pajak_id, tahun_pajak, status_ptkp,
                     gaji_setahun, tunjangan_setahun, bonus_thr_setahun, bruto_setahun,
                     biaya_jabatan_setahun, iuran_pensiun_setahun, netto_setahun,
                     pph21_terutang"
@@ -252,7 +252,7 @@ Public Class wp_lapor_pajak
                 End If
 
                 sql &= ") VALUES (
-                    @npwp, @tahun, @ptkp,
+                    @wp_id, @tahun, @ptkp,
                     @gaji, @tunjangan, @bonus, @bruto,
                     @biaya, @iuran, @netto,
                     @pph"
@@ -265,7 +265,7 @@ Public Class wp_lapor_pajak
             End If
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmd.Parameters.AddWithValue("@tahun", tahunPajak)
             cmd.Parameters.AddWithValue("@ptkp", If(String.IsNullOrEmpty(statusPTKP), DBNull.Value, statusPTKP))
             cmd.Parameters.AddWithValue("@gaji", gajiPokok)

@@ -6,7 +6,8 @@ Public Class pk_form_bukti_potong
     ' Public properties untuk menerima data dari form sebelumnya
     Public Property PTKPStatusValue As String = ""
     Public Property PTKPBulananValue As Decimal = 0
-    Public Property EmployeeNPWP As String = ""
+    Public Property EmployeeWPId As Integer = 0  ' wajib_pajak.id
+    Public Property EmployeePekerjaanId As Integer = 0  ' pekerjaan.id
     Public Property EmployeeName As String = ""
     Public Property SelectedMonth As Integer = 0
     
@@ -29,13 +30,13 @@ Public Class pk_form_bukti_potong
 
     ' Load Employee Name from Database
     Private Sub LoadEmployeeName()
-        If String.IsNullOrEmpty(EmployeeNPWP) Then Return
+        If EmployeeWPId = 0 Then Return
 
         Try
             modulkoneksi.BukaKoneksi()
-            Dim query As String = "SELECT nama FROM users WHERE npwp = @npwp"
+            Dim query As String = "SELECT nama FROM wajib_pajak WHERE id = @wp_id"
             Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", EmployeeWPId)
 
             Dim result = cmd.ExecuteScalar()
             If result IsNot Nothing Then
@@ -49,16 +50,16 @@ Public Class pk_form_bukti_potong
         End Try
     End Sub
 
-    ' Load PTKP status from database (pekerjaan table) based on EmployeeNPWP
+    ' Load PTKP status from database (wajib_pajak table)
     Private Sub LoadPTKPFromDatabase()
-        If String.IsNullOrEmpty(EmployeeNPWP) Then Return
+        If EmployeeWPId = 0 Then Return
         If Not String.IsNullOrEmpty(PTKPStatusValue) Then Return ' Already has value from previous form
 
         Try
             modulkoneksi.BukaKoneksi()
-            Dim query As String = "SELECT status_ptkp FROM pekerjaan WHERE wp_npwp = @npwp LIMIT 1"
+            Dim query As String = "SELECT status_ptkp FROM wajib_pajak WHERE id = @wp_id"
             Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", EmployeeWPId)
 
             Dim result = cmd.ExecuteScalar()
             If result IsNot Nothing AndAlso result IsNot DBNull.Value Then
@@ -363,8 +364,10 @@ Public Class pk_form_bukti_potong
             MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
-            ' TODO: Implement logout logic (return to login form)
-            Application.Exit()
+            ModuleSession.ClearSession()
+            Dim loginForm As New FrmLogin()
+            loginForm.Show()
+            Me.Close()
         End If
     End Sub
 
@@ -380,7 +383,7 @@ Public Class pk_form_bukti_potong
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         Try
             ' Validasi data
-            If String.IsNullOrEmpty(EmployeeNPWP) Then
+            If EmployeePekerjaanId = 0 Then
                 MessageBox.Show("Data pegawai tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return
             End If
@@ -417,27 +420,20 @@ Public Class pk_form_bukti_potong
                 cmd.Parameters.AddWithValue("@id", BuktiPotongId)
             Else
                 ' INSERT new bukti potong
-                ' Get perusahaan_id from pekerjaan table
-                Dim perusahaanId As Integer = GetPerusahaanId()
-                If perusahaanId = 0 Then
-                    MessageBox.Show("Tidak dapat menemukan data perusahaan untuk pegawai ini.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Return
-                End If
-                
                 ' Generate nomor bukti
                 Dim nomorBukti As String = GenerateNomorBukti()
                 
-                query = "INSERT INTO bukti_potong (nomor_bukti, perusahaan_id, wp_npwp, masa_bulan, masa_tahun, " &
+                query = "INSERT INTO bukti_potong (nomor_bukti, pekerjaan_id, masa_bulan, masa_tahun, " &
                        "gaji_pokok, tunjangan, bonus_thr, bruto_total, biaya_jabatan, iuran_pensiun, " &
-                       "netto_total, ptkp, pkp, pph21_terutang) VALUES " &
-                       "(@nomor_bukti, @perusahaan_id, @wp_npwp, @masa_bulan, @masa_tahun, " &
+                       "netto_total, ptkp, pkp, pph21_terutang, created_by) VALUES " &
+                       "(@nomor_bukti, @pekerjaan_id, @masa_bulan, @masa_tahun, " &
                        "@gaji_pokok, @tunjangan, @bonus_thr, @bruto_total, @biaya_jabatan, @iuran_pensiun, " &
-                       "@netto_total, @ptkp, @pkp, @pph21_terutang)"
+                       "@netto_total, @ptkp, @pkp, @pph21_terutang, @created_by)"
                 cmd.Parameters.AddWithValue("@nomor_bukti", nomorBukti)
-                cmd.Parameters.AddWithValue("@perusahaan_id", perusahaanId)
-                cmd.Parameters.AddWithValue("@wp_npwp", EmployeeNPWP)
+                cmd.Parameters.AddWithValue("@pekerjaan_id", EmployeePekerjaanId)
                 cmd.Parameters.AddWithValue("@masa_bulan", SelectedMonth)
                 cmd.Parameters.AddWithValue("@masa_tahun", DateTime.Now.Year)
+                cmd.Parameters.AddWithValue("@created_by", ModuleSession.CurrentPemberiKerjaId)
             End If
             
             cmd.CommandText = query
@@ -470,23 +466,6 @@ Public Class pk_form_bukti_potong
             modulkoneksi.TutupKoneksi()
         End Try
     End Sub
-    
-    ' Get perusahaan_id from pekerjaan table based on EmployeeNPWP
-    Private Function GetPerusahaanId() As Integer
-        Try
-            Dim query As String = "SELECT perusahaan_id FROM pekerjaan WHERE wp_npwp = @npwp LIMIT 1"
-            Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
-            
-            Dim result = cmd.ExecuteScalar()
-            If result IsNot Nothing AndAlso result IsNot DBNull.Value Then
-                Return Convert.ToInt32(result)
-            End If
-            Return 0
-        Catch ex As Exception
-            Return 0
-        End Try
-    End Function
     
     ' Generate unique nomor bukti
     Private Function GenerateNomorBukti() As String

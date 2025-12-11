@@ -43,9 +43,11 @@ Partial Class FrmUserManagement
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Pk_navbar1 = New wp_navbar()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Pk_navbar1 = New admin_navbar()
         PanelHeader = New Guna.UI2.WinForms.Guna2Panel()
         LblSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -79,6 +81,7 @@ Partial Class FrmUserManagement
         colStatus = New DataGridViewTextBoxColumn()
         colTanggalDaftar = New DataGridViewTextBoxColumn()
         colActions = New DataGridViewButtonColumn()
+        colDelete = New DataGridViewButtonColumn()
         PanelHeader.SuspendLayout()
         FlowStats.SuspendLayout()
         CardTotalUsers.SuspendLayout()
@@ -92,12 +95,13 @@ Partial Class FrmUserManagement
         ' 
         ' Pk_navbar1
         ' 
-        Pk_navbar1.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(247))
+        Pk_navbar1.BackColor = Color.White
         Pk_navbar1.Dock = DockStyle.Left
-        Pk_navbar1.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
+        Pk_navbar1.ForeColor = Color.Black
         Pk_navbar1.Location = New Point(0, 0)
+        Pk_navbar1.Margin = New Padding(3, 4, 3, 4)
         Pk_navbar1.Name = "Pk_navbar1"
-        Pk_navbar1.Size = New Size(190, 720)
+        Pk_navbar1.Size = New Size(200, 720)
         Pk_navbar1.TabIndex = 0
         ' 
         ' PanelHeader
@@ -123,7 +127,7 @@ Partial Class FrmUserManagement
         LblSubtitle.ForeColor = Color.Silver
         LblSubtitle.Location = New Point(20, 56)
         LblSubtitle.Name = "LblSubtitle"
-        LblSubtitle.Size = New Size(422, 22)
+        LblSubtitle.Size = New Size(338, 17)
         LblSubtitle.TabIndex = 1
         LblSubtitle.Text = "Kelola pengguna sistem, atur peran, dan pantau status aktivitas."
         ' 
@@ -134,7 +138,7 @@ Partial Class FrmUserManagement
         LblTitle.ForeColor = Color.White
         LblTitle.Location = New Point(20, 16)
         LblTitle.Name = "LblTitle"
-        LblTitle.Size = New Size(193, 33)
+        LblTitle.Size = New Size(161, 27)
         LblTitle.TabIndex = 0
         LblTitle.Text = "User Management"
         ' 
@@ -175,7 +179,7 @@ Partial Class FrmUserManagement
         LblTotalUsersValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblTotalUsersValue.Location = New Point(18, 44)
         LblTotalUsersValue.Name = "LblTotalUsersValue"
-        LblTotalUsersValue.Size = New Size(37, 33)
+        LblTotalUsersValue.Size = New Size(32, 27)
         LblTotalUsersValue.TabIndex = 1
         LblTotalUsersValue.Text = "127"
         ' 
@@ -186,7 +190,7 @@ Partial Class FrmUserManagement
         LblTotalUsersTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblTotalUsersTitle.Location = New Point(18, 18)
         LblTotalUsersTitle.Name = "LblTotalUsersTitle"
-        LblTotalUsersTitle.Size = New Size(78, 22)
+        LblTotalUsersTitle.Size = New Size(61, 17)
         LblTotalUsersTitle.TabIndex = 0
         LblTotalUsersTitle.Text = "Total Users"
         ' 
@@ -214,7 +218,7 @@ Partial Class FrmUserManagement
         LblActiveUsersValue.ForeColor = Color.FromArgb(CByte(34), CByte(197), CByte(94))
         LblActiveUsersValue.Location = New Point(18, 44)
         LblActiveUsersValue.Name = "LblActiveUsersValue"
-        LblActiveUsersValue.Size = New Size(29, 33)
+        LblActiveUsersValue.Size = New Size(25, 27)
         LblActiveUsersValue.TabIndex = 1
         LblActiveUsersValue.Text = "98"
         ' 
@@ -225,7 +229,7 @@ Partial Class FrmUserManagement
         LblActiveUsersTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblActiveUsersTitle.Location = New Point(18, 18)
         LblActiveUsersTitle.Name = "LblActiveUsersTitle"
-        LblActiveUsersTitle.Size = New Size(86, 22)
+        LblActiveUsersTitle.Size = New Size(67, 17)
         LblActiveUsersTitle.TabIndex = 0
         LblActiveUsersTitle.Text = "Active Users"
         ' 
@@ -253,7 +257,7 @@ Partial Class FrmUserManagement
         LblPendingUsersValue.ForeColor = Color.FromArgb(CByte(251), CByte(191), CByte(36))
         LblPendingUsersValue.Location = New Point(18, 44)
         LblPendingUsersValue.Name = "LblPendingUsersValue"
-        LblPendingUsersValue.Size = New Size(16, 33)
+        LblPendingUsersValue.Size = New Size(14, 27)
         LblPendingUsersValue.TabIndex = 1
         LblPendingUsersValue.Text = "8"
         ' 
@@ -264,7 +268,7 @@ Partial Class FrmUserManagement
         LblPendingUsersTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblPendingUsersTitle.Location = New Point(18, 18)
         LblPendingUsersTitle.Name = "LblPendingUsersTitle"
-        LblPendingUsersTitle.Size = New Size(101, 22)
+        LblPendingUsersTitle.Size = New Size(78, 17)
         LblPendingUsersTitle.TabIndex = 0
         LblPendingUsersTitle.Text = "Pending Users"
         ' 
@@ -292,7 +296,7 @@ Partial Class FrmUserManagement
         LblInactiveUsersValue.ForeColor = Color.FromArgb(CByte(239), CByte(68), CByte(68))
         LblInactiveUsersValue.Location = New Point(18, 44)
         LblInactiveUsersValue.Name = "LblInactiveUsersValue"
-        LblInactiveUsersValue.Size = New Size(25, 33)
+        LblInactiveUsersValue.Size = New Size(22, 27)
         LblInactiveUsersValue.TabIndex = 1
         LblInactiveUsersValue.Text = "21"
         ' 
@@ -303,7 +307,7 @@ Partial Class FrmUserManagement
         LblInactiveUsersTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblInactiveUsersTitle.Location = New Point(18, 18)
         LblInactiveUsersTitle.Name = "LblInactiveUsersTitle"
-        LblInactiveUsersTitle.Size = New Size(97, 22)
+        LblInactiveUsersTitle.Size = New Size(76, 17)
         LblInactiveUsersTitle.TabIndex = 0
         LblInactiveUsersTitle.Text = "Inactive Users"
         ' 
@@ -374,7 +378,7 @@ Partial Class FrmUserManagement
         CmbStatus.Font = New Font("Segoe UI", 9.0F)
         CmbStatus.ForeColor = Color.FromArgb(CByte(60), CByte(76), CByte(97))
         CmbStatus.ItemHeight = 30
-        CmbStatus.Items.AddRange(New Object() {"Semua Status", "Active", "Pending", "Inactive"})
+        CmbStatus.Items.AddRange(New Object() {"Semua Status", "Aktif", "Non-Aktif"})
         CmbStatus.Location = New Point(420, 20)
         CmbStatus.Name = "CmbStatus"
         CmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges16
@@ -441,7 +445,7 @@ Partial Class FrmUserManagement
         LblTableSubtitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblTableSubtitle.Location = New Point(24, 60)
         LblTableSubtitle.Name = "LblTableSubtitle"
-        LblTableSubtitle.Size = New Size(403, 22)
+        LblTableSubtitle.Size = New Size(322, 17)
         LblTableSubtitle.TabIndex = 1
         LblTableSubtitle.Text = "Data pengguna sistem dengan informasi lengkap dan status."
         ' 
@@ -452,7 +456,7 @@ Partial Class FrmUserManagement
         LblTableTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblTableTitle.Location = New Point(24, 26)
         LblTableTitle.Name = "LblTableTitle"
-        LblTableTitle.Size = New Size(144, 27)
+        LblTableTitle.Size = New Size(120, 22)
         LblTableTitle.TabIndex = 0
         LblTableTitle.Text = "Daftar Pengguna"
         ' 
@@ -464,23 +468,23 @@ Partial Class FrmUserManagement
         DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(252))
         GridUsers.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.White
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         DataGridViewCellStyle2.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(234), CByte(244), CByte(255))
-        DataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         GridUsers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         GridUsers.ColumnHeadersHeight = 36
-        GridUsers.Columns.AddRange(New DataGridViewColumn() {colNo, colNama, colEmail, colRole, colStatus, colTanggalDaftar, colActions})
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = Color.White
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.0F)
-        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
-        DataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(CByte(240), CByte(244), CByte(252))
-        DataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
-        GridUsers.DefaultCellStyle = DataGridViewCellStyle4
+        GridUsers.Columns.AddRange(New DataGridViewColumn() {colNo, colNama, colEmail, colRole, colStatus, colTanggalDaftar, colActions, colDelete})
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = Color.White
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
+        DataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(CByte(240), CByte(244), CByte(252))
+        DataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
+        GridUsers.DefaultCellStyle = DataGridViewCellStyle5
         GridUsers.GridColor = Color.FromArgb(CByte(235), CByte(240), CByte(247))
         GridUsers.Location = New Point(24, 96)
         GridUsers.MultiSelect = False
@@ -488,6 +492,10 @@ Partial Class FrmUserManagement
         GridUsers.ReadOnly = True
         GridUsers.RowHeadersVisible = False
         GridUsers.RowHeadersWidth = 51
+        DataGridViewCellStyle6.ForeColor = Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = Color.White
+        DataGridViewCellStyle6.SelectionForeColor = Color.Black
+        GridUsers.RowsDefaultCellStyle = DataGridViewCellStyle6
         GridUsers.RowTemplate.Height = 36
         GridUsers.Size = New Size(912, 240)
         GridUsers.TabIndex = 2
@@ -561,16 +569,28 @@ Partial Class FrmUserManagement
         DataGridViewCellStyle3.BackColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
         DataGridViewCellStyle3.ForeColor = Color.White
         colActions.DefaultCellStyle = DataGridViewCellStyle3
-        colActions.HeaderText = "Aksi"
+        colActions.HeaderText = "Edit"
         colActions.MinimumWidth = 6
         colActions.Name = "colActions"
         colActions.ReadOnly = True
         colActions.Text = "Edit"
         colActions.UseColumnTextForButtonValue = True
         ' 
+        ' colDelete
+        ' 
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(255), CByte(59), CByte(48))
+        DataGridViewCellStyle4.ForeColor = Color.White
+        colDelete.DefaultCellStyle = DataGridViewCellStyle4
+        colDelete.HeaderText = "Hapus"
+        colDelete.MinimumWidth = 6
+        colDelete.Name = "colDelete"
+        colDelete.ReadOnly = True
+        colDelete.Text = "Hapus"
+        colDelete.UseColumnTextForButtonValue = True
+        ' 
         ' FrmUserManagement
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
         ClientSize = New Size(1200, 720)
@@ -601,7 +621,7 @@ Partial Class FrmUserManagement
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents Pk_navbar1 As wp_navbar
+    Friend WithEvents Pk_navbar1 As admin_navbar
     Friend WithEvents PanelHeader As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -635,4 +655,5 @@ Partial Class FrmUserManagement
     Friend WithEvents colStatus As DataGridViewTextBoxColumn
     Friend WithEvents colTanggalDaftar As DataGridViewTextBoxColumn
     Friend WithEvents colActions As DataGridViewButtonColumn
+    Friend WithEvents colDelete As DataGridViewButtonColumn
 End Class

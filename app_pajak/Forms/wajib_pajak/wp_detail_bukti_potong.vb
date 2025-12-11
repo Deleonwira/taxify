@@ -31,13 +31,13 @@ Public Class wp_detail_bukti_potong
 
             Dim sql As String =
         "SELECT bp.*, 
-                p.nama_perusahaan, p.npwp_perusahaan, p.alamat AS alamat_perusahaan,
-                u.nama AS nama_wp, u.alamat AS alamat_wp, u.nik AS nik_wp,
-                pk.status_ptkp
+                pr.nama_perusahaan, pr.npwp_perusahaan, pr.alamat AS alamat_perusahaan,
+                wp.nama AS nama_wp, wp.alamat AS alamat_wp, wp.nik AS nik_wp, wp.npwp AS npwp_wp,
+                wp.status_ptkp
                 FROM bukti_potong bp
-                JOIN perusahaan p ON p.id = bp.perusahaan_id
-                JOIN users u ON u.npwp = bp.wp_npwp
-                LEFT JOIN pekerjaan pk ON pk.wp_npwp = bp.wp_npwp AND pk.perusahaan_id = bp.perusahaan_id
+                JOIN pekerjaan pk ON pk.id = bp.pekerjaan_id
+                JOIN perusahaan pr ON pr.id = pk.perusahaan_id
+                JOIN wajib_pajak wp ON wp.id = pk.wajib_pajak_id
                 WHERE bp.id = @id LIMIT 1"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
@@ -59,7 +59,7 @@ Public Class wp_detail_bukti_potong
 
                 ' ====== DATA PEGAWAI ======
                 LblNamaPegawaiValue.Text = rd("nama_wp").ToString()
-                LblNPWPPegawaiValue.Text = rd("wp_npwp").ToString()
+                LblNPWPPegawaiValue.Text = rd("npwp_wp").ToString()
                 LblAlamatKaryawanValue.Text = If(IsDBNull(rd("alamat_wp")), "-", rd("alamat_wp").ToString())
 
                 ' Status & NIK

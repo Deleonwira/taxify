@@ -3,7 +3,8 @@ Imports MySql.Data.MySqlClient
 Public Class pk_timeline_bukti_botong
 
     ' Properties
-    Public Property EmployeeNPWP As String = ""
+    Public Property EmployeeWPId As Integer = 0  ' wajib_pajak.id
+    Public Property EmployeePekerjaanId As Integer = 0  ' pekerjaan.id
     Public Property PTKPStatusValue As String = ""
     Public Property EmployeeName As String = ""
     Private SelectedMonth As Integer = 0
@@ -49,13 +50,13 @@ Public Class pk_timeline_bukti_botong
 
     ' Load Employee Name
     Private Sub LoadEmployeeName()
-        If String.IsNullOrEmpty(EmployeeNPWP) Then Return
+        If EmployeeWPId = 0 Then Return
 
         Try
             modulkoneksi.BukaKoneksi()
-            Dim query As String = "SELECT nama FROM users WHERE npwp = @npwp"
+            Dim query As String = "SELECT nama FROM wajib_pajak WHERE id = @wp_id"
             Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", EmployeeWPId)
             
             Dim result = cmd.ExecuteScalar()
             If result IsNot Nothing Then
@@ -71,13 +72,13 @@ Public Class pk_timeline_bukti_botong
 
     ' Load Bukti Potong Status untuk setiap bulan (update indikator visual)
     Private Sub LoadBuktiPotongStatus()
-        If String.IsNullOrEmpty(EmployeeNPWP) Then Return
+        If EmployeePekerjaanId = 0 Then Return
 
         Try
             modulkoneksi.BukaKoneksi()
-            Dim query As String = "SELECT masa_bulan FROM bukti_potong WHERE wp_npwp = @npwp AND masa_tahun = @tahun"
+            Dim query As String = "SELECT masa_bulan FROM bukti_potong WHERE pekerjaan_id = @pekerjaan_id AND masa_tahun = @tahun"
             Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
+            cmd.Parameters.AddWithValue("@pekerjaan_id", EmployeePekerjaanId)
             cmd.Parameters.AddWithValue("@tahun", SelectedYear)
             
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
@@ -120,13 +121,13 @@ Public Class pk_timeline_bukti_botong
 
     ' Check if bukti potong exists for selected month
     Private Function CheckBuktiPotongExists(month As Integer) As Boolean
-        If String.IsNullOrEmpty(EmployeeNPWP) Then Return False
+        If EmployeePekerjaanId = 0 Then Return False
         
         Try
             modulkoneksi.BukaKoneksi()
-            Dim query As String = "SELECT id, created_at FROM bukti_potong WHERE wp_npwp = @npwp AND masa_bulan = @bulan AND masa_tahun = @tahun LIMIT 1"
+            Dim query As String = "SELECT id, created_at FROM bukti_potong WHERE pekerjaan_id = @pekerjaan_id AND masa_bulan = @bulan AND masa_tahun = @tahun LIMIT 1"
             Dim cmd As New MySqlCommand(query, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", EmployeeNPWP)
+            cmd.Parameters.AddWithValue("@pekerjaan_id", EmployeePekerjaanId)
             cmd.Parameters.AddWithValue("@bulan", month)
             cmd.Parameters.AddWithValue("@tahun", SelectedYear)
             
@@ -202,7 +203,8 @@ Public Class pk_timeline_bukti_botong
         End If
 
         Dim formBuktiPotong As New pk_form_bukti_potong(Me)
-        formBuktiPotong.EmployeeNPWP = EmployeeNPWP
+        formBuktiPotong.EmployeeWPId = EmployeeWPId
+        formBuktiPotong.EmployeePekerjaanId = EmployeePekerjaanId
         formBuktiPotong.PTKPStatusValue = PTKPStatusValue
         formBuktiPotong.SelectedMonth = SelectedMonth
         
@@ -299,8 +301,10 @@ Public Class pk_timeline_bukti_botong
             MessageBoxIcon.Question)
         
         If result = DialogResult.Yes Then
-            ' TODO: Implement logout logic (return to login form)
-            Application.Exit()
+            ModuleSession.ClearSession()
+            Dim loginForm As New FrmLogin()
+            loginForm.Show()
+            Me.Close()
         End If
     End Sub
 

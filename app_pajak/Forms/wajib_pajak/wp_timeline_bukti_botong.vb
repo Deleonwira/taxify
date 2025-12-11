@@ -71,16 +71,17 @@ Public Class wp_timeline_bukti_botong
 
             ' Query to get bukti_potong for the selected month
             Dim sql As String =
-                "SELECT bp.*, p.nama_perusahaan
+                "SELECT bp.*, pr.nama_perusahaan
                  FROM bukti_potong bp
-                 JOIN perusahaan p ON p.id = bp.perusahaan_id
-                 WHERE bp.wp_npwp = @npwp
+                 JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+                 JOIN perusahaan pr ON pr.id = p.perusahaan_id
+                 WHERE p.wajib_pajak_id = @wp_id
                  AND bp.masa_bulan = @bulan
                  AND bp.masa_tahun = @tahun
                  LIMIT 1"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmd.Parameters.AddWithValue("@bulan", monthNumber)
             cmd.Parameters.AddWithValue("@tahun", currentYear)
 
@@ -141,12 +142,13 @@ Public Class wp_timeline_bukti_botong
             Dim sql As String =
                 "SELECT DISTINCT bp.masa_bulan
                  FROM bukti_potong bp
-                 WHERE bp.wp_npwp = @npwp
+                 JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+                 WHERE p.wajib_pajak_id = @wp_id
                  AND bp.masa_tahun = @tahun
                  ORDER BY bp.masa_bulan"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmd.Parameters.AddWithValue("@tahun", currentYear)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()

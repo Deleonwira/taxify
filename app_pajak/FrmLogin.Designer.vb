@@ -128,9 +128,9 @@ Partial Class FrmLogin
         lblNPWP.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         lblNPWP.Location = New Point(24, 20)
         lblNPWP.Name = "lblNPWP"
-        lblNPWP.Size = New Size(46, 17)
+        lblNPWP.Size = New Size(64, 17)
         lblNPWP.TabIndex = 0
-        lblNPWP.Text = "NPWP *"
+        lblNPWP.Text = "Username *"
         ' 
         ' txtNPWP
         ' 
@@ -139,13 +139,13 @@ Partial Class FrmLogin
         txtNPWP.DefaultText = ""
         txtNPWP.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         txtNPWP.FocusedState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        txtNPWP.Font = New Font("Segoe UI", 9F)
+        txtNPWP.Font = New Font("Segoe UI", 9.0F)
         txtNPWP.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         txtNPWP.HoverState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         txtNPWP.Location = New Point(24, 40)
         txtNPWP.Name = "txtNPWP"
         txtNPWP.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
-        txtNPWP.PlaceholderText = "Contoh: 12.345.678.9-123.000"
+        txtNPWP.PlaceholderText = "Masukkan username anda"
         txtNPWP.SelectedText = ""
         txtNPWP.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         txtNPWP.Size = New Size(312, 36)
@@ -154,7 +154,7 @@ Partial Class FrmLogin
         ' lblPassword
         ' 
         lblPassword.BackColor = Color.Transparent
-        lblPassword.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
+        lblPassword.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
         lblPassword.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         lblPassword.Location = New Point(24, 84)
         lblPassword.Name = "lblPassword"
@@ -169,14 +169,14 @@ Partial Class FrmLogin
         txtPassword.DefaultText = ""
         txtPassword.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
         txtPassword.FocusedState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        txtPassword.Font = New Font("Segoe UI", 9F)
+        txtPassword.Font = New Font("Segoe UI", 9.0F)
         txtPassword.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         txtPassword.HoverState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         txtPassword.Location = New Point(24, 104)
         txtPassword.Name = "txtPassword"
         txtPassword.PasswordChar = "●"c
         txtPassword.PlaceholderForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
-        txtPassword.PlaceholderText = "Masukkan password Anda"
+        txtPassword.PlaceholderText = "Masukkan password anda"
         txtPassword.SelectedText = ""
         txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         txtPassword.Size = New Size(312, 36)

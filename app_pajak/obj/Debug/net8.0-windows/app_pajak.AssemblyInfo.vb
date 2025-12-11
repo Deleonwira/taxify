@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("app_pajak"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14360fd2e7c937bc765d44c6a18980f9a2d143ff"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a08439614af59ef3c5288fd94f6ecd723e96445"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("app_pajak"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("app_pajak"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

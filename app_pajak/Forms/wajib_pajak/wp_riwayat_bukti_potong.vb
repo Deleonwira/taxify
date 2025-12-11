@@ -27,19 +27,20 @@ Public Class wp_riwayat_bukti_potong
             modulkoneksi.BukaKoneksi()
 
             Dim sql As String =
-            "SELECT bp.*, p.nama_perusahaan 
+            "SELECT bp.*, pr.nama_perusahaan 
              FROM bukti_potong bp
-             JOIN perusahaan p ON p.id = bp.perusahaan_id
-             WHERE bp.wp_npwp = @npwp"
+             JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+             JOIN perusahaan pr ON pr.id = p.perusahaan_id
+             WHERE p.wajib_pajak_id = @wp_id"
 
             ' Add company filter if specified
             If companyId > 0 Then
-                sql &= " AND bp.perusahaan_id = @companyId"
+                sql &= " AND p.perusahaan_id = @companyId"
             End If
 
             ' Add search filter if specified
             If Not String.IsNullOrEmpty(searchText) Then
-                sql &= " AND (p.nama_perusahaan LIKE @search OR CONCAT(masa_bulan, '/', masa_tahun) LIKE @search)"
+                sql &= " AND (pr.nama_perusahaan LIKE @search OR CONCAT(masa_bulan, '/', masa_tahun) LIKE @search)"
             End If
 
             ' Add sorting
@@ -50,7 +51,7 @@ Public Class wp_riwayat_bukti_potong
             End If
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
 
             If companyId > 0 Then
                 cmd.Parameters.AddWithValue("@companyId", companyId)
@@ -103,17 +104,18 @@ Public Class wp_riwayat_bukti_potong
 
             ' Query companies with statistics (count and total bruto)
             Dim sql As String =
-                "SELECT p.id, p.nama_perusahaan, 
+                "SELECT pr.id, pr.nama_perusahaan, 
                         COUNT(bp.id) AS jumlah_bukti,
                         COALESCE(SUM(bp.bruto_total), 0) AS total_bruto
                  FROM bukti_potong bp
-                 JOIN perusahaan p ON p.id = bp.perusahaan_id
-                 WHERE bp.wp_npwp = @npwp
-                 GROUP BY p.id, p.nama_perusahaan
-                 ORDER BY p.nama_perusahaan"
+                 JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+                 JOIN perusahaan pr ON pr.id = p.perusahaan_id
+                 WHERE p.wajib_pajak_id = @wp_id
+                 GROUP BY pr.id, pr.nama_perusahaan
+                 ORDER BY pr.nama_perusahaan"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
 

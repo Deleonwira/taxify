@@ -2,7 +2,7 @@
 Module modulkoneksi
     Public koneksi As MySqlConnection
 
-    Public connectionString As String = "Server=localhost; Database=app_pajak; User Id=root; Password=;"
+    Public connectionString As String = "Server=localhost; Database=app_pajak_v2; User Id=root; Password=;"
 
     Public Sub BukaKoneksi()
         Try

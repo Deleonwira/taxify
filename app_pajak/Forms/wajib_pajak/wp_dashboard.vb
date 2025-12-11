@@ -43,9 +43,9 @@ Public Class wp_dashboard
         Try
             modulkoneksi.BukaKoneksi()
 
-            Dim sql As String = "SELECT nama FROM users WHERE npwp = @npwp"
+            Dim sql As String = "SELECT nama FROM wajib_pajak WHERE id = @wp_id"
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
 
             Dim result = cmd.ExecuteScalar()
             If result IsNot Nothing Then
@@ -85,14 +85,15 @@ Public Class wp_dashboard
             ' Get aggregate statistics from bukti_potong
             Dim sql As String = "
                 SELECT 
-                    COALESCE(SUM(bruto_total), 0) AS total_bruto,
-                    COALESCE(SUM(pph21_terutang), 0) AS total_pph21,
+                    COALESCE(SUM(bp.bruto_total), 0) AS total_bruto,
+                    COALESCE(SUM(bp.pph21_terutang), 0) AS total_pph21,
                     COUNT(*) AS jumlah_bp
-                FROM bukti_potong 
-                WHERE wp_npwp = @npwp AND masa_tahun = @tahun"
+                FROM bukti_potong bp
+                JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+                WHERE p.wajib_pajak_id = @wp_id AND bp.masa_tahun = @tahun"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmd.Parameters.AddWithValue("@tahun", currentYear)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
@@ -104,9 +105,9 @@ Public Class wp_dashboard
             rd.Close()
 
             ' Get SPT status
-            Dim sqlSpt As String = "SELECT status_spt FROM spt_tahunan WHERE wp_npwp = @npwp AND tahun_pajak = @tahun ORDER BY id DESC LIMIT 1"
+            Dim sqlSpt As String = "SELECT status_spt FROM spt_tahunan WHERE wajib_pajak_id = @wp_id AND tahun_pajak = @tahun ORDER BY id DESC LIMIT 1"
             Dim cmdSpt As New MySqlCommand(sqlSpt, modulkoneksi.koneksi)
-            cmdSpt.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmdSpt.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmdSpt.Parameters.AddWithValue("@tahun", currentYear)
 
             Dim sptResult = cmdSpt.ExecuteScalar()
@@ -149,15 +150,16 @@ Public Class wp_dashboard
             modulkoneksi.BukaKoneksi()
 
             Dim sql As String = "
-                SELECT bp.id, bp.nomor_bukti, bp.masa_bulan, bp.masa_tahun, bp.bruto_total, bp.pph21_terutang, p.nama_perusahaan
+                SELECT bp.id, bp.nomor_bukti, bp.masa_bulan, bp.masa_tahun, bp.bruto_total, bp.pph21_terutang, pr.nama_perusahaan
                 FROM bukti_potong bp
-                JOIN perusahaan p ON p.id = bp.perusahaan_id
-                WHERE bp.wp_npwp = @npwp
+                JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+                JOIN perusahaan pr ON pr.id = p.perusahaan_id
+                WHERE p.wajib_pajak_id = @wp_id
                 ORDER BY bp.masa_tahun DESC, bp.masa_bulan DESC
                 LIMIT 5"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
 
@@ -200,14 +202,15 @@ Public Class wp_dashboard
             Next
 
             Dim sql As String = "
-                SELECT masa_bulan, SUM(bruto_total) AS total_bruto
-                FROM bukti_potong
-                WHERE wp_npwp = @npwp AND masa_tahun = @tahun
-                GROUP BY masa_bulan
-                ORDER BY masa_bulan"
+                SELECT bp.masa_bulan, SUM(bp.bruto_total) AS total_bruto
+                FROM bukti_potong bp
+                JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+                WHERE p.wajib_pajak_id = @wp_id AND bp.masa_tahun = @tahun
+                GROUP BY bp.masa_bulan
+                ORDER BY bp.masa_bulan"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
             cmd.Parameters.AddWithValue("@tahun", currentYear)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()

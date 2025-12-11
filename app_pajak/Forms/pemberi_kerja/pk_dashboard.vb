@@ -36,8 +36,10 @@
             MessageBoxIcon.Question)
         
         If result = DialogResult.Yes Then
-            ' TODO: Implement logout logic (return to login form)
-            Application.Exit()
+            ModuleSession.ClearSession()
+            Dim loginForm As New FrmLogin()
+            loginForm.Show()
+            Me.Close()
         End If
     End Sub
 

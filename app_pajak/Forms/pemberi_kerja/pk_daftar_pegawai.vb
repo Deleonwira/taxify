@@ -16,27 +16,17 @@ Public Class pk_daftar_pegawai
             BukaKoneksi()
 
             ' Get perusahaan_id dari logged-in user (pemberi_kerja)
-            Dim queryPerusahaan As String = "SELECT id FROM perusahaan WHERE owner_npwp = @npwp LIMIT 1"
-            Dim cmdPerusahaan As New MySqlCommand(queryPerusahaan, koneksi)
-            cmdPerusahaan.Parameters.AddWithValue("@npwp", CurrentUserNPWP)
-
-            Dim perusahaanId As Integer = 0
-            Dim readerPerusahaan As MySqlDataReader = cmdPerusahaan.ExecuteReader()
-            If readerPerusahaan.Read() Then
-                perusahaanId = Convert.ToInt32(readerPerusahaan("id"))
-            End If
-            readerPerusahaan.Close()
+            Dim perusahaanId As Integer = ModuleSession.CurrentPerusahaanId
 
             If perusahaanId = 0 Then
                 MessageBox.Show("Perusahaan tidak ditemukan untuk user ini.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                TutupKoneksi()
                 Return
             End If
 
             ' Query untuk get employees based on perusahaan_id
-            Dim query As String = "SELECT p.wp_npwp, u.nama, p.jabatan, p.status_ptkp " &
+            Dim query As String = "SELECT p.id as pekerjaan_id, wp.id as wp_id, wp.npwp, wp.nama, p.jabatan, wp.status_ptkp " &
                                   "FROM pekerjaan p " &
-                                  "INNER JOIN users u ON p.wp_npwp = u.npwp " &
+                                  "INNER JOIN wajib_pajak wp ON p.wajib_pajak_id = wp.id " &
                                   "WHERE p.perusahaan_id = @perusahaan_id"
 
             Dim cmdEmployees As New MySqlCommand(query, koneksi)
@@ -49,9 +39,11 @@ Public Class pk_daftar_pegawai
                 ' Create employee card dynamically
                 Dim card As Guna.UI2.WinForms.Guna2Panel = CreateEmployeeCard(
                     reader("nama").ToString(),
-                    reader("wp_npwp").ToString(),
+                    reader("npwp").ToString(),
                     reader("jabatan").ToString(),
                     reader("status_ptkp").ToString(),
+                    Convert.ToInt32(reader("wp_id")),
+                    Convert.ToInt32(reader("pekerjaan_id")),
                     employeeCount
                 )
 
@@ -82,7 +74,7 @@ Public Class pk_daftar_pegawai
     End Sub
 
     ' Create employee card dynamically
-    Private Function CreateEmployeeCard(nama As String, npwp As String, jabatan As String, ptkpStatus As String, index As Integer) As Guna.UI2.WinForms.Guna2Panel
+    Private Function CreateEmployeeCard(nama As String, npwp As String, jabatan As String, ptkpStatus As String, wpId As Integer, pekerjaanId As Integer, index As Integer) As Guna.UI2.WinForms.Guna2Panel
         ' Create main card panel
         Dim card As New Guna.UI2.WinForms.Guna2Panel()
         card.BorderColor = Color.FromArgb(230, 233, 241)
@@ -140,7 +132,7 @@ Public Class pk_daftar_pegawai
         btnView.BorderRadius = 6
         btnView.Size = New Size(140, 32)
         btnView.Location = New Point(292, 90)
-        btnView.Tag = ptkpStatus & "|" & npwp ' Store PTKP status and NPWP for later use
+        btnView.Tag = ptkpStatus & "|" & wpId.ToString() & "|" & pekerjaanId.ToString() ' Store PTKP, wpId, pekerjaanId
         AddHandler btnView.Click, AddressOf BtnCreateBuktiPotong_Click
 
         ' Add all controls to card
@@ -158,12 +150,14 @@ Public Class pk_daftar_pegawai
         Dim btn As Guna.UI2.WinForms.Guna2Button = CType(sender, Guna.UI2.WinForms.Guna2Button)
         Dim tagData As String() = btn.Tag.ToString().Split("|"c)
         Dim ptkpStatus As String = tagData(0)
-        Dim wpNPWP As String = tagData(1)
+        Dim wpId As Integer = Convert.ToInt32(tagData(1))
+        Dim pekerjaanId As Integer = Convert.ToInt32(tagData(2))
 
         ' Open pk_timeline_bukti_botong with employee data
         Dim formTimeline As New pk_timeline_bukti_botong()
         formTimeline.PTKPStatusValue = ptkpStatus
-        formTimeline.EmployeeNPWP = wpNPWP
+        formTimeline.EmployeeWPId = wpId
+        formTimeline.EmployeePekerjaanId = pekerjaanId
         formTimeline.Show()
         Me.Hide() ' Hide current form
     End Sub
@@ -225,8 +219,10 @@ Public Class pk_daftar_pegawai
             MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
-            ' TODO: Implement logout logic (return to login form)
-            Application.Exit()
+            ModuleSession.ClearSession()
+            Dim loginForm As New FrmLogin()
+            loginForm.Show()
+            Me.Close()
         End If
     End Sub
 

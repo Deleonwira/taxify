@@ -26,20 +26,20 @@ Public Class wp_data_diri
             modulkoneksi.BukaKoneksi()
 
             Dim sql As String = "
-                SELECT nama, npwp, email, no_telepon, alamat
-                FROM users
-                WHERE npwp = @npwp
+                SELECT nama, npwp, nik, email, no_telepon, alamat
+                FROM wajib_pajak
+                WHERE id = @wp_id
                 LIMIT 1
             "
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
 
             If rd.Read() Then
                 txtNama.Text = rd("nama").ToString()
-                txtNIK.Text = rd("npwp").ToString()
+                txtNIK.Text = If(IsDBNull(rd("nik")), "", rd("nik").ToString())
                 Guna2TextBox1.Text = rd("email").ToString()
 
                 txtEmail.Text = If(IsDBNull(rd("no_telepon")), "", rd("no_telepon").ToString())
@@ -86,33 +86,34 @@ Public Class wp_data_diri
         Try
             modulkoneksi.BukaKoneksi()
 
+            ' Update wajib_pajak profile
             Dim sql As String = "
-                UPDATE users 
+                UPDATE wajib_pajak 
                 SET nama = @nama,
                     email = @email,
                     no_telepon = @telp,
                     alamat = @alamat
+                WHERE id = @wp_id
             "
 
-            If changePassword Then
-                sql &= ", password_hash = @pass"
-            End If
-
-            sql &= " WHERE npwp = @npwp"
-
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-
             cmd.Parameters.AddWithValue("@nama", txtNama.Text)
             cmd.Parameters.AddWithValue("@email", Guna2TextBox1.Text)
             cmd.Parameters.AddWithValue("@telp", txtEmail.Text)
             cmd.Parameters.AddWithValue("@alamat", txtAlamat.Text)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
+            cmd.ExecuteNonQuery()
 
+            ' Update password in users table if changed
             If changePassword Then
-                cmd.Parameters.AddWithValue("@pass", newPasswordHash)
+                Dim sqlPass As String = "UPDATE users SET password_hash = @pass WHERE id = @user_id"
+                Dim cmdPass As New MySqlCommand(sqlPass, modulkoneksi.koneksi)
+                cmdPass.Parameters.AddWithValue("@pass", newPasswordHash)
+                cmdPass.Parameters.AddWithValue("@user_id", ModuleSession.CurrentUserId)
+                cmdPass.ExecuteNonQuery()
             End If
 
-            cmd.ExecuteNonQuery()
+            ' Command already executed above
 
             MsgBox("Data berhasil disimpan!", MsgBoxStyle.Information)
 
@@ -140,11 +141,11 @@ Public Class wp_data_diri
             Dim sql As String = "
                 SELECT password_hash 
                 FROM users 
-                WHERE npwp = @npwp
+                WHERE id = @user_id
             "
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@user_id", ModuleSession.CurrentUserId)
 
             Dim dbHash As String = cmd.ExecuteScalar().ToString()
 

@@ -100,7 +100,7 @@ Public Class wp_riwayat_lapor_pajak
             Dim sql As String = "
                 SELECT tahun_pajak, bruto_setahun, netto_setahun, pph21_terutang, status_spt
                 FROM spt_tahunan
-                WHERE wp_npwp = @npwp"
+                WHERE wajib_pajak_id = @wp_id"
 
             If Not String.IsNullOrEmpty(searchKeyword) Then
                 sql &= " AND (CAST(tahun_pajak AS CHAR) LIKE @search OR status_spt LIKE @search)"
@@ -117,7 +117,7 @@ Public Class wp_riwayat_lapor_pajak
             sql &= " ORDER BY tahun_pajak DESC"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
 
             If Not String.IsNullOrEmpty(searchKeyword) Then
                 cmd.Parameters.AddWithValue("@search", "%" & searchKeyword & "%")

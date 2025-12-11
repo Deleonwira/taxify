@@ -268,7 +268,7 @@
         RaiseEvent DataDiriClicked(Me, e)
     End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         CollapseAllSubmenus()
         RaiseEvent LogoutClicked(Me, e)
     End Sub

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmManagementPerusahaan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmManagementPerusahaan
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -46,9 +46,10 @@ Partial Class FrmManagementPerusahaan
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Pk_navbar1 = New wp_navbar()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Pk_navbar1 = New admin_navbar()
         PanelHeader = New Guna.UI2.WinForms.Guna2Panel()
         LblSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -80,6 +81,7 @@ Partial Class FrmManagementPerusahaan
         colStatus = New DataGridViewTextBoxColumn()
         colTanggalDaftar = New DataGridViewTextBoxColumn()
         colActions = New DataGridViewButtonColumn()
+        colDelete = New DataGridViewButtonColumn()
         PanelHeader.SuspendLayout()
         FlowStats.SuspendLayout()
         CardTotalPerusahaan.SuspendLayout()
@@ -93,12 +95,13 @@ Partial Class FrmManagementPerusahaan
         ' 
         ' Pk_navbar1
         ' 
-        Pk_navbar1.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(247))
+        Pk_navbar1.BackColor = Color.White
         Pk_navbar1.Dock = DockStyle.Left
-        Pk_navbar1.ForeColor = Color.FromArgb(CByte(28), CByte(28), CByte(30))
+        Pk_navbar1.ForeColor = Color.Black
         Pk_navbar1.Location = New Point(0, 0)
+        Pk_navbar1.Margin = New Padding(3, 4, 3, 4)
         Pk_navbar1.Name = "Pk_navbar1"
-        Pk_navbar1.Size = New Size(190, 720)
+        Pk_navbar1.Size = New Size(200, 720)
         Pk_navbar1.TabIndex = 0
         ' 
         ' PanelHeader
@@ -124,7 +127,7 @@ Partial Class FrmManagementPerusahaan
         LblSubtitle.ForeColor = Color.Silver
         LblSubtitle.Location = New Point(20, 56)
         LblSubtitle.Name = "LblSubtitle"
-        LblSubtitle.Size = New Size(505, 22)
+        LblSubtitle.Size = New Size(401, 17)
         LblSubtitle.TabIndex = 1
         LblSubtitle.Text = "Kelola data perusahaan, verifikasi status, dan pantau aktivitas pemberi kerja."
         ' 
@@ -135,7 +138,7 @@ Partial Class FrmManagementPerusahaan
         LblTitle.ForeColor = Color.White
         LblTitle.Location = New Point(20, 16)
         LblTitle.Name = "LblTitle"
-        LblTitle.Size = New Size(265, 33)
+        LblTitle.Size = New Size(222, 27)
         LblTitle.TabIndex = 0
         LblTitle.Text = "Management Perusahaan"
         ' 
@@ -176,7 +179,7 @@ Partial Class FrmManagementPerusahaan
         LblTotalPerusahaanValue.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblTotalPerusahaanValue.Location = New Point(18, 44)
         LblTotalPerusahaanValue.Name = "LblTotalPerusahaanValue"
-        LblTotalPerusahaanValue.Size = New Size(29, 33)
+        LblTotalPerusahaanValue.Size = New Size(25, 27)
         LblTotalPerusahaanValue.TabIndex = 1
         LblTotalPerusahaanValue.Text = "45"
         ' 
@@ -187,7 +190,7 @@ Partial Class FrmManagementPerusahaan
         LblTotalPerusahaanTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblTotalPerusahaanTitle.Location = New Point(18, 18)
         LblTotalPerusahaanTitle.Name = "LblTotalPerusahaanTitle"
-        LblTotalPerusahaanTitle.Size = New Size(121, 22)
+        LblTotalPerusahaanTitle.Size = New Size(94, 17)
         LblTotalPerusahaanTitle.TabIndex = 0
         LblTotalPerusahaanTitle.Text = "Total Perusahaan"
         ' 
@@ -215,7 +218,7 @@ Partial Class FrmManagementPerusahaan
         LblActivePerusahaanValue.ForeColor = Color.FromArgb(CByte(34), CByte(197), CByte(94))
         LblActivePerusahaanValue.Location = New Point(18, 44)
         LblActivePerusahaanValue.Name = "LblActivePerusahaanValue"
-        LblActivePerusahaanValue.Size = New Size(29, 33)
+        LblActivePerusahaanValue.Size = New Size(25, 27)
         LblActivePerusahaanValue.TabIndex = 1
         LblActivePerusahaanValue.Text = "38"
         ' 
@@ -226,7 +229,7 @@ Partial Class FrmManagementPerusahaan
         LblActivePerusahaanTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblActivePerusahaanTitle.Location = New Point(18, 18)
         LblActivePerusahaanTitle.Name = "LblActivePerusahaanTitle"
-        LblActivePerusahaanTitle.Size = New Size(129, 22)
+        LblActivePerusahaanTitle.Size = New Size(100, 17)
         LblActivePerusahaanTitle.TabIndex = 0
         LblActivePerusahaanTitle.Text = "Active Perusahaan"
         ' 
@@ -254,7 +257,7 @@ Partial Class FrmManagementPerusahaan
         LblPendingPerusahaanValue.ForeColor = Color.FromArgb(CByte(251), CByte(191), CByte(36))
         LblPendingPerusahaanValue.Location = New Point(18, 44)
         LblPendingPerusahaanValue.Name = "LblPendingPerusahaanValue"
-        LblPendingPerusahaanValue.Size = New Size(16, 33)
+        LblPendingPerusahaanValue.Size = New Size(14, 27)
         LblPendingPerusahaanValue.TabIndex = 1
         LblPendingPerusahaanValue.Text = "5"
         ' 
@@ -265,7 +268,7 @@ Partial Class FrmManagementPerusahaan
         LblPendingPerusahaanTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblPendingPerusahaanTitle.Location = New Point(18, 18)
         LblPendingPerusahaanTitle.Name = "LblPendingPerusahaanTitle"
-        LblPendingPerusahaanTitle.Size = New Size(144, 22)
+        LblPendingPerusahaanTitle.Size = New Size(111, 17)
         LblPendingPerusahaanTitle.TabIndex = 0
         LblPendingPerusahaanTitle.Text = "Pending Perusahaan"
         ' 
@@ -293,7 +296,7 @@ Partial Class FrmManagementPerusahaan
         LblInactivePerusahaanValue.ForeColor = Color.FromArgb(CByte(239), CByte(68), CByte(68))
         LblInactivePerusahaanValue.Location = New Point(18, 44)
         LblInactivePerusahaanValue.Name = "LblInactivePerusahaanValue"
-        LblInactivePerusahaanValue.Size = New Size(16, 33)
+        LblInactivePerusahaanValue.Size = New Size(14, 27)
         LblInactivePerusahaanValue.TabIndex = 1
         LblInactivePerusahaanValue.Text = "2"
         ' 
@@ -304,7 +307,7 @@ Partial Class FrmManagementPerusahaan
         LblInactivePerusahaanTitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblInactivePerusahaanTitle.Location = New Point(18, 18)
         LblInactivePerusahaanTitle.Name = "LblInactivePerusahaanTitle"
-        LblInactivePerusahaanTitle.Size = New Size(140, 22)
+        LblInactivePerusahaanTitle.Size = New Size(109, 17)
         LblInactivePerusahaanTitle.TabIndex = 0
         LblInactivePerusahaanTitle.Text = "Inactive Perusahaan"
         ' 
@@ -421,7 +424,7 @@ Partial Class FrmManagementPerusahaan
         LblTableSubtitle.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
         LblTableSubtitle.Location = New Point(24, 60)
         LblTableSubtitle.Name = "LblTableSubtitle"
-        LblTableSubtitle.Size = New Size(490, 22)
+        LblTableSubtitle.Size = New Size(389, 17)
         LblTableSubtitle.TabIndex = 1
         LblTableSubtitle.Text = "Data perusahaan terdaftar dengan informasi lengkap dan status verifikasi."
         ' 
@@ -432,7 +435,7 @@ Partial Class FrmManagementPerusahaan
         LblTableTitle.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
         LblTableTitle.Location = New Point(24, 26)
         LblTableTitle.Name = "LblTableTitle"
-        LblTableTitle.Size = New Size(154, 27)
+        LblTableTitle.Size = New Size(130, 22)
         LblTableTitle.TabIndex = 0
         LblTableTitle.Text = "Daftar Perusahaan"
         ' 
@@ -443,24 +446,24 @@ Partial Class FrmManagementPerusahaan
         GridPerusahaan.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(252))
         GridPerusahaan.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.White
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
         DataGridViewCellStyle2.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(234), CByte(244), CByte(255))
-        DataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         GridPerusahaan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         GridPerusahaan.ColumnHeadersHeight = 36
-        GridPerusahaan.Columns.AddRange(New DataGridViewColumn() {colNo, colNamaPerusahaan, colNPWP, colStatus, colTanggalDaftar, colActions})
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = Color.White
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.0F)
-        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
-        DataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(CByte(240), CByte(244), CByte(252))
-        DataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
-        GridPerusahaan.DefaultCellStyle = DataGridViewCellStyle4
+        GridPerusahaan.Columns.AddRange(New DataGridViewColumn() {colNo, colNamaPerusahaan, colNPWP, colStatus, colTanggalDaftar, colActions, colDelete})
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = Color.White
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(64), CByte(74), CByte(89))
+        DataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(CByte(240), CByte(244), CByte(252))
+        DataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(CByte(35), CByte(44), CByte(63))
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
+        GridPerusahaan.DefaultCellStyle = DataGridViewCellStyle5
         GridPerusahaan.GridColor = Color.FromArgb(CByte(235), CByte(240), CByte(247))
         GridPerusahaan.Location = New Point(24, 96)
         GridPerusahaan.MultiSelect = False
@@ -539,17 +542,30 @@ Partial Class FrmManagementPerusahaan
         DataGridViewCellStyle3.BackColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
         DataGridViewCellStyle3.ForeColor = Color.White
         colActions.DefaultCellStyle = DataGridViewCellStyle3
-        colActions.FillWeight = 72.99465F
-        colActions.HeaderText = "Aksi"
+        colActions.FillWeight = 60.0F
+        colActions.HeaderText = "Edit"
         colActions.MinimumWidth = 6
         colActions.Name = "colActions"
         colActions.ReadOnly = True
         colActions.Text = "Edit"
         colActions.UseColumnTextForButtonValue = True
         ' 
+        ' colDelete
+        ' 
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(255), CByte(59), CByte(48))
+        DataGridViewCellStyle4.ForeColor = Color.White
+        colDelete.DefaultCellStyle = DataGridViewCellStyle4
+        colDelete.FillWeight = 60.0F
+        colDelete.HeaderText = "Hapus"
+        colDelete.MinimumWidth = 6
+        colDelete.Name = "colDelete"
+        colDelete.ReadOnly = True
+        colDelete.Text = "Hapus"
+        colDelete.UseColumnTextForButtonValue = True
+        ' 
         ' FrmManagementPerusahaan
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
         ClientSize = New Size(1200, 720)
@@ -580,7 +596,7 @@ Partial Class FrmManagementPerusahaan
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents Pk_navbar1 As wp_navbar
+    Friend WithEvents Pk_navbar1 As admin_navbar
     Friend WithEvents PanelHeader As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -612,4 +628,5 @@ Partial Class FrmManagementPerusahaan
     Friend WithEvents colStatus As DataGridViewTextBoxColumn
     Friend WithEvents colTanggalDaftar As DataGridViewTextBoxColumn
     Friend WithEvents colActions As DataGridViewButtonColumn
+    Friend WithEvents colDelete As DataGridViewButtonColumn
 End Class

@@ -4,6 +4,7 @@ Public Class FrmRegister
 
     Private Sub FrmRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Clear all fields on load
+        txtUsername.Clear()
         txtNPWP.Clear()
         txtNamaLengkap.Clear()
         txtEmail.Clear()
@@ -13,12 +14,11 @@ Public Class FrmRegister
         txtPassword.Clear()
         txtConfirmPassword.Clear()
         txtJabatan.Clear()
-        
+
         ' Load daftar perusahaan dari database
         LoadPerusahaanList()
 
         ' Set default selections
-        'cmbStatusKepegawaian.SelectedIndex = 0 ' Default: Tetap
         cmbStatusPTKP.SelectedIndex = 0 ' Default: TK0
     End Sub
 
@@ -26,7 +26,7 @@ Public Class FrmRegister
         Try
             modulkoneksi.BukaKoneksi()
 
-            ' Load all perusahaan from database (termasuk Freelance dengan ID = 2)
+            ' Load all perusahaan from database
             Dim sql As String = "SELECT id, nama_perusahaan FROM perusahaan ORDER BY nama_perusahaan"
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
@@ -54,6 +54,26 @@ Public Class FrmRegister
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         ' 1. Validasi Input User
+        If String.IsNullOrWhiteSpace(txtUsername.Text) Then
+            MsgBox("Username harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
+            txtUsername.Focus()
+            Return
+        End If
+
+        ' Validasi username (hanya huruf, angka, underscore)
+        Dim usernameClean As String = txtUsername.Text.Trim().ToLower()
+        If usernameClean.Length < 4 Then
+            MsgBox("Username minimal 4 karakter!", MsgBoxStyle.Exclamation, "Validasi")
+            txtUsername.Focus()
+            Return
+        End If
+
+        If Not System.Text.RegularExpressions.Regex.IsMatch(usernameClean, "^[a-z0-9_]+$") Then
+            MsgBox("Username hanya boleh mengandung huruf, angka, dan underscore!", MsgBoxStyle.Exclamation, "Validasi")
+            txtUsername.Focus()
+            Return
+        End If
+
         If String.IsNullOrWhiteSpace(txtNPWP.Text) Then
             MsgBox("NPWP harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
             txtNPWP.Focus()
@@ -69,6 +89,12 @@ Public Class FrmRegister
         If String.IsNullOrWhiteSpace(txtEmail.Text) Then
             MsgBox("Email harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
             txtEmail.Focus()
+            Return
+        End If
+
+        If String.IsNullOrWhiteSpace(txtNIK.Text) Then
+            MsgBox("NIK harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
+            txtNIK.Focus()
             Return
         End If
 
@@ -94,15 +120,12 @@ Public Class FrmRegister
             Return
         End If
 
-        ' Validasi NIK (optional, tapi jika diisi harus 16 digit)
-        Dim nikClean As String = ""
-        If Not String.IsNullOrWhiteSpace(txtNIK.Text) Then
-            nikClean = txtNIK.Text.Trim().Replace("-", "").Replace(".", "").Replace(" ", "")
-            If nikClean.Length <> 16 OrElse Not IsNumeric(nikClean) Then
-                MsgBox("NIK harus 16 digit angka!", MsgBoxStyle.Exclamation, "Validasi")
-                txtNIK.Focus()
-                Return
-            End If
+        ' Validasi NIK (16 digit)
+        Dim nikClean As String = txtNIK.Text.Trim().Replace("-", "").Replace(".", "").Replace(" ", "")
+        If nikClean.Length <> 16 OrElse Not IsNumeric(nikClean) Then
+            MsgBox("NIK harus 16 digit angka!", MsgBoxStyle.Exclamation, "Validasi")
+            txtNIK.Focus()
+            Return
         End If
 
         ' 3. Validasi pekerjaan - perusahaan harus dipilih
@@ -119,57 +142,89 @@ Public Class FrmRegister
         Dim selectedPerusahaan = CType(cmbPerusahaan.SelectedItem, KeyValuePair(Of Integer, String))
         Dim perusahaanId As Integer = selectedPerusahaan.Key
         Dim jabatan As String = txtJabatan.Text.Trim()
-        'Dim statusKepegawaian As String = cmbStatusKepegawaian.SelectedItem.ToString()
         Dim statusPTKP As String = cmbStatusPTKP.SelectedItem.ToString()
 
-        ' 6. Insert ke Database
+        ' 6. Use user-input username
+        Dim username As String = usernameClean
+
+        ' 7. Insert ke Database (Transaction)
         Try
             modulkoneksi.BukaKoneksi()
 
-            ' Check if NPWP already exists
-            Dim checkSql As String = "SELECT COUNT(*) FROM users WHERE npwp = @npwp"
-            Dim cmdCheck As New MySqlCommand(checkSql, modulkoneksi.koneksi)
-            cmdCheck.Parameters.AddWithValue("@npwp", npwpClean)
-            Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
+            ' Check if username already exists
+            Dim checkUserSql As String = "SELECT COUNT(*) FROM users WHERE username = @username"
+            Dim cmdCheckUser As New MySqlCommand(checkUserSql, modulkoneksi.koneksi)
+            cmdCheckUser.Parameters.AddWithValue("@username", username)
+            Dim countUser As Integer = Convert.ToInt32(cmdCheckUser.ExecuteScalar())
 
-            If count > 0 Then
+            If countUser > 0 Then
+                MsgBox("Username sudah digunakan! Silakan pilih username lain.", MsgBoxStyle.Exclamation, "Username Sudah Ada")
+                Return
+            End If
+
+            ' Check if NPWP already exists in wajib_pajak
+            Dim checkNpwpSql As String = "SELECT COUNT(*) FROM wajib_pajak WHERE npwp = @npwp"
+            Dim cmdCheckNpwp As New MySqlCommand(checkNpwpSql, modulkoneksi.koneksi)
+            cmdCheckNpwp.Parameters.AddWithValue("@npwp", npwpClean)
+            Dim countNpwp As Integer = Convert.ToInt32(cmdCheckNpwp.ExecuteScalar())
+
+            If countNpwp > 0 Then
                 MsgBox("NPWP sudah terdaftar! Silakan login.", MsgBoxStyle.Exclamation, "NPWP Sudah Ada")
                 Return
             End If
 
-            ' Insert new user - hardcode tipe_user = "wajib_pajak", status_validasi = "pending"
-            Dim sqlUser As String = "INSERT INTO users (npwp, password_hash, nama, email, tipe_user, status_validasi, no_telepon, alamat, nik) VALUES (@npwp, @pass, @nama, @email, 'wajib_pajak', 'pending', @telepon, @alamat, @nik)"
-            Dim cmdUser As New MySqlCommand(sqlUser, modulkoneksi.koneksi)
-            cmdUser.Parameters.AddWithValue("@npwp", npwpClean)
-            cmdUser.Parameters.AddWithValue("@pass", passwordHash)
-            cmdUser.Parameters.AddWithValue("@nama", txtNamaLengkap.Text.Trim())
-            cmdUser.Parameters.AddWithValue("@email", txtEmail.Text.Trim())
+            ' Check if NIK already exists
+            Dim checkNikSql As String = "SELECT COUNT(*) FROM wajib_pajak WHERE nik = @nik"
+            Dim cmdCheckNik As New MySqlCommand(checkNikSql, modulkoneksi.koneksi)
+            cmdCheckNik.Parameters.AddWithValue("@nik", nikClean)
+            Dim countNik As Integer = Convert.ToInt32(cmdCheckNik.ExecuteScalar())
 
-            ' Handle optional fields
+            If countNik > 0 Then
+                MsgBox("NIK sudah terdaftar!", MsgBoxStyle.Exclamation, "NIK Sudah Ada")
+                Return
+            End If
+
+            ' === INSERT INTO users ===
+            Dim sqlUser As String = "INSERT INTO users (username, password_hash, tipe_user, is_active) VALUES (@username, @pass, 'wajib_pajak', 1)"
+            Dim cmdUser As New MySqlCommand(sqlUser, modulkoneksi.koneksi)
+            cmdUser.Parameters.AddWithValue("@username", username)
+            cmdUser.Parameters.AddWithValue("@pass", passwordHash)
+            cmdUser.ExecuteNonQuery()
+
+            ' Get the inserted user ID
+            Dim userId As Integer = Convert.ToInt32(cmdUser.LastInsertedId)
+
+            ' === INSERT INTO wajib_pajak ===
+            Dim sqlWP As String = "INSERT INTO wajib_pajak (user_id, npwp, nik, nama, email, no_telepon, alamat, status_ptkp, status_validasi) VALUES (@user_id, @npwp, @nik, @nama, @email, @telepon, @alamat, @status_ptkp, 'pending')"
+            Dim cmdWP As New MySqlCommand(sqlWP, modulkoneksi.koneksi)
+            cmdWP.Parameters.AddWithValue("@user_id", userId)
+            cmdWP.Parameters.AddWithValue("@npwp", npwpClean)
+            cmdWP.Parameters.AddWithValue("@nik", nikClean)
+            cmdWP.Parameters.AddWithValue("@nama", txtNamaLengkap.Text.Trim())
+            cmdWP.Parameters.AddWithValue("@email", txtEmail.Text.Trim())
+
             If String.IsNullOrWhiteSpace(txtNoTelepon.Text) Then
-                cmdUser.Parameters.AddWithValue("@telepon", DBNull.Value)
+                cmdWP.Parameters.AddWithValue("@telepon", DBNull.Value)
             Else
-                cmdUser.Parameters.AddWithValue("@telepon", txtNoTelepon.Text.Trim())
+                cmdWP.Parameters.AddWithValue("@telepon", txtNoTelepon.Text.Trim())
             End If
 
             If String.IsNullOrWhiteSpace(txtAlamat.Text) Then
-                cmdUser.Parameters.AddWithValue("@alamat", DBNull.Value)
+                cmdWP.Parameters.AddWithValue("@alamat", DBNull.Value)
             Else
-                cmdUser.Parameters.AddWithValue("@alamat", txtAlamat.Text.Trim())
+                cmdWP.Parameters.AddWithValue("@alamat", txtAlamat.Text.Trim())
             End If
 
-            If String.IsNullOrWhiteSpace(nikClean) Then
-                cmdUser.Parameters.AddWithValue("@nik", DBNull.Value)
-            Else
-                cmdUser.Parameters.AddWithValue("@nik", nikClean)
-            End If
+            cmdWP.Parameters.AddWithValue("@status_ptkp", statusPTKP)
+            cmdWP.ExecuteNonQuery()
 
-            cmdUser.ExecuteNonQuery()
+            ' Get the inserted wajib_pajak ID
+            Dim wpId As Integer = Convert.ToInt32(cmdWP.LastInsertedId)
 
-            ' Insert pekerjaan data
-            Dim sqlPekerjaan As String = "INSERT INTO pekerjaan (wp_npwp, perusahaan_id, jabatan, status_kepegawaian, status_ptkp) VALUES (@npwp, @perusahaan_id, @jabatan, @status_kepegawaian, @status_ptkp)"
+            ' === INSERT INTO pekerjaan ===
+            Dim sqlPekerjaan As String = "INSERT INTO pekerjaan (wajib_pajak_id, perusahaan_id, jabatan) VALUES (@wp_id, @perusahaan_id, @jabatan, 0)"
             Dim cmdPekerjaan As New MySqlCommand(sqlPekerjaan, modulkoneksi.koneksi)
-            cmdPekerjaan.Parameters.AddWithValue("@npwp", npwpClean)
+            cmdPekerjaan.Parameters.AddWithValue("@wp_id", wpId)
             cmdPekerjaan.Parameters.AddWithValue("@perusahaan_id", perusahaanId)
 
             If String.IsNullOrWhiteSpace(jabatan) Then
@@ -178,12 +233,9 @@ Public Class FrmRegister
                 cmdPekerjaan.Parameters.AddWithValue("@jabatan", jabatan)
             End If
 
-            'cmdPekerjaan.Parameters.AddWithValue("@status_kepegawaian", statusKepegawaian)
-            cmdPekerjaan.Parameters.AddWithValue("@status_ptkp", statusPTKP)
-
             cmdPekerjaan.ExecuteNonQuery()
 
-            MsgBox("Registrasi berhasil!" & vbCrLf & vbCrLf & "Akun Anda sedang menunggu verifikasi oleh admin. Silakan coba login nanti.", MsgBoxStyle.Information, "Registrasi Pending")
+            MsgBox("Registrasi berhasil!" & vbCrLf & vbCrLf & "Username Anda: " & username & vbCrLf & vbCrLf & "Akun Anda sedang menunggu verifikasi oleh admin. Silakan coba login nanti.", MsgBoxStyle.Information, "Registrasi Pending")
 
             ' Go to login
             Dim f As New FrmLogin()
@@ -203,4 +255,7 @@ Public Class FrmRegister
         Me.Close()
     End Sub
 
+    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
+
+    End Sub
 End Class

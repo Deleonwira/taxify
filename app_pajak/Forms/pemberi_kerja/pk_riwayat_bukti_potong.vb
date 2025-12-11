@@ -2,7 +2,7 @@
 
 Public Class pk_riwayat_bukti_potong
 
-    Private _selectedPegawaiNPWP As String = ""
+    Private _selectedWajibPajakId As Integer = 0
 
     ' Form load - set active menu and load data
     Private Sub pk_riwayat_bukti_potong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -22,41 +22,40 @@ Public Class pk_riwayat_bukti_potong
         Try
             modulkoneksi.BukaKoneksi()
 
-            ' Get perusahaan_id from current user
-            Dim perusahaanId As Integer = GetPerusahaanId()
+            ' Get perusahaan_id from current session (pemberi_kerja)
+            Dim perusahaanId As Integer = ModuleSession.CurrentPerusahaanId
             If perusahaanId = 0 Then
                 modulkoneksi.TutupKoneksi()
                 Return
             End If
 
-            ' Query pegawai with bukti potong statistics
+            ' Query pegawai with bukti potong statistics using new schema
             Dim sql As String = "
                 SELECT 
-                    u.npwp, u.nama,
+                    wp.id AS wp_id, wp.npwp, wp.nama,
                     COUNT(bp.id) AS jumlah_bukti,
                     COALESCE(SUM(bp.bruto_total), 0) AS total_bruto
                 FROM pekerjaan p
-                JOIN users u ON u.npwp = p.wp_npwp
-                LEFT JOIN bukti_potong bp ON bp.wp_npwp = p.wp_npwp 
-                    AND bp.perusahaan_id = p.perusahaan_id
+                JOIN wajib_pajak wp ON wp.id = p.wajib_pajak_id
+                LEFT JOIN bukti_potong bp ON bp.pekerjaan_id = p.id
                 WHERE p.perusahaan_id = @perusahaan_id
-                GROUP BY u.npwp, u.nama
-                ORDER BY u.nama"
+                GROUP BY wp.id, wp.npwp, wp.nama
+                ORDER BY wp.nama"
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
             cmd.Parameters.AddWithValue("@perusahaan_id", perusahaanId)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
 
-            ' Store pegawai data
-            Dim pegawaiList As New List(Of Tuple(Of String, String, Integer, Decimal))
+            ' Store pegawai data (wp_id, nama, jumlah_bukti, total_bruto)
+            Dim pegawaiList As New List(Of Tuple(Of Integer, String, Integer, Decimal))
 
             While rd.Read()
-                Dim npwp As String = rd("npwp").ToString()
+                Dim wpId As Integer = Convert.ToInt32(rd("wp_id"))
                 Dim nama As String = rd("nama").ToString()
                 Dim jumlah As Integer = Convert.ToInt32(rd("jumlah_bukti"))
                 Dim bruto As Decimal = Convert.ToDecimal(rd("total_bruto"))
-                pegawaiList.Add(Tuple.Create(npwp, nama, jumlah, bruto))
+                pegawaiList.Add(Tuple.Create(wpId, nama, jumlah, bruto))
             End While
 
             rd.Close()
@@ -84,7 +83,7 @@ Public Class pk_riwayat_bukti_potong
                 card.FillColor = Color.White
                 card.Size = New Size(300, 90)
                 card.Margin = New Padding(4)
-                card.Tag = pegawai.Item1
+                card.Tag = pegawai.Item1 ' Store wp_id
                 card.Cursor = Cursors.Hand
 
                 Dim pic As New Guna.UI2.WinForms.Guna2CirclePictureBox()
@@ -111,11 +110,11 @@ Public Class pk_riwayat_bukti_potong
                 card.Controls.Add(lblName)
                 card.Controls.Add(lblStats)
 
-                Dim npwpValue As String = pegawai.Item1
-                AddHandler card.Click, Sub(s, ev) FilterByPegawai(npwpValue)
-                AddHandler pic.Click, Sub(s, ev) FilterByPegawai(npwpValue)
-                AddHandler lblName.Click, Sub(s, ev) FilterByPegawai(npwpValue)
-                AddHandler lblStats.Click, Sub(s, ev) FilterByPegawai(npwpValue)
+                Dim wpIdValue As Integer = pegawai.Item1
+                AddHandler card.Click, Sub(s, ev) FilterByPegawai(wpIdValue)
+                AddHandler pic.Click, Sub(s, ev) FilterByPegawai(wpIdValue)
+                AddHandler lblName.Click, Sub(s, ev) FilterByPegawai(wpIdValue)
+                AddHandler lblStats.Click, Sub(s, ev) FilterByPegawai(wpIdValue)
 
                 FlowPegawai.Controls.Add(card)
             Next
@@ -145,34 +144,36 @@ Public Class pk_riwayat_bukti_potong
         End Try
     End Sub
 
-    Private Sub LoadBuktiPotong(Optional searchText As String = "", Optional pegawaiNPWP As String = "")
+    Private Sub LoadBuktiPotong(Optional searchText As String = "", Optional wajibPajakId As Integer = 0)
         GridBuktiPotong.Rows.Clear()
 
         Try
             modulkoneksi.BukaKoneksi()
 
-            Dim perusahaanId As Integer = GetPerusahaanId()
+            Dim perusahaanId As Integer = ModuleSession.CurrentPerusahaanId
             If perusahaanId = 0 Then
                 modulkoneksi.TutupKoneksi()
                 Return
             End If
 
+            ' Updated query using new schema (pekerjaan-based)
             Dim sql As String = "
                 SELECT 
                     bp.id, bp.nomor_bukti,
                     bp.masa_bulan, bp.masa_tahun,
-                    u.nama AS nama_pegawai, u.npwp AS npwp_pegawai,
+                    wp.nama AS nama_pegawai, wp.npwp AS npwp_pegawai,
                     bp.bruto_total, bp.netto_total, bp.pph21_terutang
                 FROM bukti_potong bp
-                JOIN users u ON u.npwp = bp.wp_npwp
-                WHERE bp.perusahaan_id = @perusahaan_id"
+                JOIN pekerjaan p ON p.id = bp.pekerjaan_id
+                JOIN wajib_pajak wp ON wp.id = p.wajib_pajak_id
+                WHERE p.perusahaan_id = @perusahaan_id"
 
-            If Not String.IsNullOrEmpty(pegawaiNPWP) Then
-                sql &= " AND bp.wp_npwp = @pegawaiNPWP"
+            If wajibPajakId > 0 Then
+                sql &= " AND p.wajib_pajak_id = @wp_id"
             End If
 
             If Not String.IsNullOrEmpty(searchText) Then
-                sql &= " AND (u.nama LIKE @search OR CONCAT(bp.masa_bulan, '/', bp.masa_tahun) LIKE @search)"
+                sql &= " AND (wp.nama LIKE @search OR CONCAT(bp.masa_bulan, '/', bp.masa_tahun) LIKE @search)"
             End If
 
             sql &= " ORDER BY bp.masa_tahun DESC, bp.masa_bulan DESC"
@@ -180,8 +181,8 @@ Public Class pk_riwayat_bukti_potong
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
             cmd.Parameters.AddWithValue("@perusahaan_id", perusahaanId)
 
-            If Not String.IsNullOrEmpty(pegawaiNPWP) Then
-                cmd.Parameters.AddWithValue("@pegawaiNPWP", pegawaiNPWP)
+            If wajibPajakId > 0 Then
+                cmd.Parameters.AddWithValue("@wp_id", wajibPajakId)
             End If
 
             If Not String.IsNullOrEmpty(searchText) Then
@@ -212,32 +213,17 @@ Public Class pk_riwayat_bukti_potong
         End Try
     End Sub
 
-    Private Function GetPerusahaanId() As Integer
-        Try
-            Dim sql As String = "SELECT id FROM perusahaan WHERE owner_npwp = @npwp LIMIT 1"
-            Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@npwp", ModuleSession.CurrentUserNPWP)
-            Dim result = cmd.ExecuteScalar()
-            If result IsNot Nothing Then
-                Return Convert.ToInt32(result)
-            End If
-        Catch ex As Exception
-            MsgBox("Error mendapatkan perusahaan: " & ex.Message, MsgBoxStyle.Critical)
-        End Try
-        Return 0
-    End Function
-
     ' ====== FILTER AND ACTION HANDLERS ======
 
-    Private Sub FilterByPegawai(pegawaiNPWP As String)
-        _selectedPegawaiNPWP = pegawaiNPWP
+    Private Sub FilterByPegawai(wajibPajakId As Integer)
+        _selectedWajibPajakId = wajibPajakId
         TxtSearch.Text = ""
-        LoadBuktiPotong(pegawaiNPWP:=pegawaiNPWP)
+        LoadBuktiPotong(wajibPajakId:=wajibPajakId)
 
         For Each ctrl As Control In FlowPegawai.Controls
             If TypeOf ctrl Is Guna.UI2.WinForms.Guna2Panel Then
                 Dim card As Guna.UI2.WinForms.Guna2Panel = CType(ctrl, Guna.UI2.WinForms.Guna2Panel)
-                If card.Tag IsNot Nothing AndAlso card.Tag.ToString() = pegawaiNPWP Then
+                If card.Tag IsNot Nothing AndAlso Convert.ToInt32(card.Tag) = wajibPajakId Then
                     card.BorderColor = Color.FromArgb(156, 0, 219)
                     card.BorderThickness = 2
                 Else
@@ -250,7 +236,7 @@ Public Class pk_riwayat_bukti_potong
 
     Private Sub BtnFilter_Click(sender As Object, e As EventArgs) Handles BtnFilter.Click
         Dim searchText As String = TxtSearch.Text.Trim()
-        _selectedPegawaiNPWP = ""
+        _selectedWajibPajakId = 0
 
         For Each ctrl As Control In FlowPegawai.Controls
             If TypeOf ctrl Is Guna.UI2.WinForms.Guna2Panel Then
