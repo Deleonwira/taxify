@@ -27,8 +27,8 @@ Public Class FrmManagementPerusahaan
         Me.Close()
     End Sub
 
-    Private Sub Pk_navbar1_ValidasiRegistrasiClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.ValidasiRegistrasiClicked
-        Dim f As New admin_validasi_registrasi()
+    Private Sub Pk_navbar1_ManajemenPemberiKerjaClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.ManajemenPemberiKerjaClicked
+        Dim f As New FrmManagementPemberiKerja()
         f.Show()
         Me.Close()
     End Sub

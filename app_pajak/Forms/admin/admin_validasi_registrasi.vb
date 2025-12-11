@@ -2,12 +2,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class admin_validasi_registrasi
 
-    Private Sub admin_validasi_registrasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadPendingUsers()
-        
-        ' Set active menu in navbar
-        Admin_navbar1.SetActiveMenu(admin_navbar.MenuType.ValidasiRegistrasi)
-    End Sub
+
 
     ' ====== NAVBAR EVENT HANDLERS ======
     Private Sub Admin_navbar1_DashboardClicked(sender As Object, e As EventArgs) Handles Admin_navbar1.DashboardClicked
@@ -16,9 +11,7 @@ Public Class admin_validasi_registrasi
         Me.Close()
     End Sub
 
-    Private Sub Admin_navbar1_ValidasiRegistrasiClicked(sender As Object, e As EventArgs) Handles Admin_navbar1.ValidasiRegistrasiClicked
-        ' Already on this form, do nothing
-    End Sub
+
 
     Private Sub Admin_navbar1_ManajemenUserClicked(sender As Object, e As EventArgs) Handles Admin_navbar1.ManajemenUserClicked
         Dim f As New FrmUserManagement()

@@ -27,8 +27,8 @@ Public Class FrmUserManagement
         Me.Close()
     End Sub
 
-    Private Sub Pk_navbar1_ValidasiRegistrasiClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.ValidasiRegistrasiClicked
-        Dim f As New admin_validasi_registrasi()
+    Private Sub Pk_navbar1_ManajemenPemberiKerjaClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.ManajemenPemberiKerjaClicked
+        Dim f As New FrmManagementPemberiKerja()
         f.Show()
         Me.Close()
     End Sub
@@ -221,9 +221,380 @@ Public Class FrmUserManagement
     End Sub
 
     Private Sub BtnAddUser_Click(sender As Object, e As EventArgs) Handles BtnAddUser.Click
-        ' TODO: Open form to add new user
-        MsgBox("Fitur tambah user baru akan segera tersedia.", MsgBoxStyle.Information)
+        ShowAddUserDialog()
     End Sub
+    
+    Private Sub ShowAddUserDialog()
+        Using dialog As New Form()
+            dialog.Text = "Tambah User Baru"
+            dialog.Size = New Size(480, 580)
+            dialog.StartPosition = FormStartPosition.CenterParent
+            dialog.FormBorderStyle = FormBorderStyle.FixedDialog
+            dialog.MaximizeBox = False
+            dialog.MinimizeBox = False
+            dialog.BackColor = Color.FromArgb(247, 248, 252)
+            dialog.AutoScroll = True
+            
+            Dim yPos As Integer = 20
+            Dim controls As New Dictionary(Of String, Control)
+            
+            ' Role Selection
+            Dim lblRole As New Label() With {.Text = "Tipe User:", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI Semibold", 9, FontStyle.Bold)}
+            Dim cmbRole As New ComboBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .DropDownStyle = ComboBoxStyle.DropDownList, .Font = New Font("Segoe UI", 9)}
+            cmbRole.Items.AddRange(New String() {"Wajib Pajak", "Pemberi Kerja"})
+            cmbRole.SelectedIndex = 0
+            dialog.Controls.Add(lblRole)
+            dialog.Controls.Add(cmbRole)
+            controls("tipe_user") = cmbRole
+            yPos += 35
+            
+            ' Username
+            Dim lblUsername As New Label() With {.Text = "Username:*", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9)}
+            Dim txtUsername As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9)}
+            dialog.Controls.Add(lblUsername)
+            dialog.Controls.Add(txtUsername)
+            controls("username") = txtUsername
+            yPos += 35
+            
+            ' Password
+            Dim lblPassword As New Label() With {.Text = "Password:*", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9)}
+            Dim txtPassword As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9), .PasswordChar = "●"c}
+            dialog.Controls.Add(lblPassword)
+            dialog.Controls.Add(txtPassword)
+            controls("password") = txtPassword
+            yPos += 35
+            
+            ' Confirm Password
+            Dim lblConfirmPwd As New Label() With {.Text = "Konfirmasi:*", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9)}
+            Dim txtConfirmPwd As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9), .PasswordChar = "●"c}
+            dialog.Controls.Add(lblConfirmPwd)
+            dialog.Controls.Add(txtConfirmPwd)
+            controls("confirm_password") = txtConfirmPwd
+            yPos += 35
+            
+            ' Nama
+            Dim lblNama As New Label() With {.Text = "Nama:*", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9)}
+            Dim txtNama As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9)}
+            dialog.Controls.Add(lblNama)
+            dialog.Controls.Add(txtNama)
+            controls("nama") = txtNama
+            yPos += 35
+            
+            ' Email
+            Dim lblEmail As New Label() With {.Text = "Email:*", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9)}
+            Dim txtEmail As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9)}
+            dialog.Controls.Add(lblEmail)
+            dialog.Controls.Add(txtEmail)
+            controls("email") = txtEmail
+            yPos += 35
+            
+            ' No. Telepon
+            Dim lblTelp As New Label() With {.Text = "No. Telepon:", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9)}
+            Dim txtTelp As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 150, .Font = New Font("Segoe UI", 9)}
+            dialog.Controls.Add(lblTelp)
+            dialog.Controls.Add(txtTelp)
+            controls("no_telepon") = txtTelp
+            yPos += 35
+            
+            ' === Wajib Pajak Specific Fields ===
+            Dim wpStartY As Integer = yPos
+            
+            ' NPWP
+            Dim lblNpwp As New Label() With {.Text = "NPWP:*", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9), .Tag = "wp"}
+            Dim txtNpwp As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9), .Tag = "wp"}
+            dialog.Controls.Add(lblNpwp)
+            dialog.Controls.Add(txtNpwp)
+            controls("npwp") = txtNpwp
+            yPos += 35
+            
+            ' NIK
+            Dim lblNik As New Label() With {.Text = "NIK:*", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9), .Tag = "wp"}
+            Dim txtNik As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9), .Tag = "wp", .MaxLength = 16}
+            dialog.Controls.Add(lblNik)
+            dialog.Controls.Add(txtNik)
+            controls("nik") = txtNik
+            yPos += 35
+            
+            ' Alamat
+            Dim lblAlamat As New Label() With {.Text = "Alamat:", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9), .Tag = "wp"}
+            Dim txtAlamat As New TextBox() With {.Location = New Point(150, yPos - 3), .Width = 200, .Font = New Font("Segoe UI", 9), .Tag = "wp"}
+            dialog.Controls.Add(lblAlamat)
+            dialog.Controls.Add(txtAlamat)
+            controls("alamat") = txtAlamat
+            yPos += 35
+            
+            ' Status PTKP
+            Dim lblPtkp As New Label() With {.Text = "Status PTKP:", .Location = New Point(20, yPos), .Width = 120, .Font = New Font("Segoe UI", 9), .Tag = "wp"}
+            Dim cmbPtkp As New ComboBox() With {.Location = New Point(150, yPos - 3), .Width = 100, .DropDownStyle = ComboBoxStyle.DropDownList, .Font = New Font("Segoe UI", 9), .Tag = "wp"}
+            cmbPtkp.Items.AddRange(New String() {"TK0", "TK1", "TK2", "TK3", "K0", "K1", "K2", "K3"})
+            cmbPtkp.SelectedIndex = 0
+            dialog.Controls.Add(lblPtkp)
+            dialog.Controls.Add(cmbPtkp)
+            controls("status_ptkp") = cmbPtkp
+            yPos += 35
+            
+            Dim wpEndY As Integer = yPos
+            
+            ' === Pemberi Kerja Specific Fields ===
+            Dim pkStartY As Integer = wpStartY
+            
+            ' Perusahaan ComboBox
+            Dim lblPerusahaan As New Label() With {.Text = "Perusahaan:*", .Location = New Point(20, pkStartY), .Width = 120, .Font = New Font("Segoe UI", 9), .Tag = "pk", .Visible = False}
+            Dim cmbPerusahaan As New ComboBox() With {.Location = New Point(150, pkStartY - 3), .Width = 200, .DropDownStyle = ComboBoxStyle.DropDownList, .Font = New Font("Segoe UI", 9), .Tag = "pk", .Visible = False}
+            dialog.Controls.Add(lblPerusahaan)
+            dialog.Controls.Add(cmbPerusahaan)
+            controls("perusahaan") = cmbPerusahaan
+            
+            ' Load perusahaan data
+            Try
+                modulkoneksi.BukaKoneksi()
+                Dim sqlPerusahaan As String = "SELECT id, nama_perusahaan FROM perusahaan WHERE nama_perusahaan != 'Freelance / Tidak Terdaftar' ORDER BY nama_perusahaan"
+                Dim cmdPerusahaan As New MySqlCommand(sqlPerusahaan, modulkoneksi.koneksi)
+                Dim reader = cmdPerusahaan.ExecuteReader()
+                While reader.Read()
+                    cmbPerusahaan.Items.Add(New KeyValuePair(Of Integer, String)(reader.GetInt32("id"), reader.GetString("nama_perusahaan")))
+                End While
+                reader.Close()
+                If cmbPerusahaan.Items.Count > 0 Then cmbPerusahaan.SelectedIndex = 0
+            Catch ex As Exception
+                ' Ignore - will be empty
+            Finally
+                modulkoneksi.TutupKoneksi()
+            End Try
+            
+            cmbPerusahaan.DisplayMember = "Value"
+            cmbPerusahaan.ValueMember = "Key"
+            
+            ' Handle role change to show/hide fields
+            AddHandler cmbRole.SelectedIndexChanged, Sub(s, ev)
+                Dim isWP As Boolean = (cmbRole.SelectedItem.ToString() = "Wajib Pajak")
+                For Each ctrl As Control In dialog.Controls
+                    If ctrl.Tag IsNot Nothing Then
+                        If ctrl.Tag.ToString() = "wp" Then
+                            ctrl.Visible = isWP
+                        ElseIf ctrl.Tag.ToString() = "pk" Then
+                            ctrl.Visible = Not isWP
+                        End If
+                    End If
+                Next
+            End Sub
+            
+            ' Buttons
+            yPos = wpEndY + 20
+            Dim btnSave As New Button() With {
+                .Text = "Simpan",
+                .Location = New Point(150, yPos),
+                .Size = New Size(100, 35),
+                .BackColor = Color.FromArgb(156, 0, 219),
+                .ForeColor = Color.White,
+                .FlatStyle = FlatStyle.Flat,
+                .Font = New Font("Segoe UI Semibold", 9, FontStyle.Bold)
+            }
+            btnSave.FlatAppearance.BorderSize = 0
+            
+            Dim btnCancel As New Button() With {
+                .Text = "Batal",
+                .Location = New Point(260, yPos),
+                .Size = New Size(100, 35),
+                .BackColor = Color.FromArgb(120, 128, 146),
+                .ForeColor = Color.White,
+                .FlatStyle = FlatStyle.Flat,
+                .Font = New Font("Segoe UI Semibold", 9, FontStyle.Bold),
+                .DialogResult = DialogResult.Cancel
+            }
+            btnCancel.FlatAppearance.BorderSize = 0
+            
+            dialog.Controls.Add(btnSave)
+            dialog.Controls.Add(btnCancel)
+            dialog.CancelButton = btnCancel
+            
+            ' Save button click handler
+            AddHandler btnSave.Click, Sub(s, ev)
+                If SaveNewUser(controls) Then
+                    dialog.DialogResult = DialogResult.OK
+                    dialog.Close()
+                End If
+            End Sub
+            
+            dialog.ShowDialog()
+        End Using
+    End Sub
+    
+    Private Function SaveNewUser(controls As Dictionary(Of String, Control)) As Boolean
+        Try
+            ' Get values
+            Dim tipeUser As String = DirectCast(controls("tipe_user"), ComboBox).SelectedItem.ToString()
+            Dim username As String = DirectCast(controls("username"), TextBox).Text.Trim()
+            Dim password As String = DirectCast(controls("password"), TextBox).Text
+            Dim confirmPwd As String = DirectCast(controls("confirm_password"), TextBox).Text
+            Dim nama As String = DirectCast(controls("nama"), TextBox).Text.Trim()
+            Dim email As String = DirectCast(controls("email"), TextBox).Text.Trim()
+            Dim noTelepon As String = DirectCast(controls("no_telepon"), TextBox).Text.Trim()
+            
+            ' Validate common fields
+            If String.IsNullOrEmpty(username) Then
+                MsgBox("Username wajib diisi!", MsgBoxStyle.Exclamation)
+                Return False
+            End If
+            
+            If String.IsNullOrEmpty(password) Then
+                MsgBox("Password wajib diisi!", MsgBoxStyle.Exclamation)
+                Return False
+            End If
+            
+            If password <> confirmPwd Then
+                MsgBox("Password dan konfirmasi password tidak cocok!", MsgBoxStyle.Exclamation)
+                Return False
+            End If
+            
+            If String.IsNullOrEmpty(nama) Then
+                MsgBox("Nama wajib diisi!", MsgBoxStyle.Exclamation)
+                Return False
+            End If
+            
+            If String.IsNullOrEmpty(email) Then
+                MsgBox("Email wajib diisi!", MsgBoxStyle.Exclamation)
+                Return False
+            End If
+            
+            modulkoneksi.BukaKoneksi()
+            
+            ' Check unique username
+            Dim sqlCheckUser As String = "SELECT COUNT(*) FROM users WHERE username = @username"
+            Dim cmdCheckUser As New MySqlCommand(sqlCheckUser, modulkoneksi.koneksi)
+            cmdCheckUser.Parameters.AddWithValue("@username", username)
+            If Convert.ToInt32(cmdCheckUser.ExecuteScalar()) > 0 Then
+                MsgBox("Username sudah digunakan!", MsgBoxStyle.Exclamation)
+                Return False
+            End If
+            
+            Dim tipeUserDb As String = If(tipeUser = "Wajib Pajak", "wajib_pajak", "pemberi_kerja")
+            
+            If tipeUser = "Wajib Pajak" Then
+                Dim npwp As String = DirectCast(controls("npwp"), TextBox).Text.Trim()
+                Dim nik As String = DirectCast(controls("nik"), TextBox).Text.Trim()
+                
+                If String.IsNullOrEmpty(npwp) Then
+                    MsgBox("NPWP wajib diisi!", MsgBoxStyle.Exclamation)
+                    Return False
+                End If
+                
+                If String.IsNullOrEmpty(nik) Then
+                    MsgBox("NIK wajib diisi!", MsgBoxStyle.Exclamation)
+                    Return False
+                End If
+                
+                If nik.Length <> 16 OrElse Not nik.All(AddressOf Char.IsDigit) Then
+                    MsgBox("NIK harus 16 digit angka!", MsgBoxStyle.Exclamation)
+                    Return False
+                End If
+                
+                ' Check unique NPWP
+                Dim sqlCheckNpwp As String = "SELECT COUNT(*) FROM wajib_pajak WHERE npwp = @npwp"
+                Dim cmdCheckNpwp As New MySqlCommand(sqlCheckNpwp, modulkoneksi.koneksi)
+                cmdCheckNpwp.Parameters.AddWithValue("@npwp", npwp)
+                If Convert.ToInt32(cmdCheckNpwp.ExecuteScalar()) > 0 Then
+                    MsgBox("NPWP sudah terdaftar!", MsgBoxStyle.Exclamation)
+                    Return False
+                End If
+                
+                ' Check unique NIK
+                Dim sqlCheckNik As String = "SELECT COUNT(*) FROM wajib_pajak WHERE nik = @nik"
+                Dim cmdCheckNik As New MySqlCommand(sqlCheckNik, modulkoneksi.koneksi)
+                cmdCheckNik.Parameters.AddWithValue("@nik", nik)
+                If Convert.ToInt32(cmdCheckNik.ExecuteScalar()) > 0 Then
+                    MsgBox("NIK sudah terdaftar!", MsgBoxStyle.Exclamation)
+                    Return False
+                End If
+                
+                ' Hash password
+                Dim passwordHash As String = HashPassword(password)
+                
+                ' Insert user
+                Dim sqlInsertUser As String = "INSERT INTO users (username, password_hash, tipe_user, is_active) VALUES (@username, @password, @tipe_user, 1)"
+                Dim cmdInsertUser As New MySqlCommand(sqlInsertUser, modulkoneksi.koneksi)
+                cmdInsertUser.Parameters.AddWithValue("@username", username)
+                cmdInsertUser.Parameters.AddWithValue("@password", passwordHash)
+                cmdInsertUser.Parameters.AddWithValue("@tipe_user", tipeUserDb)
+                cmdInsertUser.ExecuteNonQuery()
+                
+                Dim userId As Long = cmdInsertUser.LastInsertedId
+                
+                ' Insert wajib_pajak
+                Dim alamat As String = DirectCast(controls("alamat"), TextBox).Text.Trim()
+                Dim statusPtkp As String = DirectCast(controls("status_ptkp"), ComboBox).SelectedItem.ToString()
+                
+                Dim sqlInsertWp As String = "INSERT INTO wajib_pajak (user_id, npwp, nik, nama, email, no_telepon, alamat, status_ptkp, status_validasi) VALUES (@user_id, @npwp, @nik, @nama, @email, @no_telepon, @alamat, @status_ptkp, 'approved')"
+                Dim cmdInsertWp As New MySqlCommand(sqlInsertWp, modulkoneksi.koneksi)
+                cmdInsertWp.Parameters.AddWithValue("@user_id", userId)
+                cmdInsertWp.Parameters.AddWithValue("@npwp", npwp)
+                cmdInsertWp.Parameters.AddWithValue("@nik", nik)
+                cmdInsertWp.Parameters.AddWithValue("@nama", nama)
+                cmdInsertWp.Parameters.AddWithValue("@email", email)
+                cmdInsertWp.Parameters.AddWithValue("@no_telepon", If(String.IsNullOrEmpty(noTelepon), DBNull.Value, noTelepon))
+                cmdInsertWp.Parameters.AddWithValue("@alamat", If(String.IsNullOrEmpty(alamat), DBNull.Value, alamat))
+                cmdInsertWp.Parameters.AddWithValue("@status_ptkp", statusPtkp)
+                cmdInsertWp.ExecuteNonQuery()
+                
+            Else
+                ' Pemberi Kerja
+                Dim cmbPerusahaan As ComboBox = DirectCast(controls("perusahaan"), ComboBox)
+                If cmbPerusahaan.SelectedItem Is Nothing Then
+                    MsgBox("Pilih perusahaan!", MsgBoxStyle.Exclamation)
+                    Return False
+                End If
+                
+                Dim perusahaanKvp As KeyValuePair(Of Integer, String) = DirectCast(cmbPerusahaan.SelectedItem, KeyValuePair(Of Integer, String))
+                Dim perusahaanId As Integer = perusahaanKvp.Key
+                
+                ' Hash password
+                Dim passwordHash As String = HashPassword(password)
+                
+                ' Insert user
+                Dim sqlInsertUser As String = "INSERT INTO users (username, password_hash, tipe_user, is_active) VALUES (@username, @password, @tipe_user, 1)"
+                Dim cmdInsertUser As New MySqlCommand(sqlInsertUser, modulkoneksi.koneksi)
+                cmdInsertUser.Parameters.AddWithValue("@username", username)
+                cmdInsertUser.Parameters.AddWithValue("@password", passwordHash)
+                cmdInsertUser.Parameters.AddWithValue("@tipe_user", tipeUserDb)
+                cmdInsertUser.ExecuteNonQuery()
+                
+                Dim userId As Long = cmdInsertUser.LastInsertedId
+                
+                ' Insert pemberi_kerja
+                Dim sqlInsertPk As String = "INSERT INTO pemberi_kerja (user_id, perusahaan_id, nama, email, no_telepon) VALUES (@user_id, @perusahaan_id, @nama, @email, @no_telepon)"
+                Dim cmdInsertPk As New MySqlCommand(sqlInsertPk, modulkoneksi.koneksi)
+                cmdInsertPk.Parameters.AddWithValue("@user_id", userId)
+                cmdInsertPk.Parameters.AddWithValue("@perusahaan_id", perusahaanId)
+                cmdInsertPk.Parameters.AddWithValue("@nama", nama)
+                cmdInsertPk.Parameters.AddWithValue("@email", email)
+                cmdInsertPk.Parameters.AddWithValue("@no_telepon", If(String.IsNullOrEmpty(noTelepon), DBNull.Value, noTelepon))
+                cmdInsertPk.ExecuteNonQuery()
+            End If
+            
+            MsgBox("User baru berhasil ditambahkan!", MsgBoxStyle.Information)
+            LoadUsers()
+            LoadStatistics()
+            Return True
+            
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, MsgBoxStyle.Critical)
+            Return False
+        Finally
+            modulkoneksi.TutupKoneksi()
+        End Try
+    End Function
+    
+    Private Function HashPassword(password As String) As String
+        Using sha256 As System.Security.Cryptography.SHA256 = System.Security.Cryptography.SHA256.Create()
+            Dim bytes As Byte() = System.Text.Encoding.UTF8.GetBytes(password)
+            Dim hash As Byte() = sha256.ComputeHash(bytes)
+            Dim sb As New System.Text.StringBuilder()
+            For Each b As Byte In hash
+                sb.Append(b.ToString("x2"))
+            Next
+            Return sb.ToString()
+        End Using
+    End Function
 
     Private Sub GridUsers_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GridUsers.CellClick
         If e.RowIndex < 0 Then Return

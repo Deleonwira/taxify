@@ -34,9 +34,7 @@ Partial Class wp_detail_bukti_potong
         BunifuPanel4 = New Bunifu.UI.WinForms.BunifuPanel()
         Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         PanelEmployer = New Guna.UI2.WinForms.Guna2Panel()
-
         LblNomorKaryawanValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        LblNomorKaryawan = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblStatusPTKPValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblStatusPTKP = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblAlamatKaryawanValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -109,6 +107,7 @@ Partial Class wp_detail_bukti_potong
         ' 
         ' BunifuPanel1
         ' 
+        BunifuPanel1.AutoScroll = True
         BunifuPanel1.BackgroundColor = Color.Transparent
         BunifuPanel1.BackgroundImage = CType(resources.GetObject("BunifuPanel1.BackgroundImage"), Image)
         BunifuPanel1.BackgroundImageLayout = ImageLayout.Stretch
@@ -156,7 +155,6 @@ Partial Class wp_detail_bukti_potong
         PanelEmployer.BorderRadius = 12
         PanelEmployer.BorderThickness = 1
         PanelEmployer.Controls.Add(LblNomorKaryawanValue)
-        PanelEmployer.Controls.Add(LblNomorKaryawan)
         PanelEmployer.Controls.Add(LblStatusPTKPValue)
         PanelEmployer.Controls.Add(LblStatusPTKP)
         PanelEmployer.Controls.Add(LblAlamatKaryawanValue)
@@ -183,10 +181,8 @@ Partial Class wp_detail_bukti_potong
         PanelEmployer.Name = "PanelEmployer"
         PanelEmployer.Padding = New Padding(24)
         PanelEmployer.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        PanelEmployer.Size = New Size(1018, 397)
+        PanelEmployer.Size = New Size(1018, 252)
         PanelEmployer.TabIndex = 1
-        ' 
-        '
         ' 
         ' LblNomorKaryawanValue
         ' 
@@ -198,17 +194,6 @@ Partial Class wp_detail_bukti_potong
         LblNomorKaryawanValue.Size = New Size(3, 2)
         LblNomorKaryawanValue.TabIndex = 23
         LblNomorKaryawanValue.Text = Nothing
-        ' 
-        ' LblNomorKaryawan
-        ' 
-        LblNomorKaryawan.BackColor = Color.Transparent
-        LblNomorKaryawan.Font = New Font("Segoe UI", 9F)
-        LblNomorKaryawan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNomorKaryawan.Location = New Point(829, 132)
-        LblNomorKaryawan.Name = "LblNomorKaryawan"
-        LblNomorKaryawan.Size = New Size(125, 17)
-        LblNomorKaryawan.TabIndex = 22
-        LblNomorKaryawan.Text = "Nomor Karyawan / NIP"
         ' 
         ' LblStatusPTKPValue
         ' 
@@ -325,7 +310,7 @@ Partial Class wp_detail_bukti_potong
         LblAlamatPerusahaan.BackColor = Color.Transparent
         LblAlamatPerusahaan.Font = New Font("Segoe UI", 9F)
         LblAlamatPerusahaan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblAlamatPerusahaan.Location = New Point(24, 260)
+        LblAlamatPerusahaan.Location = New Point(280, 68)
         LblAlamatPerusahaan.Name = "LblAlamatPerusahaan"
         LblAlamatPerusahaan.Size = New Size(105, 17)
         LblAlamatPerusahaan.TabIndex = 9
@@ -391,7 +376,7 @@ Partial Class wp_detail_bukti_potong
         LblTanggalBukti.BackColor = Color.Transparent
         LblTanggalBukti.Font = New Font("Segoe UI", 9F)
         LblTanggalBukti.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblTanggalBukti.Location = New Point(24, 320)
+        LblTanggalBukti.Location = New Point(280, 132)
         LblTanggalBukti.Name = "LblTanggalBukti"
         LblTanggalBukti.Size = New Size(75, 17)
         LblTanggalBukti.TabIndex = 3
@@ -448,7 +433,7 @@ Partial Class wp_detail_bukti_potong
         PanelIncome.Controls.Add(LblIncomeTitle)
         PanelIncome.CustomizableEdges = CustomizableEdges3
         PanelIncome.FillColor = Color.White
-        PanelIncome.Location = New Point(21, 477)
+        PanelIncome.Location = New Point(21, 332)
         PanelIncome.Name = "PanelIncome"
         PanelIncome.Padding = New Padding(24)
         PanelIncome.ShadowDecoration.CustomizableEdges = CustomizableEdges4
@@ -688,7 +673,6 @@ Partial Class wp_detail_bukti_potong
     Friend WithEvents BunifuPanel4 As Bunifu.UI.WinForms.BunifuPanel
     Friend WithEvents Guna2HtmlLabel16 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNomorKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNomorKaryawan As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblStatusPTKPValue As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblStatusPTKP As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblAlamatKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel

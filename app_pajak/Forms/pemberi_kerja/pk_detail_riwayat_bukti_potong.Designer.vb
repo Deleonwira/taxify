@@ -35,7 +35,6 @@ Partial Class pk_detail_riwayat_bukti_potong
         LblCompanyName = New Guna.UI2.WinForms.Guna2HtmlLabel()
         PanelEmployer = New Guna.UI2.WinForms.Guna2Panel()
         LblNomorKaryawanValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        LblNomorKaryawan = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblStatusPTKPValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblStatusPTKP = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblAlamatKaryawanValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -127,6 +126,7 @@ Partial Class pk_detail_riwayat_bukti_potong
         LblCompanyName.Name = "LblCompanyName"
         LblCompanyName.Size = New Size(3, 2)
         LblCompanyName.TabIndex = 0
+        LblCompanyName.Text = Nothing
         LblCompanyName.TextAlignment = ContentAlignment.MiddleLeft
         ' 
         ' PanelEmployer
@@ -135,7 +135,6 @@ Partial Class pk_detail_riwayat_bukti_potong
         PanelEmployer.BorderRadius = 12
         PanelEmployer.BorderThickness = 1
         PanelEmployer.Controls.Add(LblNomorKaryawanValue)
-        PanelEmployer.Controls.Add(LblNomorKaryawan)
         PanelEmployer.Controls.Add(LblStatusPTKPValue)
         PanelEmployer.Controls.Add(LblStatusPTKP)
         PanelEmployer.Controls.Add(LblAlamatKaryawanValue)
@@ -175,17 +174,6 @@ Partial Class pk_detail_riwayat_bukti_potong
         LblNomorKaryawanValue.Size = New Size(8, 19)
         LblNomorKaryawanValue.TabIndex = 21
         LblNomorKaryawanValue.Text = "-"
-        ' 
-        ' LblNomorKaryawan
-        ' 
-        LblNomorKaryawan.BackColor = Color.Transparent
-        LblNomorKaryawan.Font = New Font("Segoe UI", 9F)
-        LblNomorKaryawan.ForeColor = Color.FromArgb(CByte(120), CByte(128), CByte(146))
-        LblNomorKaryawan.Location = New Point(792, 118)
-        LblNomorKaryawan.Name = "LblNomorKaryawan"
-        LblNomorKaryawan.Size = New Size(125, 17)
-        LblNomorKaryawan.TabIndex = 20
-        LblNomorKaryawan.Text = "Nomor Karyawan / NIP"
         ' 
         ' LblStatusPTKPValue
         ' 
@@ -659,7 +647,6 @@ Partial Class pk_detail_riwayat_bukti_potong
     Friend WithEvents LblAlamatKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblStatusPTKP As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblStatusPTKPValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNomorKaryawan As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblNomorKaryawanValue As Guna.UI2.WinForms.Guna2HtmlLabel
 
     Friend WithEvents PanelIncome As Guna.UI2.WinForms.Guna2Panel

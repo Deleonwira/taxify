@@ -189,3 +189,4 @@ C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.
 C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.admin_validasi_registrasi.resources
 C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.pk_detail_riwayat_bukti_potong.resources
 C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.admin_navbar.resources
+C:\Users\hamza\Downloads\app_pajak\app_pajak\obj\Debug\net8.0-windows\app_pajak.FrmManagementPemberiKerja.resources

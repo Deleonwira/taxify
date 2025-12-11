@@ -64,7 +64,7 @@ Public Class wp_detail_bukti_potong
 
                 ' Status & NIK
                 LblStatusPTKPValue.Text = If(IsDBNull(rd("status_ptkp")), "-", rd("status_ptkp").ToString())
-                LblNomorKaryawanValue.Text = If(IsDBNull(rd("nik_wp")), "-", rd("nik_wp").ToString())
+
 
                 ' ====== KOMONEN PENGHASILAN ======
                 ' Gaji Bruto (Total Bruto)
@@ -138,5 +138,9 @@ Public Class wp_detail_bukti_potong
         Dim f As New FrmLogin()
         f.Show()
         Me.Close()
+    End Sub
+
+    Private Sub PanelEmployer_Paint(sender As Object, e As PaintEventArgs) Handles PanelEmployer.Paint
+
     End Sub
 End Class

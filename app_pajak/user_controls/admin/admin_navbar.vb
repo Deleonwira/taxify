@@ -2,7 +2,7 @@ Public Class admin_navbar
 
     ' ====== EVENT UNTUK NAVIGASI ======
     Public Event DashboardClicked(ByVal sender As Object, ByVal e As EventArgs)
-    Public Event ValidasiRegistrasiClicked(ByVal sender As Object, ByVal e As EventArgs)
+    Public Event ManajemenPemberiKerjaClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event ManajemenUserClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event ManajemenPerusahaanClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event LogoutClicked(ByVal sender As Object, ByVal e As EventArgs)
@@ -10,7 +10,7 @@ Public Class admin_navbar
     ' ====== ENUM UNTUK MENANDAI MENU AKTIF ======
     Public Enum MenuType
         Dashboard
-        ValidasiRegistrasi
+        ManajemenPemberiKerja
         ManajemenUser
         ManajemenPerusahaan
     End Enum
@@ -26,7 +26,7 @@ Public Class admin_navbar
     Private Sub InitializeIconSwapHandlers()
         ' Add CheckedChanged handlers to swap icons when button state changes
         AddHandler btnDashboard.CheckedChanged, AddressOf btnDashboard_CheckedChanged
-        AddHandler btnValidasi.CheckedChanged, AddressOf btnValidasi_CheckedChanged
+        AddHandler btnPemberiKerja.CheckedChanged, AddressOf btnPemberiKerja_CheckedChanged
         AddHandler btnUsers.CheckedChanged, AddressOf btnUsers_CheckedChanged
         AddHandler btnPerusahaan.CheckedChanged, AddressOf btnPerusahaan_CheckedChanged
     End Sub
@@ -40,11 +40,11 @@ Public Class admin_navbar
         End If
     End Sub
 
-    Private Sub btnValidasi_CheckedChanged(sender As Object, e As EventArgs)
-        If btnValidasi.Checked Then
-            btnValidasi.Image = My.Resources.Resources.diploma_white
+    Private Sub btnPemberiKerja_CheckedChanged(sender As Object, e As EventArgs)
+        If btnPemberiKerja.Checked Then
+            btnPemberiKerja.Image = My.Resources.Resources.user_white
         Else
-            btnValidasi.Image = My.Resources.Resources.diploma
+            btnPemberiKerja.Image = My.Resources.Resources.user__2_
         End If
     End Sub
 
@@ -70,8 +70,8 @@ Public Class admin_navbar
         RaiseEvent DashboardClicked(Me, e)
     End Sub
 
-    Private Sub btnValidasi_Click(sender As Object, e As EventArgs) Handles btnValidasi.Click
-        RaiseEvent ValidasiRegistrasiClicked(Me, e)
+    Private Sub btnPemberiKerja_Click(sender As Object, e As EventArgs) Handles btnPemberiKerja.Click
+        RaiseEvent ManajemenPemberiKerjaClicked(Me, e)
     End Sub
 
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
@@ -99,8 +99,8 @@ Public Class admin_navbar
             Case MenuType.Dashboard
                 btnDashboard.Checked = True
 
-            Case MenuType.ValidasiRegistrasi
-                btnValidasi.Checked = True
+            Case MenuType.ManajemenPemberiKerja
+                btnPemberiKerja.Checked = True
 
             Case MenuType.ManajemenUser
                 btnUsers.Checked = True

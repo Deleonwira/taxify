@@ -52,7 +52,7 @@ Public Class pk_detail_riwayat_bukti_potong
 
                 ' Status & NIK
                 LblStatusPTKPValue.Text = If(IsDBNull(rd("status_ptkp")), "-", rd("status_ptkp").ToString())
-                LblNomorKaryawanValue.Text = If(IsDBNull(rd("nik_wp")), "-", rd("nik_wp").ToString())
+
 
                 ' ====== KOMPONEN PENGHASILAN ======
                 ' Gaji Bruto (Total Bruto)
@@ -126,4 +126,7 @@ Public Class pk_detail_riwayat_bukti_potong
         MsgBox("Fitur download PDF akan segera hadir.", MsgBoxStyle.Information)
     End Sub
 
+    Private Sub PanelEmployer_Paint(sender As Object, e As PaintEventArgs) Handles PanelEmployer.Paint
+
+    End Sub
 End Class
