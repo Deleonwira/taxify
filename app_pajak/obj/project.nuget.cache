@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fZ/KMXZuCVM=",
+  "dgSpecHash": "y2rCUwC9IT4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+  "projectFilePath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\hamza\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\hamza\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
@@ -125,9 +125,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'LiveCharts 0.9.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "filePath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "libraryId": "LiveCharts",
       "targetGraphs": [
         "net8.0-windows7.0"
@@ -137,9 +137,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'LiveCharts.WinForms 0.9.7.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "filePath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "libraryId": "LiveCharts.WinForms",
       "targetGraphs": [
         "net8.0-windows7.0"
@@ -149,9 +149,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'LiveCharts.Wpf 0.9.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "filePath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "libraryId": "LiveCharts.Wpf",
       "targetGraphs": [
         "net8.0-windows7.0"
@@ -161,9 +161,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'OpenTK 3.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "filePath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "libraryId": "OpenTK",
       "targetGraphs": [
         "net8.0-windows7.0"
@@ -173,9 +173,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'OpenTK.GLControl 3.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "filePath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "libraryId": "OpenTK.GLControl",
       "targetGraphs": [
         "net8.0-windows7.0"
@@ -185,9 +185,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'SkiaSharp.Views.WindowsForms 3.119.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "filePath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "libraryId": "SkiaSharp.Views.WindowsForms",
       "targetGraphs": [
         "net8.0-windows7.0"

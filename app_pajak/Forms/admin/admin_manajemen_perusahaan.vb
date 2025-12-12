@@ -4,21 +4,6 @@ Public Class FrmManagementPerusahaan
 
     Private isLoading As Boolean = True ' Flag to prevent events during initialization
 
-    Private Sub FrmManagementPerusahaan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set default combo selections (events will fire but isLoading prevents LoadPerusahaan)
-        CmbStatus.SelectedIndex = 0
-        CmbSort.SelectedIndex = 0
-
-        ' Now allow events to work
-        isLoading = False
-
-        ' Load data
-        LoadStatistics()
-        LoadPerusahaan()
-        
-        ' Set active menu in navbar
-        Pk_navbar1.SetActiveMenu(admin_navbar.MenuType.ManajemenPerusahaan)
-    End Sub
 
     ' ====== NAVBAR EVENT HANDLERS ======
     Private Sub Pk_navbar1_DashboardClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.DashboardClicked
@@ -53,35 +38,6 @@ Public Class FrmManagementPerusahaan
     ''' <summary>
     ''' Load statistik perusahaan untuk dashboard cards
     ''' </summary>
-    Private Sub LoadStatistics()
-        Try
-            modulkoneksi.BukaKoneksi()
-
-            ' Total perusahaan
-            Dim sqlTotal As String = "SELECT COUNT(*) FROM perusahaan"
-            Dim cmdTotal As New MySqlCommand(sqlTotal, modulkoneksi.koneksi)
-            Dim totalPerusahaan As Integer = Convert.ToInt32(cmdTotal.ExecuteScalar())
-            LblTotalPerusahaanValue.Text = totalPerusahaan.ToString()
-
-            ' Perusahaan dengan pegawai (Active)
-            Dim sqlActive As String = "SELECT COUNT(DISTINCT p.perusahaan_id) FROM pekerjaan p"
-            Dim cmdActive As New MySqlCommand(sqlActive, modulkoneksi.koneksi)
-            Dim activePerusahaan As Integer = Convert.ToInt32(cmdActive.ExecuteScalar())
-            LblActivePerusahaanValue.Text = activePerusahaan.ToString()
-
-            ' Perusahaan tanpa pegawai (baru terdaftar)
-            Dim inactivePerusahaan As Integer = totalPerusahaan - activePerusahaan
-            LblInactivePerusahaanValue.Text = inactivePerusahaan.ToString()
-
-            ' Perusahaan freelance/tidak terdaftar (id=2 based on schema)
-            LblPendingPerusahaanValue.Text = "1" ' Freelance placeholder
-
-        Catch ex As Exception
-            MsgBox("Error loading statistics: " & ex.Message, MsgBoxStyle.Critical)
-        Finally
-            modulkoneksi.TutupKoneksi()
-        End Try
-    End Sub
 
     ''' <summary>
     ''' Load daftar perusahaan ke DataGridView
@@ -215,7 +171,6 @@ Public Class FrmManagementPerusahaan
             cmd.ExecuteNonQuery()
 
             MsgBox("Perusahaan berhasil ditambahkan!", MsgBoxStyle.Information)
-            LoadStatistics()
             LoadPerusahaan()
 
         Catch ex As Exception
@@ -396,7 +351,6 @@ Public Class FrmManagementPerusahaan
             cmdPerusahaan.ExecuteNonQuery()
 
             MsgBox("Perusahaan berhasil dihapus!", MsgBoxStyle.Information)
-            LoadStatistics()
             LoadPerusahaan()
 
         Catch ex As Exception
@@ -406,4 +360,7 @@ Public Class FrmManagementPerusahaan
         End Try
     End Sub
 
+    Private Sub FrmManagementPerusahaan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadPerusahaan()
+    End Sub
 End Class

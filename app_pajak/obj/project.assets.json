@@ -6015,11 +6015,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectUniqueName": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "projectName": "app_pajak",
-      "projectPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\app_pajak.vbproj",
+      "projectPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
       "packagesPath": "C:\\Users\\hamza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hamza\\Downloads\\app_pajak\\app_pajak\\obj\\",
+      "outputPath": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

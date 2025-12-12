@@ -26,7 +26,6 @@ Public Class admin_navbar
     Private Sub InitializeIconSwapHandlers()
         ' Add CheckedChanged handlers to swap icons when button state changes
         AddHandler btnDashboard.CheckedChanged, AddressOf btnDashboard_CheckedChanged
-        AddHandler btnPemberiKerja.CheckedChanged, AddressOf btnPemberiKerja_CheckedChanged
         AddHandler btnUsers.CheckedChanged, AddressOf btnUsers_CheckedChanged
         AddHandler btnPerusahaan.CheckedChanged, AddressOf btnPerusahaan_CheckedChanged
     End Sub
@@ -40,13 +39,7 @@ Public Class admin_navbar
         End If
     End Sub
 
-    Private Sub btnPemberiKerja_CheckedChanged(sender As Object, e As EventArgs)
-        If btnPemberiKerja.Checked Then
-            btnPemberiKerja.Image = My.Resources.Resources.user_white
-        Else
-            btnPemberiKerja.Image = My.Resources.Resources.user__2_
-        End If
-    End Sub
+
 
     Private Sub btnUsers_CheckedChanged(sender As Object, e As EventArgs)
         If btnUsers.Checked Then
@@ -70,7 +63,7 @@ Public Class admin_navbar
         RaiseEvent DashboardClicked(Me, e)
     End Sub
 
-    Private Sub btnPemberiKerja_Click(sender As Object, e As EventArgs) Handles btnPemberiKerja.Click
+    Private Sub btnPemberiKerja_Click(sender As Object, e As EventArgs)
         RaiseEvent ManajemenPemberiKerjaClicked(Me, e)
     End Sub
 
@@ -99,8 +92,6 @@ Public Class admin_navbar
             Case MenuType.Dashboard
                 btnDashboard.Checked = True
 
-            Case MenuType.ManajemenPemberiKerja
-                btnPemberiKerja.Checked = True
 
             Case MenuType.ManajemenUser
                 btnUsers.Checked = True
