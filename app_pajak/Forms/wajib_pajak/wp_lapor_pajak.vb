@@ -2,6 +2,8 @@
 
 Public Class wp_lapor_pajak
 
+    Private _tahunPajak As Integer
+
     Private Sub wp_lapor_pajak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Navigation event handlers
         AddHandler Wp_navbar1.DashboardClicked, AddressOf OnDashboardClicked
@@ -16,72 +18,41 @@ Public Class wp_lapor_pajak
         ' Set active menu
         Wp_navbar1.SetActiveMenu(wp_navbar.MenuType.LaporPajak)
 
-        LoadUserData()
-        SetDefaultValues()
+        ' Set tahun pajak = current year (untuk bukti potong tahun berjalan)
+        _tahunPajak = DateTime.Now.Year
+
+        ' Refresh SPT calculation first (call stored procedure)
+        RefreshSPTCalculation()
+
+        ' Load calculated data from spt_tahunan
+        LoadDataFromSPT()
+
+        ' Set all calculated fields to read-only
+        SetFieldsReadOnly()
     End Sub
 
-    Private Sub LoadUserData()
-        ' Load user basic info
+    ' ========== REFRESH SPT CALCULATION ==========
+    Private Sub RefreshSPTCalculation()
         Try
             modulkoneksi.BukaKoneksi()
-            Dim sql As String = "SELECT npwp, nama, alamat FROM wajib_pajak WHERE id = @wp_id"
-            Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
-            Dim rd As MySqlDataReader = cmd.ExecuteReader()
 
-            If rd.Read() Then
-                ' User data can be displayed if needed
-                ' Currently no labels for this in the form
-            End If
-            rd.Close()
+            ' Call stored procedure to recalculate SPT
+            Dim cmd As New MySqlCommand("sp_kalkulasi_spt_tahunan", modulkoneksi.koneksi)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@p_wajib_pajak_id", ModuleSession.CurrentWajibPajakId)
+            cmd.Parameters.AddWithValue("@p_tahun_pajak", _tahunPajak)
+            cmd.ExecuteNonQuery()
+
         Catch ex As Exception
-            MsgBox("Error: " & ex.Message, MsgBoxStyle.Critical)
-        Finally
-            modulkoneksi.TutupKoneksi()
-        End Try
-    End Sub
-
-    Private Sub SetDefaultValues()
-        ' Set default tahun pajak = current year - 1 (FIX, tidak bisa dirubah)
-        Dim tahunPajak As Integer = DateTime.Now.Year - 1
-
-        ' Load PTKP from pekerjaan table
-        LoadPTKP()
-
-        ' Load data from spt_tahunan if exists
-        LoadDataFromSPT(tahunPajak)
-    End Sub
-
-    ' ========== LOAD PTKP FROM PEKERJAAN ==========
-    Private Sub LoadPTKP()
-        Try
-            modulkoneksi.BukaKoneksi()
-            Dim sql As String = "SELECT status_ptkp FROM wajib_pajak WHERE id = @wp_id"
-            Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
-            Dim rd As MySqlDataReader = cmd.ExecuteReader()
-
-            If rd.Read() Then
-                Dim statusPTKP As String = If(IsDBNull(rd("status_ptkp")), "", rd("status_ptkp").ToString())
-                ' Display PTKP in label if exists (Guna2HtmlLabel1 is for PTKP)
-                ' If there's a label for PTKP, set it here
-                ' Guna2HtmlLabel1.Text = If(String.IsNullOrEmpty(statusPTKP), "-", statusPTKP)
-            End If
-            rd.Close()
-        Catch ex As Exception
-            ' Silent fail
+            ' Silent fail - SPT might not exist yet, will be created on save
         Finally
             modulkoneksi.TutupKoneksi()
         End Try
     End Sub
 
     ' ========== LOAD DATA FROM SPT_TAHUNAN ==========
-    Private Sub LoadDataFromSPT(tahunPajak As Integer)
+    Private Sub LoadDataFromSPT()
         Try
-            If String.IsNullOrWhiteSpace(ModuleSession.CurrentUserNPWP) Then
-                Return
-            End If
-
             modulkoneksi.BukaKoneksi()
 
             Dim sql As String = "SELECT * FROM spt_tahunan 
@@ -90,212 +61,197 @@ Public Class wp_lapor_pajak
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
             cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
-            cmd.Parameters.AddWithValue("@tahun", tahunPajak)
+            cmd.Parameters.AddWithValue("@tahun", _tahunPajak)
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
 
             If rd.Read() Then
-                ' Populate form fields from database sesuai struktur tabel spt_tahunan
-                ' Gaji Pokok (gaji_setahun)
+                ' ===== Section: Info PTKP & Tahun =====
+                ' Guna2TextBox10 = Status PTKP
+                Guna2TextBox10.Text = If(IsDBNull(rd("status_ptkp")), "TK0", rd("status_ptkp").ToString())
+
+                ' Guna2TextBox11 = Tahun Pajak
+                Guna2TextBox11.Text = _tahunPajak.ToString()
+
+                ' ===== Section: Penghasilan Bruto =====
+                ' txtPPhTerutang = Gaji Pokok Setahun (misleading name from original)
                 txtPPhTerutang.Text = If(IsDBNull(rd("gaji_setahun")), "0", Convert.ToDecimal(rd("gaji_setahun")).ToString("N0"))
 
-                ' Tunjangan Tetap (tunjangan_setahun)
+                ' Guna2TextBox1 = Tunjangan Tetap Setahun
                 Guna2TextBox1.Text = If(IsDBNull(rd("tunjangan_setahun")), "0", Convert.ToDecimal(rd("tunjangan_setahun")).ToString("N0"))
 
-                ' Bonus/THR (bonus_thr_setahun)
+                ' Guna2TextBox3 = Bonus/THR Setahun
                 Guna2TextBox3.Text = If(IsDBNull(rd("bonus_thr_setahun")), "0", Convert.ToDecimal(rd("bonus_thr_setahun")).ToString("N0"))
 
-                ' Jumlah Bruto (bruto_setahun)
+                ' Guna2TextBox4 = Jumlah Penghasilan Bruto
                 Guna2TextBox4.Text = If(IsDBNull(rd("bruto_setahun")), "0", Convert.ToDecimal(rd("bruto_setahun")).ToString("N0"))
 
-                ' Biaya Jabatan (biaya_jabatan_setahun)
+                ' ===== Section: Pengurangan =====
+                ' Guna2TextBox8 = Biaya Jabatan Setahun
                 Guna2TextBox8.Text = If(IsDBNull(rd("biaya_jabatan_setahun")), "0", Convert.ToDecimal(rd("biaya_jabatan_setahun")).ToString("N0"))
 
-                ' Iuran Pensiun (iuran_pensiun_setahun) - mapped to Zakat/Sumbangan field
+                ' Guna2TextBox7 = Iuran Pensiun (Zakat/Sumbangan field)
                 Guna2TextBox7.Text = If(IsDBNull(rd("iuran_pensiun_setahun")), "0", Convert.ToDecimal(rd("iuran_pensiun_setahun")).ToString("N0"))
 
-                ' Total Pengurangan (biaya jabatan + iuran pensiun)
+                ' Guna2TextBox5 = Total Pengurangan
                 Dim biayaJabatan As Decimal = If(IsDBNull(rd("biaya_jabatan_setahun")), 0, Convert.ToDecimal(rd("biaya_jabatan_setahun")))
                 Dim iuranPensiun As Decimal = If(IsDBNull(rd("iuran_pensiun_setahun")), 0, Convert.ToDecimal(rd("iuran_pensiun_setahun")))
                 Guna2TextBox5.Text = (biayaJabatan + iuranPensiun).ToString("N0")
 
-                ' Penghasilan Netto (netto_setahun)
-                Guna2TextBox9.Text = If(IsDBNull(rd("netto_setahun")), "0", Convert.ToDecimal(rd("netto_setahun")).ToString("N0"))
+                ' ===== Section: Perhitungan Pajak SPT Tahunan =====
+                ' Guna2TextBox9 = PTKP Nilai (nilai_tahunan dari master_ptkp)
+                Guna2TextBox9.Text = If(IsDBNull(rd("ptkp")), "0", Convert.ToDecimal(rd("ptkp")).ToString("N0"))
 
-                ' Pajak PPh (pph21_terutang)
+                ' Guna2TextBox6 = PPh 21 Terutang
                 Guna2TextBox6.Text = If(IsDBNull(rd("pph21_terutang")), "0", Convert.ToDecimal(rd("pph21_terutang")).ToString("N0"))
 
-                ' Total Pengurangan (Hasil section) - same as above
-                Guna2TextBox2.Text = (biayaJabatan + iuranPensiun).ToString("N0")
+                ' Guna2TextBox2 = PPh 21 Dipotong
+                Guna2TextBox2.Text = If(IsDBNull(rd("pph21_dipotong")), "0", Convert.ToDecimal(rd("pph21_dipotong")).ToString("N0"))
+
+                ' ===== Update Status Badge =====
+                Dim statusSpt As String = If(IsDBNull(rd("status_spt")), "Nihil", rd("status_spt").ToString())
+                Dim kurangBayar As Decimal = If(IsDBNull(rd("pph21_kurang_bayar")), 0, Convert.ToDecimal(rd("pph21_kurang_bayar")))
+                Dim lebihBayar As Decimal = If(IsDBNull(rd("pph21_lebih_bayar")), 0, Convert.ToDecimal(rd("pph21_lebih_bayar")))
+
+                UpdateStatusBadge(statusSpt, kurangBayar, lebihBayar)
+            Else
+                ' No SPT data found - show empty form with just PTKP and Year
+                LoadEmptyForm()
             End If
 
             rd.Close()
 
         Catch ex As Exception
             ' Silent fail - form can be used for new entry
+            LoadEmptyForm()
         Finally
             modulkoneksi.TutupKoneksi()
         End Try
     End Sub
 
-    ' ========== AUTO CALCULATION ==========
-    Private Sub CalculateJumlahBruto()
-        ' TODO: Sum all penghasilan bruto fields
-        ' jumlah_bruto = gaji_pokok + tunjangan_tetap + bonus_thr
+    Private Sub LoadEmptyForm()
+        ' Set tahun pajak
+        Guna2TextBox11.Text = _tahunPajak.ToString()
+
+        ' Load PTKP status from wajib_pajak
+        Try
+            modulkoneksi.BukaKoneksi()
+            Dim sql As String = "SELECT status_ptkp FROM wajib_pajak WHERE id = @wp_id"
+            Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
+            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
+            Dim result = cmd.ExecuteScalar()
+            Guna2TextBox10.Text = If(result Is Nothing OrElse IsDBNull(result), "TK0", result.ToString())
+        Catch ex As Exception
+            Guna2TextBox10.Text = "TK0"
+        Finally
+            modulkoneksi.TutupKoneksi()
+        End Try
+
+        ' Set all numeric fields to 0
+        txtPPhTerutang.Text = "0"
+        Guna2TextBox1.Text = "0"
+        Guna2TextBox3.Text = "0"
+        Guna2TextBox4.Text = "0"
+        Guna2TextBox5.Text = "0"
+        Guna2TextBox6.Text = "0"
+        Guna2TextBox7.Text = "0"
+        Guna2TextBox8.Text = "0"
+        Guna2TextBox9.Text = "0"
+        Guna2TextBox2.Text = "0"
+
+        ' Update status badge
+        UpdateStatusBadge("Nihil", 0, 0)
     End Sub
 
-    Private Sub CalculateTotalPengurangan()
-        ' TODO: Calculate total pengurangan
-        ' total_pengurangan = biaya_jabatan + zakat_sumbangan
+    Private Sub UpdateStatusBadge(statusSpt As String, kurangBayar As Decimal, lebihBayar As Decimal)
+        ' Update the BunifuPanel3 and Guna2HtmlLabel9 for status badge
+        Select Case statusSpt
+            Case "Kurang Bayar"
+                BunifuPanel3.BackgroundColor = Color.FromArgb(192, 0, 0) ' Red
+                Guna2HtmlLabel9.Text = "Kurang Bayar: " & kurangBayar.ToString("N0")
+            Case "Lebih Bayar"
+                BunifuPanel3.BackgroundColor = Color.FromArgb(0, 128, 0) ' Green
+                Guna2HtmlLabel9.Text = "Lebih Bayar: " & lebihBayar.ToString("N0")
+            Case Else ' Nihil
+                BunifuPanel3.BackgroundColor = Color.FromArgb(100, 100, 100) ' Gray
+                Guna2HtmlLabel9.Text = "Nihil"
+        End Select
     End Sub
 
-    Private Sub CalculateHasil()
-        ' TODO: Calculate hasil
-        ' penghasilan_netto = jumlah_bruto - total_pengurangan
-
-        ' TODO: Get PTKP from database based on user's status
-        ' Then: pajak_pph = Calculate using progressive tax rates from tarif_pajak table
+    Private Sub SetFieldsReadOnly()
+        ' Set all calculated fields to read-only
+        txtPPhTerutang.ReadOnly = True
+        Guna2TextBox1.ReadOnly = True
+        Guna2TextBox2.ReadOnly = True
+        Guna2TextBox3.ReadOnly = True
+        Guna2TextBox4.ReadOnly = True
+        Guna2TextBox5.ReadOnly = True
+        Guna2TextBox6.ReadOnly = True
+        Guna2TextBox7.ReadOnly = True
+        Guna2TextBox8.ReadOnly = True
+        Guna2TextBox9.ReadOnly = True
+        Guna2TextBox10.ReadOnly = True
+        Guna2TextBox11.ReadOnly = True
     End Sub
 
     ' ========== SAVE ==========
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
-        SaveSPT(status:="draft")
+        SaveSPT()
     End Sub
 
     Private Sub btnKirim_Click(sender As Object, e As EventArgs) Handles btnKirim.Click
-        SaveSPT(status:="terkirim")
+        SaveSPT()
     End Sub
 
-    Private Sub SaveSPT(status As String)
+    Private Sub SaveSPT()
         Try
-            ' Tahun pajak fix = current year - 1
-            Dim tahunPajak As Integer = DateTime.Now.Year - 1
-
-            ' Helper function to parse decimal from formatted text
-            Dim parseDecimal As Func(Of String, Decimal) = Function(text As String) As Decimal
-                                                               If String.IsNullOrWhiteSpace(text) Then Return 0
-                                                               ' Remove thousand separators (dots and commas)
-                                                               Dim cleanText As String = text.Replace(".", "").Replace(",", "").Trim()
-                                                               Dim result As Decimal = 0
-                                                               Decimal.TryParse(cleanText, result)
-                                                               Return result
-                                                           End Function
-
-            ' Get values from form
-            Dim gajiPokok As Decimal = parseDecimal(txtPPhTerutang.Text)
-            Dim tunjangan As Decimal = parseDecimal(Guna2TextBox1.Text)
-            Dim bonusThr As Decimal = parseDecimal(Guna2TextBox3.Text)
-            Dim bruto As Decimal = parseDecimal(Guna2TextBox4.Text)
-            Dim biayaJabatan As Decimal = parseDecimal(Guna2TextBox8.Text)
-            Dim iuranPensiun As Decimal = parseDecimal(Guna2TextBox7.Text)
-            Dim netto As Decimal = parseDecimal(Guna2TextBox9.Text)
-            Dim pphTerutang As Decimal = parseDecimal(Guna2TextBox6.Text)
-
             modulkoneksi.BukaKoneksi()
 
-            ' Get PTKP from pekerjaan table (REQUIRED)
-            Dim statusPTKP As String = ""
-            Try
-                Dim sqlPTKP As String = "SELECT status_ptkp FROM wajib_pajak WHERE id = @wp_id"
-                Dim cmdPTKP As New MySqlCommand(sqlPTKP, modulkoneksi.koneksi)
-                cmdPTKP.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
-                Dim rdPTKP As MySqlDataReader = cmdPTKP.ExecuteReader()
-                If rdPTKP.Read() Then
-                    statusPTKP = If(IsDBNull(rdPTKP("status_ptkp")), "", rdPTKP("status_ptkp").ToString())
-                End If
-                rdPTKP.Close()
-
-                If String.IsNullOrEmpty(statusPTKP) Then
-                    MsgBox("Status PTKP tidak ditemukan di data pekerjaan. Silakan lengkapi data pekerjaan terlebih dahulu.", MsgBoxStyle.Exclamation)
-                    Return
-                End If
-            Catch ex As Exception
-                MsgBox("Error mengambil data PTKP: " & ex.Message, MsgBoxStyle.Critical)
-                Return
-            End Try
-
-            ' Check if record exists
+            ' Check if SPT record exists
             Dim sqlCheck As String = "SELECT id FROM spt_tahunan WHERE wajib_pajak_id = @wp_id AND tahun_pajak = @tahun"
             Dim cmdCheck As New MySqlCommand(sqlCheck, modulkoneksi.koneksi)
             cmdCheck.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
-            cmdCheck.Parameters.AddWithValue("@tahun", tahunPajak)
-            Dim exists As Boolean = cmdCheck.ExecuteScalar() IsNot Nothing
+            cmdCheck.Parameters.AddWithValue("@tahun", _tahunPajak)
+            Dim sptId = cmdCheck.ExecuteScalar()
 
-            Dim sql As String
-            If exists Then
-                ' UPDATE existing record
-                sql = "UPDATE spt_tahunan SET 
-                       status_ptkp = @ptkp,
-                       gaji_setahun = @gaji,
-                       tunjangan_setahun = @tunjangan,
-                       bonus_thr_setahun = @bonus,
-                       bruto_setahun = @bruto,
-                       biaya_jabatan_setahun = @biaya,
-                       iuran_pensiun_setahun = @iuran,
-                       netto_setahun = @netto,
-                       pph21_terutang = @pph"
+            If sptId Is Nothing Then
+                ' No SPT record found - call stored procedure to create one first
+                RefreshSPTCalculation()
 
-                If status = "terkirim" Then
-                    sql &= ", tanggal_lapor = @tanggal"
+                ' Check again
+                sptId = cmdCheck.ExecuteScalar()
+                If sptId Is Nothing Then
+                    MsgBox("Tidak ada data bukti potong untuk tahun " & _tahunPajak & ". Silakan input bukti potong terlebih dahulu.", MsgBoxStyle.Exclamation)
+                    Return
                 End If
-
-                sql &= " WHERE wajib_pajak_id = @wp_id AND tahun_pajak = @tahun"
-            Else
-                ' INSERT new record
-                sql = "INSERT INTO spt_tahunan (
-                    wajib_pajak_id, tahun_pajak, status_ptkp,
-                    gaji_setahun, tunjangan_setahun, bonus_thr_setahun, bruto_setahun,
-                    biaya_jabatan_setahun, iuran_pensiun_setahun, netto_setahun,
-                    pph21_terutang"
-
-                If status = "terkirim" Then
-                    sql &= ", tanggal_lapor"
-                End If
-
-                sql &= ") VALUES (
-                    @wp_id, @tahun, @ptkp,
-                    @gaji, @tunjangan, @bonus, @bruto,
-                    @biaya, @iuran, @netto,
-                    @pph"
-
-                If status = "terkirim" Then
-                    sql &= ", @tanggal"
-                End If
-
-                sql &= ")"
             End If
 
-            Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
-            cmd.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
-            cmd.Parameters.AddWithValue("@tahun", tahunPajak)
-            cmd.Parameters.AddWithValue("@ptkp", If(String.IsNullOrEmpty(statusPTKP), DBNull.Value, statusPTKP))
-            cmd.Parameters.AddWithValue("@gaji", gajiPokok)
-            cmd.Parameters.AddWithValue("@tunjangan", tunjangan)
-            cmd.Parameters.AddWithValue("@bonus", bonusThr)
-            cmd.Parameters.AddWithValue("@bruto", bruto)
-            cmd.Parameters.AddWithValue("@biaya", biayaJabatan)
-            cmd.Parameters.AddWithValue("@iuran", iuranPensiun)
-            cmd.Parameters.AddWithValue("@netto", netto)
-            cmd.Parameters.AddWithValue("@pph", pphTerutang)
+            ' Update tanggal_lapor to mark as submitted
+            Dim sqlUpdate As String = "UPDATE spt_tahunan SET tanggal_lapor = @tanggal WHERE wajib_pajak_id = @wp_id AND tahun_pajak = @tahun"
+            Dim cmdUpdate As New MySqlCommand(sqlUpdate, modulkoneksi.koneksi)
+            cmdUpdate.Parameters.AddWithValue("@tanggal", DateTime.Now)
+            cmdUpdate.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
+            cmdUpdate.Parameters.AddWithValue("@tahun", _tahunPajak)
+            cmdUpdate.ExecuteNonQuery()
 
-            If status = "terkirim" Then
-                cmd.Parameters.AddWithValue("@tanggal", DateTime.Now)
-            End If
+            MsgBox("SPT Tahunan berhasil disimpan!", MsgBoxStyle.Information)
 
-            cmd.ExecuteNonQuery()
-
-            MsgBox("SPT berhasil disimpan!", MsgBoxStyle.Information)
+            ' Navigate to riwayat lapor
+            Dim f As New wp_riwayat_lapor_pajak()
+            f.Show()
             Me.Close()
 
         Catch ex As Exception
-            MsgBox("Error: " & ex.Message, MsgBoxStyle.Critical)
+            MsgBox("Error menyimpan SPT: " & ex.Message, MsgBoxStyle.Critical)
         Finally
             modulkoneksi.TutupKoneksi()
         End Try
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        ' Discard
+        ' Discard / Cancel
+        Dim f As New wp_dashboard()
+        f.Show()
         Me.Close()
     End Sub
 

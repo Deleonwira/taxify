@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2025 at 09:40 AM
+-- Generation Time: Dec 14, 2025 at 10:56 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -313,6 +313,33 @@ CREATE TABLE `bukti_potong_freelance` (
 INSERT INTO `bukti_potong_freelance` (`id`, `wajib_pajak_id`, `nomor_bukti`, `jenis_freelance`, `is_pph_final`, `masa_tahun`, `masa_bulan`, `nama_pemberi_kerja`, `npwp_pemberi_kerja`, `bruto_per_hari`, `jumlah_hari_kerja`, `bruto_total`, `dpp`, `tarif_persen`, `pph_dipotong`, `created_at`) VALUES
 (1, 1, 'BPF-2025-01-8158', 'tenaga_ahli', 0, 2025, 1, 'Jamaludin', NULL, 0.00, 0, 10000000.00, 5000000.00, 2.50, 250000.00, '2025-12-14 14:39:55'),
 (2, 1, 'BPF-2025-12-6475', 'harian', 1, 2025, 12, 'Musiala', '1293102973012', 1000000.00, 4, 4000000.00, 4000000.00, 0.50, 20000.00, '2025-12-14 14:40:39');
+
+--
+-- Triggers `bukti_potong_freelance`
+--
+DELIMITER $$
+CREATE TRIGGER `trg_bukti_potong_freelance_after_delete` AFTER DELETE ON `bukti_potong_freelance` FOR EACH ROW BEGIN
+    CALL sp_kalkulasi_spt_tahunan(OLD.wajib_pajak_id, OLD.masa_tahun);
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `trg_bukti_potong_freelance_after_insert` AFTER INSERT ON `bukti_potong_freelance` FOR EACH ROW BEGIN
+    CALL sp_kalkulasi_spt_tahunan(NEW.wajib_pajak_id, NEW.masa_tahun);
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `trg_bukti_potong_freelance_after_update` AFTER UPDATE ON `bukti_potong_freelance` FOR EACH ROW BEGIN
+    CALL sp_kalkulasi_spt_tahunan(NEW.wajib_pajak_id, NEW.masa_tahun);
+    
+    -- Jika tahun atau wajib_pajak berubah, kalkulasi ulang data lama juga
+    IF (NEW.masa_tahun != OLD.masa_tahun) OR (NEW.wajib_pajak_id != OLD.wajib_pajak_id) THEN
+        CALL sp_kalkulasi_spt_tahunan(OLD.wajib_pajak_id, OLD.masa_tahun);
+    END IF;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
