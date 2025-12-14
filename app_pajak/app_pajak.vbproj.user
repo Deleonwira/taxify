@@ -10,6 +10,9 @@
     <Compile Update="Forms\admin\admin_manajemen_perusahaan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\admin\admin_master_pajak.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\admin\admin_validasi_registrasi.vb">
       <SubType>Form</SubType>
     </Compile>

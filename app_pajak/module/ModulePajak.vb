@@ -1,33 +1,44 @@
 ' Module untuk logika perhitungan pajak PPh21
 ' Dipisahkan dari pk_form_bukti_potong untuk reusability
 
+Imports MySql.Data.MySqlClient
+
 Module ModulePajak
 
     ''' <summary>
-    ''' Mapping PTKP status ke nilai tahunan berdasarkan PMK No. 101/PMK.010/2016
+    ''' Mapping PTKP status ke nilai tahunan dari database
+    ''' Fallback ke default jika database error
     ''' </summary>
     ''' <param name="statusPTKP">Status PTKP (TK0, TK1, TK2, TK3, K0, K1, K2, K3)</param>
     ''' <returns>Nilai PTKP tahunan dalam Rupiah</returns>
     Public Function GetPTKPTahunan(statusPTKP As String) As Decimal
+        Try
+            modulkoneksi.BukaKoneksi()
+            Dim sql As String = "SELECT nilai_tahunan FROM master_ptkp WHERE kode_status = @kode AND is_active = 1"
+            Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
+            cmd.Parameters.AddWithValue("@kode", statusPTKP.ToUpper().Trim())
+            Dim result = cmd.ExecuteScalar()
+            
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                Return Convert.ToDecimal(result)
+            End If
+        Catch ex As Exception
+            ' Fallback to hardcoded if database error
+        Finally
+            modulkoneksi.TutupKoneksi()
+        End Try
+        
+        ' Fallback values (PMK No. 101/PMK.010/2016)
         Select Case statusPTKP.ToUpper().Trim()
-            Case "TK0"
-                Return 54000000D  ' Tidak Kawin, 0 tanggungan
-            Case "TK1"
-                Return 58500000D  ' Tidak Kawin, 1 tanggungan
-            Case "TK2"
-                Return 63000000D  ' Tidak Kawin, 2 tanggungan
-            Case "TK3"
-                Return 67500000D  ' Tidak Kawin, 3 tanggungan
-            Case "K0"
-                Return 58500000D  ' Kawin, 0 tanggungan
-            Case "K1"
-                Return 63000000D  ' Kawin, 1 tanggungan
-            Case "K2"
-                Return 67500000D  ' Kawin, 2 tanggungan
-            Case "K3"
-                Return 72000000D  ' Kawin, 3 tanggungan
-            Case Else
-                Return 54000000D  ' Default: TK0
+            Case "TK0" : Return 54000000D
+            Case "TK1" : Return 58500000D
+            Case "TK2" : Return 63000000D
+            Case "TK3" : Return 67500000D
+            Case "K0" : Return 58500000D
+            Case "K1" : Return 63000000D
+            Case "K2" : Return 67500000D
+            Case "K3" : Return 72000000D
+            Case Else : Return 54000000D
         End Select
     End Function
 
@@ -41,12 +52,8 @@ Module ModulePajak
     End Function
 
     ''' <summary>
-    ''' Menghitung tarif progresif PPh21 berdasarkan UU HPP 2021
-    ''' Lapisan 1: 0 - 60 juta (5%)
-    ''' Lapisan 2: 60 juta - 250 juta (15%)
-    ''' Lapisan 3: 250 juta - 500 juta (25%)
-    ''' Lapisan 4: 500 juta - 5 milyar (30%)
-    ''' Lapisan 5: > 5 milyar (35%)
+    ''' Menghitung tarif progresif PPh21 dari database
+    ''' Fallback ke UU HPP 2021 jika database error
     ''' </summary>
     ''' <param name="pkpTahunan">Penghasilan Kena Pajak Tahunan</param>
     ''' <returns>PPh21 terutang tahunan</returns>
@@ -57,6 +64,47 @@ Module ModulePajak
             Return 0
         End If
 
+        ' Try to get tax brackets from database
+        Dim brackets As New List(Of Tuple(Of Decimal, Decimal, Decimal))() ' (batas_bawah, batas_atas, tarif_persen)
+        
+        Try
+            modulkoneksi.BukaKoneksi()
+            Dim sql As String = "SELECT batas_bawah, batas_atas, tarif_persen FROM master_tarif_pph WHERE is_active = 1 ORDER BY lapisan ASC"
+            Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
+            Dim rd As MySqlDataReader = cmd.ExecuteReader()
+            
+            While rd.Read()
+                Dim bawah As Decimal = Convert.ToDecimal(rd("batas_bawah"))
+                Dim atas As Decimal = Convert.ToDecimal(rd("batas_atas"))
+                Dim tarif As Decimal = Convert.ToDecimal(rd("tarif_persen")) / 100D
+                brackets.Add(Tuple.Create(bawah, atas, tarif))
+            End While
+            rd.Close()
+        Catch ex As Exception
+            ' Fallback to hardcoded
+            brackets.Clear()
+        Finally
+            modulkoneksi.TutupKoneksi()
+        End Try
+        
+        ' If got brackets from database, use them
+        If brackets.Count > 0 Then
+            For Each bracket In brackets
+                Dim bawah As Decimal = bracket.Item1
+                Dim atas As Decimal = bracket.Item2
+                Dim tarif As Decimal = bracket.Item3
+                
+                If pkpTahunan > bawah Then
+                    Dim taxableInBracket As Decimal = Math.Min(pkpTahunan, atas) - bawah
+                    If taxableInBracket > 0 Then
+                        tax += taxableInBracket * tarif
+                    End If
+                End If
+            Next
+            Return tax
+        End If
+        
+        ' Fallback: Hardcoded UU HPP 2021
         ' Lapisan 1: 0 - 60 juta (5%)
         If pkpTahunan > 0 Then
             Dim layer1 = Math.Min(pkpTahunan, 60000000D)

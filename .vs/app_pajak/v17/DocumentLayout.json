@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\hamza\\Downloads\\taxify\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\taxify\\app_pajak\\module\\modulepajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\module\\modulepajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\taxify\\app_pajak\\forms\\admin\\admin_master_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\admin\\admin_master_pajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\taxify\\app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\wajib_pajak\\wp_tambah_bukti_potong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
@@ -173,10 +181,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\taxify\\app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\taxify\\app_pajak\\module\\modulepajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|solutionrelative:app_pajak\\module\\modulepajak.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3E7DE3D-7FB9-4A63-803E-7F2FB18791C5}|app_pajak\\app_pajak.vbproj|c:\\users\\hamza\\downloads\\taxify\\app_pajak\\forms\\pemberi_kerja\\pk_daftar_pegawai.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -399,11 +403,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "admin_master_pajak.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_master_pajak.vb",
+              "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_master_pajak.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_master_pajak.vb",
+              "RelativeToolTip": "app_pajak\\Forms\\admin\\admin_master_pajak.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-14T08:28:59.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "wp_tambah_bukti_potong.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
@@ -416,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "wp_tambah_bukti_potong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_tambah_bukti_potong.vb",
@@ -428,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "wp_navbar.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
@@ -440,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "wp_navbar.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
@@ -448,12 +465,11 @@
               "RelativeToolTip": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUBAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-03T05:02:12.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T05:02:12.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "admin_manajemen_users.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_manajemen_users.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_manajemen_users.vb",
@@ -465,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "admin_manajemen_users.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_manajemen_users.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_manajemen_users.vb",
@@ -477,7 +493,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "ModulePajak.vb",
+              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\module\\ModulePajak.vb",
+              "RelativeDocumentMoniker": "app_pajak\\module\\ModulePajak.vb",
+              "ToolTip": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\module\\ModulePajak.vb",
+              "RelativeToolTip": "app_pajak\\module\\ModulePajak.vb",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv6oAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-06T10:30:09.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "wp_riwayat_lapor_pajak.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb",
@@ -489,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "wp_timeline_bukti_botong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
@@ -501,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "admin_manajemen_users.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_manajemen_users.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_manajemen_users.Designer.vb",
@@ -513,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "admin_manajemen_perusahaan.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_manajemen_perusahaan.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_manajemen_perusahaan.vb",
@@ -525,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "admin_manajemen_perusahaan.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_manajemen_perusahaan.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_manajemen_perusahaan.vb",
@@ -537,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "pk_form_bukti_potong.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.Designer.vb",
@@ -549,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "pk_form_bukti_potong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
@@ -561,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "wp_riwayat_bukti_potong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.vb",
@@ -573,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "wp_lapor_pajak.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
@@ -585,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "PajakDiagnosisEngine.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\PajakDiagnosisEngine.vb",
               "RelativeDocumentMoniker": "app_pajak\\PajakDiagnosisEngine.vb",
@@ -597,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "FrmRegister.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmRegister.vb",
               "RelativeDocumentMoniker": "app_pajak\\FrmRegister.vb",
@@ -609,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "FrmLogin.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmLogin.vb",
               "RelativeDocumentMoniker": "app_pajak\\FrmLogin.vb",
@@ -621,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "admin_navbar.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\admin\\admin_navbar.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\admin\\admin_navbar.vb",
@@ -633,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "admin_validasi_registrasi.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_validasi_registrasi.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_validasi_registrasi.vb",
@@ -645,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "build_log.txt",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\build_log.txt",
               "RelativeDocumentMoniker": "app_pajak\\build_log.txt",
@@ -657,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "admin_navbar.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\admin\\admin_navbar.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\admin\\admin_navbar.vb",
@@ -669,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "admin_manajemen_pemberi_kerja.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_manajemen_pemberi_kerja.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_manajemen_pemberi_kerja.vb",
@@ -681,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "wp_diagnosa_pajak.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
@@ -693,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "pk_dashboard.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb",
@@ -705,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "pk_detail_riwayat_bukti_potong.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_detail_riwayat_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_detail_riwayat_bukti_potong.vb",
@@ -717,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "pk_detail_riwayat_bukti_potong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_detail_riwayat_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_detail_riwayat_bukti_potong.vb",
@@ -729,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "wp_detail_bukti_potong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb",
@@ -741,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "wp_detail_bukti_potong.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.vb",
@@ -753,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "FrmRegister.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmRegister.vb",
               "RelativeDocumentMoniker": "app_pajak\\FrmRegister.vb",
@@ -765,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "admin_validasi_registrasi.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_validasi_registrasi.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_validasi_registrasi.vb",
@@ -777,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "admin_dashboard.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_dashboard.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_dashboard.resx",
@@ -788,7 +817,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "pk_daftar_pegawai.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb",
@@ -800,7 +829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "FrmLogin.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmLogin.vb",
               "RelativeDocumentMoniker": "app_pajak\\FrmLogin.vb",
@@ -812,7 +841,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "admin_dashboard.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_dashboard.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_dashboard.vb",
@@ -824,7 +853,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "FrmLogin.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmLogin.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\FrmLogin.Designer.vb",
@@ -836,7 +865,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "pk_navbar1.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
@@ -848,7 +877,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "pk_navbar1.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.vb",
@@ -860,7 +889,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "wp_data_diri.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
@@ -872,7 +901,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "wp_dashboard.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
@@ -884,7 +913,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "FrmDiagnosa.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
@@ -896,7 +925,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "pk_timeline_bukti_botong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
@@ -908,7 +937,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "pk_daftar_pegawai.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.vb",
@@ -920,7 +949,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "pk_form_bukti_potong.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_form_bukti_potong.vb",
@@ -933,18 +962,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 43,
-              "Title": "ModulePajak.vb",
-              "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\module\\ModulePajak.vb",
-              "RelativeDocumentMoniker": "app_pajak\\module\\ModulePajak.vb",
-              "ToolTip": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\module\\ModulePajak.vb",
-              "RelativeToolTip": "app_pajak\\module\\ModulePajak.vb",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAiwLcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-06T10:30:09.526Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
               "Title": "pk_riwayat_bukti_potong.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb",
@@ -956,7 +973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "wp_navbar.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.Designer.vb",
@@ -964,12 +981,11 @@
               "RelativeToolTip": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.Designer.vb",
               "ViewState": "AgIAAK4AAAAAAAAAAAAlwMAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-03T05:02:27.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T05:02:27.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "pk_dashboard.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.Designer.vb",
@@ -981,7 +997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "wp_dashboard.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.vb",
@@ -993,7 +1009,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "chatbot_control.vb [Design]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\wajib_pajak\\chatbot_control.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\chatbot_control.vb",
@@ -1005,19 +1021,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "wp_navbar.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.resx",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.resx",
               "ToolTip": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\wajib_pajak\\wp_navbar.resx",
               "RelativeToolTip": "app_pajak\\user_controls\\wajib_pajak\\wp_navbar.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-12-04T17:45:32.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T17:45:32.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "ModuleSession.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\module\\ModuleSession.vb",
               "RelativeDocumentMoniker": "app_pajak\\module\\ModuleSession.vb",
@@ -1029,7 +1044,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "modulkoneksi.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\module\\modulkoneksi.vb",
               "RelativeDocumentMoniker": "app_pajak\\module\\modulkoneksi.vb",
@@ -1041,7 +1056,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "wp_timeline_bukti_botong.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.Designer.vb",
@@ -1053,7 +1068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "app_pajak",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
               "RelativeDocumentMoniker": "app_pajak\\app_pajak.vbproj",
@@ -1064,7 +1079,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "pk_dashboard.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_dashboard.vb",
@@ -1076,7 +1091,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "wp_dashboard.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.Designer.vb",
@@ -1088,7 +1103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "wp_riwayat_bukti_potong.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.Designer.vb",
@@ -1100,7 +1115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "wp_riwayat_lapor_pajak.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.Designer.vb",
@@ -1108,12 +1123,11 @@
               "RelativeToolTip": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.Designer.vb",
               "ViewState": "AgIAAB0BAAAAAAAAAAAUwC0BAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-04T23:21:11.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T23:21:11.681Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "wp_riwayat_lapor_pajak.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_lapor_pajak.vb",
@@ -1125,7 +1139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "wp_data_diri.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.vb",
@@ -1137,7 +1151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "chatbot_control.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\wajib_pajak\\chatbot_control.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\wajib_pajak\\chatbot_control.Designer.vb",
@@ -1149,7 +1163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "wp_lapor_pajak.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.vb",
@@ -1161,7 +1175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "wp_timeline_bukti_botong.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.vb",
@@ -1173,7 +1187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "pk_navbar1.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\user_controls\\pemberi_kerja\\pk_navbar1.Designer.vb",
@@ -1185,7 +1199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "app_pajak.vbproj",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\app_pajak.vbproj",
               "RelativeDocumentMoniker": "app_pajak\\app_pajak.vbproj",
@@ -1197,7 +1211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -1207,7 +1221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "pk_daftar_pegawai.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_daftar_pegawai.Designer.vb",
@@ -1219,7 +1233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "wp_lapor_pajak.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.Designer.vb",
@@ -1231,7 +1245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "cudy0xno..sql",
               "DocumentMoniker": "C:\\Users\\hamza\\AppData\\Local\\Temp\\cudy0xno..sql",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\cudy0xno..sql",
@@ -1242,7 +1256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "3yqhmerl..sql",
               "DocumentMoniker": "C:\\Users\\hamza\\AppData\\Local\\Temp\\3yqhmerl..sql",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\3yqhmerl..sql",
@@ -1253,7 +1267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "ewt2yhov..sql",
               "DocumentMoniker": "C:\\Users\\hamza\\AppData\\Local\\Temp\\ewt2yhov..sql",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\ewt2yhov..sql",
@@ -1264,7 +1278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "zfd3vbkf..sql",
               "DocumentMoniker": "C:\\Users\\hamza\\AppData\\Local\\Temp\\zfd3vbkf..sql",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\zfd3vbkf..sql",
@@ -1275,7 +1289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "ulzd1l4s..sql",
               "DocumentMoniker": "C:\\Users\\hamza\\AppData\\Local\\Temp\\ulzd1l4s..sql",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\ulzd1l4s..sql",
@@ -1286,7 +1300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "bwnyvbgi..sql",
               "DocumentMoniker": "C:\\Users\\hamza\\AppData\\Local\\Temp\\bwnyvbgi..sql",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\bwnyvbgi..sql",
@@ -1297,7 +1311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "wp_detail_bukti_potong.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.Designer.vb",
@@ -1309,7 +1323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "pk_riwayat_bukti_potong.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.vb",
@@ -1321,7 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "FrmDiagnosa.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.Designer.vb",
@@ -1333,7 +1347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "wp_data_diri.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.Designer.vb",
@@ -1345,7 +1359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "wp_diagnosa_pajak.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.vb",
@@ -1357,7 +1371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "Application.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\My Project\\Application.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\My Project\\Application.Designer.vb",
@@ -1369,7 +1383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "history.png -  [English (United States)] - PNG [24x24, 32 bit, PNG]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Resources\\history.png",
               "RelativeDocumentMoniker": "app_pajak\\Resources\\history.png",
@@ -1381,7 +1395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "FrmDiagnosa.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\FrmDiagnosa.vb",
@@ -1393,7 +1407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "wp_diagnosa_pajak.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_diagnosa_pajak.Designer.vb",
@@ -1405,7 +1419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "FrmLogin.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmLogin.resx",
               "RelativeDocumentMoniker": "app_pajak\\FrmLogin.resx",
@@ -1416,7 +1430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "pk_timeline_bukti_botong.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.Designer.vb",
@@ -1428,7 +1442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "pk_timeline_bukti_botong.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_timeline_bukti_botong.vb",
@@ -1440,7 +1454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "wp_data_diri.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_data_diri.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_data_diri.resx",
@@ -1451,7 +1465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "wp_detail_bukti_potong.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_detail_bukti_potong.resx",
@@ -1462,7 +1476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "wp_lapor_pajak.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_lapor_pajak.resx",
@@ -1473,7 +1487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "wp_riwayat_bukti_potong.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_riwayat_bukti_potong.resx",
@@ -1484,7 +1498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "wp_timeline_bukti_botong.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_timeline_bukti_botong.resx",
@@ -1495,7 +1509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "pk_riwayat_bukti_potong.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.Designer.vb",
@@ -1507,7 +1521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "FrmRegister.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmRegister.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\FrmRegister.Designer.vb",
@@ -1519,7 +1533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "wp_dashboard.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\wajib_pajak\\wp_dashboard.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\wajib_pajak\\wp_dashboard.resx",
@@ -1530,7 +1544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "taxify_logo.png -  [English (United States)] - PNG [500x500, 32 bit, PNG]",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Resources\\taxify_logo.png",
               "RelativeDocumentMoniker": "app_pajak\\Resources\\taxify_logo.png",
@@ -1542,7 +1556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "FrmRegister.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\FrmRegister.resx",
               "RelativeDocumentMoniker": "app_pajak\\FrmRegister.resx",
@@ -1553,7 +1567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "admin_manajemen_perusahaan.Designer.vb",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\admin\\admin_manajemen_perusahaan.Designer.vb",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\admin\\admin_manajemen_perusahaan.Designer.vb",
@@ -1565,7 +1579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "pk_riwayat_bukti_potong.resx",
               "DocumentMoniker": "C:\\Users\\hamza\\Downloads\\taxify\\app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx",
               "RelativeDocumentMoniker": "app_pajak\\Forms\\pemberi_kerja\\pk_riwayat_bukti_potong.resx",

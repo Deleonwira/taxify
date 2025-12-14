@@ -5,6 +5,7 @@ Public Class admin_navbar
     Public Event ManajemenPemberiKerjaClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event ManajemenUserClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event ManajemenPerusahaanClicked(ByVal sender As Object, ByVal e As EventArgs)
+    Public Event MasterPajakClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event LogoutClicked(ByVal sender As Object, ByVal e As EventArgs)
 
     ' ====== ENUM UNTUK MENANDAI MENU AKTIF ======
@@ -13,6 +14,7 @@ Public Class admin_navbar
         ManajemenPemberiKerja
         ManajemenUser
         ManajemenPerusahaan
+        MasterPajak
     End Enum
 
     ' ====== INITIALIZATION ======
@@ -28,6 +30,7 @@ Public Class admin_navbar
         AddHandler btnDashboard.CheckedChanged, AddressOf btnDashboard_CheckedChanged
         AddHandler btnUsers.CheckedChanged, AddressOf btnUsers_CheckedChanged
         AddHandler btnPerusahaan.CheckedChanged, AddressOf btnPerusahaan_CheckedChanged
+        AddHandler btnMasterPajak.CheckedChanged, AddressOf btnMasterPajak_CheckedChanged
     End Sub
 
     ' ====== ICON SWAP HANDLERS ======
@@ -57,6 +60,10 @@ Public Class admin_navbar
         End If
     End Sub
 
+    Private Sub btnMasterPajak_CheckedChanged(sender As Object, e As EventArgs)
+        ' Master Pajak uses text only, no icon swap needed
+    End Sub
+
     ' ====== HANDLER NAVIGASI ======
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
@@ -73,6 +80,10 @@ Public Class admin_navbar
 
     Private Sub btnPerusahaan_Click(sender As Object, e As EventArgs) Handles btnPerusahaan.Click
         RaiseEvent ManajemenPerusahaanClicked(Me, e)
+    End Sub
+
+    Private Sub btnMasterPajak_Click(sender As Object, e As EventArgs) Handles btnMasterPajak.Click
+        RaiseEvent MasterPajakClicked(Me, e)
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -98,6 +109,9 @@ Public Class admin_navbar
 
             Case MenuType.ManajemenPerusahaan
                 btnPerusahaan.Checked = True
+
+            Case MenuType.MasterPajak
+                btnMasterPajak.Checked = True
         End Select
     End Sub
 

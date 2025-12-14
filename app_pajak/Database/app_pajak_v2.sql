@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2025 at 08:19 AM
+-- Generation Time: Dec 14, 2025 at 09:40 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -306,6 +306,71 @@ CREATE TABLE `bukti_potong_freelance` (
   `created_at` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `bukti_potong_freelance`
+--
+
+INSERT INTO `bukti_potong_freelance` (`id`, `wajib_pajak_id`, `nomor_bukti`, `jenis_freelance`, `is_pph_final`, `masa_tahun`, `masa_bulan`, `nama_pemberi_kerja`, `npwp_pemberi_kerja`, `bruto_per_hari`, `jumlah_hari_kerja`, `bruto_total`, `dpp`, `tarif_persen`, `pph_dipotong`, `created_at`) VALUES
+(1, 1, 'BPF-2025-01-8158', 'tenaga_ahli', 0, 2025, 1, 'Jamaludin', NULL, 0.00, 0, 10000000.00, 5000000.00, 2.50, 250000.00, '2025-12-14 14:39:55'),
+(2, 1, 'BPF-2025-12-6475', 'harian', 1, 2025, 12, 'Musiala', '1293102973012', 1000000.00, 4, 4000000.00, 4000000.00, 0.50, 20000.00, '2025-12-14 14:40:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `master_ptkp`
+--
+
+CREATE TABLE `master_ptkp` (
+  `id` int(11) NOT NULL,
+  `kode_status` varchar(10) NOT NULL,
+  `keterangan` varchar(100) NOT NULL,
+  `nilai_tahunan` decimal(15,2) NOT NULL,
+  `is_active` tinyint(1) DEFAULT 1,
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `master_ptkp`
+--
+
+INSERT INTO `master_ptkp` (`id`, `kode_status`, `keterangan`, `nilai_tahunan`, `is_active`, `updated_at`) VALUES
+(1, 'TK0', 'Tidak Kawin, 0 Tanggungan', 54000000.00, 1, '2025-12-14 15:35:01'),
+(2, 'TK1', 'Tidak Kawin, 1 Tanggungan', 58500000.00, 1, '2025-12-14 15:33:25'),
+(3, 'TK2', 'Tidak Kawin, 2 Tanggungan', 63000000.00, 1, '2025-12-14 15:33:25'),
+(4, 'TK3', 'Tidak Kawin, 3 Tanggungan', 67500000.00, 1, '2025-12-14 15:33:25'),
+(5, 'K0', 'Kawin, 0 Tanggungan', 58500000.00, 1, '2025-12-14 15:33:25'),
+(6, 'K1', 'Kawin, 1 Tanggungan', 63000000.00, 1, '2025-12-14 15:33:25'),
+(7, 'K2', 'Kawin, 2 Tanggungan', 67500000.00, 1, '2025-12-14 15:33:25'),
+(8, 'K3', 'Kawin, 3 Tanggungan', 72000000.00, 1, '2025-12-14 15:33:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `master_tarif_pph`
+--
+
+CREATE TABLE `master_tarif_pph` (
+  `id` int(11) NOT NULL,
+  `lapisan` int(11) NOT NULL,
+  `batas_bawah` decimal(20,2) NOT NULL,
+  `batas_atas` decimal(20,2) NOT NULL,
+  `tarif_persen` decimal(5,2) NOT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT 1,
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `master_tarif_pph`
+--
+
+INSERT INTO `master_tarif_pph` (`id`, `lapisan`, `batas_bawah`, `batas_atas`, `tarif_persen`, `keterangan`, `is_active`, `updated_at`) VALUES
+(1, 1, 0.00, 60000000.00, 5.00, 'Lapisan 1: 0 - 60 Juta', 1, '2025-12-14 15:33:25'),
+(2, 2, 60000000.00, 250000000.00, 15.00, 'Lapisan 2: 60 Juta - 250 Juta', 1, '2025-12-14 15:33:25'),
+(3, 3, 250000000.00, 500000000.00, 25.00, 'Lapisan 3: 250 Juta - 500 Juta', 1, '2025-12-14 15:33:25'),
+(4, 4, 500000000.00, 5000000000.00, 30.00, 'Lapisan 4: 500 Juta - 5 Milyar', 1, '2025-12-14 15:33:25'),
+(5, 5, 5000000000.00, 999999999999.00, 35.00, 'Lapisan 5: > 5 Milyar', 1, '2025-12-14 15:33:25');
+
 -- --------------------------------------------------------
 
 --
@@ -525,6 +590,20 @@ ALTER TABLE `bukti_potong_freelance`
   ADD KEY `wajib_pajak_id` (`wajib_pajak_id`);
 
 --
+-- Indexes for table `master_ptkp`
+--
+ALTER TABLE `master_ptkp`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `kode_status` (`kode_status`);
+
+--
+-- Indexes for table `master_tarif_pph`
+--
+ALTER TABLE `master_tarif_pph`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `lapisan` (`lapisan`);
+
+--
 -- Indexes for table `pekerjaan`
 --
 ALTER TABLE `pekerjaan`
@@ -590,7 +669,19 @@ ALTER TABLE `bukti_potong`
 -- AUTO_INCREMENT for table `bukti_potong_freelance`
 --
 ALTER TABLE `bukti_potong_freelance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `master_ptkp`
+--
+ALTER TABLE `master_ptkp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `master_tarif_pph`
+--
+ALTER TABLE `master_tarif_pph`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pekerjaan`

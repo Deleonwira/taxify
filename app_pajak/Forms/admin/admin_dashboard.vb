@@ -31,6 +31,12 @@
         Me.Close()
     End Sub
 
+    Private Sub Admin_navbar1_MasterPajakClicked(sender As Object, e As EventArgs) Handles Admin_navbar1.MasterPajakClicked
+        Dim f As New admin_master_pajak()
+        f.Show()
+        Me.Close()
+    End Sub
+
     Private Sub Admin_navbar1_LogoutClicked(sender As Object, e As EventArgs) Handles Admin_navbar1.LogoutClicked
         ModuleSession.ClearSession()
         Dim f As New FrmLogin()
