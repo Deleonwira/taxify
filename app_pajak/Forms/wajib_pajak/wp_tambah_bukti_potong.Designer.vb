@@ -17,17 +17,17 @@ Partial Class wp_tambah_bukti_potong
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(wp_tambah_bukti_potong))
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pk_form_bukti_potong))
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -52,1061 +52,737 @@ Partial Class wp_tambah_bukti_potong
         Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Guna2PanelHeader = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Wp_navbar1 = New wp_navbar()
+        PanelMain = New Guna.UI2.WinForms.Guna2Panel()
+        PanelContent = New Guna.UI2.WinForms.Guna2Panel()
+        PanelInfoDasar = New Bunifu.UI.WinForms.BunifuPanel()
+        lblInfoDasar = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        PanelPemberiKerja = New Bunifu.UI.WinForms.BunifuPanel()
+        lblPemberiKerjaHeader = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        PanelPenghasilan = New Bunifu.UI.WinForms.BunifuPanel()
+        lblPenghasilanHeader = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        PanelPerhitungan = New Bunifu.UI.WinForms.BunifuPanel()
+        lblPerhitunganHeader = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        btnHitung = New Guna.UI2.WinForms.Guna2Button()
+        btnReset = New Guna.UI2.WinForms.Guna2Button()
+        btnSimpan = New Guna.UI2.WinForms.Guna2Button()
+        lblNama = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtNama = New Guna.UI2.WinForms.Guna2TextBox()
+        lblJenisFreelance = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        cboJenisFreelance = New Guna.UI2.WinForms.Guna2ComboBox()
+        lblBulan = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        cboBulan = New Guna.UI2.WinForms.Guna2ComboBox()
+        lblTahun = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtTahun = New Guna.UI2.WinForms.Guna2TextBox()
+        lblNamaPemberiKerja = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtNamaPemberiKerja = New Guna.UI2.WinForms.Guna2TextBox()
+        lblNpwpPemberiKerja = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtNpwpPemberiKerja = New Guna.UI2.WinForms.Guna2TextBox()
+        lblBrutoPerHari = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtBrutoPerHari = New Guna.UI2.WinForms.Guna2TextBox()
+        lblJumlahHariKerja = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtJumlahHariKerja = New Guna.UI2.WinForms.Guna2TextBox()
+        lblBrutoTotal = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtBrutoTotal = New Guna.UI2.WinForms.Guna2TextBox()
+        lblDPP = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtDPP = New Guna.UI2.WinForms.Guna2TextBox()
+        lblTarif = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtTarif = New Guna.UI2.WinForms.Guna2TextBox()
+        lblPPhDipotong = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        txtPPhDipotong = New Guna.UI2.WinForms.Guna2TextBox()
+        PanelHeader = New Guna.UI2.WinForms.Guna2Panel()
         lblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        PanelMain = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel33 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox12 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel32 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox11 = New Guna.UI2.WinForms.Guna2TextBox()
-        BunifuPanel3 = New Bunifu.UI.WinForms.BunifuPanel()
-        Guna2HtmlLabel23 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel22 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        btnSimpan = New Guna.UI2.WinForms.Guna2Button()
-        Guna2HtmlLabel19 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
-        BunifuPanel1 = New Bunifu.UI.WinForms.BunifuPanel()
-        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        BunifuPanel5 = New Bunifu.UI.WinForms.BunifuPanel()
-        Guna2HtmlLabel18 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox6 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel20 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel21 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox9 = New Guna.UI2.WinForms.Guna2TextBox()
-        BunifuPanel2 = New Bunifu.UI.WinForms.BunifuPanel()
-        Guna2HtmlLabel24 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox5 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel25 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox7 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel26 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel27 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox8 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel28 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel29 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox10 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel30 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel31 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        txtPPhTerutang = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2HtmlLabel17 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel15 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        lblDetailPajak = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Wp_navbar11 = New wp_navbar()
-        Guna2PanelHeader.SuspendLayout()
         PanelMain.SuspendLayout()
-        Guna2Panel1.SuspendLayout()
-        BunifuPanel3.SuspendLayout()
-        BunifuPanel1.SuspendLayout()
-        BunifuPanel5.SuspendLayout()
-        BunifuPanel2.SuspendLayout()
+        PanelContent.SuspendLayout()
+        PanelInfoDasar.SuspendLayout()
+        PanelPemberiKerja.SuspendLayout()
+        PanelPenghasilan.SuspendLayout()
+        PanelPerhitungan.SuspendLayout()
+        PanelHeader.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Guna2PanelHeader
+        ' Wp_navbar1
         ' 
-        Guna2PanelHeader.BackColor = Color.Transparent
-        Guna2PanelHeader.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
-        Guna2PanelHeader.BorderRadius = 12
-        Guna2PanelHeader.BorderThickness = 1
-        Guna2PanelHeader.Controls.Add(Guna2HtmlLabel2)
-        Guna2PanelHeader.Controls.Add(lblTitle)
-        Guna2PanelHeader.Controls.Add(lblSubtitle)
-        Guna2PanelHeader.CustomizableEdges = CustomizableEdges1
-        Guna2PanelHeader.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        Guna2PanelHeader.Location = New Point(24, 24)
-        Guna2PanelHeader.Name = "Guna2PanelHeader"
-        Guna2PanelHeader.Padding = New Padding(24)
-        Guna2PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2PanelHeader.Size = New Size(1062, 91)
-        Guna2PanelHeader.TabIndex = 0
-        ' 
-        ' Guna2HtmlLabel2
-        ' 
-        Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Bold)
-        Guna2HtmlLabel2.ForeColor = Color.Gainsboro
-        Guna2HtmlLabel2.Location = New Point(943, 48)
-        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(84, 19)
-        Guna2HtmlLabel2.TabIndex = 2
-        Guna2HtmlLabel2.Text = "Bulan Januari"
-        ' 
-        ' lblTitle
-        ' 
-        lblTitle.BackColor = Color.Transparent
-        lblTitle.Font = New Font("Segoe UI Semibold", 14.0F, FontStyle.Bold)
-        lblTitle.ForeColor = Color.White
-        lblTitle.Location = New Point(24, 14)
-        lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(188, 27)
-        lblTitle.TabIndex = 0
-        lblTitle.Text = "Tambah Bukti Potong"
-        ' 
-        ' lblSubtitle
-        ' 
-        lblSubtitle.BackColor = Color.Transparent
-        lblSubtitle.Font = New Font("Segoe UI", 9.0F)
-        lblSubtitle.ForeColor = Color.FromArgb(CByte(233), CByte(221), CByte(255))
-        lblSubtitle.Location = New Point(24, 48)
-        lblSubtitle.Name = "lblSubtitle"
-        lblSubtitle.Size = New Size(420, 17)
-        lblSubtitle.TabIndex = 1
-        lblSubtitle.Text = "Masukkan detail pemberi kerja dan pegawai untuk menghasilkan bukti potong."
+        Wp_navbar1.BackColor = Color.FromArgb(CByte(84), CByte(64), CByte(209))
+        Wp_navbar1.Dock = DockStyle.Left
+        Wp_navbar1.ForeColor = Color.White
+        Wp_navbar1.Location = New Point(0, 0)
+        Wp_navbar1.Margin = New Padding(3, 4, 3, 4)
+        Wp_navbar1.Name = "Wp_navbar1"
+        Wp_navbar1.Size = New Size(191, 720)
+        Wp_navbar1.TabIndex = 0
         ' 
         ' PanelMain
         ' 
         PanelMain.AutoScroll = True
         PanelMain.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
-        PanelMain.Controls.Add(Guna2Panel1)
-        PanelMain.Controls.Add(Guna2PanelHeader)
-        PanelMain.CustomizableEdges = CustomizableEdges37
-        PanelMain.Location = New Point(190, 0)
+        PanelMain.Controls.Add(PanelContent)
+        PanelMain.Controls.Add(PanelHeader)
+        PanelMain.CustomizableEdges = CustomizableEdges35
+        PanelMain.Location = New Point(191, 0)
         PanelMain.Name = "PanelMain"
         PanelMain.Padding = New Padding(24)
-        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges38
-        PanelMain.Size = New Size(1110, 720)
+        PanelMain.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        PanelMain.Size = New Size(1109, 720)
         PanelMain.TabIndex = 1
         ' 
-        ' Guna2Panel1
+        ' PanelContent
         ' 
-        Guna2Panel1.AutoScroll = True
-        Guna2Panel1.BackColor = Color.Transparent
-        Guna2Panel1.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
-        Guna2Panel1.BorderRadius = 10
-        Guna2Panel1.BorderThickness = 1
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel33)
-        Guna2Panel1.Controls.Add(Guna2TextBox12)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel32)
-        Guna2Panel1.Controls.Add(Guna2TextBox11)
-        Guna2Panel1.Controls.Add(BunifuPanel3)
-        Guna2Panel1.Controls.Add(Guna2TextBox2)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel22)
-        Guna2Panel1.Controls.Add(Guna2Button1)
-        Guna2Panel1.Controls.Add(btnSimpan)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel19)
-        Guna2Panel1.Controls.Add(Guna2TextBox1)
-        Guna2Panel1.Controls.Add(Guna2Button2)
-        Guna2Panel1.Controls.Add(BunifuPanel1)
-        Guna2Panel1.Controls.Add(BunifuPanel5)
-        Guna2Panel1.Controls.Add(Guna2TextBox6)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel20)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel21)
-        Guna2Panel1.Controls.Add(Guna2TextBox9)
-        Guna2Panel1.Controls.Add(BunifuPanel2)
-        Guna2Panel1.Controls.Add(Guna2TextBox5)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel25)
-        Guna2Panel1.Controls.Add(Guna2TextBox7)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel26)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel27)
-        Guna2Panel1.Controls.Add(Guna2TextBox8)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel28)
-        Guna2Panel1.Controls.Add(Guna2TextBox4)
-        Guna2Panel1.Controls.Add(Guna2TextBox3)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel29)
-        Guna2Panel1.Controls.Add(Guna2TextBox10)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel30)
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel31)
-        Guna2Panel1.Controls.Add(txtPPhTerutang)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges35
-        Guna2Panel1.FillColor = Color.White
-        Guna2Panel1.Location = New Point(24, 138)
-        Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.Padding = New Padding(18)
-        Guna2Panel1.ShadowDecoration.Color = Color.FromArgb(CByte(209), CByte(216), CByte(230))
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges36
-        Guna2Panel1.ShadowDecoration.Depth = 8
-        Guna2Panel1.ShadowDecoration.Enabled = True
-        Guna2Panel1.Size = New Size(1061, 1035)
-        Guna2Panel1.TabIndex = 3
+        PanelContent.AutoScroll = True
+        PanelContent.BackColor = Color.Transparent
+        PanelContent.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
+        PanelContent.BorderRadius = 10
+        PanelContent.BorderThickness = 1
+        PanelContent.Controls.Add(PanelInfoDasar)
+        PanelContent.Controls.Add(PanelPemberiKerja)
+        PanelContent.Controls.Add(PanelPenghasilan)
+        PanelContent.Controls.Add(PanelPerhitungan)
+        PanelContent.Controls.Add(btnHitung)
+        PanelContent.Controls.Add(btnReset)
+        PanelContent.Controls.Add(btnSimpan)
+        PanelContent.Controls.Add(lblNama)
+        PanelContent.Controls.Add(txtNama)
+        PanelContent.Controls.Add(lblJenisFreelance)
+        PanelContent.Controls.Add(cboJenisFreelance)
+        PanelContent.Controls.Add(lblBulan)
+        PanelContent.Controls.Add(cboBulan)
+        PanelContent.Controls.Add(lblTahun)
+        PanelContent.Controls.Add(txtTahun)
+        PanelContent.Controls.Add(lblNamaPemberiKerja)
+        PanelContent.Controls.Add(txtNamaPemberiKerja)
+        PanelContent.Controls.Add(lblNpwpPemberiKerja)
+        PanelContent.Controls.Add(txtNpwpPemberiKerja)
+        PanelContent.Controls.Add(lblBrutoPerHari)
+        PanelContent.Controls.Add(txtBrutoPerHari)
+        PanelContent.Controls.Add(lblJumlahHariKerja)
+        PanelContent.Controls.Add(txtJumlahHariKerja)
+        PanelContent.Controls.Add(lblBrutoTotal)
+        PanelContent.Controls.Add(txtBrutoTotal)
+        PanelContent.Controls.Add(lblDPP)
+        PanelContent.Controls.Add(txtDPP)
+        PanelContent.Controls.Add(lblTarif)
+        PanelContent.Controls.Add(txtTarif)
+        PanelContent.Controls.Add(lblPPhDipotong)
+        PanelContent.Controls.Add(txtPPhDipotong)
+        PanelContent.CustomizableEdges = CustomizableEdges31
+        PanelContent.FillColor = Color.White
+        PanelContent.Location = New Point(24, 130)
+        PanelContent.Name = "PanelContent"
+        PanelContent.Padding = New Padding(20)
+        PanelContent.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        PanelContent.Size = New Size(1061, 614)
+        PanelContent.TabIndex = 1
         ' 
-        ' Guna2HtmlLabel33
+        ' PanelInfoDasar
         ' 
-        Guna2HtmlLabel33.BackColor = Color.Transparent
-        Guna2HtmlLabel33.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel33.ForeColor = Color.Black
-        Guna2HtmlLabel33.Location = New Point(284, 153)
-        Guna2HtmlLabel33.Name = "Guna2HtmlLabel33"
-        Guna2HtmlLabel33.Size = New Size(105, 17)
-        Guna2HtmlLabel33.TabIndex = 66
-        Guna2HtmlLabel33.Text = "Bulan Bukti Potong"
+        PanelInfoDasar.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
+        PanelInfoDasar.BackgroundImage = CType(resources.GetObject("PanelInfoDasar.BackgroundImage"), Image)
+        PanelInfoDasar.BackgroundImageLayout = ImageLayout.Stretch
+        PanelInfoDasar.BorderColor = Color.Transparent
+        PanelInfoDasar.BorderRadius = 10
+        PanelInfoDasar.BorderThickness = 1
+        PanelInfoDasar.Controls.Add(lblInfoDasar)
+        PanelInfoDasar.Location = New Point(20, 20)
+        PanelInfoDasar.Name = "PanelInfoDasar"
+        PanelInfoDasar.ShowBorders = True
+        PanelInfoDasar.Size = New Size(1021, 45)
+        PanelInfoDasar.TabIndex = 0
         ' 
-        ' Guna2TextBox12
+        ' lblInfoDasar
         ' 
-        Guna2TextBox12.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox12.BorderRadius = 8
-        Guna2TextBox12.CustomizableEdges = CustomizableEdges3
-        Guna2TextBox12.DefaultText = ""
-        Guna2TextBox12.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox12.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox12.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox12.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox12.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox12.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox12.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox12.Location = New Point(284, 176)
-        Guna2TextBox12.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox12.Name = "Guna2TextBox12"
-        Guna2TextBox12.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox12.PlaceholderText = "Januari"
-        Guna2TextBox12.SelectedText = ""
-        Guna2TextBox12.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TextBox12.Size = New Size(224, 36)
-        Guna2TextBox12.TabIndex = 65
+        lblInfoDasar.BackColor = Color.Transparent
+        lblInfoDasar.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
+        lblInfoDasar.ForeColor = Color.White
+        lblInfoDasar.Location = New Point(15, 12)
+        lblInfoDasar.Name = "lblInfoDasar"
+        lblInfoDasar.Size = New Size(110, 22)
+        lblInfoDasar.TabIndex = 0
+        lblInfoDasar.Text = "Informasi Dasar"
         ' 
-        ' Guna2HtmlLabel32
+        ' PanelPemberiKerja
         ' 
-        Guna2HtmlLabel32.BackColor = Color.Transparent
-        Guna2HtmlLabel32.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel32.ForeColor = Color.Black
-        Guna2HtmlLabel32.Location = New Point(40, 77)
-        Guna2HtmlLabel32.Name = "Guna2HtmlLabel32"
-        Guna2HtmlLabel32.Size = New Size(35, 17)
-        Guna2HtmlLabel32.TabIndex = 64
-        Guna2HtmlLabel32.Text = "Nama"
+        PanelPemberiKerja.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
+        PanelPemberiKerja.BackgroundImage = CType(resources.GetObject("PanelPemberiKerja.BackgroundImage"), Image)
+        PanelPemberiKerja.BackgroundImageLayout = ImageLayout.Stretch
+        PanelPemberiKerja.BorderColor = Color.Transparent
+        PanelPemberiKerja.BorderRadius = 10
+        PanelPemberiKerja.BorderThickness = 1
+        PanelPemberiKerja.Controls.Add(lblPemberiKerjaHeader)
+        PanelPemberiKerja.Location = New Point(20, 223)
+        PanelPemberiKerja.Name = "PanelPemberiKerja"
+        PanelPemberiKerja.ShowBorders = True
+        PanelPemberiKerja.Size = New Size(500, 45)
+        PanelPemberiKerja.TabIndex = 10
         ' 
-        ' Guna2TextBox11
+        ' lblPemberiKerjaHeader
         ' 
-        Guna2TextBox11.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox11.BorderRadius = 8
-        Guna2TextBox11.CustomizableEdges = CustomizableEdges5
-        Guna2TextBox11.DefaultText = "sss"
-        Guna2TextBox11.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox11.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox11.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox11.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox11.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox11.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox11.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox11.Location = New Point(40, 100)
-        Guna2TextBox11.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox11.Name = "Guna2TextBox11"
-        Guna2TextBox11.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox11.PlaceholderText = "Hamza Deleon "
-        Guna2TextBox11.SelectedText = ""
-        Guna2TextBox11.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2TextBox11.Size = New Size(468, 36)
-        Guna2TextBox11.TabIndex = 63
+        lblPemberiKerjaHeader.BackColor = Color.Transparent
+        lblPemberiKerjaHeader.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
+        lblPemberiKerjaHeader.ForeColor = Color.White
+        lblPemberiKerjaHeader.Location = New Point(15, 12)
+        lblPemberiKerjaHeader.Name = "lblPemberiKerjaHeader"
+        lblPemberiKerjaHeader.Size = New Size(147, 22)
+        lblPemberiKerjaHeader.TabIndex = 0
+        lblPemberiKerjaHeader.Text = "Pemberi Kerja / Klien"
         ' 
-        ' BunifuPanel3
+        ' PanelPenghasilan
         ' 
-        BunifuPanel3.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
-        BunifuPanel3.BackgroundImage = CType(resources.GetObject("BunifuPanel3.BackgroundImage"), Image)
-        BunifuPanel3.BackgroundImageLayout = ImageLayout.Stretch
-        BunifuPanel3.BorderColor = Color.Transparent
-        BunifuPanel3.BorderRadius = 10
-        BunifuPanel3.BorderThickness = 1
-        BunifuPanel3.Controls.Add(Guna2HtmlLabel23)
-        BunifuPanel3.Location = New Point(21, 21)
-        BunifuPanel3.Name = "BunifuPanel3"
-        BunifuPanel3.ShowBorders = True
-        BunifuPanel3.Size = New Size(504, 50)
-        BunifuPanel3.TabIndex = 62
+        PanelPenghasilan.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
+        PanelPenghasilan.BackgroundImage = CType(resources.GetObject("PanelPenghasilan.BackgroundImage"), Image)
+        PanelPenghasilan.BackgroundImageLayout = ImageLayout.Stretch
+        PanelPenghasilan.BorderColor = Color.Transparent
+        PanelPenghasilan.BorderRadius = 10
+        PanelPenghasilan.BorderThickness = 1
+        PanelPenghasilan.Controls.Add(lblPenghasilanHeader)
+        PanelPenghasilan.Location = New Point(541, 223)
+        PanelPenghasilan.Name = "PanelPenghasilan"
+        PanelPenghasilan.ShowBorders = True
+        PanelPenghasilan.Size = New Size(500, 45)
+        PanelPenghasilan.TabIndex = 15
         ' 
-        ' Guna2HtmlLabel23
+        ' lblPenghasilanHeader
         ' 
-        Guna2HtmlLabel23.BackColor = Color.Transparent
-        Guna2HtmlLabel23.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        Guna2HtmlLabel23.ForeColor = Color.White
-        Guna2HtmlLabel23.Location = New Point(17, 12)
-        Guna2HtmlLabel23.Name = "Guna2HtmlLabel23"
-        Guna2HtmlLabel23.Size = New Size(96, 22)
-        Guna2HtmlLabel23.TabIndex = 5
-        Guna2HtmlLabel23.Text = "Data Pegawai"
+        lblPenghasilanHeader.BackColor = Color.Transparent
+        lblPenghasilanHeader.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
+        lblPenghasilanHeader.ForeColor = Color.White
+        lblPenghasilanHeader.Location = New Point(15, 12)
+        lblPenghasilanHeader.Name = "lblPenghasilanHeader"
+        lblPenghasilanHeader.Size = New Size(128, 22)
+        lblPenghasilanHeader.TabIndex = 0
+        lblPenghasilanHeader.Text = "Penghasilan Bruto"
         ' 
-        ' Guna2TextBox2
+        ' PanelPerhitungan
         ' 
-        Guna2TextBox2.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox2.BorderRadius = 8
-        Guna2TextBox2.CustomizableEdges = CustomizableEdges7
-        Guna2TextBox2.DefaultText = ""
-        Guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox2.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox2.Location = New Point(38, 780)
-        Guna2TextBox2.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox2.Name = "Guna2TextBox2"
-        Guna2TextBox2.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox2.PlaceholderText = "0"
-        Guna2TextBox2.SelectedText = ""
-        Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2TextBox2.Size = New Size(452, 36)
-        Guna2TextBox2.TabIndex = 61
+        PanelPerhitungan.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
+        PanelPerhitungan.BackgroundImage = CType(resources.GetObject("PanelPerhitungan.BackgroundImage"), Image)
+        PanelPerhitungan.BackgroundImageLayout = ImageLayout.Stretch
+        PanelPerhitungan.BorderColor = Color.Transparent
+        PanelPerhitungan.BorderRadius = 10
+        PanelPerhitungan.BorderThickness = 1
+        PanelPerhitungan.Controls.Add(lblPerhitunganHeader)
+        PanelPerhitungan.Location = New Point(20, 430)
+        PanelPerhitungan.Name = "PanelPerhitungan"
+        PanelPerhitungan.ShowBorders = True
+        PanelPerhitungan.Size = New Size(1021, 45)
+        PanelPerhitungan.TabIndex = 22
         ' 
-        ' Guna2HtmlLabel22
+        ' lblPerhitunganHeader
         ' 
-        Guna2HtmlLabel22.BackColor = Color.Transparent
-        Guna2HtmlLabel22.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel22.ForeColor = Color.Black
-        Guna2HtmlLabel22.Location = New Point(38, 757)
-        Guna2HtmlLabel22.Name = "Guna2HtmlLabel22"
-        Guna2HtmlLabel22.Size = New Size(89, 17)
-        Guna2HtmlLabel22.TabIndex = 60
-        Guna2HtmlLabel22.Text = "Pph 21 Terutang"
+        lblPerhitunganHeader.BackColor = Color.Transparent
+        lblPerhitunganHeader.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
+        lblPerhitunganHeader.ForeColor = Color.White
+        lblPerhitunganHeader.Location = New Point(15, 12)
+        lblPerhitunganHeader.Name = "lblPerhitunganHeader"
+        lblPerhitunganHeader.Size = New Size(129, 22)
+        lblPerhitunganHeader.TabIndex = 0
+        lblPerhitunganHeader.Text = "Perhitungan Pajak"
         ' 
-        ' Guna2Button1
+        ' btnHitung
         ' 
-        Guna2Button1.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        Guna2Button1.BorderRadius = 16
-        Guna2Button1.BorderThickness = 1
-        Guna2Button1.CustomizableEdges = CustomizableEdges9
-        Guna2Button1.FillColor = Color.Transparent
-        Guna2Button1.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
-        Guna2Button1.ForeColor = Color.Black
-        Guna2Button1.Location = New Point(742, 854)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2Button1.Size = New Size(141, 35)
-        Guna2Button1.TabIndex = 59
-        Guna2Button1.Text = "Reset"
+        btnHitung.BackColor = Color.Transparent
+        btnHitung.BorderRadius = 16
+        btnHitung.CustomizableEdges = CustomizableEdges1
+        btnHitung.FillColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnHitung.Font = New Font("Poppins SemiBold", 9F, FontStyle.Bold)
+        btnHitung.ForeColor = Color.White
+        btnHitung.Location = New Point(695, 588)
+        btnHitung.Name = "btnHitung"
+        btnHitung.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnHitung.Size = New Size(100, 26)
+        btnHitung.TabIndex = 29
+        btnHitung.Text = "Hitung"
+        ' 
+        ' btnReset
+        ' 
+        btnReset.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        btnReset.BorderRadius = 16
+        btnReset.BorderThickness = 1
+        btnReset.CustomizableEdges = CustomizableEdges3
+        btnReset.FillColor = Color.Transparent
+        btnReset.Font = New Font("Poppins SemiBold", 9F, FontStyle.Bold)
+        btnReset.ForeColor = Color.Black
+        btnReset.Location = New Point(805, 588)
+        btnReset.Name = "btnReset"
+        btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnReset.Size = New Size(100, 26)
+        btnReset.TabIndex = 30
+        btnReset.Text = "Reset"
         ' 
         ' btnSimpan
         ' 
         btnSimpan.BackColor = Color.Transparent
         btnSimpan.BorderRadius = 16
-        btnSimpan.CustomizableEdges = CustomizableEdges11
+        btnSimpan.CustomizableEdges = CustomizableEdges5
         btnSimpan.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        btnSimpan.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
-        btnSimpan.ForeColor = Color.BlanchedAlmond
-        btnSimpan.Location = New Point(886, 854)
+        btnSimpan.Font = New Font("Poppins SemiBold", 9F, FontStyle.Bold)
+        btnSimpan.ForeColor = Color.White
+        btnSimpan.Location = New Point(915, 588)
         btnSimpan.Name = "btnSimpan"
-        btnSimpan.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        btnSimpan.Size = New Size(141, 35)
-        btnSimpan.TabIndex = 58
-        btnSimpan.Text = "Lapor"
-        ' 
-        ' Guna2HtmlLabel19
-        ' 
-        Guna2HtmlLabel19.BackColor = Color.Transparent
-        Guna2HtmlLabel19.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel19.ForeColor = Color.Black
-        Guna2HtmlLabel19.Location = New Point(38, 153)
-        Guna2HtmlLabel19.Name = "Guna2HtmlLabel19"
-        Guna2HtmlLabel19.Size = New Size(30, 17)
-        Guna2HtmlLabel19.TabIndex = 57
-        Guna2HtmlLabel19.Text = "PTKP"
-        ' 
-        ' Guna2TextBox1
-        ' 
-        Guna2TextBox1.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox1.BorderRadius = 8
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges13
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox1.Location = New Point(38, 176)
-        Guna2TextBox1.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox1.PlaceholderText = "TK/0"
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2TextBox1.Size = New Size(224, 36)
-        Guna2TextBox1.TabIndex = 56
-        ' 
-        ' Guna2Button2
-        ' 
-        Guna2Button2.BackColor = Color.Transparent
-        Guna2Button2.BorderRadius = 16
-        Guna2Button2.CustomizableEdges = CustomizableEdges15
-        Guna2Button2.FillColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2Button2.Font = New Font("Poppins SemiBold", 8.0F, FontStyle.Bold)
-        Guna2Button2.ForeColor = Color.BlanchedAlmond
-        Guna2Button2.Location = New Point(904, 558)
-        Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        Guna2Button2.Size = New Size(141, 35)
-        Guna2Button2.TabIndex = 55
-        Guna2Button2.Text = "Hitung"
-        ' 
-        ' BunifuPanel1
-        ' 
-        BunifuPanel1.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
-        BunifuPanel1.BackgroundImage = CType(resources.GetObject("BunifuPanel1.BackgroundImage"), Image)
-        BunifuPanel1.BackgroundImageLayout = ImageLayout.Stretch
-        BunifuPanel1.BorderColor = Color.Transparent
-        BunifuPanel1.BorderRadius = 10
-        BunifuPanel1.BorderThickness = 1
-        BunifuPanel1.Controls.Add(Guna2HtmlLabel1)
-        BunifuPanel1.Location = New Point(541, 21)
-        BunifuPanel1.Name = "BunifuPanel1"
-        BunifuPanel1.ShowBorders = True
-        BunifuPanel1.Size = New Size(504, 50)
-        BunifuPanel1.TabIndex = 44
-        ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        Guna2HtmlLabel1.ForeColor = Color.White
-        Guna2HtmlLabel1.Location = New Point(17, 12)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(96, 22)
-        Guna2HtmlLabel1.TabIndex = 5
-        Guna2HtmlLabel1.Text = "Pengurangan"
-        ' 
-        ' BunifuPanel5
-        ' 
-        BunifuPanel5.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
-        BunifuPanel5.BackgroundImage = CType(resources.GetObject("BunifuPanel5.BackgroundImage"), Image)
-        BunifuPanel5.BackgroundImageLayout = ImageLayout.Stretch
-        BunifuPanel5.BorderColor = Color.Transparent
-        BunifuPanel5.BorderRadius = 10
-        BunifuPanel5.BorderThickness = 1
-        BunifuPanel5.Controls.Add(Guna2HtmlLabel18)
-        BunifuPanel5.Location = New Point(21, 612)
-        BunifuPanel5.Name = "BunifuPanel5"
-        BunifuPanel5.ShowBorders = True
-        BunifuPanel5.Size = New Size(1024, 50)
-        BunifuPanel5.TabIndex = 52
-        ' 
-        ' Guna2HtmlLabel18
-        ' 
-        Guna2HtmlLabel18.BackColor = Color.Transparent
-        Guna2HtmlLabel18.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        Guna2HtmlLabel18.ForeColor = Color.White
-        Guna2HtmlLabel18.Location = New Point(17, 12)
-        Guna2HtmlLabel18.Name = "Guna2HtmlLabel18"
-        Guna2HtmlLabel18.Size = New Size(181, 22)
-        Guna2HtmlLabel18.TabIndex = 5
-        Guna2HtmlLabel18.Text = "Perhitungan Bukti Potong"
-        ' 
-        ' Guna2TextBox6
-        ' 
-        Guna2TextBox6.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox6.BorderRadius = 8
-        Guna2TextBox6.CustomizableEdges = CustomizableEdges17
-        Guna2TextBox6.DefaultText = ""
-        Guna2TextBox6.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox6.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox6.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox6.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox6.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox6.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox6.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox6.Location = New Point(556, 696)
-        Guna2TextBox6.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox6.Name = "Guna2TextBox6"
-        Guna2TextBox6.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox6.PlaceholderText = "0"
-        Guna2TextBox6.SelectedText = ""
-        Guna2TextBox6.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        Guna2TextBox6.Size = New Size(452, 36)
-        Guna2TextBox6.TabIndex = 49
-        ' 
-        ' Guna2HtmlLabel20
-        ' 
-        Guna2HtmlLabel20.BackColor = Color.Transparent
-        Guna2HtmlLabel20.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel20.ForeColor = Color.Black
-        Guna2HtmlLabel20.Location = New Point(556, 673)
-        Guna2HtmlLabel20.Name = "Guna2HtmlLabel20"
-        Guna2HtmlLabel20.Size = New Size(92, 17)
-        Guna2HtmlLabel20.TabIndex = 48
-        Guna2HtmlLabel20.Text = "Pph 21 Dipotong"
-        ' 
-        ' Guna2HtmlLabel21
-        ' 
-        Guna2HtmlLabel21.BackColor = Color.Transparent
-        Guna2HtmlLabel21.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel21.ForeColor = Color.Black
-        Guna2HtmlLabel21.Location = New Point(40, 673)
-        Guna2HtmlLabel21.Name = "Guna2HtmlLabel21"
-        Guna2HtmlLabel21.Size = New Size(96, 17)
-        Guna2HtmlLabel21.TabIndex = 47
-        Guna2HtmlLabel21.Text = "Penghasilan Neto"
-        ' 
-        ' Guna2TextBox9
-        ' 
-        Guna2TextBox9.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox9.BorderRadius = 8
-        Guna2TextBox9.CustomizableEdges = CustomizableEdges19
-        Guna2TextBox9.DefaultText = ""
-        Guna2TextBox9.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox9.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox9.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox9.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox9.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox9.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox9.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox9.Location = New Point(38, 696)
-        Guna2TextBox9.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox9.Name = "Guna2TextBox9"
-        Guna2TextBox9.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox9.PlaceholderText = "0"
-        Guna2TextBox9.SelectedText = ""
-        Guna2TextBox9.ShadowDecoration.CustomizableEdges = CustomizableEdges20
-        Guna2TextBox9.Size = New Size(467, 36)
-        Guna2TextBox9.TabIndex = 46
-        ' 
-        ' BunifuPanel2
-        ' 
-        BunifuPanel2.BackgroundColor = Color.FromArgb(CByte(186), CByte(52), CByte(240))
-        BunifuPanel2.BackgroundImage = CType(resources.GetObject("BunifuPanel2.BackgroundImage"), Image)
-        BunifuPanel2.BackgroundImageLayout = ImageLayout.Stretch
-        BunifuPanel2.BorderColor = Color.Transparent
-        BunifuPanel2.BorderRadius = 10
-        BunifuPanel2.BorderThickness = 1
-        BunifuPanel2.Controls.Add(Guna2HtmlLabel24)
-        BunifuPanel2.Location = New Point(21, 230)
-        BunifuPanel2.Name = "BunifuPanel2"
-        BunifuPanel2.ShowBorders = True
-        BunifuPanel2.Size = New Size(504, 50)
-        BunifuPanel2.TabIndex = 43
-        ' 
-        ' Guna2HtmlLabel24
-        ' 
-        Guna2HtmlLabel24.BackColor = Color.Transparent
-        Guna2HtmlLabel24.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        Guna2HtmlLabel24.ForeColor = Color.White
-        Guna2HtmlLabel24.Location = New Point(17, 12)
-        Guna2HtmlLabel24.Name = "Guna2HtmlLabel24"
-        Guna2HtmlLabel24.Size = New Size(128, 22)
-        Guna2HtmlLabel24.TabIndex = 5
-        Guna2HtmlLabel24.Text = "Penghasilan Bruto"
-        ' 
-        ' Guna2TextBox5
-        ' 
-        Guna2TextBox5.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox5.BorderRadius = 8
-        Guna2TextBox5.CustomizableEdges = CustomizableEdges21
-        Guna2TextBox5.DefaultText = ""
-        Guna2TextBox5.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox5.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox5.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox5.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox5.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox5.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox5.Location = New Point(558, 253)
-        Guna2TextBox5.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox5.Name = "Guna2TextBox5"
-        Guna2TextBox5.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox5.PlaceholderText = "0"
-        Guna2TextBox5.SelectedText = ""
-        Guna2TextBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        Guna2TextBox5.Size = New Size(450, 36)
-        Guna2TextBox5.TabIndex = 35
-        ' 
-        ' Guna2HtmlLabel25
-        ' 
-        Guna2HtmlLabel25.BackColor = Color.Transparent
-        Guna2HtmlLabel25.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel25.ForeColor = Color.Black
-        Guna2HtmlLabel25.Location = New Point(558, 230)
-        Guna2HtmlLabel25.Name = "Guna2HtmlLabel25"
-        Guna2HtmlLabel25.Size = New Size(103, 17)
-        Guna2HtmlLabel25.TabIndex = 34
-        Guna2HtmlLabel25.Text = "Total Pengurangan"
-        ' 
-        ' Guna2TextBox7
-        ' 
-        Guna2TextBox7.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox7.BorderRadius = 8
-        Guna2TextBox7.CustomizableEdges = CustomizableEdges23
-        Guna2TextBox7.DefaultText = ""
-        Guna2TextBox7.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox7.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox7.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox7.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox7.Location = New Point(558, 176)
-        Guna2TextBox7.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox7.Name = "Guna2TextBox7"
-        Guna2TextBox7.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox7.PlaceholderText = "0"
-        Guna2TextBox7.SelectedText = ""
-        Guna2TextBox7.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        Guna2TextBox7.Size = New Size(450, 36)
-        Guna2TextBox7.TabIndex = 33
-        ' 
-        ' Guna2HtmlLabel26
-        ' 
-        Guna2HtmlLabel26.BackColor = Color.Transparent
-        Guna2HtmlLabel26.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel26.ForeColor = Color.Black
-        Guna2HtmlLabel26.Location = New Point(558, 153)
-        Guna2HtmlLabel26.Name = "Guna2HtmlLabel26"
-        Guna2HtmlLabel26.Size = New Size(101, 17)
-        Guna2HtmlLabel26.TabIndex = 31
-        Guna2HtmlLabel26.Text = "Zakat/Sumbangan"
-        ' 
-        ' Guna2HtmlLabel27
-        ' 
-        Guna2HtmlLabel27.BackColor = Color.Transparent
-        Guna2HtmlLabel27.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel27.ForeColor = Color.Black
-        Guna2HtmlLabel27.Location = New Point(558, 77)
-        Guna2HtmlLabel27.Name = "Guna2HtmlLabel27"
-        Guna2HtmlLabel27.Size = New Size(73, 17)
-        Guna2HtmlLabel27.TabIndex = 30
-        Guna2HtmlLabel27.Text = "Biaya jabatan"
-        ' 
-        ' Guna2TextBox8
-        ' 
-        Guna2TextBox8.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox8.BorderRadius = 8
-        Guna2TextBox8.CustomizableEdges = CustomizableEdges25
-        Guna2TextBox8.DefaultText = ""
-        Guna2TextBox8.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox8.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox8.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox8.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox8.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox8.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox8.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox8.Location = New Point(556, 100)
-        Guna2TextBox8.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox8.Name = "Guna2TextBox8"
-        Guna2TextBox8.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox8.PlaceholderText = "0"
-        Guna2TextBox8.SelectedText = ""
-        Guna2TextBox8.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        Guna2TextBox8.Size = New Size(452, 36)
-        Guna2TextBox8.TabIndex = 29
-        ' 
-        ' Guna2HtmlLabel28
-        ' 
-        Guna2HtmlLabel28.BackColor = Color.Transparent
-        Guna2HtmlLabel28.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel28.ForeColor = Color.Black
-        Guna2HtmlLabel28.Location = New Point(38, 519)
-        Guna2HtmlLabel28.Name = "Guna2HtmlLabel28"
-        Guna2HtmlLabel28.Size = New Size(128, 17)
-        Guna2HtmlLabel28.TabIndex = 27
-        Guna2HtmlLabel28.Text = "Total Penghasilan Bruto"
-        ' 
-        ' Guna2TextBox4
-        ' 
-        Guna2TextBox4.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox4.BorderRadius = 8
-        Guna2TextBox4.CustomizableEdges = CustomizableEdges27
-        Guna2TextBox4.DefaultText = ""
-        Guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox4.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox4.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox4.Location = New Point(38, 542)
-        Guna2TextBox4.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox4.Name = "Guna2TextBox4"
-        Guna2TextBox4.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox4.PlaceholderText = "0"
-        Guna2TextBox4.SelectedText = ""
-        Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges28
-        Guna2TextBox4.Size = New Size(470, 36)
-        Guna2TextBox4.TabIndex = 26
-        ' 
-        ' Guna2TextBox3
-        ' 
-        Guna2TextBox3.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox3.BorderRadius = 8
-        Guna2TextBox3.CustomizableEdges = CustomizableEdges29
-        Guna2TextBox3.DefaultText = ""
-        Guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox3.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox3.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox3.Location = New Point(38, 462)
-        Guna2TextBox3.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox3.Name = "Guna2TextBox3"
-        Guna2TextBox3.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox3.PlaceholderText = "0"
-        Guna2TextBox3.SelectedText = ""
-        Guna2TextBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges30
-        Guna2TextBox3.Size = New Size(470, 36)
-        Guna2TextBox3.TabIndex = 25
-        ' 
-        ' Guna2HtmlLabel29
-        ' 
-        Guna2HtmlLabel29.BackColor = Color.Transparent
-        Guna2HtmlLabel29.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel29.ForeColor = Color.Black
-        Guna2HtmlLabel29.Location = New Point(38, 439)
-        Guna2HtmlLabel29.Name = "Guna2HtmlLabel29"
-        Guna2HtmlLabel29.Size = New Size(123, 17)
-        Guna2HtmlLabel29.TabIndex = 24
-        Guna2HtmlLabel29.Text = "Tantiem, Bonus & THR"
-        ' 
-        ' Guna2TextBox10
-        ' 
-        Guna2TextBox10.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        Guna2TextBox10.BorderRadius = 8
-        Guna2TextBox10.CustomizableEdges = CustomizableEdges31
-        Guna2TextBox10.DefaultText = ""
-        Guna2TextBox10.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox10.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox10.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox10.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox10.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        Guna2TextBox10.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        Guna2TextBox10.Font = New Font("Segoe UI", 9.0F)
-        Guna2TextBox10.Location = New Point(38, 385)
-        Guna2TextBox10.Margin = New Padding(2, 3, 2, 3)
-        Guna2TextBox10.Name = "Guna2TextBox10"
-        Guna2TextBox10.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        Guna2TextBox10.PlaceholderText = "0"
-        Guna2TextBox10.SelectedText = ""
-        Guna2TextBox10.ShadowDecoration.CustomizableEdges = CustomizableEdges32
-        Guna2TextBox10.Size = New Size(467, 36)
-        Guna2TextBox10.TabIndex = 22
-        ' 
-        ' Guna2HtmlLabel30
-        ' 
-        Guna2HtmlLabel30.BackColor = Color.Transparent
-        Guna2HtmlLabel30.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel30.ForeColor = Color.Black
-        Guna2HtmlLabel30.Location = New Point(38, 362)
-        Guna2HtmlLabel30.Name = "Guna2HtmlLabel30"
-        Guna2HtmlLabel30.Size = New Size(135, 17)
-        Guna2HtmlLabel30.TabIndex = 20
-        Guna2HtmlLabel30.Text = "Tunjangan Tetap Lainnya"
-        ' 
-        ' Guna2HtmlLabel31
-        ' 
-        Guna2HtmlLabel31.BackColor = Color.Transparent
-        Guna2HtmlLabel31.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel31.ForeColor = Color.Black
-        Guna2HtmlLabel31.Location = New Point(38, 286)
-        Guna2HtmlLabel31.Name = "Guna2HtmlLabel31"
-        Guna2HtmlLabel31.Size = New Size(59, 17)
-        Guna2HtmlLabel31.TabIndex = 19
-        Guna2HtmlLabel31.Text = "Gaji Pokok"
-        ' 
-        ' txtPPhTerutang
-        ' 
-        txtPPhTerutang.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
-        txtPPhTerutang.BorderRadius = 8
-        txtPPhTerutang.CustomizableEdges = CustomizableEdges33
-        txtPPhTerutang.DefaultText = ""
-        txtPPhTerutang.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtPPhTerutang.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtPPhTerutang.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtPPhTerutang.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtPPhTerutang.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
-        txtPPhTerutang.FocusedState.BorderColor = Color.FromArgb(CByte(0), CByte(122), CByte(255))
-        txtPPhTerutang.Font = New Font("Segoe UI", 9.0F)
-        txtPPhTerutang.Location = New Point(38, 309)
-        txtPPhTerutang.Margin = New Padding(2, 3, 2, 3)
-        txtPPhTerutang.Name = "txtPPhTerutang"
-        txtPPhTerutang.PlaceholderForeColor = Color.FromArgb(CByte(142), CByte(142), CByte(147))
-        txtPPhTerutang.PlaceholderText = "0"
-        txtPPhTerutang.SelectedText = ""
-        txtPPhTerutang.ShadowDecoration.CustomizableEdges = CustomizableEdges34
-        txtPPhTerutang.Size = New Size(467, 36)
-        txtPPhTerutang.TabIndex = 8
-        ' 
-        ' Guna2HtmlLabel17
-        ' 
-        Guna2HtmlLabel17.BackColor = Color.Transparent
-        Guna2HtmlLabel17.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel17.ForeColor = Color.Black
-        Guna2HtmlLabel17.Location = New Point(44, 87)
-        Guna2HtmlLabel17.Name = "Guna2HtmlLabel17"
-        Guna2HtmlLabel17.Size = New Size(30, 17)
-        Guna2HtmlLabel17.TabIndex = 17
-        Guna2HtmlLabel17.Text = "PTKP"
-        ' 
-        ' Guna2HtmlLabel15
-        ' 
-        Guna2HtmlLabel15.BackColor = Color.Transparent
-        Guna2HtmlLabel15.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel15.ForeColor = Color.Black
-        Guna2HtmlLabel15.Location = New Point(318, 87)
-        Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
-        Guna2HtmlLabel15.Size = New Size(36, 17)
-        Guna2HtmlLabel15.TabIndex = 18
-        Guna2HtmlLabel15.Text = "Tahun"
-        ' 
-        ' Guna2HtmlLabel3
-        ' 
-        Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel3.ForeColor = Color.Black
-        Guna2HtmlLabel3.Location = New Point(40, 225)
-        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(59, 17)
-        Guna2HtmlLabel3.TabIndex = 19
-        Guna2HtmlLabel3.Text = "Gaji Pokok"
-        ' 
-        ' Guna2HtmlLabel4
-        ' 
-        Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel4.ForeColor = Color.Black
-        Guna2HtmlLabel4.Location = New Point(269, 225)
-        Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Guna2HtmlLabel4.Size = New Size(135, 17)
-        Guna2HtmlLabel4.TabIndex = 20
-        Guna2HtmlLabel4.Text = "Tunjangan Tetap Lainnya"
-        ' 
-        ' Guna2HtmlLabel6
-        ' 
-        Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel6.ForeColor = Color.Black
-        Guna2HtmlLabel6.Location = New Point(500, 225)
-        Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Guna2HtmlLabel6.Size = New Size(123, 17)
-        Guna2HtmlLabel6.TabIndex = 24
-        Guna2HtmlLabel6.Text = "Tantiem, Bonus & THR"
-        ' 
-        ' Guna2HtmlLabel7
-        ' 
-        Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel7.ForeColor = Color.Black
-        Guna2HtmlLabel7.Location = New Point(731, 225)
-        Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Guna2HtmlLabel7.Size = New Size(140, 17)
-        Guna2HtmlLabel7.TabIndex = 27
-        Guna2HtmlLabel7.Text = "Jumlah Penghasilan Bruto"
-        ' 
-        ' Guna2HtmlLabel11
-        ' 
-        Guna2HtmlLabel11.BackColor = Color.Transparent
-        Guna2HtmlLabel11.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel11.ForeColor = Color.Black
-        Guna2HtmlLabel11.Location = New Point(40, 399)
-        Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
-        Guna2HtmlLabel11.Size = New Size(73, 17)
-        Guna2HtmlLabel11.TabIndex = 30
-        Guna2HtmlLabel11.Text = "Biaya jabatan"
-        ' 
-        ' Guna2HtmlLabel10
-        ' 
-        Guna2HtmlLabel10.BackColor = Color.Transparent
-        Guna2HtmlLabel10.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel10.ForeColor = Color.Black
-        Guna2HtmlLabel10.Location = New Point(269, 399)
-        Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
-        Guna2HtmlLabel10.Size = New Size(101, 17)
-        Guna2HtmlLabel10.TabIndex = 31
-        Guna2HtmlLabel10.Text = "Zakat/Sumbangan"
-        ' 
-        ' Guna2HtmlLabel8
-        ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel8.ForeColor = Color.Black
-        Guna2HtmlLabel8.Location = New Point(500, 399)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(103, 17)
-        Guna2HtmlLabel8.TabIndex = 34
-        Guna2HtmlLabel8.Text = "Total Pengurangan"
-        ' 
-        ' lblDetailPajak
-        ' 
-        lblDetailPajak.BackColor = Color.Transparent
-        lblDetailPajak.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        lblDetailPajak.ForeColor = Color.White
-        lblDetailPajak.Location = New Point(17, 12)
-        lblDetailPajak.Name = "lblDetailPajak"
-        lblDetailPajak.Size = New Size(128, 22)
-        lblDetailPajak.TabIndex = 5
-        lblDetailPajak.Text = "Penghasilan Bruto"
-        ' 
-        ' Guna2HtmlLabel12
-        ' 
-        Guna2HtmlLabel12.BackColor = Color.Transparent
-        Guna2HtmlLabel12.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        Guna2HtmlLabel12.ForeColor = Color.White
-        Guna2HtmlLabel12.Location = New Point(17, 12)
-        Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
-        Guna2HtmlLabel12.Size = New Size(96, 22)
-        Guna2HtmlLabel12.TabIndex = 5
-        Guna2HtmlLabel12.Text = "Pengurangan"
-        ' 
-        ' Guna2HtmlLabel16
-        ' 
-        Guna2HtmlLabel16.BackColor = Color.Transparent
-        Guna2HtmlLabel16.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        Guna2HtmlLabel16.ForeColor = Color.White
-        Guna2HtmlLabel16.Location = New Point(17, 12)
-        Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
-        Guna2HtmlLabel16.Size = New Size(151, 22)
-        Guna2HtmlLabel16.TabIndex = 5
-        Guna2HtmlLabel16.Text = "Informasi Wajib Pajak"
-        ' 
-        ' Guna2HtmlLabel14
-        ' 
-        Guna2HtmlLabel14.BackColor = Color.Transparent
-        Guna2HtmlLabel14.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel14.ForeColor = Color.Black
-        Guna2HtmlLabel14.Location = New Point(38, 551)
-        Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-        Guna2HtmlLabel14.Size = New Size(96, 17)
-        Guna2HtmlLabel14.TabIndex = 47
-        Guna2HtmlLabel14.Text = "Penghasilan Neto"
-        ' 
-        ' Guna2HtmlLabel13
-        ' 
-        Guna2HtmlLabel13.BackColor = Color.Transparent
-        Guna2HtmlLabel13.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel13.ForeColor = Color.Black
-        Guna2HtmlLabel13.Location = New Point(269, 551)
-        Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-        Guna2HtmlLabel13.Size = New Size(55, 17)
-        Guna2HtmlLabel13.TabIndex = 48
-        Guna2HtmlLabel13.Text = "Pajak PPh"
-        ' 
-        ' Guna2HtmlLabel9
-        ' 
-        Guna2HtmlLabel9.BackColor = Color.Transparent
-        Guna2HtmlLabel9.Font = New Font("Segoe UI", 9.0F)
-        Guna2HtmlLabel9.ForeColor = Color.Black
-        Guna2HtmlLabel9.Location = New Point(500, 551)
-        Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
-        Guna2HtmlLabel9.Size = New Size(103, 17)
-        Guna2HtmlLabel9.TabIndex = 50
-        Guna2HtmlLabel9.Text = "Total Pengurangan"
-        ' 
-        ' Guna2HtmlLabel5
-        ' 
-        Guna2HtmlLabel5.BackColor = Color.Transparent
-        Guna2HtmlLabel5.Font = New Font("Segoe UI Semibold", 11.0F, FontStyle.Bold)
-        Guna2HtmlLabel5.ForeColor = Color.White
-        Guna2HtmlLabel5.Location = New Point(17, 12)
-        Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Guna2HtmlLabel5.Size = New Size(36, 22)
-        Guna2HtmlLabel5.TabIndex = 5
-        Guna2HtmlLabel5.Text = "Hasil"
-        ' 
-        ' Wp_navbar11
-        ' 
-        Wp_navbar11.BackColor = Color.FromArgb(CByte(84), CByte(64), CByte(209))
-        Wp_navbar11.Dock = DockStyle.Left
-        Wp_navbar11.ForeColor = Color.White
-        Wp_navbar11.Location = New Point(0, 0)
-        Wp_navbar11.Margin = New Padding(3, 4, 3, 4)
-        Wp_navbar11.Name = "Wp_navbar11"
-        Wp_navbar11.Size = New Size(191, 720)
-        Wp_navbar11.TabIndex = 2
-        ' 
-        ' pk_form_bukti_potong
+        btnSimpan.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnSimpan.Size = New Size(120, 26)
+        btnSimpan.TabIndex = 31
+        btnSimpan.Text = "Simpan"
+        ' 
+        ' lblNama
+        ' 
+        lblNama.BackColor = Color.Transparent
+        lblNama.Font = New Font("Segoe UI", 9F)
+        lblNama.ForeColor = Color.Black
+        lblNama.Location = New Point(20, 75)
+        lblNama.Name = "lblNama"
+        lblNama.Size = New Size(99, 17)
+        lblNama.TabIndex = 1
+        lblNama.Text = "Nama Wajib Pajak"
+        ' 
+        ' txtNama
+        ' 
+        txtNama.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtNama.BorderRadius = 8
+        txtNama.CustomizableEdges = CustomizableEdges7
+        txtNama.DefaultText = ""
+        txtNama.Enabled = False
+        txtNama.FillColor = Color.FromArgb(CByte(235), CByte(236), CByte(240))
+        txtNama.Font = New Font("Segoe UI", 9F)
+        txtNama.Location = New Point(20, 95)
+        txtNama.Name = "txtNama"
+        txtNama.PlaceholderText = ""
+        txtNama.SelectedText = ""
+        txtNama.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        txtNama.Size = New Size(490, 36)
+        txtNama.TabIndex = 2
+        ' 
+        ' lblJenisFreelance
+        ' 
+        lblJenisFreelance.BackColor = Color.Transparent
+        lblJenisFreelance.Font = New Font("Segoe UI", 9F)
+        lblJenisFreelance.ForeColor = Color.Black
+        lblJenisFreelance.Location = New Point(530, 75)
+        lblJenisFreelance.Name = "lblJenisFreelance"
+        lblJenisFreelance.Size = New Size(81, 17)
+        lblJenisFreelance.TabIndex = 3
+        lblJenisFreelance.Text = "Jenis Freelance"
+        ' 
+        ' cboJenisFreelance
+        ' 
+        cboJenisFreelance.BackColor = Color.Transparent
+        cboJenisFreelance.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        cboJenisFreelance.BorderRadius = 8
+        cboJenisFreelance.CustomizableEdges = CustomizableEdges9
+        cboJenisFreelance.DrawMode = DrawMode.OwnerDrawFixed
+        cboJenisFreelance.DropDownStyle = ComboBoxStyle.DropDownList
+        cboJenisFreelance.FocusedColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cboJenisFreelance.FocusedState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cboJenisFreelance.Font = New Font("Segoe UI", 10F)
+        cboJenisFreelance.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cboJenisFreelance.ItemHeight = 30
+        cboJenisFreelance.Location = New Point(530, 95)
+        cboJenisFreelance.Name = "cboJenisFreelance"
+        cboJenisFreelance.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        cboJenisFreelance.Size = New Size(240, 36)
+        cboJenisFreelance.TabIndex = 4
+        ' 
+        ' lblBulan
+        ' 
+        lblBulan.BackColor = Color.Transparent
+        lblBulan.Font = New Font("Segoe UI", 9F)
+        lblBulan.ForeColor = Color.Black
+        lblBulan.Location = New Point(20, 145)
+        lblBulan.Name = "lblBulan"
+        lblBulan.Size = New Size(33, 17)
+        lblBulan.TabIndex = 5
+        lblBulan.Text = "Bulan"
+        ' 
+        ' cboBulan
+        ' 
+        cboBulan.BackColor = Color.Transparent
+        cboBulan.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        cboBulan.BorderRadius = 8
+        cboBulan.CustomizableEdges = CustomizableEdges11
+        cboBulan.DrawMode = DrawMode.OwnerDrawFixed
+        cboBulan.DropDownStyle = ComboBoxStyle.DropDownList
+        cboBulan.FocusedColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cboBulan.FocusedState.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        cboBulan.Font = New Font("Segoe UI", 10F)
+        cboBulan.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cboBulan.ItemHeight = 30
+        cboBulan.Location = New Point(20, 165)
+        cboBulan.Name = "cboBulan"
+        cboBulan.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        cboBulan.Size = New Size(240, 36)
+        cboBulan.TabIndex = 6
+        ' 
+        ' lblTahun
+        ' 
+        lblTahun.BackColor = Color.Transparent
+        lblTahun.Font = New Font("Segoe UI", 9F)
+        lblTahun.ForeColor = Color.Black
+        lblTahun.Location = New Point(280, 145)
+        lblTahun.Name = "lblTahun"
+        lblTahun.Size = New Size(36, 17)
+        lblTahun.TabIndex = 7
+        lblTahun.Text = "Tahun"
+        ' 
+        ' txtTahun
+        ' 
+        txtTahun.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtTahun.BorderRadius = 8
+        txtTahun.CustomizableEdges = CustomizableEdges13
+        txtTahun.DefaultText = ""
+        txtTahun.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtTahun.Font = New Font("Segoe UI", 9F)
+        txtTahun.Location = New Point(280, 165)
+        txtTahun.Name = "txtTahun"
+        txtTahun.PlaceholderText = ""
+        txtTahun.SelectedText = ""
+        txtTahun.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        txtTahun.Size = New Size(120, 36)
+        txtTahun.TabIndex = 8
+        ' 
+        ' lblNamaPemberiKerja
+        ' 
+        lblNamaPemberiKerja.BackColor = Color.Transparent
+        lblNamaPemberiKerja.Font = New Font("Segoe UI", 9F)
+        lblNamaPemberiKerja.ForeColor = Color.Black
+        lblNamaPemberiKerja.Location = New Point(20, 278)
+        lblNamaPemberiKerja.Name = "lblNamaPemberiKerja"
+        lblNamaPemberiKerja.Size = New Size(119, 17)
+        lblNamaPemberiKerja.TabIndex = 11
+        lblNamaPemberiKerja.Text = "Nama Pemberi Kerja *"
+        ' 
+        ' txtNamaPemberiKerja
+        ' 
+        txtNamaPemberiKerja.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtNamaPemberiKerja.BorderRadius = 8
+        txtNamaPemberiKerja.CustomizableEdges = CustomizableEdges15
+        txtNamaPemberiKerja.DefaultText = ""
+        txtNamaPemberiKerja.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtNamaPemberiKerja.Font = New Font("Segoe UI", 9F)
+        txtNamaPemberiKerja.Location = New Point(20, 298)
+        txtNamaPemberiKerja.Name = "txtNamaPemberiKerja"
+        txtNamaPemberiKerja.PlaceholderText = "Masukkan nama perusahaan/klien"
+        txtNamaPemberiKerja.SelectedText = ""
+        txtNamaPemberiKerja.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        txtNamaPemberiKerja.Size = New Size(490, 36)
+        txtNamaPemberiKerja.TabIndex = 12
+        ' 
+        ' lblNpwpPemberiKerja
+        ' 
+        lblNpwpPemberiKerja.BackColor = Color.Transparent
+        lblNpwpPemberiKerja.Font = New Font("Segoe UI", 9F)
+        lblNpwpPemberiKerja.ForeColor = Color.Black
+        lblNpwpPemberiKerja.Location = New Point(20, 348)
+        lblNpwpPemberiKerja.Name = "lblNpwpPemberiKerja"
+        lblNpwpPemberiKerja.Size = New Size(169, 17)
+        lblNpwpPemberiKerja.TabIndex = 13
+        lblNpwpPemberiKerja.Text = "NPWP Pemberi Kerja (opsional)"
+        ' 
+        ' txtNpwpPemberiKerja
+        ' 
+        txtNpwpPemberiKerja.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtNpwpPemberiKerja.BorderRadius = 8
+        txtNpwpPemberiKerja.CustomizableEdges = CustomizableEdges17
+        txtNpwpPemberiKerja.DefaultText = ""
+        txtNpwpPemberiKerja.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtNpwpPemberiKerja.Font = New Font("Segoe UI", 9F)
+        txtNpwpPemberiKerja.Location = New Point(20, 368)
+        txtNpwpPemberiKerja.Name = "txtNpwpPemberiKerja"
+        txtNpwpPemberiKerja.PlaceholderText = "Masukkan NPWP pemberi kerja (jika ada)"
+        txtNpwpPemberiKerja.SelectedText = ""
+        txtNpwpPemberiKerja.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        txtNpwpPemberiKerja.Size = New Size(490, 36)
+        txtNpwpPemberiKerja.TabIndex = 14
+        ' 
+        ' lblBrutoPerHari
+        ' 
+        lblBrutoPerHari.BackColor = Color.Transparent
+        lblBrutoPerHari.Font = New Font("Segoe UI", 9F)
+        lblBrutoPerHari.ForeColor = Color.Black
+        lblBrutoPerHari.Location = New Point(541, 278)
+        lblBrutoPerHari.Name = "lblBrutoPerHari"
+        lblBrutoPerHari.Size = New Size(77, 17)
+        lblBrutoPerHari.TabIndex = 16
+        lblBrutoPerHari.Text = "Bruto Per Hari"
+        lblBrutoPerHari.Visible = False
+        ' 
+        ' txtBrutoPerHari
+        ' 
+        txtBrutoPerHari.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtBrutoPerHari.BorderRadius = 8
+        txtBrutoPerHari.CustomizableEdges = CustomizableEdges19
+        txtBrutoPerHari.DefaultText = ""
+        txtBrutoPerHari.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtBrutoPerHari.Font = New Font("Segoe UI", 9F)
+        txtBrutoPerHari.Location = New Point(541, 298)
+        txtBrutoPerHari.Name = "txtBrutoPerHari"
+        txtBrutoPerHari.PlaceholderText = "0"
+        txtBrutoPerHari.SelectedText = ""
+        txtBrutoPerHari.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        txtBrutoPerHari.Size = New Size(230, 36)
+        txtBrutoPerHari.TabIndex = 17
+        txtBrutoPerHari.Visible = False
+        ' 
+        ' lblJumlahHariKerja
+        ' 
+        lblJumlahHariKerja.BackColor = Color.Transparent
+        lblJumlahHariKerja.Font = New Font("Segoe UI", 9F)
+        lblJumlahHariKerja.ForeColor = Color.Black
+        lblJumlahHariKerja.Location = New Point(791, 278)
+        lblJumlahHariKerja.Name = "lblJumlahHariKerja"
+        lblJumlahHariKerja.Size = New Size(95, 17)
+        lblJumlahHariKerja.TabIndex = 18
+        lblJumlahHariKerja.Text = "Jumlah Hari Kerja"
+        lblJumlahHariKerja.Visible = False
+        ' 
+        ' txtJumlahHariKerja
+        ' 
+        txtJumlahHariKerja.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtJumlahHariKerja.BorderRadius = 8
+        txtJumlahHariKerja.CustomizableEdges = CustomizableEdges21
+        txtJumlahHariKerja.DefaultText = ""
+        txtJumlahHariKerja.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtJumlahHariKerja.Font = New Font("Segoe UI", 9F)
+        txtJumlahHariKerja.Location = New Point(791, 298)
+        txtJumlahHariKerja.Name = "txtJumlahHariKerja"
+        txtJumlahHariKerja.PlaceholderText = "0"
+        txtJumlahHariKerja.SelectedText = ""
+        txtJumlahHariKerja.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        txtJumlahHariKerja.Size = New Size(120, 36)
+        txtJumlahHariKerja.TabIndex = 19
+        txtJumlahHariKerja.Visible = False
+        ' 
+        ' lblBrutoTotal
+        ' 
+        lblBrutoTotal.BackColor = Color.Transparent
+        lblBrutoTotal.Font = New Font("Segoe UI", 9F)
+        lblBrutoTotal.ForeColor = Color.Black
+        lblBrutoTotal.Location = New Point(541, 278)
+        lblBrutoTotal.Name = "lblBrutoTotal"
+        lblBrutoTotal.Size = New Size(136, 17)
+        lblBrutoTotal.TabIndex = 20
+        lblBrutoTotal.Text = "Total Penghasilan Bruto *"
+        ' 
+        ' txtBrutoTotal
+        ' 
+        txtBrutoTotal.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtBrutoTotal.BorderRadius = 8
+        txtBrutoTotal.CustomizableEdges = CustomizableEdges23
+        txtBrutoTotal.DefaultText = ""
+        txtBrutoTotal.FillColor = Color.FromArgb(CByte(245), CByte(246), CByte(250))
+        txtBrutoTotal.Font = New Font("Segoe UI", 9F)
+        txtBrutoTotal.Location = New Point(541, 298)
+        txtBrutoTotal.Name = "txtBrutoTotal"
+        txtBrutoTotal.PlaceholderText = "0"
+        txtBrutoTotal.SelectedText = ""
+        txtBrutoTotal.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        txtBrutoTotal.Size = New Size(490, 36)
+        txtBrutoTotal.TabIndex = 21
+        ' 
+        ' lblDPP
+        ' 
+        lblDPP.BackColor = Color.Transparent
+        lblDPP.Font = New Font("Segoe UI", 9F)
+        lblDPP.ForeColor = Color.Black
+        lblDPP.Location = New Point(20, 485)
+        lblDPP.Name = "lblDPP"
+        lblDPP.Size = New Size(158, 17)
+        lblDPP.TabIndex = 23
+        lblDPP.Text = "DPP (Dasar Pengenaan Pajak)"
+        ' 
+        ' txtDPP
+        ' 
+        txtDPP.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtDPP.BorderRadius = 8
+        txtDPP.CustomizableEdges = CustomizableEdges25
+        txtDPP.DefaultText = ""
+        txtDPP.Enabled = False
+        txtDPP.FillColor = Color.FromArgb(CByte(235), CByte(236), CByte(240))
+        txtDPP.Font = New Font("Segoe UI", 9F)
+        txtDPP.Location = New Point(20, 505)
+        txtDPP.Name = "txtDPP"
+        txtDPP.PlaceholderText = "0"
+        txtDPP.SelectedText = ""
+        txtDPP.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        txtDPP.Size = New Size(320, 36)
+        txtDPP.TabIndex = 24
+        ' 
+        ' lblTarif
+        ' 
+        lblTarif.BackColor = Color.Transparent
+        lblTarif.Font = New Font("Segoe UI", 9F)
+        lblTarif.ForeColor = Color.Black
+        lblTarif.Location = New Point(360, 485)
+        lblTarif.Name = "lblTarif"
+        lblTarif.Size = New Size(47, 17)
+        lblTarif.TabIndex = 25
+        lblTarif.Text = "Tarif (%)"
+        ' 
+        ' txtTarif
+        ' 
+        txtTarif.BorderColor = Color.FromArgb(CByte(220), CByte(220), CByte(225))
+        txtTarif.BorderRadius = 8
+        txtTarif.CustomizableEdges = CustomizableEdges27
+        txtTarif.DefaultText = ""
+        txtTarif.Enabled = False
+        txtTarif.FillColor = Color.FromArgb(CByte(235), CByte(236), CByte(240))
+        txtTarif.Font = New Font("Segoe UI", 9F)
+        txtTarif.Location = New Point(360, 505)
+        txtTarif.Name = "txtTarif"
+        txtTarif.PlaceholderText = "0"
+        txtTarif.SelectedText = ""
+        txtTarif.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        txtTarif.Size = New Size(130, 36)
+        txtTarif.TabIndex = 26
+        ' 
+        ' lblPPhDipotong
+        ' 
+        lblPPhDipotong.BackColor = Color.Transparent
+        lblPPhDipotong.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
+        lblPPhDipotong.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        lblPPhDipotong.Location = New Point(510, 485)
+        lblPPhDipotong.Name = "lblPPhDipotong"
+        lblPPhDipotong.Size = New Size(93, 17)
+        lblPPhDipotong.TabIndex = 27
+        lblPPhDipotong.Text = "PPh 21 Dipotong"
+        ' 
+        ' txtPPhDipotong
+        ' 
+        txtPPhDipotong.BorderColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        txtPPhDipotong.BorderRadius = 8
+        txtPPhDipotong.BorderThickness = 2
+        txtPPhDipotong.CustomizableEdges = CustomizableEdges29
+        txtPPhDipotong.DefaultText = ""
+        txtPPhDipotong.Enabled = False
+        txtPPhDipotong.FillColor = Color.FromArgb(CByte(250), CByte(245), CByte(255))
+        txtPPhDipotong.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
+        txtPPhDipotong.ForeColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        txtPPhDipotong.Location = New Point(510, 505)
+        txtPPhDipotong.Name = "txtPPhDipotong"
+        txtPPhDipotong.PlaceholderText = "0"
+        txtPPhDipotong.SelectedText = ""
+        txtPPhDipotong.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        txtPPhDipotong.Size = New Size(320, 36)
+        txtPPhDipotong.TabIndex = 28
+        ' 
+        ' PanelHeader
+        ' 
+        PanelHeader.BackColor = Color.Transparent
+        PanelHeader.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
+        PanelHeader.BorderRadius = 12
+        PanelHeader.BorderThickness = 1
+        PanelHeader.Controls.Add(lblTitle)
+        PanelHeader.Controls.Add(lblSubtitle)
+        PanelHeader.CustomizableEdges = CustomizableEdges33
+        PanelHeader.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
+        PanelHeader.Location = New Point(24, 24)
+        PanelHeader.Name = "PanelHeader"
+        PanelHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        PanelHeader.Size = New Size(1061, 85)
+        PanelHeader.TabIndex = 0
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.BackColor = Color.Transparent
+        lblTitle.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold)
+        lblTitle.ForeColor = Color.White
+        lblTitle.Location = New Point(24, 16)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(275, 27)
+        lblTitle.TabIndex = 0
+        lblTitle.Text = "Tambah Bukti Potong Freelance"
+        ' 
+        ' lblSubtitle
+        ' 
+        lblSubtitle.BackColor = Color.Transparent
+        lblSubtitle.Font = New Font("Segoe UI", 9F)
+        lblSubtitle.ForeColor = Color.FromArgb(CByte(233), CByte(221), CByte(255))
+        lblSubtitle.Location = New Point(24, 48)
+        lblSubtitle.Name = "lblSubtitle"
+        lblSubtitle.Size = New Size(393, 17)
+        lblSubtitle.TabIndex = 1
+        lblSubtitle.Text = "Masukkan detail penghasilan freelance untuk menghasilkan bukti potong."
+        ' 
+        ' wp_tambah_bukti_potong
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
         ClientSize = New Size(1300, 720)
-        Controls.Add(Wp_navbar11)
+        Controls.Add(Wp_navbar1)
         Controls.Add(PanelMain)
         FormBorderStyle = FormBorderStyle.None
-        Name = "pk_form_bukti_potong"
+        Name = "wp_tambah_bukti_potong"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "FrmBuktiPotongA1"
-        Guna2PanelHeader.ResumeLayout(False)
-        Guna2PanelHeader.PerformLayout()
+        Text = "Tambah Bukti Potong Freelance"
         PanelMain.ResumeLayout(False)
-        Guna2Panel1.ResumeLayout(False)
-        Guna2Panel1.PerformLayout()
-        BunifuPanel3.ResumeLayout(False)
-        BunifuPanel3.PerformLayout()
-        BunifuPanel1.ResumeLayout(False)
-        BunifuPanel1.PerformLayout()
-        BunifuPanel5.ResumeLayout(False)
-        BunifuPanel5.PerformLayout()
-        BunifuPanel2.ResumeLayout(False)
-        BunifuPanel2.PerformLayout()
+        PanelContent.ResumeLayout(False)
+        PanelContent.PerformLayout()
+        PanelInfoDasar.ResumeLayout(False)
+        PanelInfoDasar.PerformLayout()
+        PanelPemberiKerja.ResumeLayout(False)
+        PanelPemberiKerja.PerformLayout()
+        PanelPenghasilan.ResumeLayout(False)
+        PanelPenghasilan.PerformLayout()
+        PanelPerhitungan.ResumeLayout(False)
+        PanelPerhitungan.PerformLayout()
+        PanelHeader.ResumeLayout(False)
+        PanelHeader.PerformLayout()
         ResumeLayout(False)
     End Sub
-    Friend WithEvents wp_navbar As wp_navbar
-    Friend WithEvents Guna2PanelHeader As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+
+    ' Navigation
+    Friend WithEvents Wp_navbar1 As wp_navbar
+
+    ' Panels
+    Friend WithEvents PanelMain As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PanelHeader As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PanelContent As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PanelInfoDasar As Bunifu.UI.WinForms.BunifuPanel
+    Friend WithEvents PanelPemberiKerja As Bunifu.UI.WinForms.BunifuPanel
+    Friend WithEvents PanelPenghasilan As Bunifu.UI.WinForms.BunifuPanel
+    Friend WithEvents PanelPerhitungan As Bunifu.UI.WinForms.BunifuPanel
+
+    ' Labels - Headers
     Friend WithEvents lblTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents PanelMain As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2HtmlLabel17 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel15 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel10 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents lblDetailPajak As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel12 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel16 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel14 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel9 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents BunifuPanel5 As Bunifu.UI.WinForms.BunifuPanel
-    Friend WithEvents Guna2HtmlLabel18 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox6 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel20 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel21 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox9 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents BunifuPanel2 As Bunifu.UI.WinForms.BunifuPanel
-    Friend WithEvents Guna2HtmlLabel24 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox5 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel25 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox7 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel26 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel27 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox8 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel28 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel29 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox10 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel30 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel31 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents txtPPhTerutang As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Wp_navbar11 As wp_navbar
-    Friend WithEvents BunifuPanel1 As Bunifu.UI.WinForms.BunifuPanel
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2HtmlLabel19 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnSimpan As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel22 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel32 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox11 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents BunifuPanel3 As Bunifu.UI.WinForms.BunifuPanel
-    Friend WithEvents Guna2HtmlLabel23 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel33 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox12 As Guna.UI2.WinForms.Guna2TextBox
-End Class
+    Friend WithEvents lblInfoDasar As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPemberiKerjaHeader As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPenghasilanHeader As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPerhitunganHeader As Guna.UI2.WinForms.Guna2HtmlLabel
 
+    ' Labels - Fields
+    Friend WithEvents lblNama As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblJenisFreelance As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblBulan As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblTahun As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblNamaPemberiKerja As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblNpwpPemberiKerja As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblBrutoPerHari As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblJumlahHariKerja As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblBrutoTotal As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblDPP As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblTarif As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPPhDipotong As Guna.UI2.WinForms.Guna2HtmlLabel
+
+    ' TextBoxes
+    Friend WithEvents txtNama As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtTahun As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtNamaPemberiKerja As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtNpwpPemberiKerja As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtBrutoPerHari As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtJumlahHariKerja As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtBrutoTotal As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtDPP As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtTarif As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtPPhDipotong As Guna.UI2.WinForms.Guna2TextBox
+
+    ' ComboBoxes
+    Friend WithEvents cboJenisFreelance As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cboBulan As Guna.UI2.WinForms.Guna2ComboBox
+
+    ' Buttons
+    Friend WithEvents btnHitung As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnReset As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSimpan As Guna.UI2.WinForms.Guna2Button
+End Class

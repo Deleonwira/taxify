@@ -180,4 +180,48 @@ Module ModulePajak
         Return totalBruto - totalPengurangan
     End Function
 
+    ''' <summary>
+    ''' Menghitung PPh Final / Harian (Berdasarkan TER Harian / PP 58 Tahun 2023)
+    ''' - Penghasilan <= 450.000 sehari: Tarif 0%
+    ''' - Penghasilan > 450.000 - 2.500.000 sehari: Tarif 0.5% dari Bruto Harian
+    ''' </summary>
+    ''' <param name="brutoHarian">Penghasilan bruto per hari</param>
+    ''' <param name="jumlahHari">Jumlah hari kerja</param>
+    ''' <returns>Total PPh terutang</returns>
+    Public Function CalculateFreelanceFinal(brutoHarian As Decimal, jumlahHari As Integer) As Decimal
+        Dim taxPerHari As Decimal = 0
+
+        If brutoHarian <= 450000D Then
+            taxPerHari = 0
+        ElseIf brutoHarian <= 2500000D Then
+            taxPerHari = brutoHarian * 0.005D
+        Else
+            ' Jika > 2.5 juta, masuk skema Pasal 17 x 50% (Non-Final)
+            ' Tapi untuk fungsi ini kita asumsikan user memilih kategori yang tepat.
+            ' Jika dipaksa masuk sini, kita gunakan fallback 0.5% atau return error?
+            ' Sesuai instruksi "behave like Final 0.5%", kita gunakan 0.5% untuk simplifikasi range ini,
+            ' tapi idealnya > 2.5jt harusnya masuk kategori Tenaga Ahli/Non-Final.
+            ' Kita batasi max tax base perhitungan 'Harian' di sini.
+            taxPerHari = brutoHarian * 0.005D
+        End If
+
+        Return taxPerHari * jumlahHari
+    End Function
+
+    ''' <summary>
+    ''' Menghitung PPh Non-Final (Tenaga Ahli)
+    ''' DPP = 50% x Penghasilan Bruto
+    ''' Tarif = Pasal 17 (Progresif)
+    ''' </summary>
+    ''' <param name="brutoTotal">Penghasilan Bruto</param>
+    ''' <returns>Total PPh dipotong</returns>
+    Public Function CalculateFreelanceNonFinal(brutoTotal As Decimal) As Decimal
+        Dim dpp As Decimal = brutoTotal * 0.5D
+        
+        ' Gunakan fungsi progresif yang sudah ada
+        ' Asumsi: Perhitungan per masa pajak, akumulasi dihandle manual atau di database.
+        ' Untuk form input ini, kita hitung based on current amount (single transaction bracket).
+        Return CalculateProgressiveTax(dpp)
+    End Function
+
 End Module

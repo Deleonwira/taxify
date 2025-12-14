@@ -4,6 +4,7 @@
     Public Event DashboardClicked(ByVal sender As Object, ByVal e As EventArgs)
 
     ' Bukti Potong submenu events
+    Public Event TambahBuktiPotongClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event TimelineBuktiPotongClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event RiwayatBuktiPotongClicked(ByVal sender As Object, ByVal e As EventArgs)
 
@@ -18,6 +19,7 @@
     ' ====== ENUM UNTUK MENANDAI MENU AKTIF ======
     Public Enum MenuType
         Dashboard
+        TambahBuktiPotong
         TimelineBuktiPotong
         RiwayatBuktiPotong
         LaporPajak
@@ -32,6 +34,7 @@
     Private PanelBuktiPotongDropdown As Guna.UI2.WinForms.Guna2Panel
     Private btnLaporPajak As Guna.UI2.WinForms.Guna2Button
     Private btnRiwayatLaporSubmenu As Guna.UI2.WinForms.Guna2Button
+    Private btnTambahBuktiPotong As Guna.UI2.WinForms.Guna2Button
     Private btnTimelineBuktiPotong As Guna.UI2.WinForms.Guna2Button
     Private btnRiwayatBuktiPotongSubmenu As Guna.UI2.WinForms.Guna2Button
 
@@ -151,18 +154,37 @@
 
         ' ===== CREATE BUKTI POTONG DROPDOWN PANEL =====
         PanelBuktiPotongDropdown = New Guna.UI2.WinForms.Guna2Panel()
-        PanelBuktiPotongDropdown.Size = New Size(160, 90)
+        PanelBuktiPotongDropdown.Size = New Size(160, 125) ' Increased height for 3 buttons
         PanelBuktiPotongDropdown.Location = New Point(17, 280) ' Below btnBuktiPotong
-        PanelBuktiPotongDropdown.FillColor = Color.White ' Slightly darker purple
+        PanelBuktiPotongDropdown.FillColor = Color.White
         PanelBuktiPotongDropdown.BorderRadius = 0
         PanelBuktiPotongDropdown.BorderThickness = 0
         PanelBuktiPotongDropdown.Visible = False
+
+        ' Tambah Bukti Potong submenu button (NEW - First item)
+        btnTambahBuktiPotong = New Guna.UI2.WinForms.Guna2Button()
+        btnTambahBuktiPotong.Text = "Tambah"
+        btnTambahBuktiPotong.Size = New Size(150, 35)
+        btnTambahBuktiPotong.Location = New Point(5, 5)
+        btnTambahBuktiPotong.FillColor = Color.White
+        btnTambahBuktiPotong.Font = New Font("Segoe UI", 9.0F)
+        btnTambahBuktiPotong.ForeColor = Color.Black
+        btnTambahBuktiPotong.TextAlign = HorizontalAlignment.Left
+        btnTambahBuktiPotong.Image = My.Resources.Resources.contact_form
+        btnTambahBuktiPotong.ImageSize = New Size(16, 16)
+        btnTambahBuktiPotong.ImageAlign = HorizontalAlignment.Left
+        btnTambahBuktiPotong.ImageOffset = New Point(15, 0)
+        btnTambahBuktiPotong.TextOffset = New Point(15, 0)
+        btnTambahBuktiPotong.BorderRadius = 0
+        btnTambahBuktiPotong.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        btnTambahBuktiPotong.CheckedState.FillColor = Color.White
+        AddHandler btnTambahBuktiPotong.Click, AddressOf btnTambahBuktiPotong_Click
 
         ' Timeline Bukti Potong submenu button
         btnTimelineBuktiPotong = New Guna.UI2.WinForms.Guna2Button()
         btnTimelineBuktiPotong.Text = "Timeline"
         btnTimelineBuktiPotong.Size = New Size(150, 35)
-        btnTimelineBuktiPotong.Location = New Point(5, 5)
+        btnTimelineBuktiPotong.Location = New Point(5, 45) ' Moved down
         btnTimelineBuktiPotong.FillColor = Color.White
         btnTimelineBuktiPotong.Font = New Font("Segoe UI", 9.0F)
         btnTimelineBuktiPotong.ForeColor = Color.Black
@@ -181,7 +203,7 @@
         btnRiwayatBuktiPotongSubmenu = New Guna.UI2.WinForms.Guna2Button()
         btnRiwayatBuktiPotongSubmenu.Text = "Riwayat"
         btnRiwayatBuktiPotongSubmenu.Size = New Size(150, 35)
-        btnRiwayatBuktiPotongSubmenu.Location = New Point(5, 45)
+        btnRiwayatBuktiPotongSubmenu.Location = New Point(5, 85) ' Moved down
         btnRiwayatBuktiPotongSubmenu.FillColor = Color.White
         btnRiwayatBuktiPotongSubmenu.Font = New Font("Segoe UI", 9.0F)
         btnRiwayatBuktiPotongSubmenu.ForeColor = Color.Black
@@ -196,6 +218,7 @@
         btnRiwayatBuktiPotongSubmenu.CheckedState.FillColor = Color.White
         AddHandler btnRiwayatBuktiPotongSubmenu.Click, AddressOf btnRiwayatBuktiPotongSubmenu_Click
 
+        PanelBuktiPotongDropdown.Controls.Add(btnTambahBuktiPotong)
         PanelBuktiPotongDropdown.Controls.Add(btnTimelineBuktiPotong)
         PanelBuktiPotongDropdown.Controls.Add(btnRiwayatBuktiPotongSubmenu)
         Guna2Panel1.Controls.Add(PanelBuktiPotongDropdown)
@@ -252,8 +275,8 @@
             ' Expand - move buttons down
             PanelBuktiPotongDropdown.Visible = True
             PanelBuktiPotongDropdown.Location = New Point(17, 280) ' Right below btnBuktiPotong
-            btnRiwayat.Location = New Point(17, 370) ' 280 + 90 (panel height)
-            btnDataDiri.Location = New Point(17, 419)
+            btnRiwayat.Location = New Point(17, 405) ' 280 + 125 (new panel height)
+            btnDataDiri.Location = New Point(17, 454)
         End If
     End Sub
 
@@ -283,8 +306,11 @@
         RaiseEvent RiwayatLaporClicked(Me, e)
     End Sub
 
-    Private Sub btnTimelineBuktiPotong_Click(sender As Object, e As EventArgs)
+    Private Sub btnTambahBuktiPotong_Click(sender As Object, e As EventArgs)
+        RaiseEvent TambahBuktiPotongClicked(Me, e)
+    End Sub
 
+    Private Sub btnTimelineBuktiPotong_Click(sender As Object, e As EventArgs)
         RaiseEvent TimelineBuktiPotongClicked(Me, e)
     End Sub
 
@@ -302,6 +328,14 @@
     End Sub
 
     ' ====== PUBLIC METHODS FOR SUBMENU NAVIGATION ======
+
+    ''' <summary>
+    ''' Navigate to Tambah Bukti Potong
+    ''' </summary>
+    Public Sub NavigateToTambahBuktiPotong()
+        CollapseAllSubmenus()
+        RaiseEvent TambahBuktiPotongClicked(Me, EventArgs.Empty)
+    End Sub
 
     ''' <summary>
     ''' Navigate to Timeline Bukti Potong
@@ -352,6 +386,14 @@
         Select Case menu
             Case MenuType.Dashboard
                 btnDashboard.Checked = True
+
+            Case MenuType.TambahBuktiPotong
+                btnBuktiPotong.Checked = True
+                ' Show Bukti Potong dropdown and adjust positions
+                ShowBuktiPotongDropdown()
+                If btnTambahBuktiPotong IsNot Nothing Then
+                    btnTambahBuktiPotong.Checked = True
+                End If
 
             Case MenuType.TimelineBuktiPotong
                 btnBuktiPotong.Checked = True
@@ -419,9 +461,9 @@
         If PanelBuktiPotongDropdown IsNot Nothing Then
             PanelBuktiPotongDropdown.Visible = True
             PanelBuktiPotongDropdown.Location = New Point(17, 280)
-            ' Adjust button positions
-            btnRiwayat.Location = New Point(17, 370)
-            btnDataDiri.Location = New Point(17, 419)
+            ' Adjust button positions for 125px panel height
+            btnRiwayat.Location = New Point(17, 405)
+            btnDataDiri.Location = New Point(17, 454)
         End If
     End Sub
 

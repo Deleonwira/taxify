@@ -7,6 +7,7 @@ Public Class wp_data_diri
         AddHandler Wp_navbar1.DashboardClicked, AddressOf OnDashboardClicked
         AddHandler Wp_navbar1.LaporPajakClicked, AddressOf OnLaporPajakClicked
         AddHandler Wp_navbar1.RiwayatLaporClicked, AddressOf OnRiwayatLaporClicked
+        AddHandler Wp_navbar1.TambahBuktiPotongClicked, AddressOf OnTambahBuktiPotongClicked
         AddHandler Wp_navbar1.TimelineBuktiPotongClicked, AddressOf OnTimelineBuktiPotongClicked
         AddHandler Wp_navbar1.RiwayatBuktiPotongClicked, AddressOf OnRiwayatBuktiPotongClicked
         AddHandler Wp_navbar1.DataDiriClicked, AddressOf OnDataDiriClicked
@@ -188,6 +189,12 @@ Public Class wp_data_diri
 
     Private Sub OnRiwayatLaporClicked(sender As Object, e As EventArgs)
         Dim f As New wp_riwayat_lapor_pajak()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnTambahBuktiPotongClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_tambah_bukti_potong()
         f.Show()
         Me.Hide()
     End Sub
