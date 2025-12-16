@@ -5,6 +5,7 @@ Public Class pk_navbar1
     Public Event DaftarPegawaiClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event BuktiPotongClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event RiwayatClicked(ByVal sender As Object, ByVal e As EventArgs)
+    Public Event ProfilClicked(ByVal sender As Object, ByVal e As EventArgs)
     Public Event LogoutClicked(ByVal sender As Object, ByVal e As EventArgs)
 
     ' ====== ENUM UNTUK MENANDAI MENU AKTIF ======
@@ -13,6 +14,7 @@ Public Class pk_navbar1
         DaftarPegawai
         BuktiPotong
         Riwayat
+        Profil
     End Enum
 
     Private Sub Dashboard_CheckedChanged(sender As Object, e As EventArgs)
@@ -41,6 +43,10 @@ Public Class pk_navbar1
         RaiseEvent RiwayatClicked(Me, e)
     End Sub
 
+    Private Sub btnProfil_Click(sender As Object, e As EventArgs) Handles btnProfil.Click
+        RaiseEvent ProfilClicked(Me, e)
+    End Sub
+
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         RaiseEvent LogoutClicked(Me, e)
     End Sub
@@ -65,6 +71,8 @@ Public Class pk_navbar1
             '    btnBuktiPotong.Checked = True
             Case MenuType.Riwayat
                 btnRiwayat.Checked = True
+            Case MenuType.Profil
+                btnProfil.Checked = True
         End Select
     End Sub
 

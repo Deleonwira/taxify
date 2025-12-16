@@ -296,6 +296,7 @@ Public Class wp_riwayat_lapor_pajak
     Private Sub OnChatbotClicked(sender As Object, e As EventArgs)
         ' Navigate to dashboard to show chatbot
         Dim f As New wp_dashboard()
+        f.AutoShowChatbot = True
         f.Show()
         Me.Hide()
     End Sub

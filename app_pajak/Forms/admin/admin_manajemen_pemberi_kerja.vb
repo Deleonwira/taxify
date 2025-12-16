@@ -49,6 +49,12 @@ Public Class FrmManagementPemberiKerja
         Me.Close()
     End Sub
 
+    Private Sub Pk_navbar1_ManajemenSPTClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.ManajemenSPTClicked
+        Dim f As New admin_manajemen_spt()
+        f.Show()
+        Me.Close()
+    End Sub
+
     Private Sub Pk_navbar1_LogoutClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.LogoutClicked
         ModuleSession.ClearSession()
         Dim f As New FrmLogin()

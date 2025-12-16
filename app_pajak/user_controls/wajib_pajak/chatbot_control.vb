@@ -1,33 +1,44 @@
+Imports System.Text
+Imports System.Collections.Generic
+
 Public Class chatbot_control
 
     ' Event untuk menangani jawaban user (Ya/Tidak)
     Public Event AnswerSelected(sender As Object, answer As String)
 
-    Private currentQuestion As String = ""
-    Private currentQuestionObj As Question = Nothing
-    Private messageHistory As New List(Of ChatMessage)
-    Private diagnosisEngine As PajakDiagnosisEngine = Nothing
-    Private isDiagnosisActive As Boolean = False
-
-    ' Class untuk menyimpan history chat
-    Private Class ChatMessage
-        Public Property Text As String
-        Public Property IsBot As Boolean
-        Public Property Timestamp As DateTime
-
-        Public Sub New(text As String, isBot As Boolean)
-            Me.Text = text
-            Me.IsBot = isBot
-            Me.Timestamp = DateTime.Now
-        End Sub
-    End Class
-
     Private Sub chatbot_control_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Inisialisasi control
         pnlChatArea.AutoScroll = True
-        btnYes.Visible = False
-        btnNo.Visible = False
-        ClearChat()
+        
+        If ModuleChatbot.MessageHistory.Count = 0 Then
+            ' Sesi baru
+            ResetChat()
+        Else
+            ' Restore sesi
+            RefreshChatDisplay()
+            
+            ' Re-attach handlers jika engine aktif
+            If ModuleChatbot.IsDiagnosisActive AndAlso ModuleChatbot.DiagnosisEngine IsNot Nothing Then
+                AddHandler ModuleChatbot.DiagnosisEngine.QuestionChanged, AddressOf OnEngineQuestionChanged
+                AddHandler ModuleChatbot.DiagnosisEngine.Completed, AddressOf OnEngineCompleted
+                
+                ' Tampilkan tombol jika ada pertanyaan aktif
+                If ModuleChatbot.CurrentQuestionObj IsNot Nothing Then
+                    ShowYesNoButtons()
+                Else
+                    HideYesNoButtons()
+                End If
+            Else
+                HideYesNoButtons()
+            End If
+        End If
+    End Sub
+
+    ' Method untuk reset chat dan mulai baru
+    Private Sub ResetChat()
+        ModuleChatbot.ResetChatbot()
+        pnlChatArea.Controls.Clear()
+        HideYesNoButtons()
         
         ' Pesan selamat datang (tanpa tombol)
         AddBotMessage("Halo! Saya adalah asisten chatbot untuk membantu Anda dengan diagnosis pajak. Saya akan mengajukan beberapa pertanyaan yang hanya dapat dijawab dengan Ya atau Tidak.", False)
@@ -36,12 +47,33 @@ Public Class chatbot_control
         StartDiagnosis()
     End Sub
 
+    ' Method untuk memulai diagnosis
+    Public Sub StartDiagnosis()
+        ' Buat engine baru via ModuleChatbot, atau reset jika sudah ada namun tidak aktif
+        If ModuleChatbot.DiagnosisEngine Is Nothing Then
+            ModuleChatbot.DiagnosisEngine = New PajakDiagnosisEngine()
+        Else
+            ModuleChatbot.DiagnosisEngine.Reset()
+        End If
+
+        ' Subscribe ke events
+        RemoveHandler ModuleChatbot.DiagnosisEngine.QuestionChanged, AddressOf OnEngineQuestionChanged
+        RemoveHandler ModuleChatbot.DiagnosisEngine.Completed, AddressOf OnEngineCompleted
+        AddHandler ModuleChatbot.DiagnosisEngine.QuestionChanged, AddressOf OnEngineQuestionChanged
+        AddHandler ModuleChatbot.DiagnosisEngine.Completed, AddressOf OnEngineCompleted
+
+        ModuleChatbot.IsDiagnosisActive = True
+
+        ' Ambil pertanyaan pertama
+        ModuleChatbot.CurrentQuestionObj = ModuleChatbot.DiagnosisEngine.GetNextQuestion()
+        If ModuleChatbot.CurrentQuestionObj IsNot Nothing Then
+            AddBotMessage(ModuleChatbot.CurrentQuestionObj.Text)
+        End If
+    End Sub
+
     ' Method untuk menambahkan pesan bot
     Public Sub AddBotMessage(message As String, Optional showButtons As Boolean = True)
-        If showButtons Then
-            currentQuestion = message
-        End If
-        messageHistory.Add(New ChatMessage(message, True))
+        ModuleChatbot.MessageHistory.Add(New ModuleChatbot.ChatMessage(message, True))
         RefreshChatDisplay()
         
         If showButtons Then
@@ -53,7 +85,7 @@ Public Class chatbot_control
 
     ' Method untuk menambahkan pesan user (Ya/Tidak)
     Private Sub AddUserMessage(message As String)
-        messageHistory.Add(New ChatMessage(message, False))
+        ModuleChatbot.MessageHistory.Add(New ModuleChatbot.ChatMessage(message, False))
         RefreshChatDisplay()
         HideYesNoButtons()
     End Sub
@@ -70,7 +102,7 @@ Public Class chatbot_control
         Dim yPosition As Integer = 10
         Dim maxWidth As Integer = Math.Max(pnlChatArea.Width - 40, 200) ' Minimum width
 
-        For Each msg As ChatMessage In messageHistory
+        For Each msg As ModuleChatbot.ChatMessage In ModuleChatbot.MessageHistory
             If msg.IsBot Then
                 ' Bot message bubble (kiri)
                 Dim bubble As Guna.UI2.WinForms.Guna2Panel = CreateBotBubble(msg.Text, maxWidth)
@@ -199,8 +231,8 @@ Public Class chatbot_control
         AddUserMessage("Ya")
         
         ' Jika diagnosis aktif, submit ke engine
-        If isDiagnosisActive AndAlso currentQuestionObj IsNot Nothing Then
-            diagnosisEngine.SubmitAnswer(currentQuestionObj.Id, "ya")
+        If ModuleChatbot.IsDiagnosisActive AndAlso ModuleChatbot.DiagnosisEngine IsNot Nothing AndAlso ModuleChatbot.CurrentQuestionObj IsNot Nothing Then
+            ModuleChatbot.DiagnosisEngine.SubmitAnswer(ModuleChatbot.CurrentQuestionObj.Id, "ya")
         Else
             RaiseEvent AnswerSelected(Me, "Ya")
         End If
@@ -211,8 +243,8 @@ Public Class chatbot_control
         AddUserMessage("Tidak")
         
         ' Jika diagnosis aktif, submit ke engine
-        If isDiagnosisActive AndAlso currentQuestionObj IsNot Nothing Then
-            diagnosisEngine.SubmitAnswer(currentQuestionObj.Id, "tidak")
+        If ModuleChatbot.IsDiagnosisActive AndAlso ModuleChatbot.DiagnosisEngine IsNot Nothing AndAlso ModuleChatbot.CurrentQuestionObj IsNot Nothing Then
+            ModuleChatbot.DiagnosisEngine.SubmitAnswer(ModuleChatbot.CurrentQuestionObj.Id, "tidak")
         Else
             RaiseEvent AnswerSelected(Me, "Tidak")
         End If
@@ -224,65 +256,9 @@ Public Class chatbot_control
         Me.Visible = False
     End Sub
 
-    ' Method untuk clear chat
+    ' Method untuk clear chat (untuk keperluan eksternal / restart)
     Public Sub ClearChat()
-        messageHistory.Clear()
-        pnlChatArea.Controls.Clear()
-        HideYesNoButtons()
-    End Sub
-
-    ' Method untuk menambahkan typing indicator (optional)
-    Public Sub ShowTypingIndicator()
-        Dim typingPanel As New Guna.UI2.WinForms.Guna2Panel()
-        typingPanel.BackColor = Color.Transparent
-        typingPanel.FillColor = Color.FromArgb(245, 245, 250)
-        typingPanel.BorderRadius = 10
-        typingPanel.Size = New Size(60, 42)
-        typingPanel.Location = New Point(10, pnlChatArea.Controls.Count * 60 + 10)
-
-        Dim dots As New Guna.UI2.WinForms.Guna2HtmlLabel()
-        dots.Text = "..."
-        dots.Location = New Point(20, 10)
-        dots.ForeColor = Color.FromArgb(128, 128, 128)
-        dots.Font = New Font("Segoe UI", 12.0F)
-        typingPanel.Controls.Add(dots)
-
-        pnlChatArea.Controls.Add(typingPanel)
-    End Sub
-
-    ' Property untuk mendapatkan tinggi control
-    Public ReadOnly Property ChatHeight As Integer
-        Get
-            Return Me.Height
-        End Get
-    End Property
-
-    ' ========== PAJAK DIAGNOSIS ENGINE INTEGRATION ==========
-
-    ' Method untuk memulai diagnosis
-    Public Sub StartDiagnosis()
-        ' Reset jika ada diagnosis sebelumnya
-        If diagnosisEngine IsNot Nothing Then
-            diagnosisEngine.Reset()
-            RemoveHandler diagnosisEngine.QuestionChanged, AddressOf OnEngineQuestionChanged
-            RemoveHandler diagnosisEngine.Completed, AddressOf OnEngineCompleted
-        End If
-
-        ' Buat engine baru
-        diagnosisEngine = New PajakDiagnosisEngine()
-        
-        ' Subscribe ke events
-        AddHandler diagnosisEngine.QuestionChanged, AddressOf OnEngineQuestionChanged
-        AddHandler diagnosisEngine.Completed, AddressOf OnEngineCompleted
-
-        isDiagnosisActive = True
-
-        ' Ambil pertanyaan pertama
-        currentQuestionObj = diagnosisEngine.GetNextQuestion()
-        If currentQuestionObj IsNot Nothing Then
-            currentQuestion = currentQuestionObj.Text
-            AddBotMessage(currentQuestionObj.Text)
-        End If
+        ResetChat()
     End Sub
 
     ' Handler untuk event QuestionChanged dari engine
@@ -296,8 +272,7 @@ Public Class chatbot_control
 
     ' Method untuk menangani perubahan pertanyaan
     Private Sub HandleQuestionChanged(q As Question)
-        currentQuestionObj = q
-        currentQuestion = q.Text
+        ModuleChatbot.CurrentQuestionObj = q
         AddBotMessage(q.Text)
     End Sub
 
@@ -312,26 +287,35 @@ Public Class chatbot_control
 
     ' Method untuk menangani selesainya diagnosis
     Private Sub HandleDiagnosisCompleted(guidance As List(Of String))
-        isDiagnosisActive = False
+        ModuleChatbot.IsDiagnosisActive = False
         HideYesNoButtons()
+        ModuleChatbot.CurrentQuestionObj = Nothing
 
-        ' Tambahkan pesan bahwa diagnosis selesai (tanpa tombol)
-        AddBotMessage("Diagnosis selesai! Berikut hasil evaluasi:", False)
+        Dim sb As New StringBuilder()
+        sb.AppendLine("Diagnosis selesai! Berikut hasil evaluasi:")
+        sb.AppendLine()
         
-        ' Tambahkan setiap guidance sebagai pesan terpisah (tanpa tombol)
         For Each line In guidance
-            AddBotMessage("• " & line, False)
+            sb.AppendLine("• " & line)
         Next
         
-        ' Pesan akhir (tanpa tombol)
-        AddBotMessage("Terima kasih telah menggunakan layanan diagnosis pajak kami!", False)
+        sb.AppendLine()
+        sb.Append("Terima kasih telah menggunakan layanan diagnosis pajak kami!")
+        
+        ' Tampilkan sebagai satu output (consolidated bubble)
+        AddBotMessage(sb.ToString(), False)
     End Sub
 
     ' Method untuk restart diagnosis
     Public Sub RestartDiagnosis()
-        ClearChat()
-        AddBotMessage("Mari kita mulai diagnosis pajak Anda dari awal.", False)
-        StartDiagnosis()
+        ResetChat()
     End Sub
+
+    ' Property untuk mendapatkan tinggi control
+    Public ReadOnly Property ChatHeight As Integer
+        Get
+            Return Me.Height
+        End Get
+    End Property
 
 End Class

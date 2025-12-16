@@ -34,6 +34,12 @@ Public Class FrmManagementPerusahaan
         Me.Close()
     End Sub
 
+    Private Sub Pk_navbar1_ManajemenSPTClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.ManajemenSPTClicked
+        Dim f As New admin_manajemen_spt()
+        f.Show()
+        Me.Close()
+    End Sub
+
     Private Sub Pk_navbar1_LogoutClicked(sender As Object, e As EventArgs) Handles Pk_navbar1.LogoutClicked
         ModuleSession.ClearSession()
         Dim f As New FrmLogin()
@@ -367,6 +373,7 @@ Public Class FrmManagementPerusahaan
     End Sub
 
     Private Sub FrmManagementPerusahaan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Pk_navbar1.SetActiveMenu(admin_navbar.MenuType.ManajemenPerusahaan)
         LoadPerusahaan()
     End Sub
 End Class

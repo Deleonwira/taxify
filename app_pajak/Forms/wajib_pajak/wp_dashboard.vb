@@ -10,6 +10,9 @@ Public Class wp_dashboard
     Private StatusSPT As String = "-"
     Private MonthlyData As New Dictionary(Of Integer, Decimal)
 
+    ' Property to auto-show chatbot
+    Public Property AutoShowChatbot As Boolean = False
+
     Private Sub FrmDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Navigation event handlers
         AddHandler Wp_navbar1.DashboardClicked, AddressOf OnDashboardClicked
@@ -26,10 +29,17 @@ Public Class wp_dashboard
         Wp_navbar1.SetActiveMenu(wp_navbar.MenuType.Dashboard)
 
         ' Initialize chatbot
-        Chatbot_control1.Visible = False
-        btnChatbotFAB.Visible = True
+        If AutoShowChatbot Then
+            PositionChatbot()
+            Chatbot_control1.Visible = True
+            btnChatbotFAB.Visible = False
+            Chatbot_control1.BringToFront()
+        Else
+            Chatbot_control1.Visible = False
+            btnChatbotFAB.Visible = True
+        End If
 
-        ' Load all dashboard data
+    ' Load all dashboard data
         LoadDashboardData()
     End Sub
 
@@ -381,15 +391,19 @@ Public Class wp_dashboard
             Chatbot_control1.Visible = False
             btnChatbotFAB.Visible = True
         Else
-            Dim fabLocation As Point = btnChatbotFAB.Location
-            Chatbot_control1.Location = New Point(
-                fabLocation.X + btnChatbotFAB.Width - Chatbot_control1.Width,
-                fabLocation.Y - Chatbot_control1.Height - 10
-            )
+            PositionChatbot()
             Chatbot_control1.Visible = True
             Chatbot_control1.BringToFront()
             btnChatbotFAB.Visible = False
         End If
+    End Sub
+
+    Private Sub PositionChatbot()
+        Dim fabLocation As Point = btnChatbotFAB.Location
+        Chatbot_control1.Location = New Point(
+            fabLocation.X + btnChatbotFAB.Width - Chatbot_control1.Width,
+            fabLocation.Y - Chatbot_control1.Height - 10
+        )
     End Sub
 
     Private Sub Chatbot_control1_VisibleChanged(sender As Object, e As EventArgs) Handles Chatbot_control1.VisibleChanged

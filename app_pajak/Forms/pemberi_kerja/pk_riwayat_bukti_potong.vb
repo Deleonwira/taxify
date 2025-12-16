@@ -7,6 +7,7 @@ Public Class pk_riwayat_bukti_potong
     ' Form load - set active menu and load data
     Private Sub pk_riwayat_bukti_potong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pk_navbar11.SetActiveMenu(pk_navbar1.MenuType.Riwayat)
+        AddHandler Pk_navbar11.ProfilClicked, AddressOf OnProfilClicked
         LoadPegawai()
         LoadBuktiPotong()
     End Sub
@@ -291,6 +292,12 @@ Public Class pk_riwayat_bukti_potong
 
     Private Sub Pk_navbar11_RiwayatClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.RiwayatClicked
         ' Already on riwayat
+    End Sub
+
+    Private Sub OnProfilClicked(sender As Object, e As EventArgs)
+        Dim f As New pk_profil()
+        f.Show()
+        Me.Close()
     End Sub
 
     Private Sub Pk_navbar11_LogoutClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.LogoutClicked

@@ -46,13 +46,13 @@ Partial Class chatbot_control
         ' 
         ' pnlHeader
         ' 
-        pnlHeader.BackColor = Color.FromArgb(106, 90, 232)
+        pnlHeader.BackColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
         pnlHeader.Controls.Add(lblTitle)
         pnlHeader.Controls.Add(btnClose)
         pnlHeader.Controls.Add(picIcon)
         pnlHeader.CustomizableEdges = CustomizableEdges4
         pnlHeader.Dock = DockStyle.Top
-        pnlHeader.FillColor = Color.FromArgb(106, 90, 232)
+        pnlHeader.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
         pnlHeader.Location = New Point(0, 0)
         pnlHeader.Margin = New Padding(0)
         pnlHeader.Name = "pnlHeader"
@@ -63,14 +63,14 @@ Partial Class chatbot_control
         ' lblTitle
         ' 
         lblTitle.BackColor = Color.Transparent
-        lblTitle.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        lblTitle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTitle.ForeColor = Color.White
         lblTitle.Location = New Point(49, 11)
         lblTitle.Margin = New Padding(0)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(64, 23)
+        lblTitle.Size = New Size(121, 23)
         lblTitle.TabIndex = 2
-        lblTitle.Text = "ChatBot"
+        lblTitle.Text = "Diagnosa Pajak"
         ' 
         ' btnClose
         ' 
@@ -80,10 +80,10 @@ Partial Class chatbot_control
         btnClose.CustomizableEdges = CustomizableEdges1
         btnClose.DisabledState.BorderColor = Color.DarkGray
         btnClose.DisabledState.CustomBorderColor = Color.DarkGray
-        btnClose.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        btnClose.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btnClose.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnClose.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnClose.FillColor = Color.Transparent
-        btnClose.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        btnClose.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         btnClose.ForeColor = Color.White
         btnClose.Image = My.Resources.Resources.circle_xmark__1_
         btnClose.Location = New Point(285, 8)
@@ -143,10 +143,10 @@ Partial Class chatbot_control
         btnNo.CustomizableEdges = CustomizableEdges8
         btnNo.DisabledState.BorderColor = Color.DarkGray
         btnNo.DisabledState.CustomBorderColor = Color.DarkGray
-        btnNo.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        btnNo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
-        btnNo.FillColor = Color.FromArgb(106, 90, 232)
-        btnNo.Font = New Font("Segoe UI", 8.0F, FontStyle.Bold)
+        btnNo.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnNo.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnNo.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
+        btnNo.Font = New Font("Segoe UI", 8F, FontStyle.Bold)
         btnNo.ForeColor = Color.White
         btnNo.Location = New Point(231, 10)
         btnNo.Margin = New Padding(0)
@@ -164,10 +164,10 @@ Partial Class chatbot_control
         btnYes.CustomizableEdges = CustomizableEdges10
         btnYes.DisabledState.BorderColor = Color.DarkGray
         btnYes.DisabledState.CustomBorderColor = Color.DarkGray
-        btnYes.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        btnYes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
-        btnYes.FillColor = Color.FromArgb(106, 90, 232)
-        btnYes.Font = New Font("Segoe UI", 8.0F, FontStyle.Bold)
+        btnYes.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnYes.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnYes.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
+        btnYes.Font = New Font("Segoe UI", 8F, FontStyle.Bold)
         btnYes.ForeColor = Color.White
         btnYes.Location = New Point(119, 10)
         btnYes.Margin = New Padding(0)

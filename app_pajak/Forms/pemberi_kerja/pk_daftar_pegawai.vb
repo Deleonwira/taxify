@@ -5,6 +5,7 @@ Public Class pk_daftar_pegawai
     ' Form load event - Load data from database
     Private Sub pk_daftar_pegawai_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pk_navbar11.SetActiveMenu(pk_navbar1.MenuType.DaftarPegawai)
+        AddHandler Pk_navbar11.ProfilClicked, AddressOf OnProfilClicked
         LoadEmployeesFromDatabase()
     End Sub
 
@@ -208,6 +209,12 @@ Public Class pk_daftar_pegawai
     Private Sub Pk_navbar11_RiwayatClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.RiwayatClicked
         Dim formRiwayat As New pk_riwayat_bukti_potong()
         formRiwayat.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub OnProfilClicked(sender As Object, e As EventArgs)
+        Dim f As New pk_profil()
+        f.Show()
         Me.Close()
     End Sub
 

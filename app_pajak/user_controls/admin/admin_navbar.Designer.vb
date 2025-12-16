@@ -18,8 +18,8 @@ Partial Class admin_navbar
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -30,10 +30,11 @@ Partial Class admin_navbar
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         btnLogout = New Guna.UI2.WinForms.Guna2Button()
+        btnManajemenSPT = New Guna.UI2.WinForms.Guna2Button()
         btnMasterPajak = New Guna.UI2.WinForms.Guna2Button()
         btnPerusahaan = New Guna.UI2.WinForms.Guna2Button()
         btnUsers = New Guna.UI2.WinForms.Guna2Button()
@@ -48,19 +49,20 @@ Partial Class admin_navbar
         ' 
         Guna2Panel1.BackColor = Color.White
         Guna2Panel1.Controls.Add(btnLogout)
+        Guna2Panel1.Controls.Add(btnManajemenSPT)
         Guna2Panel1.Controls.Add(btnMasterPajak)
         Guna2Panel1.Controls.Add(btnPerusahaan)
         Guna2Panel1.Controls.Add(btnUsers)
         Guna2Panel1.Controls.Add(btnDashboard)
         Guna2Panel1.Controls.Add(Guna2PictureBox1)
         Guna2Panel1.Controls.Add(lblTitle)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges11
+        Guna2Panel1.CustomizableEdges = CustomizableEdges13
         Guna2Panel1.Dock = DockStyle.Left
         Guna2Panel1.FillColor = Color.White
         Guna2Panel1.Location = New Point(0, 0)
         Guna2Panel1.Margin = New Padding(3, 4, 3, 4)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2Panel1.Size = New Size(200, 720)
         Guna2Panel1.TabIndex = 0
         ' 
@@ -89,6 +91,34 @@ Partial Class admin_navbar
         btnLogout.TextAlign = HorizontalAlignment.Left
         btnLogout.TextOffset = New Point(20, 0)
         ' 
+        ' btnMasterPajak
+        ' 
+        btnMasterPajak.BackColor = Color.Transparent
+        btnMasterPajak.BorderRadius = 10
+        btnMasterPajak.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        btnMasterPajak.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
+        btnMasterPajak.CheckedState.ForeColor = Color.White
+        btnMasterPajak.CustomizableEdges = CustomizableEdges3
+        btnMasterPajak.DisabledState.BorderColor = Color.DarkGray
+        btnMasterPajak.DisabledState.CustomBorderColor = Color.DarkGray
+        btnMasterPajak.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnMasterPajak.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnMasterPajak.FillColor = Color.Transparent
+        btnMasterPajak.Font = New Font("Segoe UI", 10F)
+        btnMasterPajak.ForeColor = Color.Black
+        btnMasterPajak.Image = My.Resources.Resources.settings
+        btnMasterPajak.ImageAlign = HorizontalAlignment.Left
+        btnMasterPajak.ImageOffset = New Point(10, 0)
+        btnMasterPajak.Location = New Point(17, 280)
+        btnMasterPajak.Margin = New Padding(3, 4, 3, 4)
+        btnMasterPajak.Name = "btnMasterPajak"
+        btnMasterPajak.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnMasterPajak.Size = New Size(167, 41)
+        btnMasterPajak.TabIndex = 21
+        btnMasterPajak.Text = "Master Pajak"
+        btnMasterPajak.TextAlign = HorizontalAlignment.Left
+        btnMasterPajak.TextOffset = New Point(20, 0)
+        ' 
         ' btnPerusahaan
         ' 
         btnPerusahaan.BackColor = Color.Transparent
@@ -96,7 +126,7 @@ Partial Class admin_navbar
         btnPerusahaan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         btnPerusahaan.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
         btnPerusahaan.CheckedState.ForeColor = Color.White
-        btnPerusahaan.CustomizableEdges = CustomizableEdges3
+        btnPerusahaan.CustomizableEdges = CustomizableEdges5
         btnPerusahaan.DisabledState.BorderColor = Color.DarkGray
         btnPerusahaan.DisabledState.CustomBorderColor = Color.DarkGray
         btnPerusahaan.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -110,39 +140,12 @@ Partial Class admin_navbar
         btnPerusahaan.Location = New Point(17, 231)
         btnPerusahaan.Margin = New Padding(3, 4, 3, 4)
         btnPerusahaan.Name = "btnPerusahaan"
-        btnPerusahaan.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnPerusahaan.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnPerusahaan.Size = New Size(167, 41)
         btnPerusahaan.TabIndex = 18
         btnPerusahaan.Text = "Perusahaan"
         btnPerusahaan.TextAlign = HorizontalAlignment.Left
         btnPerusahaan.TextOffset = New Point(20, 0)
-        ' 
-        ' btnMasterPajak
-        ' 
-        btnMasterPajak.BackColor = Color.Transparent
-        btnMasterPajak.BorderRadius = 10
-        btnMasterPajak.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        btnMasterPajak.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
-        btnMasterPajak.CheckedState.ForeColor = Color.White
-        btnMasterPajak.CustomizableEdges = CustomizableEdges13
-        btnMasterPajak.DisabledState.BorderColor = Color.DarkGray
-        btnMasterPajak.DisabledState.CustomBorderColor = Color.DarkGray
-        btnMasterPajak.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnMasterPajak.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnMasterPajak.FillColor = Color.Transparent
-        btnMasterPajak.Font = New Font("Segoe UI", 10F)
-        btnMasterPajak.ForeColor = Color.Black
-        btnMasterPajak.ImageAlign = HorizontalAlignment.Left
-        btnMasterPajak.ImageOffset = New Point(10, 0)
-        btnMasterPajak.Location = New Point(17, 280)
-        btnMasterPajak.Margin = New Padding(3, 4, 3, 4)
-        btnMasterPajak.Name = "btnMasterPajak"
-        btnMasterPajak.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        btnMasterPajak.Size = New Size(167, 41)
-        btnMasterPajak.TabIndex = 21
-        btnMasterPajak.Text = "Master Pajak"
-        btnMasterPajak.TextAlign = HorizontalAlignment.Left
-        btnMasterPajak.TextOffset = New Point(20, 0)
         ' 
         ' btnUsers
         ' 
@@ -151,7 +154,7 @@ Partial Class admin_navbar
         btnUsers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         btnUsers.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
         btnUsers.CheckedState.ForeColor = Color.White
-        btnUsers.CustomizableEdges = CustomizableEdges5
+        btnUsers.CustomizableEdges = CustomizableEdges7
         btnUsers.DisabledState.BorderColor = Color.DarkGray
         btnUsers.DisabledState.CustomBorderColor = Color.DarkGray
         btnUsers.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -165,7 +168,7 @@ Partial Class admin_navbar
         btnUsers.Location = New Point(17, 182)
         btnUsers.Margin = New Padding(3, 4, 3, 4)
         btnUsers.Name = "btnUsers"
-        btnUsers.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnUsers.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnUsers.Size = New Size(167, 41)
         btnUsers.TabIndex = 16
         btnUsers.Text = "Users"
@@ -179,7 +182,7 @@ Partial Class admin_navbar
         btnDashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         btnDashboard.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
         btnDashboard.CheckedState.ForeColor = Color.White
-        btnDashboard.CustomizableEdges = CustomizableEdges7
+        btnDashboard.CustomizableEdges = CustomizableEdges9
         btnDashboard.DisabledState.BorderColor = Color.DarkGray
         btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray
         btnDashboard.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -193,7 +196,7 @@ Partial Class admin_navbar
         btnDashboard.Location = New Point(17, 133)
         btnDashboard.Margin = New Padding(3, 4, 3, 4)
         btnDashboard.Name = "btnDashboard"
-        btnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btnDashboard.Size = New Size(167, 41)
         btnDashboard.TabIndex = 14
         btnDashboard.Text = "Dashboard"
@@ -204,13 +207,13 @@ Partial Class admin_navbar
         ' 
         Guna2PictureBox1.BackColor = Color.Transparent
         Guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges9
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges11
         Guna2PictureBox1.Image = My.Resources.Resources.taxify_logo
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(35, 46)
         Guna2PictureBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2PictureBox1.Size = New Size(30, 30)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 13
@@ -243,6 +246,35 @@ Partial Class admin_navbar
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
 
+        ' 
+        ' btnManajemenSPT
+        ' 
+        btnManajemenSPT.BackColor = Color.Transparent
+        btnManajemenSPT.BorderRadius = 10
+        btnManajemenSPT.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        btnManajemenSPT.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
+        btnManajemenSPT.CheckedState.ForeColor = Color.White
+        btnManajemenSPT.CustomizableEdges = CustomizableEdges3
+        btnManajemenSPT.DisabledState.BorderColor = Color.DarkGray
+        btnManajemenSPT.DisabledState.CustomBorderColor = Color.DarkGray
+        btnManajemenSPT.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnManajemenSPT.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnManajemenSPT.FillColor = Color.Transparent
+        btnManajemenSPT.Font = New Font("Segoe UI", 10F)
+        btnManajemenSPT.ForeColor = Color.Black
+        btnManajemenSPT.Image = My.Resources.Resources.report_card
+        btnManajemenSPT.ImageAlign = HorizontalAlignment.Left
+        btnManajemenSPT.ImageOffset = New Point(10, 0)
+        btnManajemenSPT.Location = New Point(17, 329)
+        btnManajemenSPT.Margin = New Padding(3, 4, 3, 4)
+        btnManajemenSPT.Name = "btnManajemenSPT"
+        btnManajemenSPT.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnManajemenSPT.Size = New Size(167, 41)
+        btnManajemenSPT.TabIndex = 22
+        btnManajemenSPT.Text = "Manajemen SPT"
+        btnManajemenSPT.TextAlign = HorizontalAlignment.Left
+        btnManajemenSPT.TextOffset = New Point(20, 0)
+        ' 
     End Sub
 
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
@@ -253,5 +285,6 @@ Partial Class admin_navbar
     Friend WithEvents btnPerusahaan As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnMasterPajak As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnManajemenSPT As Guna.UI2.WinForms.Guna2Button
 
 End Class

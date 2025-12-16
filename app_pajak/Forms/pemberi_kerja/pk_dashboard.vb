@@ -3,6 +3,7 @@
     ' Form load - set active menu
     Private Sub pk_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pk_navbar11.SetActiveMenu(pk_navbar1.MenuType.Dashboard)
+        AddHandler Pk_navbar11.ProfilClicked, AddressOf OnProfilClicked
     End Sub
 
     ' ====== NAVBAR EVENT HANDLERS ======
@@ -25,6 +26,12 @@
     Private Sub Pk_navbar11_RiwayatClicked(sender As Object, e As EventArgs) Handles Pk_navbar11.RiwayatClicked
         Dim formRiwayat As New pk_riwayat_bukti_potong()
         formRiwayat.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnProfilClicked(sender As Object, e As EventArgs)
+        Dim f As New pk_profil()
+        f.Show()
         Me.Hide()
     End Sub
 

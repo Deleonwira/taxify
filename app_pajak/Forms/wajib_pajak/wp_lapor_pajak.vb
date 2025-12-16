@@ -14,6 +14,7 @@ Public Class wp_lapor_pajak
         AddHandler Wp_navbar1.RiwayatBuktiPotongClicked, AddressOf OnRiwayatBuktiPotongClicked
         AddHandler Wp_navbar1.DataDiriClicked, AddressOf OnDataDiriClicked
         AddHandler Wp_navbar1.LogoutClicked, AddressOf OnLogoutClicked
+        AddHandler Wp_navbar1.ChatbotClicked, AddressOf OnChatbotClicked
 
         ' Set active menu
         Wp_navbar1.SetActiveMenu(wp_navbar.MenuType.LaporPajak)
@@ -303,6 +304,13 @@ Public Class wp_lapor_pajak
         Dim f As New FrmLogin()
         f.Show()
         Me.Close()
+    End Sub
+
+    Private Sub OnChatbotClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_dashboard()
+        f.AutoShowChatbot = True
+        f.Show()
+        Me.Hide()
     End Sub
 
     Private Sub BunifuPanel1_Click(sender As Object, e As EventArgs) Handles BunifuPanel1.Click

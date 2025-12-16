@@ -357,3 +357,6 @@ C:\Users\hamza\Downloads\taxify\app_pajak\bin\Debug\net8.0-windows\PdfSharp.Syst
 C:\Users\hamza\Downloads\taxify\app_pajak\bin\Debug\net8.0-windows\PdfSharp.WPFonts.dll
 C:\Users\hamza\Downloads\taxify\app_pajak\bin\Debug\net8.0-windows\PdfSharp.dll
 C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.wp_detail_lapor_pajak.resources
+C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.pk_profil.resources
+C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.admin_manajemen_spt.resources
+C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.admin_master_pajak.resources

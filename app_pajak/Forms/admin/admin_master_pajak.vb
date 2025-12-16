@@ -40,6 +40,12 @@ Public Class admin_master_pajak
         ' Already on this form, do nothing
     End Sub
 
+    Private Sub Admin_navbar1_ManajemenSPTClicked(sender As Object, e As EventArgs) Handles Admin_navbar1.ManajemenSPTClicked
+        Dim f As New admin_manajemen_spt()
+        f.Show()
+        Me.Close()
+    End Sub
+
     Private Sub Admin_navbar1_LogoutClicked(sender As Object, e As EventArgs) Handles Admin_navbar1.LogoutClicked
         ModuleSession.ClearSession()
         Dim f As New FrmLogin()

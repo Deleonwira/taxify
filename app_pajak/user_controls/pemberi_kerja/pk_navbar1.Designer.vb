@@ -33,6 +33,7 @@ Partial Class pk_navbar1
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         btnLogout = New Guna.UI2.WinForms.Guna2Button()
         btnRiwayat = New Guna.UI2.WinForms.Guna2Button()
+        btnProfil = New Guna.UI2.WinForms.Guna2Button()
         btnDaftarPegawai = New Guna.UI2.WinForms.Guna2Button()
         btnDashboard = New Guna.UI2.WinForms.Guna2Button()
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -46,6 +47,7 @@ Partial Class pk_navbar1
         Guna2Panel1.BackColor = Color.FromArgb(CByte(84), CByte(64), CByte(209))
         Guna2Panel1.Controls.Add(btnLogout)
         Guna2Panel1.Controls.Add(btnRiwayat)
+        Guna2Panel1.Controls.Add(btnProfil)
         Guna2Panel1.Controls.Add(btnDaftarPegawai)
         Guna2Panel1.Controls.Add(btnDashboard)
         Guna2Panel1.Controls.Add(Guna2PictureBox1)
@@ -112,6 +114,35 @@ Partial Class pk_navbar1
         btnRiwayat.Text = "Riwayat"
         btnRiwayat.TextAlign = HorizontalAlignment.Left
         btnRiwayat.TextOffset = New Point(20, 0)
+        ' 
+        ' btnProfil
+        ' 
+        btnProfil.BackColor = Color.Transparent
+        btnProfil.BorderRadius = 10
+        btnProfil.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        btnProfil.CheckedState.FillColor = Color.FromArgb(CByte(106), CByte(90), CByte(232))
+        btnProfil.CheckedState.ForeColor = Color.White
+        btnProfil.CustomizableEdges = CustomizableEdges1
+        btnProfil.DisabledState.BorderColor = Color.DarkGray
+        btnProfil.DisabledState.CustomBorderColor = Color.DarkGray
+        btnProfil.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnProfil.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnProfil.FillColor = Color.Transparent
+        btnProfil.Font = New Font("Segoe UI", 10F)
+        btnProfil.ForeColor = Color.Black
+        ' Using user__2_ temporarily, if user exists we could use it, but safe with existing resource
+        btnProfil.Image = My.Resources.Resources.user__2_ 
+        btnProfil.ImageAlign = HorizontalAlignment.Left
+        btnProfil.ImageOffset = New Point(10, 0)
+        btnProfil.Location = New Point(17, 280)
+        btnProfil.Margin = New Padding(3, 4, 3, 4)
+        btnProfil.Name = "btnProfil"
+        btnProfil.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnProfil.Size = New Size(160, 41)
+        btnProfil.TabIndex = 18
+        btnProfil.Text = "Profil"
+        btnProfil.TextAlign = HorizontalAlignment.Left
+        btnProfil.TextOffset = New Point(20, 0)
         ' 
         ' btnDaftarPegawai
         ' 
@@ -221,5 +252,6 @@ Partial Class pk_navbar1
     Friend WithEvents btnDaftarPegawai As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnRiwayat As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnProfil As Guna.UI2.WinForms.Guna2Button
 
 End Class

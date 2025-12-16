@@ -28,6 +28,7 @@ Module ModuleSession
         CurrentPerusahaanId = 0
         CurrentPerusahaanName = ""
         CurrentUserNPWP = ""
+        ModuleChatbot.ResetChatbot()
     End Sub
 
     Public Function IsLoggedIn() As Boolean
