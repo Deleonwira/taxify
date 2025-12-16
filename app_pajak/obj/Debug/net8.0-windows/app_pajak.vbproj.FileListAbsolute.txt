@@ -310,7 +310,6 @@ C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.adm
 C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.FrmManagementPemberiKerja.resources
 C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.FrmManagementPerusahaan.resources
 C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.FrmUserManagement.resources
-C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.admin_validasi_registrasi.resources
 C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.pk_daftar_pegawai.resources
 C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.pk_dashboard.resources
 C:\Users\hamza\Downloads\taxify\app_pajak\obj\Debug\net8.0-windows\app_pajak.pk_detail_riwayat_bukti_potong.resources

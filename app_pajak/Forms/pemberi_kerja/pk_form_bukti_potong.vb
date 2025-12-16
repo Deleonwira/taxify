@@ -19,6 +19,7 @@ Public Class pk_form_bukti_potong
     Private pkp_bulanan As Decimal = 0
     Private parentForm As Form = Nothing
     Private isCalculating As Boolean = False  ' Flag untuk mencegah loop kalkulasi
+    Private isFormatting As Boolean = False   ' Flag untuk mencegah loop formatting
 
     ' Constructor untuk menerima parent form
     Public Sub New(Optional parent As Form = Nothing)
@@ -298,26 +299,96 @@ Public Class pk_form_bukti_potong
         End If
     End Sub
 
+    ' Helper method for Currency Formatting
+    Private Sub FormatCurrencyInput(sender As Object)
+        If isFormatting Then Return
+        
+        Dim txt As Guna.UI2.WinForms.Guna2TextBox = CType(sender, Guna.UI2.WinForms.Guna2TextBox)
+        Dim originalText As String = txt.Text
+        Dim selectionStart As Integer = txt.SelectionStart
+        
+        ' Count thousands separators before cursor
+        Dim separatorCountBefore As Integer = 0
+        For i As Integer = 0 To selectionStart - 1
+            If i < originalText.Length AndAlso originalText(i) = "."c Then
+                separatorCountBefore += 1
+            End If
+        Next
+        
+        ' Get raw numeric value
+        Dim rawValue As Decimal = ModulePajak.ParseCurrency(originalText)
+        
+        isFormatting = True
+        If rawValue = 0 AndAlso originalText.Trim() = "" Then
+            txt.Text = ""
+        Else
+            txt.Text = ModulePajak.FormatCurrency(rawValue)
+        End If
+        isFormatting = False
+        
+        ' Restore cursor position
+        Dim newText As String = txt.Text
+        Dim newSelectionStart As Integer = selectionStart
+        
+        ' Adjust cursor based on new separators
+        Dim separatorCountAfter As Integer = 0
+        ' Use a simplified logic: calculate position from the end if it's easier, or re-calculate forward
+        ' Ideally tracking value length change is robust
+        
+        ' Simple robust approach: put cursor at end (easiest) OR try to maintain relative position
+        ' Using the end of text is better for standard currency input
+        txt.SelectionStart = txt.Text.Length
+    End Sub
+
+    ' Helper method for Numeric Validation (KeyPress)
+    Private Sub ValidateNumericKeyPress(sender As Object, e As KeyPressEventArgs)
+        ' Allow digits and Control keys (Backspace, etc.)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
     ' Event handlers untuk field Penghasilan Bruto
     Private Sub txtPPhTerutang_TextChanged(sender As Object, e As EventArgs) Handles txtPPhTerutang.TextChanged
+        FormatCurrencyInput(sender)
         CalculateTotalPenghasilanBruto()
+    End Sub
+
+    Private Sub txtPPhTerutang_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPPhTerutang.KeyPress
+        ValidateNumericKeyPress(sender, e)
     End Sub
 
     Private Sub Guna2TextBox10_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox10.TextChanged
+        FormatCurrencyInput(sender)
         CalculateTotalPenghasilanBruto()
     End Sub
 
+    Private Sub Guna2TextBox10_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Guna2TextBox10.KeyPress
+        ValidateNumericKeyPress(sender, e)
+    End Sub
+
     Private Sub Guna2TextBox3_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox3.TextChanged
+        FormatCurrencyInput(sender)
         CalculateTotalPenghasilanBruto()
+    End Sub
+
+    Private Sub Guna2TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Guna2TextBox3.KeyPress
+        ValidateNumericKeyPress(sender, e)
     End Sub
 
     ' Event handlers untuk field Pengurangan
     Private Sub Guna2TextBox8_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox8.TextChanged
+        ' Biaya jabatan calculated, no formatting needed on input usually, but good practice if editable
         CalculateTotalPengurangan()
     End Sub
 
     Private Sub Guna2TextBox7_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox7.TextChanged
+        FormatCurrencyInput(sender)
         CalculateTotalPengurangan()
+    End Sub
+    
+    Private Sub Guna2TextBox7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Guna2TextBox7.KeyPress
+        ValidateNumericKeyPress(sender, e)
     End Sub
 
     ' Method untuk navigasi kembali ke parent form

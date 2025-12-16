@@ -74,10 +74,20 @@ Public Class FrmRegister
             Return
         End If
 
-        If String.IsNullOrWhiteSpace(txtNPWP.Text) Then
-            MsgBox("NPWP harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
-            txtNPWP.Focus()
-            Return
+        ' Validasi NPWP (Jika tidak dicentang)
+        If Not chkBelumPunyaNPWP.Checked Then
+            If String.IsNullOrWhiteSpace(txtNPWP.Text) Then
+                MsgBox("NPWP harus diisi!", MsgBoxStyle.Exclamation, "Validasi")
+                txtNPWP.Focus()
+                Return
+            End If
+            
+            Dim npwpRaw As String = ModuleSecurity.CleanNPWP(txtNPWP.Text)
+            If npwpRaw.Length <> 15 Then
+                MsgBox("NPWP harus 15 digit!", MsgBoxStyle.Exclamation, "Validasi")
+                txtNPWP.Focus()
+                Return
+            End If
         End If
 
         If String.IsNullOrWhiteSpace(txtNamaLengkap.Text) Then
@@ -111,13 +121,9 @@ Public Class FrmRegister
         End If
 
         ' 2. Clean NPWP
-        Dim npwpClean As String = ModuleSecurity.CleanNPWP(txtNPWP.Text)
-
-        ' Validasi format NPWP (15 digit)
-        If npwpClean.Length <> 15 Then
-            MsgBox("NPWP harus 15 digit!", MsgBoxStyle.Exclamation, "Validasi")
-            txtNPWP.Focus()
-            Return
+        Dim npwpClean As String = ""
+        If Not chkBelumPunyaNPWP.Checked Then
+            npwpClean = ModuleSecurity.CleanNPWP(txtNPWP.Text)
         End If
 
         ' Validasi NIK (16 digit)
@@ -162,15 +168,17 @@ Public Class FrmRegister
                 Return
             End If
 
-            ' Check if NPWP already exists in wajib_pajak
-            Dim checkNpwpSql As String = "SELECT COUNT(*) FROM wajib_pajak WHERE npwp = @npwp"
-            Dim cmdCheckNpwp As New MySqlCommand(checkNpwpSql, modulkoneksi.koneksi)
-            cmdCheckNpwp.Parameters.AddWithValue("@npwp", npwpClean)
-            Dim countNpwp As Integer = Convert.ToInt32(cmdCheckNpwp.ExecuteScalar())
+            ' Check if NPWP already exists in wajib_pajak (If manually entered)
+            If Not String.IsNullOrEmpty(npwpClean) Then
+                Dim checkNpwpSql As String = "SELECT COUNT(*) FROM wajib_pajak WHERE npwp = @npwp"
+                Dim cmdCheckNpwp As New MySqlCommand(checkNpwpSql, modulkoneksi.koneksi)
+                cmdCheckNpwp.Parameters.AddWithValue("@npwp", npwpClean)
+                Dim countNpwp As Integer = Convert.ToInt32(cmdCheckNpwp.ExecuteScalar())
 
-            If countNpwp > 0 Then
-                MsgBox("NPWP sudah terdaftar! Silakan login.", MsgBoxStyle.Exclamation, "NPWP Sudah Ada")
-                Return
+                If countNpwp > 0 Then
+                    MsgBox("NPWP sudah terdaftar! Silakan login.", MsgBoxStyle.Exclamation, "NPWP Sudah Ada")
+                    Return
+                End If
             End If
 
             ' Check if NIK already exists
@@ -184,6 +192,27 @@ Public Class FrmRegister
                 Return
             End If
 
+            ' Generate Random NPWP if Checkbox checked
+            If chkBelumPunyaNPWP.Checked Then
+                Dim isUnique As Boolean = False
+                Dim rnd As New Random()
+                
+                While Not isUnique
+                    npwpClean = ""
+                    For i As Integer = 1 To 15
+                        npwpClean &= rnd.Next(0, 10).ToString()
+                    Next
+                    
+                    ' Check DB for Uniqueness
+                    Dim checkUniqueSql As String = "SELECT COUNT(*) FROM wajib_pajak WHERE npwp = @npwp"
+                    Dim cmdUnique As New MySqlCommand(checkUniqueSql, modulkoneksi.koneksi)
+                    cmdUnique.Parameters.AddWithValue("@npwp", npwpClean)
+                    Dim count As Integer = Convert.ToInt32(cmdUnique.ExecuteScalar())
+                    
+                    If count = 0 Then isUnique = True
+                End While
+            End If
+
             ' === INSERT INTO users ===
             Dim sqlUser As String = "INSERT INTO users (username, password_hash, tipe_user, is_active) VALUES (@username, @pass, 'wajib_pajak', 1)"
             Dim cmdUser As New MySqlCommand(sqlUser, modulkoneksi.koneksi)
@@ -195,7 +224,8 @@ Public Class FrmRegister
             Dim userId As Integer = Convert.ToInt32(cmdUser.LastInsertedId)
 
             ' === INSERT INTO wajib_pajak ===
-            Dim sqlWP As String = "INSERT INTO wajib_pajak (user_id, npwp, nik, nama, email, no_telepon, alamat, status_ptkp, status_validasi) VALUES (@user_id, @npwp, @nik, @nama, @email, @telepon, @alamat, @status_ptkp, 'pending')"
+            ' Status Validasi = 'approved' (Auto Approve)
+            Dim sqlWP As String = "INSERT INTO wajib_pajak (user_id, npwp, nik, nama, email, no_telepon, alamat, status_ptkp, status_validasi) VALUES (@user_id, @npwp, @nik, @nama, @email, @telepon, @alamat, @status_ptkp, 'approved')"
             Dim cmdWP As New MySqlCommand(sqlWP, modulkoneksi.koneksi)
             cmdWP.Parameters.AddWithValue("@user_id", userId)
             cmdWP.Parameters.AddWithValue("@npwp", npwpClean)
@@ -222,7 +252,7 @@ Public Class FrmRegister
             Dim wpId As Integer = Convert.ToInt32(cmdWP.LastInsertedId)
 
             ' === INSERT INTO pekerjaan ===
-            Dim sqlPekerjaan As String = "INSERT INTO pekerjaan (wajib_pajak_id, perusahaan_id, jabatan) VALUES (@wp_id, @perusahaan_id, @jabatan, 0)"
+            Dim sqlPekerjaan As String = "INSERT INTO pekerjaan (wajib_pajak_id, perusahaan_id, jabatan) VALUES (@wp_id, @perusahaan_id, @jabatan)"
             Dim cmdPekerjaan As New MySqlCommand(sqlPekerjaan, modulkoneksi.koneksi)
             cmdPekerjaan.Parameters.AddWithValue("@wp_id", wpId)
             cmdPekerjaan.Parameters.AddWithValue("@perusahaan_id", perusahaanId)
@@ -235,7 +265,13 @@ Public Class FrmRegister
 
             cmdPekerjaan.ExecuteNonQuery()
 
-            MsgBox("Registrasi berhasil!" & vbCrLf & vbCrLf & "Username Anda: " & username & vbCrLf & vbCrLf & "Akun Anda sedang menunggu verifikasi oleh admin. Silakan coba login nanti.", MsgBoxStyle.Information, "Registrasi Pending")
+            Dim msg As String = "Registrasi berhasil!" & vbCrLf & vbCrLf & "Username: " & username 
+            If chkBelumPunyaNPWP.Checked Then
+                msg &= vbCrLf & "NPWP Anda (Generated): " & npwpClean
+            End If
+            msg &= vbCrLf & vbCrLf & "Akun Anda telah aktif, silakan Log In."
+
+            MsgBox(msg, MsgBoxStyle.Information, "Registrasi Berhasil")
 
             ' Go to login
             Dim f As New FrmLogin()
@@ -247,6 +283,17 @@ Public Class FrmRegister
         Finally
             modulkoneksi.TutupKoneksi()
         End Try
+    End Sub
+
+    Private Sub chkBelumPunyaNPWP_CheckedChanged(sender As Object, e As EventArgs) Handles chkBelumPunyaNPWP.CheckedChanged
+        If chkBelumPunyaNPWP.Checked Then
+            txtNPWP.Enabled = False
+            txtNPWP.Clear()
+            txtNPWP.PlaceholderText = "NPWP akan digenerate otomatis"
+        Else
+            txtNPWP.Enabled = True
+            txtNPWP.PlaceholderText = "Contoh: 12.345.678.9-123.000"
+        End If
     End Sub
 
     Private Sub btnGoLogin_Click(sender As Object, e As EventArgs) Handles btnGoLogin.Click

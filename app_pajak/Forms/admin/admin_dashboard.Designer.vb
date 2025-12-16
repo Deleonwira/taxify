@@ -17,27 +17,17 @@ Partial Class admin_dashboard
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Admin_navbar1 = New admin_navbar()
         pnlMain = New Guna.UI2.WinForms.Guna2Panel()
         pnlHeader = New Guna.UI2.WinForms.Guna2Panel()
         lblSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        pnlMenu = New Guna.UI2.WinForms.Guna2Panel()
-        btnValidasiRegistrasi = New Guna.UI2.WinForms.Guna2Button()
-        btnLogout = New Guna.UI2.WinForms.Guna2Button()
         pnlMain.SuspendLayout()
         pnlHeader.SuspendLayout()
-        pnlMenu.SuspendLayout()
         SuspendLayout()
         ' 
         ' Admin_navbar1
@@ -55,13 +45,12 @@ Partial Class admin_dashboard
         ' 
         pnlMain.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(252))
         pnlMain.Controls.Add(pnlHeader)
-        pnlMain.Controls.Add(pnlMenu)
-        pnlMain.CustomizableEdges = CustomizableEdges9
+        pnlMain.CustomizableEdges = CustomizableEdges3
         pnlMain.Dock = DockStyle.Fill
         pnlMain.Location = New Point(200, 0)
         pnlMain.Name = "pnlMain"
         pnlMain.Padding = New Padding(24)
-        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         pnlMain.Size = New Size(1000, 720)
         pnlMain.TabIndex = 0
         ' 
@@ -75,7 +64,7 @@ Partial Class admin_dashboard
         pnlHeader.Location = New Point(24, 24)
         pnlHeader.Name = "pnlHeader"
         pnlHeader.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        pnlHeader.Size = New Size(752, 80)
+        pnlHeader.Size = New Size(949, 80)
         pnlHeader.TabIndex = 0
         ' 
         ' lblSubtitle
@@ -100,49 +89,6 @@ Partial Class admin_dashboard
         lblTitle.TabIndex = 0
         lblTitle.Text = "Admin Dashboard"
         ' 
-        ' pnlMenu
-        ' 
-        pnlMenu.BorderColor = Color.FromArgb(CByte(230), CByte(233), CByte(241))
-        pnlMenu.BorderRadius = 12
-        pnlMenu.BorderThickness = 1
-        pnlMenu.Controls.Add(btnValidasiRegistrasi)
-        pnlMenu.Controls.Add(btnLogout)
-        pnlMenu.CustomizableEdges = CustomizableEdges7
-        pnlMenu.FillColor = Color.White
-        pnlMenu.Location = New Point(24, 120)
-        pnlMenu.Name = "pnlMenu"
-        pnlMenu.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        pnlMenu.Size = New Size(752, 356)
-        pnlMenu.TabIndex = 1
-        ' 
-        ' btnValidasiRegistrasi
-        ' 
-        btnValidasiRegistrasi.BorderRadius = 8
-        btnValidasiRegistrasi.CustomizableEdges = CustomizableEdges3
-        btnValidasiRegistrasi.FillColor = Color.FromArgb(CByte(156), CByte(0), CByte(219))
-        btnValidasiRegistrasi.Font = New Font("Segoe UI Semibold", 11F, FontStyle.Bold)
-        btnValidasiRegistrasi.ForeColor = Color.White
-        btnValidasiRegistrasi.Location = New Point(24, 24)
-        btnValidasiRegistrasi.Name = "btnValidasiRegistrasi"
-        btnValidasiRegistrasi.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnValidasiRegistrasi.Size = New Size(300, 50)
-        btnValidasiRegistrasi.TabIndex = 0
-        btnValidasiRegistrasi.Text = "📋 Validasi Registrasi"
-        ' 
-        ' btnLogout
-        ' 
-        btnLogout.BorderRadius = 8
-        btnLogout.CustomizableEdges = CustomizableEdges5
-        btnLogout.FillColor = Color.FromArgb(CByte(255), CByte(59), CByte(48))
-        btnLogout.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
-        btnLogout.ForeColor = Color.White
-        btnLogout.Location = New Point(24, 290)
-        btnLogout.Name = "btnLogout"
-        btnLogout.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnLogout.Size = New Size(150, 44)
-        btnLogout.TabIndex = 1
-        btnLogout.Text = "Logout"
-        ' 
         ' admin_dashboard
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -157,7 +103,6 @@ Partial Class admin_dashboard
         pnlMain.ResumeLayout(False)
         pnlHeader.ResumeLayout(False)
         pnlHeader.PerformLayout()
-        pnlMenu.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -165,9 +110,6 @@ Partial Class admin_dashboard
     Friend WithEvents pnlHeader As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents pnlMenu As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents btnValidasiRegistrasi As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Admin_navbar1 As admin_navbar
 
 End Class

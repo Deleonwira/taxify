@@ -24,31 +24,26 @@ Public Class wp_riwayat_bukti_potong
 
         GridBukti.Rows.Clear()
 
+        Dim records As New List(Of Tuple(Of DateTime, String, String, String, Long, Long, Long))
+
         Try
             modulkoneksi.BukaKoneksi()
 
+            ' 1. FETCH STANDARD RECORDS
             Dim sql As String =
-            "SELECT bp.*, pr.nama_perusahaan 
+            "SELECT bp.id, bp.masa_bulan, bp.masa_tahun, bp.nomor_bukti, bp.bruto_total, bp.netto_total, bp.pph21_terutang,
+                    pr.nama_perusahaan 
              FROM bukti_potong bp
              JOIN pekerjaan p ON p.id = bp.pekerjaan_id
              JOIN perusahaan pr ON pr.id = p.perusahaan_id
              WHERE p.wajib_pajak_id = @wp_id"
 
-            ' Add company filter if specified
             If companyId > 0 Then
                 sql &= " AND p.perusahaan_id = @companyId"
             End If
 
-            ' Add search filter if specified
             If Not String.IsNullOrEmpty(searchText) Then
                 sql &= " AND (pr.nama_perusahaan LIKE @search OR CONCAT(masa_bulan, '/', masa_tahun) LIKE @search)"
-            End If
-
-            ' Add sorting
-            If sortByAmount Then
-                sql &= " ORDER BY bp.bruto_total DESC"
-            Else
-                sql &= " ORDER BY masa_tahun DESC, masa_bulan DESC"
             End If
 
             Dim cmd As New MySqlCommand(sql, modulkoneksi.koneksi)
@@ -63,31 +58,74 @@ Public Class wp_riwayat_bukti_potong
             End If
 
             Dim rd As MySqlDataReader = cmd.ExecuteReader()
-
             While rd.Read()
-
-                Dim id As String = rd("id").ToString()
+                ' Create Date for sorting (Day 1 of Month/Year)
+                Dim dt As New DateTime(CInt(rd("masa_tahun")), CInt(rd("masa_bulan")), 1)
+                Dim id As String = "S-" & rd("id").ToString() ' Prefix S for Standard
                 Dim periode As String = rd("masa_bulan").ToString() & "/" & rd("masa_tahun").ToString()
-                Dim nomorBukti As String = rd("nomor_bukti").ToString()
                 Dim perusahaan As String = rd("nama_perusahaan").ToString()
-
                 Dim bruto As Long = CLng(rd("bruto_total"))
-                Dim neto As Long = CLng(rd("netto_total"))
+                Dim netto As Long = CLng(rd("netto_total"))
                 Dim pph As Long = CLng(rd("pph21_terutang"))
 
-                GridBukti.Rows.Add(
-                periode,
-                id,
-                perusahaan,
-                bruto.ToString("N0"),
-                neto.ToString("N0"),
-                pph.ToString("N0"),
-                "Detail"
-            )
-
+                records.Add(Tuple.Create(dt, periode, id, perusahaan, bruto, netto, pph))
             End While
-
             rd.Close()
+
+            ' 2. FETCH FREELANCE RECORDS (Only if not filtering by companyId, as freelance has no linked company ID yet)
+            If companyId = 0 Then
+                Dim sqlF As String =
+                "SELECT bpf.id, bpf.masa_bulan, bpf.masa_tahun, bpf.nomor_bukti, bpf.bruto_total, bpf.dpp, bpf.pph_dipotong,
+                        bpf.nama_pemberi_kerja 
+                 FROM bukti_potong_freelance bpf
+                 WHERE bpf.wajib_pajak_id = @wp_id"
+
+                If Not String.IsNullOrEmpty(searchText) Then
+                    sqlF &= " AND (bpf.nama_pemberi_kerja LIKE @search OR CONCAT(masa_bulan, '/', masa_tahun) LIKE @search)"
+                End If
+
+                Dim cmdF As New MySqlCommand(sqlF, modulkoneksi.koneksi)
+                cmdF.Parameters.AddWithValue("@wp_id", ModuleSession.CurrentWajibPajakId)
+
+                If Not String.IsNullOrEmpty(searchText) Then
+                    cmdF.Parameters.AddWithValue("@search", "%" & searchText & "%")
+                End If
+
+                Dim rdF As MySqlDataReader = cmdF.ExecuteReader()
+                While rdF.Read()
+                    Dim dt As New DateTime(CInt(rdF("masa_tahun")), CInt(rdF("masa_bulan")), 1)
+                    Dim id As String = "F-" & rdF("id").ToString() ' Prefix F for Freelance
+                    Dim periode As String = rdF("masa_bulan").ToString() & "/" & rdF("masa_tahun").ToString()
+                    Dim perusahaan As String = rdF("nama_pemberi_kerja").ToString() & " (Freelance)"
+                    Dim bruto As Long = CLng(rdF("bruto_total"))
+                    Dim netto As Long = CLng(rdF("dpp")) ' Use DPP as Netto substitute
+                    Dim pph As Long = CLng(rdF("pph_dipotong"))
+
+                    records.Add(Tuple.Create(dt, periode, id, perusahaan, bruto, netto, pph))
+                End While
+                rdF.Close()
+            End If
+
+            ' 3. SORT & POPULATE
+            Dim sortedRecords As IEnumerable(Of Tuple(Of DateTime, String, String, String, Long, Long, Long))
+
+            If sortByAmount Then
+                sortedRecords = records.OrderByDescending(Function(x) x.Item5) ' Sort by Bruto
+            Else
+                sortedRecords = records.OrderByDescending(Function(x) x.Item1) ' Sort by Date
+            End If
+
+            For Each rec In sortedRecords
+                GridBukti.Rows.Add(
+                    rec.Item2, ' Periode
+                    rec.Item3, ' ID (Prefixed)
+                    rec.Item4, ' Perusahaan
+                    rec.Item5.ToString("N0"), ' Bruto
+                    rec.Item6.ToString("N0"), ' Netto
+                    rec.Item7.ToString("N0"), ' PPh
+                    "Detail"
+                )
+            Next
 
         Catch ex As Exception
             MsgBox("Error memuat bukti potong: " & ex.Message)

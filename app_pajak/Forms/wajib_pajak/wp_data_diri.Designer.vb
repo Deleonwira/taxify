@@ -222,7 +222,8 @@ Partial Class wp_data_diri
         Guna2TextBox2.Location = New Point(729, 548)
         Guna2TextBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox2.Name = "Guna2TextBox2"
-        Guna2TextBox2.PlaceholderText = "Phone Number"
+        Guna2TextBox2.PasswordChar = "●"c
+        Guna2TextBox2.PlaceholderText = ""
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         Guna2TextBox2.Size = New Size(290, 40)
@@ -248,7 +249,8 @@ Partial Class wp_data_diri
         Guna2TextBox3.Location = New Point(433, 548)
         Guna2TextBox3.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox3.Name = "Guna2TextBox3"
-        Guna2TextBox3.PlaceholderText = "Phone Number"
+        Guna2TextBox3.PasswordChar = "●"c
+        Guna2TextBox3.PlaceholderText = ""
         Guna2TextBox3.SelectedText = ""
         Guna2TextBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges17
         Guna2TextBox3.Size = New Size(290, 40)

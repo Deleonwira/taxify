@@ -2,8 +2,23 @@ Imports MySql.Data.MySqlClient
 Imports Guna.UI2.WinForms
 
 Public Class wp_tambah_bukti_potong
+    
+    Private isFormatting As Boolean = False   ' Flag untuk mencegah loop formatting
 
     Private Sub wp_tambah_bukti_potong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Navigation event handlers
+        AddHandler Wp_navbar1.DashboardClicked, AddressOf OnDashboardClicked
+        AddHandler Wp_navbar1.LaporPajakClicked, AddressOf OnLaporPajakClicked
+        AddHandler Wp_navbar1.RiwayatLaporClicked, AddressOf OnRiwayatLaporClicked
+        AddHandler Wp_navbar1.TambahBuktiPotongClicked, AddressOf OnTambahBuktiPotongClicked
+        AddHandler Wp_navbar1.TimelineBuktiPotongClicked, AddressOf OnTimelineBuktiPotongClicked
+        AddHandler Wp_navbar1.RiwayatBuktiPotongClicked, AddressOf OnRiwayatBuktiPotongClicked
+        AddHandler Wp_navbar1.DataDiriClicked, AddressOf OnDataDiriClicked
+        AddHandler Wp_navbar1.LogoutClicked, AddressOf OnLogoutClicked
+
+        ' Set active menu and expand Bukti Potong submenu
+        Wp_navbar1.SetActiveMenu(wp_navbar.MenuType.TambahBuktiPotong)
+
         ' Set user name (read-only)
         txtNama.Text = ModuleSession.CurrentUserName
 
@@ -28,6 +43,7 @@ Public Class wp_tambah_bukti_potong
         ' Apply initial toggle
         ToggleInputs()
     End Sub
+
 
     Private Sub cboJenisFreelance_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboJenisFreelance.SelectedIndexChanged
         ToggleInputs()
@@ -229,6 +245,110 @@ Public Class wp_tambah_bukti_potong
         Catch ex As Exception
             MessageBox.Show("Error menyimpan data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    ' Helper method for Currency Formatting
+    Private Sub FormatCurrencyInput(sender As Object)
+        If isFormatting Then Return
+        
+        Dim txt As Guna.UI2.WinForms.Guna2TextBox = CType(sender, Guna.UI2.WinForms.Guna2TextBox)
+        Dim originalText As String = txt.Text
+        Dim selectionStart As Integer = txt.SelectionStart
+        
+        ' Get raw numeric value
+        Dim rawValue As Decimal = ModulePajak.ParseCurrency(originalText)
+        
+        isFormatting = True
+        If rawValue = 0 AndAlso originalText.Trim() = "" Then
+            txt.Text = ""
+        Else
+            txt.Text = ModulePajak.FormatCurrency(rawValue)
+        End If
+        isFormatting = False
+        
+        ' Simple robust cursor placement
+        txt.SelectionStart = txt.Text.Length
+    End Sub
+
+    ' Helper method for Numeric Validation (KeyPress)
+    Private Sub ValidateNumericKeyPress(sender As Object, e As KeyPressEventArgs)
+        ' Allow digits and Control keys (Backspace, etc.)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    ' Apply event handlers manually in Load or just by naming convention
+    ' Adding explicit handlers for clarity
+    
+    Private Sub txtBrutoTotal_TextChanged(sender As Object, e As EventArgs) Handles txtBrutoTotal.TextChanged
+        FormatCurrencyInput(sender)
+    End Sub
+
+    Private Sub txtBrutoTotal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrutoTotal.KeyPress
+        ValidateNumericKeyPress(sender, e)
+    End Sub
+
+    Private Sub txtBrutoPerHari_TextChanged(sender As Object, e As EventArgs) Handles txtBrutoPerHari.TextChanged
+        FormatCurrencyInput(sender)
+    End Sub
+
+    Private Sub txtBrutoPerHari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrutoPerHari.KeyPress
+        ValidateNumericKeyPress(sender, e)
+    End Sub
+
+    Private Sub txtJumlahHariKerja_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtJumlahHariKerja.KeyPress
+        ValidateNumericKeyPress(sender, e)
+    End Sub
+
+    ' =============================
+    '   NAVIGATION HANDLERS
+    ' =============================
+    Private Sub OnDashboardClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_dashboard()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnLaporPajakClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_lapor_pajak()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnRiwayatLaporClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_riwayat_lapor_pajak()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnTambahBuktiPotongClicked(sender As Object, e As EventArgs)
+        ' Already on this page
+    End Sub
+
+    Private Sub OnTimelineBuktiPotongClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_timeline_bukti_botong()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnRiwayatBuktiPotongClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_riwayat_bukti_potong()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnDataDiriClicked(sender As Object, e As EventArgs)
+        Dim f As New wp_data_diri()
+        f.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub OnLogoutClicked(sender As Object, e As EventArgs)
+        ModuleSession.ClearSession()
+        Dim f As New FrmLogin()
+        f.Show()
+        Me.Close()
     End Sub
 
 End Class
