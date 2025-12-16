@@ -53,6 +53,7 @@ Partial Class wp_riwayat_lapor_pajak
         colPenghasilanNeto = New DataGridViewTextBoxColumn()
         colPph21 = New DataGridViewTextBoxColumn()
         colStatus = New DataGridViewTextBoxColumn()
+        colDetail = New DataGridViewButtonColumn()
         BtnDownloadSemua = New Guna.UI2.WinForms.Guna2Button()
         LblTableSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         LblTableTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -136,7 +137,7 @@ Partial Class wp_riwayat_lapor_pajak
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         GridRiwayat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         GridRiwayat.ColumnHeadersHeight = 36
-        GridRiwayat.Columns.AddRange(New DataGridViewColumn() {colTahun, colPenghasilanBruto, colPenghasilanNeto, colPph21, colStatus})
+        GridRiwayat.Columns.AddRange(New DataGridViewColumn() {colTahun, colPenghasilanBruto, colPenghasilanNeto, colPph21, colStatus, colDetail})
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.White
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
@@ -213,6 +214,16 @@ Partial Class wp_riwayat_lapor_pajak
         colStatus.MinimumWidth = 6
         colStatus.Name = "colStatus"
         colStatus.ReadOnly = True
+        ' 
+        ' colDetail
+        ' 
+        colDetail.HeaderText = "Aksi"
+        colDetail.MinimumWidth = 6
+        colDetail.Name = "colDetail"
+        colDetail.ReadOnly = True
+        colDetail.Text = "Detail"
+        colDetail.UseColumnTextForButtonValue = True
+        ' 
         ' 
         ' BtnDownloadSemua
         ' 
@@ -484,6 +495,7 @@ Partial Class wp_riwayat_lapor_pajak
     Friend WithEvents colPenghasilanNeto As DataGridViewTextBoxColumn
     Friend WithEvents colPph21 As DataGridViewTextBoxColumn
     Friend WithEvents colStatus As DataGridViewTextBoxColumn
+    Friend WithEvents colDetail As DataGridViewButtonColumn
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class

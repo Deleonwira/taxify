@@ -1,4 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports PdfSharp.Pdf
+Imports PdfSharp.Drawing
+Imports System.IO
+
 
 Public Class wp_detail_bukti_potong
     Private buktiId As String
@@ -214,6 +218,107 @@ Public Class wp_detail_bukti_potong
         Dim f As New FrmLogin()
         f.Show()
         Me.Close()
+    End Sub
+
+    ' =============================
+    '   PDF EXPORT LOGIC
+    ' =============================
+    Private Sub BtnDownload_Click(sender As Object, e As EventArgs) Handles BtnDownload.Click
+        ' 1. Capture the panel content first
+        Dim panelToPrint As Panel = BunifuPanel1
+        Dim bmp As Bitmap = Nothing
+
+        Dim originalAutoScroll As Boolean = panelToPrint.AutoScroll
+        Dim originalSize As Size = panelToPrint.Size
+        Dim originalLocation As Point = panelToPrint.Location
+        Dim originalDock As DockStyle = panelToPrint.Dock
+
+        Try
+            ' Disable AutoScroll to measure full size
+            panelToPrint.AutoScroll = False
+            panelToPrint.Dock = DockStyle.None
+
+            ' Calculate total height
+            Dim maxBottom As Integer = 0
+            For Each ctrl As Control In panelToPrint.Controls
+                If ctrl.Bottom > maxBottom Then maxBottom = ctrl.Bottom
+            Next
+
+            Dim newHeight As Integer = maxBottom + 50
+            panelToPrint.Size = New Size(panelToPrint.Width, newHeight)
+
+            ' Create Bitmap
+            bmp = New Bitmap(panelToPrint.Width, panelToPrint.Height)
+            panelToPrint.DrawToBitmap(bmp, New Rectangle(0, 0, panelToPrint.Width, panelToPrint.Height))
+
+        Catch ex As Exception
+            MsgBox("Gagal mengambil gambar halaman: " & ex.Message, MsgBoxStyle.Critical)
+            Return
+        Finally
+            ' Restore original state
+            panelToPrint.AutoScroll = originalAutoScroll
+            panelToPrint.Dock = originalDock
+            panelToPrint.Size = originalSize
+            panelToPrint.Location = originalLocation
+        End Try
+
+        If bmp Is Nothing Then Return
+
+        ' 2. Save as PDF using PdfSharp
+        Dim sfd As New SaveFileDialog()
+        sfd.Filter = "PDF Files|*.pdf"
+        sfd.FileName = "BuktiPotong_" & buktiId & ".pdf"
+
+        If sfd.ShowDialog() = DialogResult.OK Then
+            Try
+                ' Create PDF Document
+                Dim document As New PdfDocument()
+                document.Info.Title = "Bukti Potong " & buktiId
+
+                ' Create Page (A4)
+                Dim page As PdfPage = document.AddPage()
+                page.Size = PdfSharp.PageSize.A4
+
+                ' Get Graphics
+                Dim gfx As XGraphics = XGraphics.FromPdfPage(page)
+
+                ' Convert Bitmap to XImage
+                ' Note: We might need to save to stream if direct conversion fails, but try direct first
+                Dim xImg As XImage
+                Using ms As New MemoryStream()
+                    bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Png)
+                    xImg = XImage.FromStream(ms)
+
+                    ' Calculate scaling to fit page width (leaving some margin)
+                    Dim margin As Double = 20
+                    Dim pageWidth As Double = page.Width.Point - (margin * 2)
+                    Dim scale As Double = pageWidth / xImg.PixelWidth
+                    Dim finalHeight As Double = xImg.PixelHeight * scale
+
+                    ' If height is larger than page, we might need multiple pages or just scale down?
+                    ' For simplicity, if it's too long, we just scale it to fit PAGE HEIGHT if needed, 
+                    ' or just draw it and let it clip (or resize page).
+                    ' Better: Resize page to fit content if it's very long.
+
+                    If finalHeight > (page.Height.Point - margin * 2) Then
+                        ' Resize page height to fit the long image
+                        page.Height = New XUnit(finalHeight + margin * 2)
+                    End If
+
+                    ' Draw image
+                    gfx.DrawImage(xImg, margin, margin, pageWidth, finalHeight)
+                End Using
+
+                ' Save
+                document.Save(sfd.FileName)
+                MsgBox("Berhasil diekspor ke PDF!", MsgBoxStyle.Information)
+
+            Catch ex As Exception
+                MsgBox("Gagal menyimpan PDF: " & ex.Message, MsgBoxStyle.Critical)
+            Finally
+                If bmp IsNot Nothing Then bmp.Dispose()
+            End Try
+        End If
     End Sub
 
     Private Sub PanelEmployer_Paint(sender As Object, e As PaintEventArgs) Handles PanelEmployer.Paint

@@ -43,6 +43,9 @@
     <Compile Update="Forms\wajib_pajak\wp_detail_bukti_potong.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\wajib_pajak\wp_detail_lapor_pajak.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\wajib_pajak\wp_diagnosa_pajak.vb">
       <SubType>Form</SubType>
     </Compile>

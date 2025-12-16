@@ -99,7 +99,7 @@ Public Class wp_riwayat_lapor_pajak
             modulkoneksi.BukaKoneksi()
 
             Dim sql As String = "
-                SELECT tahun_pajak, bruto_setahun, netto_setahun, pph21_terutang, status_spt
+                SELECT id, tahun_pajak, bruto_setahun, netto_setahun, pph21_terutang, status_spt
                 FROM spt_tahunan
                 WHERE wajib_pajak_id = @wp_id"
 
@@ -141,6 +141,7 @@ Public Class wp_riwayat_lapor_pajak
 
             ' Populate DataGridView
             For Each row As DataRow In table.Rows
+                Dim id As String = row("id").ToString()
                 Dim tahun As String = If(IsDBNull(row("tahun_pajak")), "", row("tahun_pajak").ToString())
                 Dim bruto As Decimal = If(IsDBNull(row("bruto_setahun")), 0, Convert.ToDecimal(row("bruto_setahun")))
                 Dim netto As Decimal = If(IsDBNull(row("netto_setahun")), 0, Convert.ToDecimal(row("netto_setahun")))
@@ -166,7 +167,8 @@ Public Class wp_riwayat_lapor_pajak
                 End Select
 
                 ' Add row to DataGridView
-                GridRiwayat.Rows.Add(tahun, brutoFormatted, nettoFormatted, pph21Formatted, statusText)
+                Dim rowIndex As Integer = GridRiwayat.Rows.Add(tahun, brutoFormatted, nettoFormatted, pph21Formatted, statusText)
+                GridRiwayat.Rows(rowIndex).Tag = id
             Next
 
         Catch ex As Exception
@@ -230,23 +232,13 @@ Public Class wp_riwayat_lapor_pajak
     End Sub
 
     Private Sub GridRiwayat_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GridRiwayat.CellClick
-        ' Handle row click to view detail
-        If e.RowIndex >= 0 Then
-            Dim tahun As String = GridRiwayat.Rows(e.RowIndex).Cells("colTahun").Value?.ToString()
-            If Not String.IsNullOrEmpty(tahun) Then
-                ' Show detail info for now (can be expanded to a detail form later)
-                Dim bruto As String = GridRiwayat.Rows(e.RowIndex).Cells("colPenghasilanBruto").Value?.ToString()
-                Dim netto As String = GridRiwayat.Rows(e.RowIndex).Cells("colPenghasilanNeto").Value?.ToString()
-                Dim pph21 As String = GridRiwayat.Rows(e.RowIndex).Cells("colPph21").Value?.ToString()
-                Dim status As String = GridRiwayat.Rows(e.RowIndex).Cells("colStatus").Value?.ToString()
-
-                Dim detailMsg As String = $"Detail SPT Tahun {tahun}" & vbCrLf & vbCrLf &
-                    $"Penghasilan Bruto: {bruto}" & vbCrLf &
-                    $"Penghasilan Neto: {netto}" & vbCrLf &
-                    $"PPh21 Terutang: {pph21}" & vbCrLf &
-                    $"Status: {status}"
-
-                MsgBox(detailMsg, MsgBoxStyle.Information, "Detail SPT Tahunan")
+        ' Handle row click to view detail ONLY on button click
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex = colDetail.Index Then
+            Dim id As String = GridRiwayat.Rows(e.RowIndex).Tag?.ToString()
+            If Not String.IsNullOrEmpty(id) Then
+                Dim f As New wp_detail_lapor_pajak(id)
+                f.Show()
+                Me.Close()
             End If
         End If
     End Sub
