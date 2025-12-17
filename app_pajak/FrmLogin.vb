@@ -237,7 +237,7 @@ Public Class FrmLogin
 
     End Sub
 
-    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
+    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 End Class
